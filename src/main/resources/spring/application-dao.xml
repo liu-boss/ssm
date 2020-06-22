@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--配置包扫描-->
+    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+
+    <!--配置数据库连接池-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="username" value="${user}"></property>
+        <property name="password" value="${password}"></property>
+        <property name="url" value="${url}"></property>
+        <property name="driverClassName" value="${driverClass}"></property>
+        <!-- 配置初始化大小、最小、最大连连接数量 -->
+        <property name="initialSize" value="5"/>
+        <property name="minIdle" value="10"/>
+        <property name="maxActive" value="20"/>
+
+        <!-- 配置获取连接等待超时的时间 -->
+        <property name="maxWait" value="60000"/>
+
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="2000"/>
+
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="600000"/>
+
+        <!--validationQuery 用来检测连接是否有效的 sql，要求是一个查询语句，常用 select 'x'。
+            但是在 oracle 数据库下需要写成 select 'x' from dual 不然实例化数据源的时候就会失败,
+            这是由于 oracle 和 mysql 语法间的差异造成的-->
+        <property name="validationQuery" value="select 'x'"/>
+        <!--建议配置为 true，不影响性能，并且保证安全性。申请连接的时候检测，
+        如果空闲时间大于 timeBetweenEvictionRunsMillis，执行 validationQuery 检测连接是否有效。-->
+        <property name="testWhileIdle" value="true"/>
+        <!--申请连接时执行 validationQuery 检测连接是否有效，做了这个配置会降低性能。-->
+        <property name="testOnBorrow" value="false"/>
+        <!--归还连接时执行 validationQuery 检测连接是否有效，做了这个配置会降低性能。-->
+        <property name="testOnReturn" value="false"/>
+
+        <!-- 配置监控统计拦截的 filters Druid 连接池的监控信息主要是通过 StatFilter 采集的，
+        采集的信息非常全面，包括 SQL 执行、并发、慢查、执行时间区间分布等-->
+        <property name="filters" value="stat"/>
+    </bean>
+
+    <!--配置mybatis的SqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <!--mybatis的配置文件-->
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>
+        <!--配置mybatis扫面的实体类的包-->
+        <property name="typeAliasesPackage" value="com.coderman.entity"></property>
+        <!--   扫描sql配置文件：mapper需要的xml文件-->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+    </bean>
+
+    <!--配置通用mapper-->
+
+
+    <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
+    <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.coderman.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+        <property name="properties">
+            <value>
+                <!-- 通用mapper -->
+                mappers=tk.mybatis.mapper.common.Mapper
+            </value>
+        </property>
+    </bean>
+
+
+    <!--配置mapper的扫描-->
+<!--    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+<!--        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>-->
+<!--        &lt;!&ndash;  给出需要扫描Dao接口包       &ndash;&gt;-->
+<!--        <property name="basePackage" value="com.coderman.mapper"/>-->
+<!--    </bean>-->
+
+
+</beans>
