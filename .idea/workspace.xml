@@ -124,7 +124,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -1866,7 +1865,7 @@
       <workItem from="1592828293890" duration="316000" />
       <workItem from="1592828618199" duration="2000" />
       <workItem from="1597105575612" duration="956000" />
-      <workItem from="1597106555391" duration="13089000" />
+      <workItem from="1597106555391" duration="14059000" />
     </task>
     <task id="LOCAL-00001" summary="添加README.md">
       <created>1591975324666</created>
@@ -2025,22 +2024,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="562" y="337" key="Github.CreateGistDialog/0.0.1536.834@0.0.1536.834" timestamp="1597105758413" />
-    <state width="1495" height="420" key="GridCell.Tab.0.bottom" timestamp="1597120942435">
+    <state width="1495" height="420" key="GridCell.Tab.0.bottom" timestamp="1597121016720">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="420" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1597120942435" />
-    <state width="1495" height="420" key="GridCell.Tab.0.center" timestamp="1597120942435">
+    <state width="1495" height="420" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1597121016720" />
+    <state width="1495" height="420" key="GridCell.Tab.0.center" timestamp="1597121016720">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="420" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1597120942435" />
-    <state width="1495" height="420" key="GridCell.Tab.0.left" timestamp="1597120942435">
+    <state width="1495" height="420" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1597121016720" />
+    <state width="1495" height="420" key="GridCell.Tab.0.left" timestamp="1597121016720">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="420" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1597120942435" />
-    <state width="1495" height="420" key="GridCell.Tab.0.right" timestamp="1597120942435">
+    <state width="1495" height="420" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1597121016720" />
+    <state width="1495" height="420" key="GridCell.Tab.0.right" timestamp="1597121016720">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="420" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1597120942435" />
+    <state width="1495" height="420" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1597121016720" />
     <state width="1495" height="336" key="GridCell.Tab.1.bottom" timestamp="1597118271206">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
