@@ -14,7 +14,7 @@
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <!--扫描web相关的bean-->
-    <context:component-scan base-package="com.coderman.web"></context:component-scan>
+    <context:component-scan base-package="com.coderman.web"/>
 
 
     <!--配置注解驱动的配置-->
@@ -27,23 +27,20 @@
         -->
     <mvc:default-servlet-handler/>
 
-    <!--
-    <mvc:interceptors>
-        <mvc:interceptor>
+    <!-- 配置视图  BeanNameViewResolver 解析器: 使用视图的名字来解析视图:(在异常处理中使用的: ModelAndView("jsonView", result.toMap());) -->
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
 
-            <mvc:mapping path="/**"/>
-            <mvc:exclude-mapping path="/admin/login"/>
-            <mvc:exclude-mapping path="/resource/**"/>
-            <bean class="com.coderman.interceptor.LoginInterceptor"></bean>
-        </mvc:interceptor>
-    </mvc:interceptors>
-    拦截所有的请求-->
+
+    <!--自己的异常处理器-->
+    <bean class="com.coderman.common.SpringExceptionResolver" />
+
+    <!--json的视图解析器-->
+    <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />
 
     <!--jsp视图解析器-->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
-        <property name="prefix" value="/WEB-INF/jsp/"></property>
-        <property name="suffix" value=".jsp"></property>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
     </bean>
-
 </beans>

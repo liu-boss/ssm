@@ -1,10 +1,14 @@
 package com.coderman.model;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 public class User {
     private Integer id;
 
+    @NotBlank
     private String username;
 
+    @NotBlank
     private String password;
 
     private Integer sex;
