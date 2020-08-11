@@ -7,14 +7,14 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
     <!--配置包扫描-->
-    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+    <context:property-placeholder location="classpath:jdbc.properties"/>
 
     <!--配置数据库连接池-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="username" value="${user}"></property>
-        <property name="password" value="${password}"></property>
-        <property name="url" value="${url}"></property>
-        <property name="driverClassName" value="${driverClass}"></property>
+        <property name="username" value="${user}"/>
+        <property name="password" value="${password}"/>
+        <property name="url" value="${url}"/>
+        <property name="driverClassName" value="${driverClass}"/>
         <!-- 配置初始化大小、最小、最大连连接数量 -->
         <property name="initialSize" value="5"/>
         <property name="minIdle" value="10"/>
@@ -48,22 +48,27 @@
 
     <!--配置mybatis的SqlSessionFactory-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"></property>
+        <property name="dataSource" ref="dataSource"/>
         <!--mybatis的配置文件-->
-        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
         <!--配置mybatis扫面的实体类的包-->
-        <property name="typeAliasesPackage" value="com.coderman.entity"></property>
+        <property name="typeAliasesPackage" value="com.coderman.model"/>
         <!--   扫描sql配置文件：mapper需要的xml文件-->
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
     </bean>
 
     <!--配置通用mapper-->
+    <!--    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+    <!--        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>-->
+    <!--        &lt;!&ndash;  给出需要扫描Dao接口包       &ndash;&gt;-->
+    <!--        <property name="basePackage" value="com.coderman.mapper"/>-->
+    <!--    </bean>-->
 
 
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
     <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.coderman.mapper"/>
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <property name="properties">
             <value>
                 <!-- 通用mapper -->
@@ -73,12 +78,6 @@
     </bean>
 
 
-    <!--配置mapper的扫描-->
-<!--    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
-<!--        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>-->
-<!--        &lt;!&ndash;  给出需要扫描Dao接口包       &ndash;&gt;-->
-<!--        <property name="basePackage" value="com.coderman.mapper"/>-->
-<!--    </bean>-->
 
 
 </beans>

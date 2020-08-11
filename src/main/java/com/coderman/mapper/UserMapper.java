@@ -1,17 +1,17 @@
 package com.coderman.mapper;
 
-import com.coderman.entity.User;
-import tk.mybatis.mapper.common.BaseMapper;
+import com.coderman.model.User;
 
-import java.util.List;
+public interface UserMapper {
+    int deleteByPrimaryKey(Integer id);
 
-/**
- * @Author zhangyukang
- * @Date 2020/6/22 18:11
- * @Version 1.0
- **/
-public interface UserMapper extends BaseMapper<User> {
+    int insert(User record);
 
-    List<User> list();
+    int insertSelective(User record);
 
+    User selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(User record);
+
+    int updateByPrimaryKey(User record);
 }
