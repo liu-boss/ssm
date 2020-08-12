@@ -95,9 +95,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response115.json" root0="SKIP_INSPECTION" />
-  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -150,20 +147,20 @@
       <recent name="com.coderman.util" />
       <recent name="com.coderman.dao" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\WEB-INF\jsp\error" />
-      <recent name="D:\myworkspace\workspace_idea3\seckill\seckill\src\main\webapp\resource" />
-      <recent name="D:\myworkspace\workspace_idea3\seckill\seckill\src\main\webapp" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\java\com\coderman\util" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\java\com\coderman\common" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\java\com\coderman" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\mybatis" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\test\java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\WEB-INF\jsp\error" />
+      <recent name="D:\myworkspace\workspace_idea3\seckill\seckill\src\main\webapp\resource" />
+      <recent name="D:\myworkspace\workspace_idea3\seckill\seckill\src\main\webapp" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -1824,6 +1821,13 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.MybatisGenerator" />
+      <item itemvalue="JUnit.MD5UtilTest.encrypt" />
+      <item itemvalue="JUnit.UserServiceTest.listAll" />
+      <item itemvalue="JUnit.UserServiceTest.listAll2" />
+      <item itemvalue="Maven.tomcat" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UserServiceTest.listAll2" />
@@ -1832,6 +1836,9 @@
         <item itemvalue="Application.MybatisGenerator" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SpringGeneralSettings">
+    <option name="showMultipleContextsPanel" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -2072,10 +2079,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1183" height="408" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1592056501057" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1597107846820">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1597200579612">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1597107846820" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1597200579612" />
     <state x="513" y="215" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1597110022370">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

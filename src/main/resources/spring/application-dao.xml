@@ -7,10 +7,10 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
     <!--配置包扫描-->
-    <context:property-placeholder location="classpath:jdbc.properties"/>
+    <context:property-placeholder ignore-unresolvable="true" location="classpath:jdbc.properties"/>
 
     <!--配置数据库连接池-->
-    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+    <bean id="dataSource"  class="com.alibaba.druid.pool.DruidDataSource">
         <property name="username" value="${user}"/>
         <property name="password" value="${password}"/>
         <property name="url" value="${url}"/>
