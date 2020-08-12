@@ -1,10 +1,19 @@
 # ssm
-自用的ssm的web集成环境,开箱即用。
 
-1. Spring . SpringMVC . Mybatis
+自用的ssm的web集成环境,开箱即用,赶快用起来吧。本项目由几个分支,并且持续更新.
 
+> 主要功能: 实现Spring,SpringMVC,Mybatis的整合,使用Druid数据源,封装JsonData前端数据返回对象,并且集成了Mybatis的代码生成(使用程序的方式)
+>Hibernate Validator数据校验, 全局异常处理.
 
-application-dao.xml
+```
+master:    基本的ssm框架搭建
+ssm-redis: ssm与redis进行整合
+```
+
+## 1. Spring, SpringMVC ,Mybatis的整合
+
+##### 1.1 application-dao.xml 配置
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -83,7 +92,7 @@ application-dao.xml
 ```
 
 
-application-service.xml
+##### 1.2 application-service.xml 配置
 
 ```xml
 
@@ -117,7 +126,7 @@ application-service.xml
 
 ```
 
-application-web.xml
+##### 1.3 application-web.xml 配置
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -168,7 +177,7 @@ application-web.xml
 </beans>
 ```
 
-4. 通用Mapper
+##### 1.4. 通用Mapper (如需使用可替换包扫描即可)
 
 ```xml
 
@@ -180,17 +189,107 @@ application-web.xml
   </bean>
 ```
 
-5. Jsp
+## 2. Jsp
 
-6. Jstl
+## 3. Jstl标签
 
-7. 分页插件
+## 4.分页插件
 
-8. Druid数据源
+```xml
+ <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--reasonable：分页合理化参数，默认值为false,直接根据参数进行查询。
+              当该参数设置为 true 时，pageNum<=0 时会查询第一页， pageNum>pages（超过总数时），会查询最后一页。-->
+            <!--<property name="reasonable" value="true"/>-->
+        </plugin>
+ </plugins>
+```
 
-9. Slf4j+Logback
+## 5. Druid数据源
 
-10. 全局异常处理 (Ajax+页面)
+```xml
+
+  <!--配置数据库连接池-->
+    <bean id="dataSource"  class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="username" value="${user}"/>
+        <property name="password" value="${password}"/>
+        <property name="url" value="${url}"/>
+        <property name="driverClassName" value="${driverClass}"/>
+        <!-- 配置初始化大小、最小、最大连连接数量 -->
+        <property name="initialSize" value="5"/>
+        <property name="minIdle" value="10"/>
+        <property name="maxActive" value="20"/>
+
+        <!-- 配置获取连接等待超时的时间 -->
+        <property name="maxWait" value="60000"/>
+
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="2000"/>
+
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="600000"/>
+
+        <!--validationQuery 用来检测连接是否有效的 sql，要求是一个查询语句，常用 select 'x'。
+            但是在 oracle 数据库下需要写成 select 'x' from dual 不然实例化数据源的时候就会失败,
+            这是由于 oracle 和 mysql 语法间的差异造成的-->
+        <property name="validationQuery" value="select 'x'"/>
+        <!--建议配置为 true，不影响性能，并且保证安全性。申请连接的时候检测，
+        如果空闲时间大于 timeBetweenEvictionRunsMillis，执行 validationQuery 检测连接是否有效。-->
+        <property name="testWhileIdle" value="true"/>
+        <!--申请连接时执行 validationQuery 检测连接是否有效，做了这个配置会降低性能。-->
+        <property name="testOnBorrow" value="false"/>
+        <!--归还连接时执行 validationQuery 检测连接是否有效，做了这个配置会降低性能。-->
+        <property name="testOnReturn" value="false"/>
+
+        <!-- 配置监控统计拦截的 filters Druid 连接池的监控信息主要是通过 StatFilter 采集的，
+        采集的信息非常全面，包括 SQL 执行、并发、慢查、执行时间区间分布等-->
+        <property name="filters" value="stat"/>
+    </bean>
+```
+
+## 6. Slf4j+Logback
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    　　　
+    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
+    <property name="LOG_HOME" value="/logs/" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 按照每天生成日志文件 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <FileNamePattern>${LOG_HOME}/TestWeb.log.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <!--日志文件保留天数-->
+            <MaxHistory>7</MaxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+        <!--日志文件最大的大小-->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>10MB</MaxFileSize>
+        </triggeringPolicy>
+    </appender>
+    　　　
+    <!-- 日志输出级别 -->
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>
+
+```
+
+## 7. 全局异常处理 (Ajax+页面)
 ```java
 package com.coderman.common;
 
@@ -257,8 +356,107 @@ public class SpringExceptionResolver implements HandlerExceptionResolver {
 }
 
 ```
-11. 封装通用数据返回对象
-12. hibernate-validator 数据校验
+## 8. 封装通用数据返回对象
+
+```java
+
+package com.coderman.common;
+
+
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class JsonData {
+
+    public static final int SUCCESS_CODE=0;  //响应成功
+    public static final int ERROR_CODE=-1;   //响应失败
+    public static final int PARAM_ERROR=400; //参数错误
+    public static final int INTERNAL_SERVER_ERROR=500; //服务器异常
+    public static final int TOKEN_ILLEGAL=10001; //令牌不合法 (过期,非法)
+
+    private int code;
+
+    private String msg;
+
+    private Object data;
+
+    public JsonData(int code) {
+        this.code = code;
+    }
+
+    public static JsonData success(Object object, String msg) {
+        JsonData jsonData = new JsonData(SUCCESS_CODE);
+        jsonData.data = object;
+        jsonData.msg = msg;
+        return jsonData;
+    }
+
+    public static JsonData success(Object object) {
+        JsonData jsonData = new JsonData(SUCCESS_CODE);
+        jsonData.data = object;
+        return jsonData;
+    }
+
+    public static JsonData success() {
+        return new JsonData(SUCCESS_CODE);
+    }
+
+    public static JsonData fail(String msg) {
+        JsonData jsonData = new JsonData(ERROR_CODE);
+        jsonData.msg = msg;
+        return jsonData;
+    }
+
+    public static JsonData fail(int code,String msg) {
+        JsonData jsonData = new JsonData(code);
+        jsonData.msg = msg;
+        return jsonData;
+    }
+
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<String, Object>();
+        result.put("code", code);
+        result.put("msg", msg);
+        result.put("data", data);
+        return result;
+    }
+
+    public static int getSuccessCode() {
+        return SUCCESS_CODE;
+    }
+
+    public static int getErrorCode() {
+        return ERROR_CODE;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+}
+
+```
+## 9. hibernate-validator 数据校验
 
 ```java
 
@@ -329,7 +527,7 @@ public class BeanValidator {
 
 ```
 
-13. Mybatis 逆向生成
+## 10. Mybatis 逆向生成
 
 ```java
 import org.mybatis.generator.api.MyBatisGenerator;
@@ -367,10 +565,45 @@ public class MybatisGenerator {
 }
 
 ```
-14. MD5工具类
+## 11. MD5工具类
+```java
+package com.coderman.util;
 
+import java.security.MessageDigest;
 
-15. Spring 测试模块
+public class MD5Util {
+
+    public static String encrypt(String s) {
+        char hexDigits[] =
+                {
+                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F',
+                'G','H','I','J','K','L','M','N','O','P','Q','R','S','T'};
+        try {
+            byte[] btInput = s.getBytes();
+            // 获得MD5摘要算法的 MessageDigest 对象
+            MessageDigest mdInst = MessageDigest.getInstance("MD5");
+            // 使用指定的字节更新摘要
+            mdInst.update(btInput);
+            // 获得密文
+            byte[] md = mdInst.digest();
+            // 把密文转换成十六进制的字符串形式
+            int j = md.length;
+            char str[] = new char[j * 2];
+            int k = 0;
+            for (byte byte0 : md) {
+                str[k++] = hexDigits[byte0 >>> 4 & 0xf];
+                str[k++] = hexDigits[byte0 & 0xf];
+            }
+            return new String(str);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+}
+
+```
+
+## 12. Spring 测试模块
 
 ```java
 package com.coderman.service;
@@ -414,4 +647,5 @@ public class UserServiceTest {
 }
 
 ```
-......
+
+
