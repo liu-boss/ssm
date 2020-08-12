@@ -156,7 +156,6 @@
             <version>5.3.5.Final</version>
         </dependency>
         <!-- spring-redis实现 -->
-        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis -->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-redis</artifactId>

@@ -1,417 +1,621 @@
-# ssm
-自用的ssm的web集成环境,开箱即用。
+### 整合Redis 过程
 
-1. Spring . SpringMVC . Mybatis
+#### 1. 加入maven 依赖
+```xml
+ <!-- spring-redis实现 -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.8.22.RELEASE</version>
+        </dependency>
+        <!-- redis客户端jar -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+```
 
+#### 2. 添加redis的配置文件
 
-application-dao.xml
+```properties
+redis.host=116.85.25.106
+redis.port=6379
+redis.pass=zhangyukang
+redis.maxIdle=300
+redis.maxActive=600
+redis.maxWait=1000
+redis.testOnBorrow=true
+
+```
+
+#### 3. 添加application-redis.xml配置文件
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-    <!--配置包扫描-->
-    <context:property-placeholder location="classpath:jdbc.properties"/>
 
-    <!--配置数据库连接池-->
-    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="username" value="${user}"/>
-        <property name="password" value="${password}"/>
-        <property name="url" value="${url}"/>
-        <property name="driverClassName" value="${driverClass}"/>
-        <!-- 配置初始化大小、最小、最大连连接数量 -->
-        <property name="initialSize" value="5"/>
-        <property name="minIdle" value="10"/>
-        <property name="maxActive" value="20"/>
+    <context:property-placeholder ignore-unresolvable="true" location="classpath:redis.properties"/>
 
-        <!-- 配置获取连接等待超时的时间 -->
-        <property name="maxWait" value="60000"/>
 
-        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
-        <property name="timeBetweenEvictionRunsMillis" value="2000"/>
 
-        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
-        <property name="minEvictableIdleTimeMillis" value="600000"/>
-
-        <!--validationQuery 用来检测连接是否有效的 sql，要求是一个查询语句，常用 select 'x'。
-            但是在 oracle 数据库下需要写成 select 'x' from dual 不然实例化数据源的时候就会失败,
-            这是由于 oracle 和 mysql 语法间的差异造成的-->
-        <property name="validationQuery" value="select 'x'"/>
-        <!--建议配置为 true，不影响性能，并且保证安全性。申请连接的时候检测，
-        如果空闲时间大于 timeBetweenEvictionRunsMillis，执行 validationQuery 检测连接是否有效。-->
-        <property name="testWhileIdle" value="true"/>
-        <!--申请连接时执行 validationQuery 检测连接是否有效，做了这个配置会降低性能。-->
-        <property name="testOnBorrow" value="false"/>
-        <!--归还连接时执行 validationQuery 检测连接是否有效，做了这个配置会降低性能。-->
-        <property name="testOnReturn" value="false"/>
-
-        <!-- 配置监控统计拦截的 filters Druid 连接池的监控信息主要是通过 StatFilter 采集的，
-        采集的信息非常全面，包括 SQL 执行、并发、慢查、执行时间区间分布等-->
-        <property name="filters" value="stat"/>
+    <!-- 3. redis数据源 -->
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxIdle" value="${redis.maxIdle}"/>
+        <property name="maxTotal" value="${redis.maxActive}"/>
+        <property name="maxWaitMillis" value="${redis.maxWait}"/>
+        <property name="testOnBorrow" value="${redis.testOnBorrow}"/>
     </bean>
 
-    <!--配置mybatis的SqlSessionFactory-->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-        <!--mybatis的配置文件-->
-        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
-        <!--配置mybatis扫面的实体类的包-->
-        <property name="typeAliasesPackage" value="com.coderman.model"/>
-        <!--   扫描sql配置文件：mapper需要的xml文件-->
-        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+    <!--链接redis-->
+    <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+        <property name="hostName" value="${redis.host}"/>
+        <property name="port" value="${redis.port}"/>
+        <property name="password" value="${redis.pass}"/>
+        <property name="poolConfig" ref="jedisPoolConfig"/>
     </bean>
 
-  
-    <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
-    <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.coderman.mapper"/>
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <property name="properties">
-            <value>
-                <!-- 通用mapper -->
-                mappers=tk.mybatis.mapper.common.Mapper
-            </value>
+<!--    key(String) value(String)-->
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" >
+        <!--以下针对各种数据进行序列化方式的选择-->
+        <property name="keySerializer">
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
         </property>
+        <property name="valueSerializer">
+            <bean class="org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer"/>
+        </property>
+        <property name="hashKeySerializer">
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+        </property>
+        <!--<property name="hashValueSerializer">
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+        </property>-->
     </bean>
 
-</beans>
 
-```
+    <!--redis工具类-->
+    <bean id="redisUtil" class="com.coderman.util.RedisUtil"/>
 
-
-application-service.xml
-
-```xml
-
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:aop="http://www.springframework.org/schema/aop"
-       xmlns:tx="http://www.springframework.org/schema/tx"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
-           http://www.springframework.org/schema/context
-           http://www.springframework.org/schema/context/spring-context-2.5.xsd
-           http://www.springframework.org/schema/tx
-           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
-           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
->
-    <!--扫描service所有使用注解的类型-->
-    <context:component-scan base-package="com.coderman.service"/>
-
-    <!--配置事务管理器-->
-    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <!--注入数据源-->
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
-    <!--配置基于注解的生命式事务-->
-    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
-
-
-</beans>
-
-```
-
-application-web.xml
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.springframework.org/schema/mvc"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://www.springframework.org/schema/aop
-       http://www.springframework.org/schema/context/spring-aop.xsd
-       http://www.springframework.org/schema/context
-       http://www.springframework.org/schema/context/spring-context.xsd
-       http://www.springframework.org/schema/tx
-       http://www.springframework.org/schema/tx/spring-tx.xsd
-       http://www.springframework.org/schema/mvc
-       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-
-    <!--扫描web相关的bean-->
-    <context:component-scan base-package="com.coderman.web"/>
-
-
-    <!--配置注解驱动的配置-->
-    <mvc:annotation-driven />
-
-    <!--
-        DispatcherServlet请求映射配置为"/"，则Spring MVC将捕获Web容器所有的请求，包括静态资源的请求，
-        Spring MVC会将它们当成一个普通请求处理，因此找不到对应处理器将导致错误。
-        如果没有作映射，就交给 WEB 应用服务器默认的 Servlet 处理，从而找到对应的静态资源，只有再找不到资源时才会报错。
-        -->
-    <mvc:default-servlet-handler/>
-
-    <!-- 配置视图  BeanNameViewResolver 解析器: 使用视图的名字来解析视图:(在异常处理中使用的: ModelAndView("jsonView", result.toMap());) -->
-    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
-
-
-    <!--自己的异常处理器-->
-    <bean class="com.coderman.common.SpringExceptionResolver" />
-
-    <!--json的视图解析器-->
-    <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />
-
-    <!--jsp视图解析器-->
-    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
-        <property name="prefix" value="/WEB-INF/jsp/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
 </beans>
 ```
 
-4. 通用Mapper
-
-```xml
-
- <!--配置通用mapper-->
-<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
- <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>-->
-    <!--给出需要扫描Dao接口包-->
-   <property name="basePackage" value="com.coderman.mapper"/>-->
-  </bean>
-```
-
-5. Jsp
-
-6. Jstl
-
-7. 分页插件
-
-8. Druid数据源
-
-9. Slf4j+Logback
-
-10. 全局异常处理 (Ajax+页面)
-```java
-package com.coderman.common;
-
-import com.coderman.exception.BizException;
-import com.coderman.exception.ParamException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.web.servlet.HandlerExceptionResolver;
-import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.util.HashMap;
-import java.util.Map;
-
-public class SpringExceptionResolver implements HandlerExceptionResolver {
-
-    private Logger log= LoggerFactory.getLogger(SpringExceptionResolver.class);
-
-    @Override
-    public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
-        String url = request.getRequestURL().toString();
-        ModelAndView mv;
-        String defaultMsg = "系统异常,请联系管理员";
-
-        if (isAjax(request)) {
-            log.error("ajax请求出现异常:" + url, ex);
-            if (ex instanceof BizException) {
-                log.error("业务异常, url:" + url, ex);
-                JsonData result = JsonData.fail(ex.getMessage());
-                mv = new ModelAndView("jsonView", result.toMap());
-            } else if(ex instanceof ParamException){
-                log.error("参数异常, url:" + url, ex);
-                JsonData result = JsonData.fail(JsonData.PARAM_ERROR,ex.getMessage());
-                mv = new ModelAndView("jsonView", result.toMap());
-            } else {//系统异常
-                log.error("系统异常, url:" + url, ex);
-                JsonData result = JsonData.fail(JsonData.INTERNAL_SERVER_ERROR,defaultMsg);
-                mv = new ModelAndView("jsonView", result.toMap());
-            }
-        } else {
-            log.error("页面请求出现异常:" + url, ex);
-            Map<String,Object> map=new HashMap<>();
-            map.put("errorMsg",ex.toString());
-            mv = new ModelAndView("error/exception",map);
-        }
-        return mv;
-    }
-
-    /**
-     * 判断网络请求是否为ajax
-     *
-     * @param req
-     * @return
-     */
-    private boolean isAjax(HttpServletRequest req) {
-        String contentTypeHeader = req.getHeader("Content-Type");
-        String acceptHeader = req.getHeader("Accept");
-        String xRequestedWith = req.getHeader("X-Requested-With");
-        return (contentTypeHeader != null && contentTypeHeader.contains("application/json"))
-                || (acceptHeader != null && acceptHeader.contains("application/json"))
-                || "XMLHttpRequest".equalsIgnoreCase(xRequestedWith);
-    }
-}
-
-```
-11. 封装通用数据返回对象
-12. hibernate-validator 数据校验
-
+#### 4. RedisUtil 工具类
 ```java
 
 package com.coderman.util;
 
-import com.coderman.exception.ParamException;
-import com.google.common.base.Preconditions;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
+/**
+ * @Author zhangyukang
+ * @Date 2020/8/4 13:42
+ * @Version 1.0
+ **/
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.CollectionUtils;
 
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
-import java.util.*;
-
-public class BeanValidator {
-
-    private static ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
-
-    public static <T> Map<String, String> validate(T t, Class... groups) {
-        Validator validator = validatorFactory.getValidator();
-        Set<ConstraintViolation<T>> validateResult = validator.validate(t, groups);
-        if (validateResult.isEmpty()) {
-            return Collections.emptyMap();
-        } else {
-            LinkedHashMap<String,String> errors = Maps.newLinkedHashMap();
-            Iterator iterator = validateResult.iterator();
-            while (iterator.hasNext()) {
-                ConstraintViolation violation = (ConstraintViolation)iterator.next();
-                errors.put(violation.getPropertyPath().toString(), violation.getMessage());
-            }
-            return errors;
-        }
-    }
-
-    public static Map<String, String> validateList(Collection<?> collection) {
-        Preconditions.checkNotNull(collection);
-        Iterator iterator = collection.iterator();
-        Map<String,String> errors;
-        do {
-            if (!iterator.hasNext()) {
-                return Collections.emptyMap();
-            }
-            Object object = iterator.next();
-            errors = validate(object);
-        } while (errors.isEmpty());
-
-        return errors;
-    }
-
-    public static Map<String, String> validateObject(Object first, Object... objects) {
-        if (objects != null && objects.length > 0) {
-            return validateList(Lists.asList(first, objects));
-        } else {
-            return validate(first);
-        }
-    }
-
-    public static void check(Object param) throws ParamException {
-        Map<String, String> map = BeanValidator.validateObject(param);
-        if (!CollectionUtils.isEmpty(map)) {
-            throw new ParamException(map.toString());
-        }
-    }
-}
-
-```
-
-13. Mybatis 逆向生成
-
-```java
-import org.mybatis.generator.api.MyBatisGenerator;
-import org.mybatis.generator.config.Configuration;
-import org.mybatis.generator.config.xml.ConfigurationParser;
-import org.mybatis.generator.internal.DefaultShellCallback;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 /**
- * @Author zhangyukang
- * @Date 2020/7/6 11:13
- * @Version 1.0
- **/
-public class MybatisGenerator {
-
-
-    public static void main(String[] args) throws Exception {
-        Logger logger=LoggerFactory.getLogger(MybatisGenerator.class);
-        List<String> warnings = new ArrayList<String>();
-        boolean overwrite = true;
-        InputStream inputStream = MybatisGenerator.class.getResourceAsStream("mybatis/mybatis-generator.xml");
-        ConfigurationParser cp = new ConfigurationParser(warnings);
-        Configuration config = cp.parseConfiguration(inputStream);
-        DefaultShellCallback callback = new DefaultShellCallback(overwrite);
-        MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config,
-                callback, warnings);
-        myBatisGenerator.generate(null);
-        logger.info("generator success");
-    }
-}
-
-```
-14. MD5工具类
-
-
-15. Spring 测试模块
-
-```java
-package com.coderman.service;
-
-import com.coderman.mapper.UserMapper;
-import com.coderman.model.User;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.util.List;
-
-/**
- * @Author zhangyukang
- * @Date 2020/8/11 09:40
- * @Version 1.0
- **/
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring/application-dao.xml","classpath:spring/application-service.xml"})
-public class UserServiceTest {
+ * Redis工具类
+ * @author ZENG.XIAO.YAN
+ * @date   2018年6月7日
+ */
+public final class RedisUtil {
 
     @Autowired
-    private UserMapper userMapper;
-
-    @Autowired
-    private UserService userService;
-
-    @Test
-    public void listAll() {
-        List<User> users = userMapper.listAll();
-        System.out.println(users);
+    private RedisTemplate<String, Object> redisTemplate;
+    // =============================common============================
+    /**
+     * 指定缓存失效时间
+     * @param key 键
+     * @param time 时间(秒)
+     * @return
+     */
+    public boolean expire(String key, long time) {
+        try {
+            if (time > 0) {
+                redisTemplate.expire(key, time, TimeUnit.SECONDS);
+            }
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    /**
+     * 根据key 获取过期时间
+     * @param key 键 不能为null
+     * @return 时间(秒) 返回0代表为永久有效
+     */
+    public long getExpire(String key) {
+        return redisTemplate.getExpire(key, TimeUnit.SECONDS);
     }
 
-    @Test
-    public void listAll2(){
-        List<User> users = userService.listAll();
-        System.out.println(users);
+    /**
+     * 判断key是否存在
+     * @param key 键
+     * @return true 存在 false不存在
+     */
+    public boolean hasKey(String key) {
+        try {
+            return redisTemplate.hasKey(key);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 删除缓存
+     * @param key 可以传一个值 或多个
+     */
+    @SuppressWarnings("unchecked")
+    public void del(String... key) {
+        if (key != null && key.length > 0) {
+            if (key.length == 1) {
+                redisTemplate.delete(key[0]);
+            } else {
+                redisTemplate.delete(CollectionUtils.arrayToList(key));
+            }
+        }
+    }
+    // ============================String=============================
+    /**
+     * 普通缓存获取
+     * @param key 键
+     * @return 值
+     */
+    public Object get(String key) {
+        return key == null ? null : redisTemplate.opsForValue().get(key);
+    }
+
+    /**
+     * 普通缓存放入
+     * @param key 键
+     * @param value 值
+     * @return true成功 false失败
+     */
+    public boolean set(String key, Object value) {
+        try {
+            redisTemplate.opsForValue().set(key, value);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 普通缓存放入并设置时间
+     * @param key 键
+     * @param value 值
+     * @param time 时间(秒) time要大于0 如果time小于等于0 将设置无限期
+     * @return true成功 false 失败
+     */
+    public boolean set(String key, Object value, long time) {
+        try {
+            if (time > 0) {
+                redisTemplate.opsForValue().set(key, value, time, TimeUnit.SECONDS);
+            } else {
+                set(key, value);
+            }
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    /**
+     * 递增
+     * @param key 键
+     * @param delta 要增加几(大于0)
+     * @return
+     */
+    public long incr(String key, long delta) {
+        if (delta < 0) {
+            throw new RuntimeException("递增因子必须大于0");
+        }
+        return redisTemplate.opsForValue().increment(key, delta);
+    }
+
+    /**
+     * 递减
+     * @param key 键
+     * @param delta 要减少几(小于0)
+     * @return
+     */
+    public long decr(String key, long delta) {
+        if (delta < 0) {
+            throw new RuntimeException("递减因子必须大于0");
+        }
+        return redisTemplate.opsForValue().increment(key, -delta);
+    }
+
+    // ================================Map=================================
+    /**
+     * HashGet
+     * @param key 键 不能为null
+     * @param item 项 不能为null
+     * @return 值
+     */
+    public Object hget(String key, String item) {
+        return redisTemplate.opsForHash().get(key, item);
+    }
+
+    /**
+     * 获取hashKey对应的所有键值
+     * @param key 键
+     * @return 对应的多个键值
+     */
+    public Map<Object, Object> hmget(String key) {
+        return redisTemplate.opsForHash().entries(key);
+    }
+
+    /**
+     * HashSet
+     * @param key 键
+     * @param map 对应多个键值
+     * @return true 成功 false 失败
+     */
+    public boolean hmset(String key, Map<String, Object> map) {
+        try {
+            redisTemplate.opsForHash().putAll(key, map);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    /**
+     * HashSet 并设置时间
+     * @param key 键
+     * @param map 对应多个键值
+     * @param time 时间(秒)
+     * @return true成功 false失败
+     */
+    public boolean hmset(String key, Map<String, Object> map, long time) {
+        try {
+            redisTemplate.opsForHash().putAll(key, map);
+            if (time > 0) {
+                expire(key, time);
+            }
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 向一张hash表中放入数据,如果不存在将创建
+     * @param key 键
+     * @param item 项
+     * @param value 值
+     * @return true 成功 false失败
+     */
+    public boolean hset(String key, String item, Object value) {
+        try {
+            redisTemplate.opsForHash().put(key, item, value);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    /**
+     * 向一张hash表中放入数据,如果不存在将创建
+     * @param key 键
+     * @param item 项
+     * @param value 值
+     * @param time 时间(秒) 注意:如果已存在的hash表有时间,这里将会替换原有的时间
+     * @return true 成功 false失败
+     */
+    public boolean hset(String key, String item, Object value, long time) {
+        try {
+            redisTemplate.opsForHash().put(key, item, value);
+            if (time > 0) {
+                expire(key, time);
+            }
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 删除hash表中的值
+     * @param key 键 不能为null
+     * @param item 项 可以使多个 不能为null
+     */
+
+    public void hdel(String key, Object... item) {
+        redisTemplate.opsForHash().delete(key, item);
+    }
+
+    /**
+     * 判断hash表中是否有该项的值
+     * @param key 键 不能为null
+     * @param item 项 不能为null
+     * @return true 存在 false不存在
+     */
+    public boolean hHasKey(String key, String item) {
+        return redisTemplate.opsForHash().hasKey(key, item);
+    }
+
+    /**
+     * hash递增 如果不存在,就会创建一个 并把新增后的值返回
+     * @param key 键
+     * @param item 项
+     * @param by 要增加几(大于0)
+     * @return
+     */
+    public double hincr(String key, String item, double by) {
+        return redisTemplate.opsForHash().increment(key, item, by);
+    }
+    /**
+     * hash递减
+     * @param key 键
+     * @param item 项
+     * @param by 要减少记(小于0)
+     * @return
+     */
+    public double hdecr(String key, String item, double by) {
+        return redisTemplate.opsForHash().increment(key, item, -by);
+    }
+    // ============================set=============================
+    /**
+     * 根据key获取Set中的所有值
+     * @param key 键
+     * @return
+     */
+    public Set<Object> sGet(String key) {
+        try {
+            return redisTemplate.opsForSet().members(key);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 根据value从一个set中查询,是否存在
+     * @param key 键
+     * @param value 值
+     * @return true 存在 false不存在
+     */
+    public boolean sHasKey(String key, Object value) {
+        try {
+            return redisTemplate.opsForSet().isMember(key, value);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    /**
+     * 将数据放入set缓存
+     * @param key 键
+     * @param values 值 可以是多个
+     * @return 成功个数
+     */
+    public long sSet(String key, Object... values) {
+        try {
+            return redisTemplate.opsForSet().add(key, values);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    /**
+     * 将set数据放入缓存
+     * @param key 键
+     * @param time 时间(秒)
+     * @param values 值 可以是多个
+     * @return 成功个数
+     */
+    public long sSetAndTime(String key, long time, Object... values) {
+        try {
+            Long count = redisTemplate.opsForSet().add(key, values);
+            if (time > 0)
+                expire(key, time);
+            return count;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    /**
+     * 获取set缓存的长度
+     * @param key 键
+     * @return
+     */
+    public long sGetSetSize(String key) {
+        try {
+            return redisTemplate.opsForSet().size(key);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    /**
+     * 移除值为value的
+     * @param key 键
+     * @param values 值 可以是多个
+     * @return 移除的个数
+     */
+    public long setRemove(String key, Object... values) {
+        try {
+            Long count = redisTemplate.opsForSet().remove(key, values);
+            return count;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+    // ===============================list=================================
+    /**
+     * 获取list缓存的内容
+     * @param key 键
+     * @param start 开始
+     * @param end 结束 0 到 -1代表所有值
+     * @return
+     */
+    public List<Object> lGet(String key, long start, long end) {
+        try {
+            return redisTemplate.opsForList().range(key, start, end);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 获取list缓存的长度
+     * @param key 键
+     * @return
+     */
+    public long lGetListSize(String key) {
+        try {
+            return redisTemplate.opsForList().size(key);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+    /**
+     * 通过索引 获取list中的值
+     * @param key 键
+     * @param index 索引 index>=0时， 0 表头，1 第二个元素，依次类推；index<0时，-1，表尾，-2倒数第二个元素，依次类推
+     * @return
+     */
+    public Object lGetIndex(String key, long index) {
+        try {
+            return redisTemplate.opsForList().index(key, index);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 将list放入缓存
+     * @param key 键
+     * @param value 值
+     * @param time 时间(秒)
+     * @return
+     */
+    public boolean lSet(String key, Object value) {
+        try {
+            redisTemplate.opsForList().rightPush(key, value);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 将list放入缓存
+     * @param key 键
+     * @param value 值
+     * @param time 时间(秒)
+     * @return
+     */
+    public boolean lSet(String key, Object value, long time) {
+        try {
+            redisTemplate.opsForList().rightPush(key, value);
+            if (time > 0)
+                expire(key, time);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 将list放入缓存
+     * @param key 键
+     * @param value 值
+     * @param time 时间(秒)
+     * @return
+     */
+    public boolean lSet(String key, List<Object> value) {
+        try {
+            redisTemplate.opsForList().rightPushAll(key, value);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 将list放入缓存
+     *
+     * @param key 键
+     * @param value 值
+     * @param time 时间(秒)
+     * @return
+     */
+    public boolean lSet(String key, List<Object> value, long time) {
+        try {
+            redisTemplate.opsForList().rightPushAll(key, value);
+            if (time > 0)
+                expire(key, time);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 根据索引修改list中的某条数据
+     * @param key 键
+     * @param index 索引
+     * @param value 值
+     * @return
+     */
+    public boolean lUpdateIndex(String key, long index, Object value) {
+        try {
+
+            redisTemplate.opsForList().set(key, index, value);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    /**
+     * 移除N个值为value
+     * @param key 键
+     * @param count 移除多少个
+     * @param value 值
+     * @return 移除的个数
+     */
+    public long lRemove(String key, long count, Object value) {
+        try {
+            Long remove = redisTemplate.opsForList().remove(key, count, value);
+            return remove;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
     }
 }
 
 ```
-......
