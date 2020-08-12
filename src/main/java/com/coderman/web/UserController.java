@@ -5,6 +5,9 @@ import com.coderman.exception.BizException;
 import com.coderman.model.User;
 import com.coderman.service.UserService;
 import com.coderman.util.BeanValidator;
+import com.coderman.util.RedisUtil;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +28,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private RedisUtil redisUtil;
+
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     @ResponseBody
     public JsonData list(@RequestParam(value = "page") Integer page,
@@ -34,8 +40,7 @@ public class UserController {
             throw new BizException("page=4 不合法");
         }
         List<User> users=userService.listAll();
-        PageInfo<User> pageInfo = new PageInfo<>(users);
-        return JsonData.success(pageInfo);
+        return JsonData.success(users);
     }
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
@@ -50,4 +55,5 @@ public class UserController {
         }
         return JsonData.success(user);
     }
+
 }

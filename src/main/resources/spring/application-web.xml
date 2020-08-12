@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -18,7 +19,7 @@
 
 
     <!--配置注解驱动的配置-->
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
 
     <!--
         DispatcherServlet请求映射配置为"/"，则Spring MVC将捕获Web容器所有的请求，包括静态资源的请求，
@@ -28,18 +29,18 @@
     <mvc:default-servlet-handler/>
 
     <!-- 配置视图  BeanNameViewResolver 解析器: 使用视图的名字来解析视图:(在异常处理中使用的: ModelAndView("jsonView", result.toMap());) -->
-    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
 
 
     <!--自己的异常处理器-->
-    <bean class="com.coderman.common.SpringExceptionResolver" />
+    <bean class="com.coderman.common.SpringExceptionResolver"/>
 
     <!--json的视图解析器-->
-    <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />
+    <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>
 
     <!--jsp视图解析器-->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
