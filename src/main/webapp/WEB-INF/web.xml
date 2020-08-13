@@ -75,6 +75,8 @@
       <param-name>contextConfigLocation</param-name>
       <param-value>classpath:spring/application-web.xml</param-value>
     </init-param>
+    <!--loading when tomcat starting-->
+    <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>web-dispatcher</servlet-name>
