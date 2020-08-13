@@ -26,7 +26,7 @@
         <mysql-connector-version>8.0.21</mysql-connector-version>
         <alibaba-druid-version>1.0.9</alibaba-druid-version>
         <logback-version>1.2.3</logback-version>
-        <jackson-version>2.9.5</jackson-version>
+        <jackson-version>2.9.10.5</jackson-version>
         <jstl-version>1.2</jstl-version>
         <servlet-api-version>2.5</servlet-api-version>
         <jsp-api-version>2.1</jsp-api-version>
