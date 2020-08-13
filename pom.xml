@@ -32,6 +32,7 @@
         <jsp-api-version>2.1</jsp-api-version>
         <pagehelper-version>5.1.4</pagehelper-version>
         <hibernate-validator-version>5.3.5.Final</hibernate-validator-version>
+        <guava-version>27.0-jre</guava-version>
     </properties>
 
     <dependencies>
@@ -111,9 +112,9 @@
             <artifactId>jackson-databind</artifactId>
             <version>${jackson-version}</version>
         </dependency>
-        <!--jstl标签-->
+        <!--jstl标签+servlet+jsp依赖-->
         <dependency>
-            <groupId>javax.servlet.jsp.jstl</groupId>
+            <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>${jstl-version}</version>
         </dependency>
@@ -129,7 +130,7 @@
             <version>${jsp-api-version}</version>
             <scope>provided</scope>
         </dependency>
-        <!--分页插件-->
+        <!--pageHelper分页插件-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>
@@ -144,7 +145,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>27.0-jre</version>
+            <version>${guava-version}</version>
         </dependency>
     </dependencies>
     <build>
