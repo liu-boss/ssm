@@ -23,17 +23,16 @@ public class SpringExceptionResolver implements HandlerExceptionResolver {
         String defaultMsg = "系统异常,请联系管理员";
 
         if (isAjax(request)) {
-            log.error("ajax请求出现异常:" + url, ex);
             if (ex instanceof BizException) {
-                log.error("业务异常, url:" + url, ex);
+                log.error("ajax请求:业务异常, url:" + url, ex);
                 JsonData result = JsonData.fail(ex.getMessage());
                 mv = new ModelAndView("jsonView", result.toMap());
             } else if(ex instanceof ParamException){
-                log.error("参数异常, url:" + url, ex);
+                log.error("ajax请求:参数异常, url:" + url, ex);
                 JsonData result = JsonData.fail(JsonData.PARAM_ERROR,ex.getMessage());
                 mv = new ModelAndView("jsonView", result.toMap());
             } else {//系统异常
-                log.error("系统异常, url:" + url, ex);
+                log.error("ajax请求:系统异常, url:" + url, ex);
                 JsonData result = JsonData.fail(JsonData.INTERNAL_SERVER_ERROR,defaultMsg);
                 mv = new ModelAndView("jsonView", result.toMap());
             }
