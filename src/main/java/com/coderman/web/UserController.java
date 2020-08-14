@@ -5,6 +5,7 @@ import com.coderman.exception.BizException;
 import com.coderman.model.User;
 import com.coderman.service.UserService;
 import com.coderman.util.BeanValidator;
+import com.coderman.util.FdfsUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -25,6 +27,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private FdfsUtil fdfsUtil;
 
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     @ResponseBody
@@ -42,10 +47,11 @@ public class UserController {
 
     @RequestMapping(value = "/upload",method = RequestMethod.POST)
     @ResponseBody
-    public JsonData upload(MultipartFile file){
-        System.out.println(file);
-        return JsonData.success(file.getOriginalFilename());
+    public JsonData upload(MultipartFile file) throws IOException {
+        String url = fdfsUtil.uploadFile(file);
+        return JsonData.success(url);
     }
+
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody

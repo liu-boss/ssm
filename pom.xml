@@ -34,6 +34,7 @@
         <hibernate-validator-version>5.3.5.Final</hibernate-validator-version>
         <guava-version>27.0-jre</guava-version>
         <commons-fileupload-version>1.4</commons-fileupload-version>
+        <fastdfs-client-version>1.26.1-RELEASE</fastdfs-client-version>
     </properties>
 
     <dependencies>
@@ -143,15 +144,23 @@
             <artifactId>hibernate-validator</artifactId>
             <version>${hibernate-validator-version}</version>
         </dependency>
+        <!--guava-->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava-version}</version>
         </dependency>
+        <!--mvc文件上传-->
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
             <version>${commons-fileupload-version}</version>
+        </dependency>
+        <!-- fastdfs-client 依赖-->
+        <dependency>
+            <groupId>com.github.tobato</groupId>
+            <artifactId>fastdfs-client</artifactId>
+            <version>${fastdfs-client-version}</version>
         </dependency>
     </dependencies>
     <build>
