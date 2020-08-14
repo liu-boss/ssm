@@ -9,8 +9,6 @@
 
     <context:property-placeholder ignore-unresolvable="true" location="classpath:redis.properties"/>
 
-
-
     <!-- 3. redis数据源 -->
     <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
         <property name="maxIdle" value="${redis.maxIdle}"/>
@@ -44,7 +42,6 @@
             <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
         </property>-->
     </bean>
-
 
     <!--redis工具类-->
     <bean id="redisUtil" class="com.coderman.util.RedisUtil"/>

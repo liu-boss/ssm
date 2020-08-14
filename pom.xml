@@ -15,12 +15,27 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
-        <springVersion>4.3.18.RELEASE</springVersion>
-        <junitVersion>4.12</junitVersion>
-        <mybatisVersion>3.2.8</mybatisVersion>
-        <mybatis-spring>1.2.2</mybatis-spring>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <spring-version>5.2.8.RELEASE</spring-version>
+        <junit-version>4.12</junit-version>
+        <mybatis-version>3.2.8</mybatis-version>
+        <mybatis-spring-version>1.2.2</mybatis-spring-version>
+        <tk-mybatis-version>4.1.5</tk-mybatis-version>
+        <mybatis-generator-version>1.3.5</mybatis-generator-version>
+        <mysql-connector-version>8.0.21</mysql-connector-version>
+        <alibaba-druid-version>1.0.9</alibaba-druid-version>
+        <logback-version>1.2.3</logback-version>
+        <jackson-version>2.9.10.5</jackson-version>
+        <jstl-version>1.2</jstl-version>
+        <servlet-api-version>2.5</servlet-api-version>
+        <jsp-api-version>2.1</jsp-api-version>
+        <pagehelper-version>5.1.4</pagehelper-version>
+        <hibernate-validator-version>5.3.5.Final</hibernate-validator-version>
+        <guava-version>27.0-jre</guava-version>
+        <commons-fileupload-version>1.4</commons-fileupload-version>
+        <spring-data-redis-version>1.8.22.RELEASE</spring-data-redis-version>
+        <jedis-version>2.9.0</jedis-version>
     </properties>
 
     <dependencies>
@@ -28,146 +43,132 @@
         <!--spring框架的三个基础包-->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${springVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>${springVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
-            <version>${springVersion}</version>
+            <version>${spring-version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>${springVersion}</version>
+            <version>${spring-version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>${springVersion}</version>
+            <version>${spring-version}</version>
         </dependency>
         <!--springMVC的两个包-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>${springVersion}</version>
+            <version>${spring-version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>${junitVersion}</version>
+            <version>${junit-version}</version>
             <scope>test</scope>
         </dependency>
         <!--dao框架依赖：mybatis-->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>${mybatisVersion}</version>
+            <version>${mybatis-version}</version>
         </dependency>
         <!--spring和mybatis整合依赖-->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
-            <version>${mybatis-spring}</version>
+            <version>${mybatis-spring-version}</version>
         </dependency>
         <!--通用mapper的依赖-->
         <dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper</artifactId>
-            <version>4.1.5</version>
+            <version>${tk-mybatis-version}</version>
         </dependency>
         <!--代码生成-->
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
-            <version>1.3.5</version>
+            <version>${mybatis-generator-version}</version>
         </dependency>
         <!--日志相关的包-->
         <dependency>
             <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>1.1.8</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.1.8</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.22</version>
+            <version>${logback-version}</version>
         </dependency>
         <!--数据库相关的包-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.21</version>
+            <version>${mysql-connector-version}</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.0.9</version>
+            <version>${alibaba-druid-version}</version>
         </dependency>
         <!-- Jackson -->
         <dependency>
-            <groupId>com.fasterxml.jackson.datatype</groupId>
-            <artifactId>jackson-datatype-guava</artifactId>
-            <version>2.5.3</version>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-version}</version>
         </dependency>
-        <!--jstl标签-->
+        <!--jstl标签+servlet+jsp依赖-->
         <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
-            <version>1.2</version>
+            <version>${jstl-version}</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
+            <version>${servlet-api-version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
-            <version>2.1</version>
+            <version>${jsp-api-version}</version>
             <scope>provided</scope>
         </dependency>
-        <!--分页插件-->
+        <!--pageHelper分页插件-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>
-            <version>5.1.4</version>
+            <version>${pagehelper-version}</version>
         </dependency>
         <!-- validator -->
         <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>1.1.0.Final</version>
-        </dependency>
-        <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>5.3.5.Final</version>
+            <version>${hibernate-validator-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>${commons-fileupload-version}</version>
         </dependency>
         <!-- spring-redis实现 -->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-redis</artifactId>
-            <version>1.8.22.RELEASE</version>
+            <version>${spring-data-redis-version}</version>
         </dependency>
         <!-- redis客户端jar -->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
-            <version>2.9.0</version>
+            <version>${jedis-version}</version>
         </dependency>
     </dependencies>
+
     <build>
         <finalName>ssm</finalName>
         <pluginManagement>

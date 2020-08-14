@@ -2,8 +2,6 @@ package com.coderman.util;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * @Author zhangyukang
  * @Date 2020/8/11 09:35
