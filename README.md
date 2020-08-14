@@ -8,6 +8,7 @@
 ```
 master:    基本的ssm框架搭建
 ssm-redis: ssm与redis进行整合
+sssm-fastdfs: ssm与fastdfs整合
 ```
 
 ## 1. Spring, SpringMVC ,Mybatis的整合
