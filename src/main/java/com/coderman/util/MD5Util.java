@@ -30,4 +30,9 @@ public class MD5Util {
             return null;
         }
     }
+
+    public static void main(String[] args) {
+        String password = MD5Util.encrypt("123456789");
+        System.out.println(password);
+    }
 }

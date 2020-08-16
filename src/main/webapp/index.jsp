@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/6/22
-  Time: 18:01
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -12,6 +5,22 @@
     <title>首页</title>
 </head>
 <body>
-<h1>Hello SSM ~ jstl::<c:out value="${1+1}"/></h1>
+<h1 style="color: green;text-align: center">哎哟不错哦!,一个基础的SSM整合</h1>
+<hr>
+<h3>文件上传</h3>
+<form action="/user/upload.do" method="post" enctype="multipart/form-data">
+    选择文件:<input type="file" name="file" width="120px">
+    <input type="submit" value="上传">
+</form>
+<hr>
+<h3>发送请求</h3>
+<hr>
+http://localhost:8080/user/list.do?page=1&size=3
+<hr>
+<h3>页面异常处理</h3>
+<hr>
+http://localhost:8080/user/list.do?page=4&size=3
+<hr>
 </body>
+
 </html>

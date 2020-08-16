@@ -21,11 +21,16 @@
     <mvc:annotation-driven />
 
     <!--
-        DispatcherServlet请求映射配置为"/"，则Spring MVC将捕获Web容器所有的请求，包括静态资源的请求，
+        DispatcherServlet请求映射配置为"/"，则Spring MVC将捕获Web容器所有的请求，包括静态资源的请求，(不包括 jsp),
+        因为tomcat的配置文件中有一个默认的*.jsp映射规则优先级更高
         Spring MVC会将它们当成一个普通请求处理，因此找不到对应处理器将导致错误。
         如果没有作映射，就交给 WEB 应用服务器默认的 Servlet 处理，从而找到对应的静态资源，只有再找不到资源时才会报错。
         -->
+    <!--
+    如果使用restful风格的url,即web.xml中前端请求分发器的servletMapping为:/
+    打开该配置
     <mvc:default-servlet-handler/>
+    -->
 
     <!-- 配置视图  BeanNameViewResolver 解析器: 使用视图的名字来解析视图:(在异常处理中使用的: ModelAndView("jsonView", result.toMap());) -->
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
@@ -45,7 +50,7 @@
 
     <!--jsp视图解析器-->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 </beans>

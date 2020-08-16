@@ -39,7 +39,7 @@
 <!--    <location>/WEB-INF/jsp/error/500.jsp</location>-->
 <!--  </error-page>-->
 
-  <!-- Encoding -->
+  <!-- set encoding -->
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -80,7 +80,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>web-dispatcher</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>*.do</url-pattern>
   </servlet-mapping>
 
 </web-app>

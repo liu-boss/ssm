@@ -26,7 +26,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/list",method = RequestMethod.GET)
+    @RequestMapping(value = "/list.do",method = RequestMethod.GET)
     @ResponseBody
     public JsonData list(@RequestParam(value = "page") Integer page,
                          @RequestParam(value = "size") Integer size){
@@ -40,14 +40,14 @@ public class UserController {
     }
 
 
-    @RequestMapping(value = "/upload",method = RequestMethod.POST)
+    @RequestMapping(value = "/upload.do",method = RequestMethod.POST)
     @ResponseBody
     public JsonData upload(MultipartFile file){
         System.out.println(file);
         return JsonData.success(file.getOriginalFilename());
     }
 
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    @RequestMapping(value = "/login.do",method = RequestMethod.POST)
     @ResponseBody
     public JsonData login(@RequestBody User user){
         BeanValidator.check(user);

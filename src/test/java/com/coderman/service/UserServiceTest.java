@@ -16,7 +16,7 @@ import java.util.List;
  * @Version 1.0
  **/
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring/application-dao.xml","classpath:spring/application-service.xml"})
+@ContextConfiguration({"classpath:spring/application-dao.xml", "classpath:spring/application-service.xml"})
 public class UserServiceTest {
 
     @Autowired
