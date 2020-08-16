@@ -142,7 +142,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24482758" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="spring" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -2390,7 +2390,7 @@
       <workItem from="1597378516943" duration="100000" />
       <workItem from="1597378618611" duration="15000" />
       <workItem from="1597565848222" duration="7223000" />
-      <workItem from="1597575878048" duration="4359000" />
+      <workItem from="1597575878048" duration="4918000" />
     </task>
     <task id="LOCAL-00001" summary="添加README.md">
       <created>1591975324666</created>
@@ -2601,10 +2601,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1183" height="408" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1592056501057" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1597378632820">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1597580413948">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1597378632820" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1597580413948" />
     <state x="513" y="215" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1597110022370">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
