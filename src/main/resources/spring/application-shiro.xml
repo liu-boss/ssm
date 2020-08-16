@@ -26,10 +26,6 @@
         <property name="authorizationCacheName" value="authorizationCache"/>
     </bean>
 
-    <!-- 配置 shiro 的核心组件：securityManager -->
-    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
-        <property name="realm" ref="userRealm"/>
-    </bean>
 
     <!-- 配置shiro的一些拦截规则，id必须和web.xml中的 shiro 拦截器名一致 -->
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
@@ -53,4 +49,12 @@
             </value>
         </property>
     </bean>
+
+    <!-- 配置 shiro 的核心组件：securityManager -->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realms">
+            <list><ref bean="userRealm"/></list>
+        </property>
+    </bean>
+
 </beans>
