@@ -16,7 +16,6 @@
     <!--扫描web相关的bean-->
     <context:component-scan base-package="com.coderman.web"/>
 
-
     <!--配置注解驱动的配置-->
     <mvc:annotation-driven />
 
@@ -25,7 +24,7 @@
         Spring MVC会将它们当成一个普通请求处理，因此找不到对应处理器将导致错误。
         如果没有作映射，就交给 WEB 应用服务器默认的 Servlet 处理，从而找到对应的静态资源，只有再找不到资源时才会报错。
         -->
-    <mvc:default-servlet-handler/>
+<!--    <mvc:default-servlet-handler/>-->
 
     <!-- 配置视图  BeanNameViewResolver 解析器: 使用视图的名字来解析视图:(在异常处理中使用的: ModelAndView("jsonView", result.toMap());) -->
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
@@ -45,7 +44,7 @@
 
     <!--jsp视图解析器-->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 </beans>

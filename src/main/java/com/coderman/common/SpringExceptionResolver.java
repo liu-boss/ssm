@@ -24,11 +24,11 @@ public class SpringExceptionResolver implements HandlerExceptionResolver {
 
         if (isAjax(request)) {
             if (ex instanceof BizException) {
-                log.error("ajax请求:业务异常, url:" + url, ex);
+                log.error("ajax请求:业务异常, url:" + url, ex.getMessage());
                 JsonData result = JsonData.fail(ex.getMessage());
                 mv = new ModelAndView("jsonView", result.toMap());
             } else if(ex instanceof ParamException){
-                log.error("ajax请求:参数异常, url:" + url, ex);
+                log.error("ajax请求:参数异常, url:" + url, ex.getMessage());
                 JsonData result = JsonData.fail(JsonData.PARAM_ERROR,ex.getMessage());
                 mv = new ModelAndView("jsonView", result.toMap());
             } else {//系统异常

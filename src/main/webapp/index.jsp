@@ -12,6 +12,8 @@
     <title>首页</title>
 </head>
 <body>
-<h1>Hello SSM ~ jstl::<c:out value="${1+1}"/></h1>
+<%
+    response.sendRedirect(request.getContextPath()+"/loginPage.do");
+%>
 </body>
 </html>

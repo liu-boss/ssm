@@ -39,6 +39,20 @@
 <!--    <location>/WEB-INF/jsp/error/500.jsp</location>-->
 <!--  </error-page>-->
 
+  <!-- ?? shiro ???  -->
+  <filter>
+    <filter-name>shiroFilter</filter-name>
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    <init-param>
+      <param-name>targetFilterLifecycle</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>shiroFilter</filter-name>
+    <servlet-name>web-dispatcher</servlet-name>
+  </filter-mapping>
+
   <!-- Encoding -->
   <filter>
     <filter-name>encodingFilter</filter-name>
@@ -65,7 +79,7 @@
   </listener>
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:spring/application-service.xml,classpath:spring/application-dao.xml</param-value>
+    <param-value>classpath:spring/application-service.xml,classpath:spring/application-dao.xml,classpath:spring/application-shiro.xml</param-value>
   </context-param>
 
   <servlet>
@@ -80,7 +94,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>web-dispatcher</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>*.do</url-pattern>
   </servlet-mapping>
 
 </web-app>

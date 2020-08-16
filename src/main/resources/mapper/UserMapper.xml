@@ -2,34 +2,33 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.coderman.mapper.UserMapper">
   <resultMap id="BaseResultMap" type="com.coderman.model.User">
-    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="id" jdbcType="BIGINT" property="id" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
-    <result column="sex" jdbcType="INTEGER" property="sex" />
-    <result column="phone" jdbcType="VARCHAR" property="phone" />
-    <result column="role" jdbcType="VARCHAR" property="role" />
+    <result column="salt" jdbcType="VARCHAR" property="salt" />
+    <result column="locked" jdbcType="BIT" property="locked" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, username, password, sex, phone, role
+    id, username, password, salt, locked
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-    from tb_user_test
-    where id = #{id,jdbcType=INTEGER}
+    from sys_users
+    where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from tb_user_test
-    where id = #{id,jdbcType=INTEGER}
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from sys_users
+    where id = #{id,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="com.coderman.model.User">
-    insert into tb_user_test (id, username, password,
-      sex, phone, role)
-    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
-      #{sex,jdbcType=INTEGER}, #{phone,jdbcType=VARCHAR}, #{role,jdbcType=VARCHAR})
+    insert into sys_users (id, username, password,
+      salt, locked)
+    values (#{id,jdbcType=BIGINT}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+      #{salt,jdbcType=VARCHAR}, #{locked,jdbcType=BIT})
   </insert>
   <insert id="insertSelective" parameterType="com.coderman.model.User">
-    insert into tb_user_test
+    insert into sys_users
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
@@ -40,19 +39,16 @@
       <if test="password != null">
         password,
       </if>
-      <if test="sex != null">
-        sex,
+      <if test="salt != null">
+        salt,
       </if>
-      <if test="phone != null">
-        phone,
-      </if>
-      <if test="role != null">
-        role,
+      <if test="locked != null">
+        locked,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
-        #{id,jdbcType=INTEGER},
+        #{id,jdbcType=BIGINT},
       </if>
       <if test="username != null">
         #{username,jdbcType=VARCHAR},
@@ -60,19 +56,16 @@
       <if test="password != null">
         #{password,jdbcType=VARCHAR},
       </if>
-      <if test="sex != null">
-        #{sex,jdbcType=INTEGER},
+      <if test="salt != null">
+        #{salt,jdbcType=VARCHAR},
       </if>
-      <if test="phone != null">
-        #{phone,jdbcType=VARCHAR},
-      </if>
-      <if test="role != null">
-        #{role,jdbcType=VARCHAR},
+      <if test="locked != null">
+        #{locked,jdbcType=BIT},
       </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.coderman.model.User">
-    update tb_user_test
+    update sys_users
     <set>
       <if test="username != null">
         username = #{username,jdbcType=VARCHAR},
@@ -80,30 +73,28 @@
       <if test="password != null">
         password = #{password,jdbcType=VARCHAR},
       </if>
-      <if test="sex != null">
-        sex = #{sex,jdbcType=INTEGER},
+      <if test="salt != null">
+        salt = #{salt,jdbcType=VARCHAR},
       </if>
-      <if test="phone != null">
-        phone = #{phone,jdbcType=VARCHAR},
-      </if>
-      <if test="role != null">
-        role = #{role,jdbcType=VARCHAR},
+      <if test="locked != null">
+        locked = #{locked,jdbcType=BIT},
       </if>
     </set>
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.coderman.model.User">
-    update tb_user_test
+    update sys_users
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
-      sex = #{sex,jdbcType=INTEGER},
-      phone = #{phone,jdbcType=VARCHAR},
-      role = #{role,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
+      salt = #{salt,jdbcType=VARCHAR},
+      locked = #{locked,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
   </update>
-  <select id="listAll" resultMap="BaseResultMap">
+
+  <select id="findByUsername" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>
-    from tb_user_test
+    from sys_users
+    where username=#{username}
   </select>
 </mapper>

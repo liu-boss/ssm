@@ -3,25 +3,23 @@ package com.coderman.model;
 import org.hibernate.validator.constraints.NotBlank;
 
 public class User {
-    private Integer id;
+    private Long id;
 
-    @NotBlank
+    @NotBlank(message = "用户名不能为空")
     private String username;
 
-    @NotBlank
+    @NotBlank(message = "密码不能为空")
     private String password;
 
-    private Integer sex;
+    private String salt;
 
-    private String phone;
+    private Boolean locked;
 
-    private String role;
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -41,27 +39,19 @@ public class User {
         this.password = password == null ? null : password.trim();
     }
 
-    public Integer getSex() {
-        return sex;
+    public String getSalt() {
+        return salt;
     }
 
-    public void setSex(Integer sex) {
-        this.sex = sex;
+    public void setSalt(String salt) {
+        this.salt = salt == null ? null : salt.trim();
     }
 
-    public String getPhone() {
-        return phone;
+    public Boolean getLocked() {
+        return locked;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone == null ? null : phone.trim();
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role == null ? null : role.trim();
+    public void setLocked(Boolean locked) {
+        this.locked = locked;
     }
 }
