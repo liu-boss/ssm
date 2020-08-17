@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <html>
 <head>
     <title>后台管理</title>
@@ -7,7 +8,12 @@
 </head>
 <body class="easyui-layout">
 <%--上--%>
-<div region="north" style="height: 50px; background-color: #E0ECFF"></div>
+<div region="north" style="height: 50px; background-color: #E0ECFF">
+    <div style="margin: 10px 20px;float: right">
+        欢迎<span style="color: red">[<shiro:principal/>]</span>登录，
+        <a style="color:blue;" href="${pageContext.request.contextPath}/user/logout.do">退出</a>
+    </div>
+</div>
 <%--左--%>
 <div region="west" style="width: 200px" title="导航菜单" split="true">
     <div id="leftMenu" class="easyui-sidemenu" data-options="data:menu,onSelect:menuSelect,multiple:true" style="width: 193px;"></div>
@@ -72,7 +78,8 @@
         state: 'open',
         children: [{
             text: '文档管理',
-            iconCls : 'icon-user'
+            iconCls : 'icon-user',
+            url:'/admin/test.do',
         }, {
             text: '下载管理',
             iconCls : 'icon-user'

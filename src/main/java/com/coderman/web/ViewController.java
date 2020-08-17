@@ -16,4 +16,7 @@ public class ViewController {
 
     @RequestMapping("/mainPage.do")
     public String mainPage(){return "main";}
+
+    @RequestMapping("/unauthorizedPage.do")
+    public String unauthorizedPage(){return "error/unauthorized";}
 }

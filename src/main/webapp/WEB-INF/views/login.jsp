@@ -51,12 +51,12 @@
         <h1>用户登录</h1>
     </div>
     <div>
-        <input class="easyui-textbox easyui-validatebox" id="username" name="username"
+        <input class="easyui-textbox easyui-validatebox" id="username" value="zhangyukang" name="username"
                data-options="iconCls:'icon-man',iconWidth:30,iconAlign:'left',prompt:'用户名'"
                style="width:100%;height:35px;"/>
     </div>
     <div>
-        <input class="easyui-passwordbox easyui-validatebox" id="password" name="password"
+        <input class="easyui-passwordbox easyui-validatebox" id="password" value="123456" name="password"
                data-options="iconWidth:30,iconAlign:'left',prompt:'密码'" style="width:100%;height:35px;"/>
     </div>
     <div>

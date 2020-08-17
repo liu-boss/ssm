@@ -1,6 +1,8 @@
 package com.coderman.common;
 
 
+import org.omg.CORBA.PUBLIC_MEMBER;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,8 +12,9 @@ public class JsonData {
     public static final int SUCCESS_CODE=0;  //响应成功
     public static final int ERROR_CODE=-1;   //响应失败
     public static final int PARAM_ERROR=400; //参数错误
+    public static final int NOT_LOGIN=100;   //用户未登入
     public static final int INTERNAL_SERVER_ERROR=500; //服务器异常
-    public static final int TOKEN_ILLEGAL=10001; //令牌不合法 (过期,非法)
+    public static final int UNAUTHORIZED = 401; //登入后访问资源未授权
 
     private int code;
 

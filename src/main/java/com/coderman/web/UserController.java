@@ -4,6 +4,8 @@ import com.coderman.common.JsonData;
 import com.coderman.exception.ParamException;
 import com.coderman.model.User;
 import com.coderman.service.UserService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.session.Session;
@@ -37,16 +39,18 @@ public class UserController {
         return JsonData.success();
     }
 
-    public static void main(String[] args) {
-        String username="zhangyukang";
-        String password="123456";
-        SecureRandomNumberGenerator randomNumberGenerator =
-                new SecureRandomNumberGenerator();
-        String salt = randomNumberGenerator.nextBytes(username.getBytes().length).toString();
-        Md5Hash md5Hash = new Md5Hash(password, salt, 2);
-        String dbPassword = md5Hash.toString();
-        System.out.println(dbPassword);
-        System.out.println(salt);
+    @RequestMapping(value = "/unauthorized.do",method = RequestMethod.GET)
+    @ResponseBody
+    @RequiresPermissions("user:unauthorized")
+    public JsonData unauthorized(){
+        return JsonData.success();
+    }
+
+    @RequestMapping(value = "/role.do",method = RequestMethod.GET)
+    @ResponseBody
+    @RequiresRoles("admin")
+    public JsonData role(){
+        return JsonData.success();
     }
 
 }

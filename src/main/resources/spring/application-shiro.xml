@@ -33,10 +33,10 @@
         <property name="securityManager" ref="securityManager"/>
         <!-- 身份认证失败，则跳转到登录页面的配置 -->
         <property name="loginUrl" value="/loginPage.do"/>
-        <!-- 登录成功后的页面 -->
+        <!-- 登录成功后的页面:(后台主页面) -->
         <property name="successUrl" value="/mainPage.do"/>
-        <!-- 权限认证失败，则跳转到指定页面 -->
-        <property name="unauthorizedUrl" value="/unauthorized"/>  <!-- 登录后访问没有权限的页面后跳转的页面 -->
+        <!-- 登录后访问没有权限的页面后跳转的页面 -->
+        <property name="unauthorizedUrl" value="/unauthorizedPage.do"/>
         <!-- Shiro连接约束配置,即过滤链的定义 -->
         <property name="filterChainDefinitions">
             <value>
@@ -45,10 +45,19 @@
                 /loginPage.do = anon
                 /user/login.do = anon
                 /user/logout.do = logout
+                /admin/** = authc, roles[admin]
                 /** = authc
             </value>
         </property>
+        <property name="filters">
+            <map>
+                <!--定义自己的loginFilter:覆盖之前的-->
+                <entry key="authc" value-ref="restLoginAuthorizationFilter"/>
+            </map>
+        </property>
     </bean>
+    <!--解决前后端(页面跳转问题)跳转页面的filter-->
+    <bean id="restLoginAuthorizationFilter" class="com.coderman.shiro.filter.RestLoginAuthorizationFilter"/>
 
     <!-- 配置 shiro 的核心组件：securityManager -->
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
