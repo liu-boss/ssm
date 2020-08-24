@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -49,14 +50,14 @@ public class UserController {
 
     @RequestMapping(value = "/login.do",method = RequestMethod.POST)
     @ResponseBody
-    public JsonData login(@RequestBody User user){
+    public JsonData login(@RequestBody User user,
+                          HttpSession session){
         BeanValidator.check(user);
-        if("zhang".equals(user.getUsername())){
-            throw new BizException("用户名不存在");
+        if(user.getUsername().equals("zhangyukang")&&user.getPassword().equals("123456")){
+            session.setAttribute("user",new User());
+            return JsonData.success(user);
+        }else {
+            return JsonData.fail("username or password error!");
         }
-        if("yu".equals(user.getUsername())){
-            int a=9/0;
-        }
-        return JsonData.success(user);
     }
 }

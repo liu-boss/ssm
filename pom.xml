@@ -27,13 +27,12 @@
         <alibaba-druid-version>1.0.9</alibaba-druid-version>
         <logback-version>1.2.3</logback-version>
         <jackson-version>2.9.10.5</jackson-version>
-        <jstl-version>1.2</jstl-version>
         <servlet-api-version>2.5</servlet-api-version>
-        <jsp-api-version>2.1</jsp-api-version>
         <pagehelper-version>5.1.4</pagehelper-version>
         <hibernate-validator-version>5.3.5.Final</hibernate-validator-version>
         <guava-version>27.0-jre</guava-version>
         <commons-fileupload-version>1.4</commons-fileupload-version>
+        <thymeleaf-version>3.0.11.RELEASE</thymeleaf-version>
     </properties>
 
     <dependencies>
@@ -115,20 +114,9 @@
         </dependency>
         <!--jstl标签+servlet+jsp依赖-->
         <dependency>
-            <groupId>jstl</groupId>
-            <artifactId>jstl</artifactId>
-            <version>${jstl-version}</version>
-        </dependency>
-        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>${servlet-api-version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
-            <version>${jsp-api-version}</version>
             <scope>provided</scope>
         </dependency>
         <!--pageHelper分页插件-->
@@ -152,6 +140,17 @@
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
             <version>${commons-fileupload-version}</version>
+        </dependency>
+        <!--thymeleaf-->
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring5</artifactId>
+            <version>${thymeleaf-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf</artifactId>
+            <version>${thymeleaf-version}</version>
         </dependency>
     </dependencies>
     <build>
