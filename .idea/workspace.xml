@@ -86,17 +86,14 @@
       <list>
         <option value="JUnit4 Test Class" />
         <option value="spring-beans.schema" />
-        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response105.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -2129,7 +2126,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.tomcat">
+  <component name="RunManager" selected="JUnit.MD5UtilTest.encrypt">
     <configuration name="MybatisGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MybatisGenerator" />
       <module name="ssm" />
@@ -2146,6 +2143,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MD5UtilTest.encrypt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ssm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coderman.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.coderman.util" />
+      <option name="MAIN_CLASS_NAME" value="com.coderman.util.MD5UtilTest" />
+      <option name="METHOD_NAME" value="encrypt" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -2226,11 +2239,13 @@
       <item itemvalue="Application.MybatisGenerator" />
       <item itemvalue="Application.UserController" />
       <item itemvalue="Maven.tomcat" />
+      <item itemvalue="JUnit.MD5UtilTest.encrypt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UserController" />
+        <item itemvalue="JUnit.MD5UtilTest.encrypt" />
         <item itemvalue="Application.MybatisGenerator" />
+        <item itemvalue="Application.UserController" />
       </list>
     </recent_temporary>
   </component>
@@ -2394,6 +2409,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="配置LogBack日志" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="395" y="95" key="#Inspections" timestamp="1598434398497">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="395" y="95" key="#Inspections/0.0.1536.834@0.0.1536.834" timestamp="1598434398497" />
     <state x="629" y="280" width="561" height="274" key="#Notifications" timestamp="1591968742834">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2410,10 +2429,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1597378123299" />
-    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1597626425742">
+    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1598440719921">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1597626425742" />
+    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1598440719921" />
     <state x="499" y="193" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1592013010575">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2426,10 +2445,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="455" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1592827534184" />
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597628269553">
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598432758069">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1597628269553" />
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1598432758069" />
     <state x="504" y="261" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1592820809013">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2446,38 +2465,38 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="562" y="337" key="Github.CreateGistDialog/0.0.1536.834@0.0.1536.834" timestamp="1597105758413" />
-    <state width="1495" height="423" key="GridCell.Tab.0.bottom" timestamp="1597630115098">
+    <state width="1495" height="271" key="GridCell.Tab.0.bottom" timestamp="1598441392937">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="423" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1597630115098" />
-    <state width="1495" height="423" key="GridCell.Tab.0.center" timestamp="1597630115098">
+    <state width="1495" height="271" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1598441392937" />
+    <state width="1495" height="271" key="GridCell.Tab.0.center" timestamp="1598441392937">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="423" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1597630115098" />
-    <state width="1495" height="423" key="GridCell.Tab.0.left" timestamp="1597630115098">
+    <state width="1495" height="271" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1598441392937" />
+    <state width="1495" height="271" key="GridCell.Tab.0.left" timestamp="1598441392937">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="423" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1597630115098" />
-    <state width="1495" height="423" key="GridCell.Tab.0.right" timestamp="1597630115098">
+    <state width="1495" height="271" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1598441392937" />
+    <state width="1495" height="271" key="GridCell.Tab.0.right" timestamp="1598441392937">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="423" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1597630115098" />
-    <state width="1495" height="375" key="GridCell.Tab.1.bottom" timestamp="1597628008223">
+    <state width="1495" height="271" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1598441392937" />
+    <state width="1495" height="375" key="GridCell.Tab.1.bottom" timestamp="1598441091431">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="375" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1597628008223" />
-    <state width="1495" height="375" key="GridCell.Tab.1.center" timestamp="1597628008223">
+    <state width="1495" height="375" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1598441091431" />
+    <state width="1495" height="375" key="GridCell.Tab.1.center" timestamp="1598441091431">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="375" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1597628008223" />
-    <state width="1495" height="375" key="GridCell.Tab.1.left" timestamp="1597628008223">
+    <state width="1495" height="375" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1598441091431" />
+    <state width="1495" height="375" key="GridCell.Tab.1.left" timestamp="1598441091431">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="375" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1597628008223" />
-    <state width="1495" height="375" key="GridCell.Tab.1.right" timestamp="1597628008223">
+    <state width="1495" height="375" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1598441091431" />
+    <state width="1495" height="375" key="GridCell.Tab.1.right" timestamp="1598441091431">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="375" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1597628008223" />
+    <state width="1495" height="375" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1598441091431" />
     <state width="1183" height="408" key="GridCell.Tab.2.bottom" timestamp="1592056501057">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

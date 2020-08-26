@@ -30,7 +30,7 @@ public class UserRealm extends AuthorizingRealm {
         User user=userService.findByUsername(username);
         if(null==user){
             throw new UnknownAccountException();
-        }else if (Boolean.TRUE.equals(user.getLocked())){
+        }else if (user.getStatus().equals("0")){
             throw new LockedAccountException();
         }
         ByteSource salt = ByteSource.Util.bytes(user.getSalt());

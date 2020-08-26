@@ -36,6 +36,7 @@
         <commons-fileupload-version>1.4</commons-fileupload-version>
         <shiro-spring-version>1.4.1</shiro-spring-version>
         <shiro-ehcache-version>1.2.2</shiro-ehcache-version>
+        <easy-captcha-version>1.6.2</easy-captcha-version>
     </properties>
 
     <dependencies>
@@ -165,6 +166,12 @@
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-ehcache</artifactId>
             <version>${shiro-ehcache-version}</version>
+        </dependency>
+        <!--图形验证码-->
+        <dependency>
+            <groupId>com.github.whvcse</groupId>
+            <artifactId>easy-captcha</artifactId>
+            <version>${easy-captcha-version}</version>
         </dependency>
     </dependencies>
     <build>

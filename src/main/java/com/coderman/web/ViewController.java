@@ -11,8 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
  **/
 @Controller
 public class ViewController {
+
     @RequestMapping("/loginPage.do")
-    public String loginPage(){return "login";}
+    public String loginPage(){
+        return "login";
+    }
 
     @RequestMapping("/mainPage.do")
     public String mainPage(){return "main";}

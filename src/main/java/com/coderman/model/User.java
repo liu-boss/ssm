@@ -1,26 +1,42 @@
 package com.coderman.model;
 
-import org.hibernate.validator.constraints.NotBlank;
+import java.util.Date;
 
 public class User {
-    private Long id;
+    private Long userId;
 
-    @NotBlank(message = "用户名不能为空")
     private String username;
 
-    @NotBlank(message = "密码不能为空")
     private String password;
 
     private String salt;
 
-    private Boolean locked;
+    private String email;
 
-    public Long getId() {
-        return id;
+    private String mobile;
+
+    private String status;
+
+    private Date createTime;
+
+    private Date modifyTime;
+
+    private Date lastLoginTime;
+
+    private String sex;
+
+    private String avatar;
+
+    private String description;
+
+    private Long deptId;
+
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getUsername() {
@@ -47,11 +63,83 @@ public class User {
         this.salt = salt == null ? null : salt.trim();
     }
 
-    public Boolean getLocked() {
-        return locked;
+    public String getEmail() {
+        return email;
     }
 
-    public void setLocked(Boolean locked) {
-        this.locked = locked;
+    public void setEmail(String email) {
+        this.email = email == null ? null : email.trim();
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile == null ? null : mobile.trim();
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status == null ? null : status.trim();
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getModifyTime() {
+        return modifyTime;
+    }
+
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
+    }
+
+    public Date getLastLoginTime() {
+        return lastLoginTime;
+    }
+
+    public void setLastLoginTime(Date lastLoginTime) {
+        this.lastLoginTime = lastLoginTime;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex == null ? null : sex.trim();
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar == null ? null : avatar.trim();
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description == null ? null : description.trim();
+    }
+
+    public Long getDeptId() {
+        return deptId;
+    }
+
+    public void setDeptId(Long deptId) {
+        this.deptId = deptId;
     }
 }

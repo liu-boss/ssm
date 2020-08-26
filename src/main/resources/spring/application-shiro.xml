@@ -12,7 +12,7 @@
     <bean id="credentialsMatcher" class="com.coderman.shiro.credentials.RetryLimitHashedCredentialsMatcher">
         <constructor-arg ref="cacheManager"/>
         <property name="hashAlgorithmName" value="md5"/>
-        <property name="hashIterations" value="2"/>
+        <property name="hashIterations" value="1024"/>
         <property name="storedCredentialsHexEncoded" value="true"/>
     </bean>
 
@@ -44,6 +44,7 @@
                 <!--  url = 拦截规则（anon为匿名，authc为要登录后，才能访问，logout登出过滤） -->
                 /loginPage.do = anon
                 /user/login.do = anon
+                /user/captcha.do = anon
                 /user/logout.do = logout
                 /admin/** = authc, roles[admin]
                 /** = authc

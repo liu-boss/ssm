@@ -59,10 +59,26 @@
         <input class="easyui-passwordbox easyui-validatebox" id="password" value="123456" name="password"
                data-options="iconWidth:30,iconAlign:'left',prompt:'密码'" style="width:100%;height:35px;"/>
     </div>
+
+    <div style="overflow: hidden">
+        <input class="easyui-textbox easyui-validatebox" id="verCode" name="verCode"
+               data-options="iconCls:'icon-reload',iconWidth:30,iconAlign:'left',prompt:'验证码'"
+               style="width:60%;height:35px;float: left"/>
+        <img style="float: right" src="/user/captcha.do" id="yzm">
+
+        <script>
+            $('#yzm').css('cursor', 'pointer').click(function () {
+                $('#yzm').attr('src', '/user/captcha.do?time' + new Date().getTime());
+            });
+        </script>
+    </div>
+
     <div>
         <input class="easyui-checkbox" type="checkbox" id="remember" label="记住密码" labelPosition="after"
                labelWidth="70"/>
     </div>
+
+
     <div>
         <input class="easyui-linkbutton" type="button" id="loginBtn" value="登陆" style="width:100%;height:35px;"/>
     </div>
@@ -86,6 +102,7 @@
         $("#loginBtn").click(function () {
             let username = $("#username").val();
             let password = $("#password").val();
+            let verCode = $("#verCode").val();
             let remember = $("#remember").checkbox('options').checked;
             if (username == null || username === '') {
                 $.messager.alert('Warning', '用户名不能为空');
@@ -93,8 +110,11 @@
             } else if (password == null || password === '') {
                 $.messager.alert('Warning', '密码不能为空');
                 return;
+            } else if (verCode == null || verCode === '') {
+                $.messager.alert('Warning', '验证码不能为空');
+                return;
             }
-            let data = {username: username, password: password};
+            let data = {username: username, password: password, verCode: verCode};
             $.ajax({
                 url: '/user/login.do',
                 type: 'POST',
@@ -106,6 +126,7 @@
                     if (result.code === 0) {
                         window.location.href = '/mainPage.do';
                     } else {
+                        $('#yzm').attr('src', '/user/captcha.do?time' + new Date().getTime());
                         $.messager.alert('Error', result.msg, 'error')
                     }
                 }
