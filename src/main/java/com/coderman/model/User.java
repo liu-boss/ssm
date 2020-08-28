@@ -1,9 +1,11 @@
 package com.coderman.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class User {
-    private Long userId;
+    private Long id;
 
     private String username;
 
@@ -17,10 +19,13 @@ public class User {
 
     private String status;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date createTime;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date modifyTime;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date lastLoginTime;
 
     private String sex;
@@ -31,12 +36,22 @@ public class User {
 
     private Long deptId;
 
-    public Long getUserId() {
-        return userId;
+    private Integer type;
+
+    public Integer getType() {
+        return type;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -142,4 +157,8 @@ public class User {
     public void setDeptId(Long deptId) {
         this.deptId = deptId;
     }
+
+    public User() {
+    }
+
 }

@@ -61,7 +61,7 @@
     </div>
 
     <div style="overflow: hidden">
-        <input class="easyui-textbox easyui-validatebox" id="verCode" name="verCode"
+        <input class="easyui-textbox easyui-validatebox" id="verCode" name="verCode" value="123"
                data-options="iconCls:'icon-reload',iconWidth:30,iconAlign:'left',prompt:'验证码'"
                style="width:60%;height:35px;float: left"/>
         <img style="float: right" src="/user/captcha.do" id="yzm">

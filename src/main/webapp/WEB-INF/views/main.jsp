@@ -10,7 +10,7 @@
 <%--上--%>
 <div region="north" style="height: 50px; background-color: #E0ECFF">
     <div style="margin: 10px 20px;float: right">
-        欢迎<span style="color: red">[<shiro:principal/>]</span>登录，
+        欢迎<span style="color: red" >[<shiro:principal property="username"/>]</span>登录，
         <a style="color:blue;" href="${pageContext.request.contextPath}/user/logout.do">退出</a>
     </div>
 </div>
@@ -57,19 +57,19 @@
     //菜单数据,可以动态从后台加载: url: 请求路径
     let menu=[{
         text: '系统管理',
-        iconCls: 'icon-sum',
+        iconCls: 'icon-large-picture',
         state: 'open',
         children: [{
             url:'/userPage.do',
             text: '用户管理',
-            iconCls : 'icon-user'
+            iconCls : 'icon-large-clipart'
         }, {
             url:'/rolePage.do',
             text: '角色管理',
-            iconCls : 'icon-user'
+            iconCls : 'icon-more'
         }, {
             text: '部门管理',
-            iconCls : 'icon-user',
+            iconCls : 'icon-lock',
             url:'/deptPage.do',
         }]
     }, {
@@ -78,14 +78,14 @@
         state: 'open',
         children: [{
             text: '文档管理',
-            iconCls : 'icon-user',
+            iconCls : 'icon-large-shapes',
             url:'/admin/test.do',
         }, {
             text: '下载管理',
-            iconCls : 'icon-user'
+            iconCls : 'icon-large-picture'
         }, {
             text: 'Option6',
-            iconCls : 'icon-user'
+            iconCls : 'icon-large-picture'
         }]
     }];
 

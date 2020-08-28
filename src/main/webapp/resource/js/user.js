@@ -4,35 +4,56 @@ let userAddForm;
 let userEditForm;
 let userAddDialog;
 let userEditDialog;
-let ctx=null;
+let userAddDeptSelectTree;
+let userEditDeptSelectTree;
+let userAddRoleSelect;
+let userEditRoleSelect;
+let treeElement;
+let ctx = null;
 
 let user = {
     init: function (contextPath) {
-        ctx=contextPath;
+        ctx = contextPath;
         userTable = $("#user_table"); //表格
         userAddForm = $("#user_add_form"); //添加表单
         userEditForm = $("#user_edit_form"); //编辑表单
         userAddDialog = $("#user_add_dialog"); //添加弹框
         userEditDialog = $("#user_edit_dialog"); //编辑弹框
         userSearchForm = $("#user_search_form");//模糊查询
+        userAddDeptSelectTree = $("#user_add_dept_select_tree");//下拉树(添加)
+        userEditDeptSelectTree = $("#user_edit_dept_select_tree");//下拉树(添加)
+        userAddRoleSelect=$("#user_add_role_select");//添加角色组件
+        userEditRoleSelect=$("#user_edit_role_select");//编辑角色组件
+        treeElement = $("#dept_tree");
+        user.initDeptTree();//初始化部门树
         user.initTable(); //初始化表格
     },
     URL: {
         list: function () {
-            return ctx+'/user/list.do';
+            return ctx + '/user/list.do';
         },
         delete: function () {
-            return ctx+'/user/delete.do';
+            return ctx + '/user/delete.do';
         },
         add: function () {
-            return ctx+'/user/add.do';
+            return ctx + '/user/add.do';
         },
         get: function (id) {
-            return ctx+'/user/get.do?id=' + id;
+            return ctx + '/user/get.do?id=' + id;
         },
         update: function () {
-            return ctx+'/user/update.do';
-        }
+            return ctx + '/user/update.do';
+        },
+        queryRole:function(id){
+            return ctx+'/user/queryRole.do?id='+id;
+        },
+        deptTree: function () {
+            return ctx + '/dept/tree.do';
+        },
+        roleAll: function () {
+            return ctx+ '/role/listAll.do';
+        },
+
     },
     //初始化表格数据
     initTable: function () {
@@ -42,38 +63,61 @@ let user = {
             autoSave: true,//自动保存
             fit: true,
             collapsible: true,
-            fitColumns: true,
+            fitColumns: false,
             toolbar: '#user_toolbar',//绑定工具栏
             pagination: true,  //是否开启分页
-            pageList: [5, 12, 15, 20],
-            pageSize: 12,
+            pageList: [10, 15, 20, 30],
+            pageSize: 10,
             rownumbers: true, //显示行列号
             showFooter: true,
             singleSelect: false, //只可以选择1行
             columns: [[
-                {field: 'id', title: 'ID', width: 100, checkbox: true},
-                {field: 'phone', title: '电话号码', width: 250, align: 'center'},
-                {field: 'role', title: '角色', width: 200, align: 'center'},
-                {field: 'password', title: '密码', width: 200, align: 'center'},
-                {field: 'username', title: '用户名', width: 200, align: 'center'},
+                {field: 'id', title: 'ID', checkbox: true},
+                {field: 'username', title: '用户名', width: 120, align: 'center'},
+                {field: 'mobile', title: '电话号码', width: 130, align: 'center'},
+                {field: 'email', title: '邮箱', width: 150, align: 'center'},
                 {
-                    field: 'sex', title: '性别', width: 200, align: 'center',
+                    field: 'status', title: '状态', width: 120, align: 'center',
                     formatter: function (value, row, index) {
-                        return row.sex === 1 ? '男+'+ctx : '女'
+                        return row.status === '1' ? '<font color="green">可用</font>' : '<font color="red">禁用</font>'
+                    }
+                },
+                {field: 'description', title: '描述信息', width: 220, align: 'center'},
+                {field: 'createTime', title: '创建时间', width: 150, align: 'center'},
+                {field: 'modifyTime', title: '修改时间', width: 150, align: 'center'},
+                {field: 'lastLoginTime', title: '最近登入时间', width: 150, align: 'center'},
+                {
+                    field: 'sex', title: '性别', width: 150, align: 'center',
+                    formatter: function (value, row, index) {
+                        if (row.sex === '2') {
+                            return '保密';
+                        }
+                        return row.sex === 0 ? '男' : '女'
                     }
                 }
             ]]
         });
     },
+    //加载部门树
+    initDeptTree: function () {
+        treeElement.tree({
+            url: user.URL.deptTree(),
+            //点击节点
+            onClick: function (node) {
+                $("#deptId").val(node.id);
+                user.search();
+            }
+        });
+    },
     //查询
     search: function () {
         userTable.datagrid('load', {
-            username: $('#user_search_form #username').val(),
-            role: $('#user_search_form #role').val(),
-            phone: $('#user_search_form #phone').val(),
-            sex: $('#user_search_form #sex').val(),
-            startTime: $('#user_search_form #startTime').val(),
-            endTime: $('#user_search_form #endTime').val()
+            username: userSearchForm.find("#username").val(),
+            email: userSearchForm.find("#email").val(),
+            mobile: userSearchForm.find("#mobile").val(),
+            sex: userSearchForm.find("#sex").val(),
+            status: userSearchForm.find("#status").val(),
+            deptId: userSearchForm.find("#deptId").val(),
         });
     },
     //添加
@@ -85,14 +129,14 @@ let user = {
                 return $(this).form('validate');
             },
             success: function (result) {
-                console.log(result)
-                if (result) {
-                    $.messager.alert('提示', '添加成功');
+                let res = $.parseJSON(result);
+                if (res.code === 0) {
+                    $.messager.alert('提示', '添加成功', 'info');
                     user.closeAddDialog();
-                    user.clear(userAddForm);
+                    user.clear(userAddForm,false);
                     user.reload();
                 } else {
-                    $.messager.alert('提示信息', "添加失败", 'warning');
+                    $.messager.alert('提示信息', "添加失败:" + res.msg, 'warning');
                 }
             }
         });
@@ -123,7 +167,7 @@ let user = {
                         userTable.datagrid("reload"); //删除成功后 刷新页面
                         $.messager.alert('提示', '删除成功！', 'info');
                     } else {
-                        $.messager.alert('提示信息', '删除失败，请联系管理员！', 'warning');
+                        $.messager.alert('提示信息', '删除失败:' + jsonObj.msg, 'warning');
                     }
                 }, "JSON");
             }
@@ -138,13 +182,14 @@ let user = {
                 return $(this).form('validate');
             },
             success: function (result) {
-                if (result) {
+                let res = $.parseJSON(result);
+                if (res.code === 0) {
                     $.messager.alert('提示', '更新成功', 'info');
                     user.closeEditDialog();
-                    user.clear(userEditForm);
+                    user.clear(userEditForm,false);
                     user.reload();
                 } else {
-                    $.messager.alert('提示信息', "更新失败", 'error');
+                    $.messager.alert('提示信息', "更新失败:" + res.msg, 'error');
                 }
             }
         });
@@ -152,10 +197,29 @@ let user = {
     //显示添加框
     showAddDialog: function () {
         userAddDialog.dialog('open').dialog('setTitle', '添加');
+        userAddDeptSelectTree.combotree({
+            url: user.URL.deptTree(),
+        });
+        userAddRoleSelect.combogrid({
+            url: user.URL.roleAll(),
+            delay: 500,
+            panelWidth:450,
+            mode: 'remote',
+            editable:false,
+            idField:'id',
+            textField:'roleName',
+            multiple:true,
+            columns:[[
+                {field:'id',title:'Id',width:60,checkbox: true},
+                {field:'roleName',title:'角色名称',width:100},
+                {field:'remark',title:'角色描述',width:150},
+                {field:'createTime',title:'创建时间',width:180}
+            ]]
+        });
     },
     //关闭添加框
     closeAddDialog: function () {
-        user.clear(userAddDialog)
+        user.clear(userAddDialog,false)
         userAddDialog.dialog('close');
     },
     //显示编辑框
@@ -169,13 +233,49 @@ let user = {
             $.messager.alert("对话框", "只能选择一行", 'warning');
             return;
         }
+        userEditDeptSelectTree.combotree({
+            url: user.URL.deptTree(),
+        });
+        //加载用户已有的角色
+        $.ajax({
+            type: "GET",
+            url: user.URL.queryRole(sels[0].id),
+            success: function (res) {
+                if (res.code === 0) {
+                    let roles="";
+                    if(res.data.length>0){
+                        roles=res.data.join(",");
+                    }
+                    userEditRoleSelect.combogrid({
+                        url: user.URL.roleAll(),
+                        delay: 500,
+                        value:roles,
+                        panelWidth:450,
+                        mode: 'remote',
+                        editable:false,
+                        idField:'id',
+                        textField:'roleName',
+                        multiple:true,
+                        columns:[[
+                            {field:'id',title:'Id',width:60,checkbox: true},
+                            {field:'roleName',title:'角色名称',width:100},
+                            {field:'remark',title:'角色描述',width:150},
+                            {field:'createTime',title:'创建时间',width:180}
+                        ]]
+                    });
+                } else {
+                    alert(data.msg);
+                }
+            }
+        });
+
         $.ajax({
             type: "GET",
             url: user.URL.get(sels[0].id),
             success: function (data) {
                 if (data.code === 0) {
                     userEditForm.form("load", data.data);
-                    userEditDialog.dialog('open');
+                    userEditDialog.dialog('open').dialog('setTitle', '编辑');
                 } else {
                     alert(data.msg);
                 }
@@ -184,12 +284,15 @@ let user = {
     },
     //关闭编辑框
     closeEditDialog: function () {
-        user.clear(userEditForm)
+        user.clear(userEditForm,false)
         userEditDialog.dialog('close');
     },
     //重置表单
-    clear: function (formElement) {
+    clear: function (formElement,loadTree) {
         formElement.form('clear');
+        if(loadTree){
+            user.initDeptTree();
+        }
     },
     //刷新
     reload: function () {
