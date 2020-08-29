@@ -1,5 +1,6 @@
 package com.coderman.web;
 
+import com.coderman.exception.BizException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
  **/
 @Controller
 public class ViewController {
+
+    //部门管理
+    @RequestMapping(value = "/deptPage.do",method = RequestMethod.GET)
+    public String deptPage(){ return "system/dept"; }
 
     //角色管理
     @RequestMapping(value = "/rolePage.do",method = RequestMethod.GET)

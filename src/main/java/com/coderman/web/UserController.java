@@ -46,6 +46,13 @@ public class UserController {
         return new EasyUIData<>(pageInfo.getTotal(), pageInfo.getList());
     }
 
+    @RequestMapping(value = "/resetPassword.do",method = RequestMethod.GET)
+    @ResponseBody
+    public JsonData resetPassword(@RequestParam("id") Long userId){
+        userService.resetPassword(userId);
+        return JsonData.success();
+    }
+
     @RequestMapping(value = "/queryRole.do", method = RequestMethod.GET)
     @ResponseBody
     public JsonData queryRole(@RequestParam("id") String userId){

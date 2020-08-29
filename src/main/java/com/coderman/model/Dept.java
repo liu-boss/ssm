@@ -15,6 +15,8 @@ public class Dept {
 
     private Date modifyTime;
 
+    private String remark;
+
     public Long getId() {
         return id;
     }
@@ -61,5 +63,13 @@ public class Dept {
 
     public void setModifyTime(Date modifyTime) {
         this.modifyTime = modifyTime;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark == null ? null : remark.trim();
     }
 }

@@ -1,6 +1,7 @@
 package com.coderman.vo;
 
 import com.coderman.util.TreeObject;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
@@ -23,9 +24,14 @@ public class DeptTreeVO implements TreeObject {
 
     private Long orderNum;
 
+    private String remark;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date createTime;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date modifyTime;
+
 
     private List<TreeObject> children;
 
@@ -102,5 +108,13 @@ public class DeptTreeVO implements TreeObject {
 
     public void setModifyTime(Date modifyTime) {
         this.modifyTime = modifyTime;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 }

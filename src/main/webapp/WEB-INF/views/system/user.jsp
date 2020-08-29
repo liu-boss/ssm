@@ -3,10 +3,12 @@
 <%@ include file="/WEB-INF/views/common/link.jsp" %>
 
 <body class="easyui-layout">
-<div data-options="region:'west',title:'West',split:true" style="width:150px;">
+<div data-options="region:'west',title:'部门树',split:true" style="width:150px;">
     <ul id="dept_tree" data-options="lines:true"></ul>
 </div>
 <div data-options="region:'center',title:'管理中心'" style="padding:5px;background:#eee;">
+
+
     <%--数据表格--%>
     <table id="user_table"></table>
 
@@ -14,13 +16,16 @@
     <div id="user_toolbar" style="display: none">
         <%--    操作按钮--%>
         <div style="margin-bottom:5px">
-            <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="user.showAddDialog()">添加</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true"
+            <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="false" onclick="user.openAll()">展开所有</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-lock" plain="false" onclick="user.closeAll()">折叠所有</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="false" onclick="user.showAddDialog()">添加</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="false"
                onclick="user.showEditDialog()">修改</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true">保存</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true">剪切</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="true" onclick="user.delete()">移除</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="user.reload()">刷新</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="false">保存</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="false">剪切</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="false" onclick="user.delete()">移除</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="false" onclick="user.reload()">刷新</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-mini-refresh" plain="false" onclick="user.resetPassword()">重置密码</a>
         </div>
         <%--    搜索表单--%>
         <form id="user_search_form">
@@ -91,7 +96,6 @@
                     <td></td>
                 </tr>
                 <tr>
-
                     <td></td>
                     <td><label>状态:</label></td>
                     <td>

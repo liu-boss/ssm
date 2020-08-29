@@ -22,4 +22,5 @@ public interface UserService {
     User getById(Long id);
     void update(UserUpdateParam updateParam); //更新用户
     Set<Long> queryRolesById(String userId); //用户角色id集合
+    void resetPassword(Long userId); //重置用户密码
 }

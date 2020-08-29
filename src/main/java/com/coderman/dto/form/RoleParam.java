@@ -12,8 +12,8 @@ public class RoleParam {
 
     private Long id;
 
-    @NotEmpty(message = "姓角色名称不能为空")
-    @Length(max = 10, min = 2,message = "姓名长度限制2~10字符")
+    @NotEmpty(message = "角色名称不能为空")
+    @Length(max = 10, min = 2,message = "角色名称长度限制2~10字符")
     private String roleName;
 
     private String remark;

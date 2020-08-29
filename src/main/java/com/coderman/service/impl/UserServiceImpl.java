@@ -67,12 +67,13 @@ public class UserServiceImpl implements UserService {
             user.setSalt(salt);
             user.setPassword(MD5Util.encryptPassword(userAddParam.getPassword(), salt));
             userMapper.insert(user);
-            assignedRoleList(user.getId(),userAddParam.getRoleIdList());//分配角色
+            assignedRoleList(user.getId(), userAddParam.getRoleIdList());//分配角色
         }
     }
 
     /**
      * 用户分配角色
+     *
      * @param id
      * @param roleIdList
      */
@@ -80,8 +81,8 @@ public class UserServiceImpl implements UserService {
         //先清除用户-角色关联
         userMapper.clearRoleList(id);
         //添加用户-角色关联
-        if(roleIdList!=null&&roleIdList.length!=0&&id!=null){
-            userMapper.assignedRoleList(id,roleIdList);
+        if (roleIdList != null && roleIdList.length != 0 && id != null) {
+            userMapper.assignedRoleList(id, roleIdList);
         }
     }
 
@@ -110,7 +111,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void update(UserUpdateParam updateParam) {
-        Long id=updateParam.getId();
+        Long id = updateParam.getId();
         if (userMapper.checkByUsername(updateParam.getUsername(), id) > 0) { //校验用户名可用性
             throw new ParamException("用户名已被占用");
         } else if (userMapper.checkByEmail(updateParam.getEmail(), id) > 0) { //校验邮箱可用性
@@ -123,13 +124,29 @@ public class UserServiceImpl implements UserService {
             user.setModifyTime(new Date());
             userMapper.updateByPrimaryKeySelective(user);
             //更新用户-角色关联
-            assignedRoleList(id,updateParam.getRoleIdList());
+            assignedRoleList(id, updateParam.getRoleIdList());
         }
     }
 
     @Override
     public Set<Long> queryRolesById(String userId) {
         return userMapper.queryRolesById(userId);
+    }
+
+    @Override
+    public void resetPassword(Long userId) {
+        User user = userMapper.selectByPrimaryKey(userId);
+        if(user==null){
+            throw new ParamException("用户不存在");
+        }else {
+            RandomNumberGenerator randomNumberGenerator = new SecureRandomNumberGenerator();
+            String salt = randomNumberGenerator.nextBytes().toHex();
+            String password = MD5Util.encryptPassword(ProjectConstant.DEFAULT_PASSWORD,salt);
+            user.setPassword(password);
+            user.setSalt(salt);
+            user.setModifyTime(new Date());
+            userMapper.updateByPrimaryKeySelective(user);
+        }
     }
 
     @Override

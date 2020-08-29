@@ -4,6 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <settings>
+        <!-- 表示开启缓存 -->
+        <setting name="cacheEnabled" value="true" />
 <!--        使用列标签代替列名-->
         <setting name="useColumnLabel" value="true"/>
 <!--        插入时返回主键-->

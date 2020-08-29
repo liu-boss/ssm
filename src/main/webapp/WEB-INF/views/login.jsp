@@ -48,7 +48,7 @@
 <body>
 <form action="#">
     <div>
-        <h1>用户登录</h1>
+        <h1>后台系统登录</h1>
     </div>
     <div>
         <input class="easyui-textbox easyui-validatebox" id="username" value="zhangyukang" name="username"
@@ -96,10 +96,10 @@
 
 <script type="text/javascript">
     $(function () {
+
         /**
-         * 点击登入
          */
-        $("#loginBtn").click(function () {
+        function login(){
             let username = $("#username").val();
             let password = $("#password").val();
             let verCode = $("#verCode").val();
@@ -124,14 +124,36 @@
                 async: false,
                 success: function (result) {
                     if (result.code === 0) {
-                        window.location.href = '/mainPage.do';
+                        let win = $.messager.progress({
+                            title:'登入成功,正在跳转到后台',
+                            msg:'Loading data...'
+                        });
+                        setTimeout(function(){
+                            $.messager.progress('close');
+                            window.location.href = '/mainPage.do';
+                        },1000)
                     } else {
                         $('#yzm').attr('src', '/user/captcha.do?time' + new Date().getTime());
                         $.messager.alert('Error', result.msg, 'error')
                     }
                 }
             });
-        })
+        }
+        /**
+         * 点击登入
+         */
+        $("#loginBtn").click(function () {
+            login();
+        });
+        /**
+         * 回车登入
+         */
+        document.onkeydown=function (e) {
+            let ev = document.all ? window.event : e;
+            if(ev.keyCode===13) {
+                login()
+            }
+        };
     })
 </script>
 

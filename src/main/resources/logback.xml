@@ -28,7 +28,6 @@
             <MaxFileSize>10MB</MaxFileSize>
         </triggeringPolicy>
     </appender>
-    　　　
     <!-- 日志输出级别 -->
     <root level="DEBUG">
         <appender-ref ref="STDOUT" />

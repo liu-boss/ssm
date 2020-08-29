@@ -7,9 +7,10 @@
     <%@ include file="/WEB-INF/views/common/link.jsp"%>
 </head>
 <body class="easyui-layout">
-<%--上--%>
+<%--上#E0ECFF--%>
 <div region="north" style="height: 50px; background-color: #E0ECFF">
-    <div style="margin: 10px 20px;float: right">
+    <img src="/resource/image/logo.png" height="100%" style="float:left;margin-left: 10px;">
+    <div style="margin: 10px 20px;float: right;overflow: hidden">
         欢迎<span style="color: red" >[<shiro:principal property="username"/>]</span>登录，
         <a style="color:blue;" href="${pageContext.request.contextPath}/user/logout.do">退出</a>
     </div>
@@ -21,11 +22,17 @@
 <%--主体--%>
 <div data-options="region:'center'" style="background:#fff3f3;">
     <!--选项卡使用-->
-    <div id="div_tabs" class="easyui-tabs" data-options="fit:true,border:false">
+    <div id="div_tabs" class="easyui-tabs" data-options="tools:'#tab-tools',fit:true,border:true">
         <!--首页-->
         <div id="windows" title="用户管理" style="background-color: #ffffff;background-size: cover;">
            <iframe src="${pageContext.request.contextPath}/userPage.do" style='width:100%;height:98%' frameborder='0'></iframe>
         </div>
+    </div>
+    <div id="tab-tools">
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'"
+           onclick="addPanel()"></a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
+           onclick="removePanel()"></a>
     </div>
 </div>
 <%--下--%>
@@ -51,6 +58,24 @@
                 closable:true,
                 content:"<iframe src="+item.url+" style='width:100%;height:98%' frameborder='0'/>"
             })
+        }
+    }
+
+    //table标签页add+remove
+    let index = 0;
+    function addPanel() {
+        index++;
+        $('#div_tabs').tabs('add', {
+            title: 'Tab' + index,
+            content: '<div style="padding:10px">Content' + index + '</div>',
+            closable: true
+        });
+    }
+    function removePanel() {
+        let tab = $('#div_tabs').tabs('getSelected');
+        if (tab) {
+            let index = $('#div_tabs').tabs('getTabIndex', tab);
+            $('#div_tabs').tabs('close', index);
         }
     }
 
@@ -90,4 +115,5 @@
     }];
 
 </script>
+
 

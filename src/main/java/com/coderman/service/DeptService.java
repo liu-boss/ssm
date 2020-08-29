@@ -1,5 +1,7 @@
 package com.coderman.service;
 
+import com.coderman.dto.form.DeptParam;
+import com.coderman.model.Dept;
 import com.coderman.util.TreeObject;
 
 import java.util.List;
@@ -11,4 +13,8 @@ import java.util.List;
  **/
 public interface DeptService {
     List<TreeObject> tree(); //部门树
+    Dept getById(Long id);
+    void add(DeptParam deptParam);
+    void delete(Long id); //删除
+    void update(DeptParam deptParam);
 }

@@ -8,6 +8,10 @@ package com.coderman.common;
  **/
 public interface ProjectConstant {
 
+
+    /** 默认密码*/
+    String DEFAULT_PASSWORD="123456";
+
     /** 性别*/
     int SEX_MAN=0; //男
     int SEX_FEMALE=1; //女
