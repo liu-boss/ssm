@@ -21,7 +21,7 @@
     delete from t_role
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.coderman.model.Role">
+  <insert id="insert" parameterType="com.coderman.model.Role" keyProperty="id" useGeneratedKeys="true">
     insert into t_role (id, role_name, remark,
       create_time, modify_time)
     values (#{id,jdbcType=BIGINT}, #{roleName,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR},
@@ -127,5 +127,40 @@
     <include refid="Base_Column_List"/>
     from t_role
   </select>
+
+  <select id="findUserRole" resultMap="BaseResultMap">
+        SELECT
+            r.*
+        FROM
+            t_role r
+        LEFT JOIN t_user_role ur ON (r.id = ur.role_id)
+        LEFT JOIN t_user u ON (u.id = ur.user_id)
+        WHERE
+            u.username = #{username}
+    </select>
+
+  <delete id="clearMenuList">
+    delete from t_role_menu
+    where role_id=#{id}
+  </delete>
+
+  <!-- 关联用户和角色-->
+  <insert id="roleAuthorization">
+    insert into t_role_menu (role_id,menu_id)
+    values
+    <foreach collection="menuIdList" item="menuId" separator=",">
+      (
+      #{roleId,jdbcType=BIGINT},
+      #{menuId,jdbcType=BIGINT}
+      )
+    </foreach>
+  </insert>
+
+  <select id="queryMenusById" resultType="Long">
+        select
+        menu_id
+        from t_role_menu
+        where role_id=#{roleId}
+    </select>
 
 </mapper>

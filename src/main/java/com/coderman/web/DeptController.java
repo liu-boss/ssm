@@ -2,15 +2,12 @@ package com.coderman.web;
 
 import com.coderman.common.JsonData;
 import com.coderman.dto.form.DeptParam;
-import com.coderman.dto.form.UserAddParam;
-import com.coderman.dto.form.UserUpdateParam;
 import com.coderman.exception.ParamException;
 import com.coderman.model.Dept;
-import com.coderman.model.User;
 import com.coderman.service.DeptService;
 import com.coderman.util.BeanValidator;
 import com.coderman.util.TreeObject;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +23,7 @@ import java.util.List;
  * @Version 1.0
  **/
 @Controller
-@RequestMapping("/dept")
+@RequestMapping("/system/dept")
 public class DeptController {
 
     @Autowired
@@ -45,6 +42,7 @@ public class DeptController {
         return JsonData.success(dept);
     }
 
+    @RequiresPermissions({"system:dept:add"})
     @RequestMapping(value = "/add.do", method = RequestMethod.POST)
     @ResponseBody
     public JsonData add(DeptParam deptParam) throws ParamException {
@@ -53,6 +51,7 @@ public class DeptController {
         return JsonData.success();
     }
 
+    @RequiresPermissions({"system:dept:delete"})
     @RequestMapping(value = "/delete.do", method = RequestMethod.POST)
     @ResponseBody
     public JsonData delete(@RequestParam("id") Long id){
@@ -60,7 +59,7 @@ public class DeptController {
         return JsonData.success();
     }
 
-
+    @RequiresPermissions({"system:dept:update"})
     @RequestMapping(value = "/update.do", method = RequestMethod.POST)
     @ResponseBody
     public JsonData update(DeptParam deptParam) throws ParamException {

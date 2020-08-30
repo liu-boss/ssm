@@ -34,4 +34,24 @@ public interface ProjectConstant {
             return value;
         }
     }
+
+    /** 权限类型*/
+    enum MenuType{
+        MENU("0","菜单"),
+        BUTTON("1","按钮");
+        private String value;
+        private String desc;
+        MenuType(String value, String desc) {
+            this.value = value;
+            this.desc = desc;
+        }
+
+        public String getValue() {
+            return value;
+        }
+
+        public String getDesc() {
+            return desc;
+        }
+    }
 }

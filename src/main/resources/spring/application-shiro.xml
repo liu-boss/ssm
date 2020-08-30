@@ -9,7 +9,7 @@
     </bean>
 
     <!-- 凭证匹配器 -->
-    <bean id="credentialsMatcher" class="com.coderman.shiro.credentials.RetryLimitHashedCredentialsMatcher">
+    <bean id="credentialsMatcher" class="com.coderman.common.shiro.credentials.RetryLimitHashedCredentialsMatcher">
         <constructor-arg ref="cacheManager"/>
         <property name="hashAlgorithmName" value="md5"/>
         <property name="hashIterations" value="1024"/>
@@ -17,7 +17,7 @@
     </bean>
 
     <!--自定义realm-->
-    <bean id="userRealm" class="com.coderman.shiro.realm.UserRealm">
+    <bean id="userRealm" class="com.coderman.common.shiro.realm.UserRealm">
         <property name="credentialsMatcher" ref="credentialsMatcher"/>
         <property name="cachingEnabled" value="true"/>
         <property name="authenticationCachingEnabled" value="true"/>
@@ -32,7 +32,7 @@
         <!-- Shiro的核心安全接口,这个属性是必须的 -->
         <property name="securityManager" ref="securityManager"/>
         <!-- 身份认证失败，则跳转到登录页面的配置 -->
-        <property name="loginUrl" value="/loginPage.do"/>
+        <property name="loginUrl" value="/system/loginPage.do"/>
         <!-- 登录成功后的页面:(后台主页面) -->
         <property name="successUrl" value="/mainPage.do"/>
         <!-- 登录后访问没有权限的页面后跳转的页面 -->
@@ -42,12 +42,10 @@
             <value>
                 <!-- 注意：规则是有顺序的，从上到下，拦截范围必须是从小到大的 -->
                 <!--  url = 拦截规则（anon为匿名，authc为要登录后，才能访问，logout登出过滤） -->
-                /loginPage.do = anon
-                /user/login.do = anon
-                /user/captcha.do = anon
-                /user/logout.do = logout
-                /admin/** = authc, roles[admin]
-                /** = authc
+                /system/loginPage.do = anon
+                /system/user/login.do = anon
+                /system/user/captcha.do = anon
+                /system/** = authc
             </value>
         </property>
         <property name="filters">
@@ -58,7 +56,7 @@
         </property>
     </bean>
     <!--解决前后端(页面跳转问题)跳转页面的filter-->
-    <bean id="restLoginAuthorizationFilter" class="com.coderman.shiro.filter.RestLoginAuthorizationFilter"/>
+    <bean id="restLoginAuthorizationFilter" class="com.coderman.common.shiro.filter.RestLoginAuthorizationFilter"/>
 
     <!-- 配置 shiro 的核心组件：securityManager -->
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">

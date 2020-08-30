@@ -4,4 +4,6 @@
 <script src="${pageContext.request.contextPath}/resource/easyui/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/resource/easyui/jquery.easyui.min.js"></script>
 <script src="${pageContext.request.contextPath}/resource/easyui/locale/easyui-lang-zh_CN.js"></script>
+<!-- 解决页面加载闪动的问题 -->
+<%@ include file="/WEB-INF/views/common/loading.jsp"%>
 

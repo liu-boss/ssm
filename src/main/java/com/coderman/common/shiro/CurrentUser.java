@@ -1,4 +1,4 @@
-package com.coderman.common;
+package com.coderman.common.shiro;
 
 /**
  * 当前登入系统的用户

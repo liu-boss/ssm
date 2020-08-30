@@ -21,19 +21,19 @@ let dept = {
     },
     URL: {
         tree: function () {
-            return ctx + '/dept/tree.do';
+            return ctx + '/system/dept/tree.do';
         },
         delete: function () {
-            return ctx + '/dept/delete.do';
+            return ctx + '/system/dept/delete.do';
         },
         add: function () {
-            return ctx + '/dept/add.do';
+            return ctx + '/system/dept/add.do';
         },
         get: function (id) {
-            return ctx + '/dept/get.do?id=' + id;
+            return ctx + '/system/dept/get.do?id=' + id;
         },
         update: function () {
-            return ctx + '/dept/update.do';
+            return ctx + '/system/dept/update.do';
         },
     },
     //初始化表格数据
@@ -53,13 +53,13 @@ let dept = {
             singleSelect: true, //只可以选择1行
             columns: [[
                 {field: 'id', title: 'ID'},
-                {field: 'text', title: '部门名', width: 100, align: 'center'},
+                {field: 'text', title: '部门名', width: 100, align: 'left'},
                 {field: 'orderNum', title: '排序', width: 120, align: 'center'},
                 {field: 'remark', title: '备注信息', width: 120, align: 'center'},
                 {field: 'createTime', title: '创建时间', width: 150, align: 'center'},
                 {field: 'modifyTime', title: '修改时间', width: 150, align: 'center'},
             ]],
-            onLoadSuccess: function(){  deptTable.treegrid("collapseAll");  }
+            onLoadSuccess: function(){  dept.openAll()  }
         });
     },
     //添加

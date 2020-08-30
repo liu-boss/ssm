@@ -9,14 +9,17 @@ import com.coderman.service.RoleService;
 import com.coderman.util.BeanValidator;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.test.annotation.Repeat;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @Author zhangyukang
@@ -24,11 +27,19 @@ import java.util.List;
  * @Version 1.0
  **/
 @Controller
-@RequestMapping("/role")
+@RequestMapping("/system/role")
 public class RoleController {
 
     @Autowired
     private RoleService roleService;
+
+    //查询角色的权限
+    @RequestMapping(value = "/queryMenu.do", method = RequestMethod.GET)
+    @ResponseBody
+    public JsonData queryMenu(@RequestParam("id") String roleId){
+        Set<Long> menuIdSet=roleService.queryMenusById(roleId);
+        return JsonData.success(menuIdSet);
+    }
 
     @RequestMapping(value = "/listAll.do", method = RequestMethod.POST)
     @ResponseBody
@@ -48,6 +59,7 @@ public class RoleController {
         return new EasyUIData<>(pageInfo.getTotal(), pageInfo.getList());
     }
 
+    @RequiresPermissions({"system:role:add"})
     @RequestMapping(value = "/add.do", method = RequestMethod.POST)
     @ResponseBody
     public JsonData add(RoleParam roleParam) throws ParamException {
@@ -63,6 +75,7 @@ public class RoleController {
         return JsonData.success(role);
     }
 
+    @RequiresPermissions({"system:role:update"})
     @RequestMapping(value = "/update.do", method = RequestMethod.POST)
     @ResponseBody
     public JsonData update(RoleParam roleParam) throws ParamException {
@@ -71,6 +84,7 @@ public class RoleController {
         return JsonData.success();
     }
 
+    @RequiresPermissions({"system:role:delete"})
     @RequestMapping(value = "/delete.do", method = RequestMethod.POST)
     @ResponseBody
     public JsonData delete(@RequestParam("id") String strIds) throws ParamException {

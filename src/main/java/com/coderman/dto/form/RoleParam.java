@@ -17,6 +17,16 @@ public class RoleParam {
     private String roleName;
 
     private String remark;
+    //角色的权限配置
+    private Long[] menuIdList;
+
+    public Long[] getMenuIdList() {
+        return menuIdList;
+    }
+
+    public void setMenuIdList(Long[] menuIdList) {
+        this.menuIdList = menuIdList;
+    }
 
     public Long getId() {
         return id;

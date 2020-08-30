@@ -78,10 +78,10 @@ public class UserServiceImpl implements UserService {
      * @param roleIdList
      */
     private void assignedRoleList(Long id, Long[] roleIdList) {
-        //先清除用户-角色关联
-        userMapper.clearRoleList(id);
-        //添加用户-角色关联
         if (roleIdList != null && roleIdList.length != 0 && id != null) {
+            //先清除用户-角色关联
+            userMapper.clearRoleList(id);
+            //添加用户-角色关联
             userMapper.assignedRoleList(id, roleIdList);
         }
     }

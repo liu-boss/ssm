@@ -5,6 +5,7 @@ import com.coderman.exception.ParamException;
 import com.coderman.model.Role;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @Author zhangyukang
@@ -18,5 +19,6 @@ public interface RoleService {
     Role getById(Long id);
     void update(RoleParam roleParam); //更新角色
     List<Role> listAll();
-
+    List<Role> findUserRole(String userName); //根据用户名获取角色
+    Set<Long> queryMenusById(String roleId);//查看角色的权限集合(id)
 }

@@ -48,7 +48,7 @@
     </bean>
 
     <!-- 凭证匹配器 -->
-    <bean id="credentialsMatcher" class="com.coderman.shiro.credentials.RetryLimitHashedCredentialsMatcher">
+    <bean id="credentialsMatcher" class="com.coderman.common.shiro.credentials.RetryLimitHashedCredentialsMatcher">
         <constructor-arg ref="cacheManager"/>
         <property name="hashAlgorithmName" value="md5"/>
         <property name="hashIterations" value="2"/>
@@ -56,7 +56,7 @@
     </bean>
 
     <!--自定义realm-->
-    <bean id="userRealm" class="com.coderman.shiro.realm.UserRealm">
+    <bean id="userRealm" class="com.coderman.common.shiro.realm.UserRealm">
         <property name="credentialsMatcher" ref="credentialsMatcher"/>
         <property name="cachingEnabled" value="true"/>
         <property name="authenticationCachingEnabled" value="true"/>
@@ -119,27 +119,3 @@
 ```
 
 #### 5. RBAC系统搭建
-
-##### 5.1 数据库设计
-
-**用户表**
-```sql
-CREATE TABLE `t_user`  (
-                           `user_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
-                           `username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户名',
-                           `password` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '密码',
-                           `dept_id` bigint(20) NULL DEFAULT NULL COMMENT '部门ID',
-                           `email` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '邮箱',
-                           `mobile` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '联系电话',
-                           `status` char(1) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '状态 0锁定 1有效',
-                           `create_time` datetime(0) NOT NULL COMMENT '创建时间',
-                           `modifu_time` datetime(0) NULL DEFAULT NULL COMMENT '修改时间',
-                           `last_login_time` datetime(0) NULL DEFAULT NULL COMMENT '最近访问时间',
-                           `sex` char(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '性别 0男 1女 2保密',
-                           `avatar` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '头像',
-                           `description` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '描述',
-                           PRIMARY KEY (`user_id`) USING BTREE,
-                           KEY `t_user_username` (`USERNAME`),
-                           KEY `t_user_mobile` (`MOBILE`)
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户表' ROW_FORMAT = Dynamic;
-```

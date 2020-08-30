@@ -38,7 +38,7 @@ public class SpringExceptionResolver implements HandlerExceptionResolver {
             } else if (ex instanceof UnauthorizedException) {
                 UnauthorizedException exception = (UnauthorizedException) ex;
                 log.error("ajax请求:授权异常, url:" + url + "  msg:" + exception.getMessage());
-                JsonData result = JsonData.fail(JsonData.UNAUTHORIZED, ex.getMessage());//未授权异常
+                JsonData result = JsonData.fail(JsonData.UNAUTHORIZED, "您无权限操作:"+ex.getMessage());//未授权异常
                 mv = new ModelAndView("jsonView", result.toMap());
             } else {
                 log.error("ajax请求:系统异常, url:" + url, ex);

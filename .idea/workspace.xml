@@ -131,7 +131,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resource/image" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resource/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -158,16 +158,236 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\image" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui\themes" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\js" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\image" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui\themes" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui\themes\icons" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\java\com\coderman\common" />
     </key>
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="0CF4001C92B8FC6BBC09E0423BDAE13B" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/user/login.do" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="page" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;zhangyukang&quot;,&quot;password&quot;:&quot;123456&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="0CF4001C92B8FC6BBC09E0423BDAE13B" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/user/login.do" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="page" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;zhangyukang&quot;,&quot;password&quot;:&quot;123456&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="0CF4001C92B8FC6BBC09E0423BDAE13B" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/menu/findUserMenus.do" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="page" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;zhangyukang&quot;,&quot;password&quot;:&quot;123456&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="0CF4001C92B8FC6BBC09E0423BDAE13B" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/menu/findUserMenus" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="page" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;zhangyukang&quot;,&quot;password&quot;:&quot;123456&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="0CF4001C92B8FC6BBC09E0423BDAE13B" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/deptPage.do" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="page" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;zhangyukang&quot;,&quot;password&quot;:&quot;123456&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -1883,246 +2103,6 @@
           <option name="textToSend" value="{&quot;username&quot;:&quot;&quot;,&quot;password&quot;:&quot;&quot;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE460DD028C4E1198E8EEB2809E3CDF5" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/user/login" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="page" />
-                <option name="value" value="4" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="size" />
-                <option name="value" value="4" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;&quot;,&quot;password&quot;:&quot;333&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE460DD028C4E1198E8EEB2809E3CDF5" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/user/login" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="page" />
-                <option name="value" value="4" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="size" />
-                <option name="value" value="4" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;33&quot;,&quot;password&quot;:&quot;333&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE460DD028C4E1198E8EEB2809E3CDF5" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/user/login" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="page" />
-                <option name="value" value="4" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="size" />
-                <option name="value" value="4" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;&quot;,&quot;password&quot;:&quot;22222&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE460DD028C4E1198E8EEB2809E3CDF5" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/user/login" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="page" />
-                <option name="value" value="4" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="size" />
-                <option name="value" value="4" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;3333&quot;,&quot;password&quot;:&quot;22222&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="JSESSIONID" />
-                <option name="path" value="/" />
-                <option name="value" value="EE460DD028C4E1198E8EEB2809E3CDF5" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/user/login" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="page" />
-                <option name="value" value="4" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="size" />
-                <option name="value" value="4" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;zhang&quot;,&quot;password&quot;:&quot;22222&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -2308,7 +2288,16 @@
       <workItem from="1598607157625" duration="5011000" />
       <workItem from="1598688301137" duration="2054000" />
       <workItem from="1598690701063" duration="11577000" />
-      <workItem from="1598704622870" duration="8109000" />
+      <workItem from="1598704622870" duration="8618000" />
+      <workItem from="1598748693809" duration="16361000" />
+      <workItem from="1598771920792" duration="8000" />
+      <workItem from="1598771960960" duration="119000" />
+      <workItem from="1598772132088" duration="23000" />
+      <workItem from="1598772322439" duration="99000" />
+      <workItem from="1598772508283" duration="12000" />
+      <workItem from="1598772552079" duration="175000" />
+      <workItem from="1598773179776" duration="811000" />
+      <workItem from="1598774059876" duration="25297000" />
     </task>
     <task id="LOCAL-00001" summary="添加README.md">
       <created>1591975324666</created>
@@ -2419,10 +2408,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="配置LogBack日志" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="395" y="95" key="#Inspections" timestamp="1598434398497">
+    <state x="395" y="95" key="#Inspections" timestamp="1598753295125">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="395" y="95" key="#Inspections/0.0.1536.834@0.0.1536.834" timestamp="1598434398497" />
+    <state x="395" y="95" key="#Inspections/0.0.1536.834@0.0.1536.834" timestamp="1598753295125" />
     <state x="629" y="280" width="561" height="274" key="#Notifications" timestamp="1598689210734">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2439,18 +2428,18 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1598441779918" />
-    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1598711409702">
+    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1598793978484">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1598711409702" />
+    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1598793978484" />
     <state x="499" y="193" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1592013010575">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="193" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.834@0.0.1536.834" timestamp="1592013010575" />
-    <state x="327" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1597577253115">
+    <state x="327" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1598749091993">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="327" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1597577253115" />
+    <state x="327" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1598749091993" />
     <state x="455" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592827534184">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2471,46 +2460,46 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="541" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1597372628208" />
-    <state x="562" y="337" key="Github.CreateGistDialog" timestamp="1597105758413">
+    <state x="562" y="337" key="Github.CreateGistDialog" timestamp="1598789590623">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="562" y="337" key="Github.CreateGistDialog/0.0.1536.834@0.0.1536.834" timestamp="1597105758413" />
+    <state x="562" y="337" key="Github.CreateGistDialog/0.0.1536.834@0.0.1536.834" timestamp="1598789590623" />
     <state x="90" y="70" width="1250" height="683" key="GrepConsoleSettings" timestamp="1598706146706">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="90" y="70" width="1250" height="683" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1598706146706" />
-    <state width="1495" height="339" key="GridCell.Tab.0.bottom" timestamp="1598714742255">
+    <state width="1495" height="362" key="GridCell.Tab.0.bottom" timestamp="1598800783488">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="339" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1598714742255" />
-    <state width="1495" height="339" key="GridCell.Tab.0.center" timestamp="1598714742255">
+    <state width="1495" height="362" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1598800783488" />
+    <state width="1495" height="362" key="GridCell.Tab.0.center" timestamp="1598800783488">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="339" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1598714742255" />
-    <state width="1495" height="339" key="GridCell.Tab.0.left" timestamp="1598714742255">
+    <state width="1495" height="362" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1598800783488" />
+    <state width="1495" height="362" key="GridCell.Tab.0.left" timestamp="1598800783488">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="339" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1598714742255" />
-    <state width="1495" height="339" key="GridCell.Tab.0.right" timestamp="1598714742255">
+    <state width="1495" height="362" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1598800783488" />
+    <state width="1495" height="362" key="GridCell.Tab.0.right" timestamp="1598800783488">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="339" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1598714742255" />
-    <state width="1495" height="407" key="GridCell.Tab.1.bottom" timestamp="1598700563302">
+    <state width="1495" height="362" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1598800783488" />
+    <state width="1495" height="306" key="GridCell.Tab.1.bottom" timestamp="1598800402594">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="407" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1598700563302" />
-    <state width="1495" height="407" key="GridCell.Tab.1.center" timestamp="1598700563302">
+    <state width="1495" height="306" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1598800402594" />
+    <state width="1495" height="306" key="GridCell.Tab.1.center" timestamp="1598800402594">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="407" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1598700563302" />
-    <state width="1495" height="407" key="GridCell.Tab.1.left" timestamp="1598700563302">
+    <state width="1495" height="306" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1598800402594" />
+    <state width="1495" height="306" key="GridCell.Tab.1.left" timestamp="1598800402593">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="407" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1598700563302" />
-    <state width="1495" height="407" key="GridCell.Tab.1.right" timestamp="1598700563302">
+    <state width="1495" height="306" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1598800402593" />
+    <state width="1495" height="306" key="GridCell.Tab.1.right" timestamp="1598800402594">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="407" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1598700563302" />
+    <state width="1495" height="306" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1598800402594" />
     <state width="1183" height="408" key="GridCell.Tab.2.bottom" timestamp="1592056501057">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2551,5 +2540,16 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="370" y="101" key="spring file set editor/0.0.1536.834@0.0.1536.834" timestamp="1592019235835" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/List.java</url>
+          <line>477</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

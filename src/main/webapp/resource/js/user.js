@@ -30,31 +30,31 @@ let user = {
     },
     URL: {
         list: function () {
-            return ctx + '/user/list.do';
+            return ctx + '/system/user/list.do';
         },
         delete: function (id) {
-            return ctx + '/user/delete.do?id='+id;
+            return ctx + '/system/user/delete.do?id='+id;
         },
         add: function () {
-            return ctx + '/user/add.do';
+            return ctx + '/system/user/add.do';
         },
         get: function (id) {
-            return ctx + '/user/get.do?id=' + id;
+            return ctx + '/system/user/get.do?id=' + id;
         },
         update: function () {
-            return ctx + '/user/update.do';
+            return ctx + '/system/user/update.do';
         },
         resetPassword:function (id) {
-            return ctx+'/user/resetPassword.do?id='+id;
+            return ctx+'/system/user/resetPassword.do?id='+id;
         },
         queryRole: function (id) {
-            return ctx + '/user/queryRole.do?id=' + id;
+            return ctx + '/system/user/queryRole.do?id=' + id;
         },
         deptTree: function () {
-            return ctx + '/dept/tree.do';
+            return ctx + '/system/dept/tree.do';
         },
         roleAll: function () {
-            return ctx + '/role/listAll.do';
+            return ctx + '/system/role/listAll.do';
         },
     },
     //初始化表格数据

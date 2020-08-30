@@ -1,4 +1,4 @@
-package com.coderman.shiro.filter;
+package com.coderman.common.shiro.filter;
 
 import com.coderman.common.JsonData;
 import com.coderman.util.HttpUtil;

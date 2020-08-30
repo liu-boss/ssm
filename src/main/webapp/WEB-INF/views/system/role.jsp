@@ -1,10 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/views/common/tag.jsp" %>
 <%@ include file="/WEB-INF/views/common/link.jsp" %>
-
 <%--数据表格--%>
 <table id="role_table"></table>
-
+<div id="sm" style="width:300px"></div>
 <%--顶部工具栏--%>
 <div id="role_toolbar" style="display: none">
     <%--    操作按钮--%>
@@ -32,7 +31,7 @@
 
 <%--添加弹框--%>
 <div id="role_add_dialog" class="easyui-dialog"
-     style="width:500px;height:250px;top: 50px;padding: 5px;display: none"
+     style="width:500px;height:350px;top: 50px;padding: 5px;display: none"
      data-options="closed:'true',iconCls:'icon-save',resizable:true,modal:true,
          buttons:[
          {text:'重置',iconCls:'icon-clear',handler:function(){role.clear(roleAddForm)}}
@@ -50,6 +49,14 @@
             </tr>
             <tr>
                 <td></td>
+                <td><label>权限配置:</label></td>
+                <td>
+                    <select id="role_add_permission_select_tree" class="easyui-combotree com_input" name="menuIdList" data-options="prompt:'请配置角色的权限'"></select>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
                 <td><label>描述信息:</label></td>
                 <td><input class="easyui-textbox com_input" type="text" name="remark"
                            data-options="prompt:'请输入描述信息',height:'50px'"/></td>
@@ -61,7 +68,7 @@
 
 <%--编辑弹框--%>
 <div id="role_edit_dialog" class="easyui-dialog"
-     style="width:500px;height:250px;top: 50px;padding: 5px;display: none"
+     style="width:500px;height:350px;top: 50px;padding: 5px;display: none"
      data-options="closed:'true',iconCls:'icon-save',resizable:true,modal:true,buttons:[
          {text:'重置',iconCls:'icon-clear',handler:function(){role.clear(roleEditForm)}},
          {text:'更新',iconCls:'icon-ok',handler:function(){role.update()}}
@@ -76,6 +83,17 @@
                            data-options="required:true,prompt:'请输入角色名'"/></td>
                 <td></td>
             </tr>
+
+
+            <tr>
+                <td></td>
+                <td><label>权限配置:</label></td>
+                <td>
+                    <select id="role_edit_permission_select_tree" class="easyui-combotree com_input" name="menuIdList" data-options="prompt:'请配置角色的权限'"></select>
+                </td>
+                <td></td>
+            </tr>
+
             <tr>
                 <td></td>
                 <td><label>描述信息:</label></td>

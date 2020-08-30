@@ -9,10 +9,15 @@ import com.coderman.exception.ParamException;
 import com.coderman.model.User;
 import com.coderman.service.UserService;
 import com.coderman.util.BeanValidator;
+import com.coderman.util.ShiroContextHolder;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.wf.captcha.GifCaptcha;
 import com.wf.captcha.utils.CaptchaUtil;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -28,12 +33,20 @@ import java.util.Set;
  * @Version 1.0
  **/
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/system/user")
 public class UserController {
+
+    private Logger logger= LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     private UserService userService;
 
+    @RequestMapping(value = "/logout.do",method = RequestMethod.GET)
+    public String logout(){
+        logger.info("退出登入:user=>{}", ShiroContextHolder.getUser());
+        SecurityUtils.getSubject().logout();
+        return "redirect:/system/loginPage.do";
+    }
 
     @RequestMapping(value = "/list.do", method = RequestMethod.POST)
     @ResponseBody
@@ -46,6 +59,7 @@ public class UserController {
         return new EasyUIData<>(pageInfo.getTotal(), pageInfo.getList());
     }
 
+    @RequiresPermissions({"system:user:resetPassword"})
     @RequestMapping(value = "/resetPassword.do",method = RequestMethod.GET)
     @ResponseBody
     public JsonData resetPassword(@RequestParam("id") Long userId){
@@ -59,7 +73,7 @@ public class UserController {
         Set<Long> roleIdSet=userService.queryRolesById(userId);
         return JsonData.success(roleIdSet);
     }
-
+    @RequiresPermissions({"system:user:add"})
     @RequestMapping(value = "/add.do", method = RequestMethod.POST)
     @ResponseBody
     public JsonData add(UserAddParam addParam) throws ParamException {
@@ -75,6 +89,7 @@ public class UserController {
         return JsonData.success(user);
     }
 
+    @RequiresPermissions({"system:user:update"})
     @RequestMapping(value = "/update.do", method = RequestMethod.POST)
     @ResponseBody
     public JsonData update(UserUpdateParam userUpdateParam) throws ParamException {
@@ -83,6 +98,7 @@ public class UserController {
         return JsonData.success();
     }
 
+    @RequiresPermissions({"system:user:delete"})
     @RequestMapping(value = "/delete.do", method = RequestMethod.POST)
     @ResponseBody
     public JsonData delete(@RequestParam("id") String strIds) throws ParamException {

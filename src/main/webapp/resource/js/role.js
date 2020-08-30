@@ -4,8 +4,8 @@ let roleAddForm;
 let roleEditForm;
 let roleAddDialog;
 let roleEditDialog;
-let roleAddDeptSelectTree;
-let roleEditDeptSelectTree;
+let roleAddPermissionSelectTree;
+let roleEditPermissionSelectTree;
 let ctx = null;
 
 let role = {
@@ -17,24 +17,32 @@ let role = {
         roleAddDialog = $("#role_add_dialog"); //添加弹框
         roleEditDialog = $("#role_edit_dialog"); //编辑弹框
         roleSearchForm = $("#role_search_form");//模糊查询
+        roleAddPermissionSelectTree = $("#role_add_permission_select_tree");//添加角色的(权限)
+        roleEditPermissionSelectTree = $("#role_edit_permission_select_tree");//编辑角色的(权限)
         role.initTable(); //初始化表格
     },
     URL: {
         list: function () {
-            return ctx + '/role/list.do';
+            return ctx + '/system/role/list.do';
         },
         delete: function () {
-            return ctx + '/role/delete.do';
+            return ctx + '/system/role/delete.do';
         },
         add: function () {
-            return ctx + '/role/add.do';
+            return ctx + '/system/role/add.do';
         },
         get: function (id) {
-            return ctx + '/role/get.do?id=' + id;
+            return ctx + '/system/role/get.do?id=' + id;
         },
         update: function () {
-            return ctx + '/role/update.do';
+            return ctx + '/system/role/update.do';
         },
+        menuTree: function () {
+            return ctx + '/system/menu/tree.do';
+        },
+        queryMenu: function (id) {
+            return ctx+'/system/role/queryMenu.do?id='+id;
+        }
     },
     //初始化表格数据
     initTable: function () {
@@ -144,6 +152,11 @@ let role = {
     //显示添加框
     showAddDialog: function () {
         roleAddDialog.dialog('open').dialog('setTitle', '添加');
+
+        roleAddPermissionSelectTree.combotree({
+            multiple: true,
+            url: role.URL.menuTree(),
+        });
     },
     //关闭添加框
     closeAddDialog: function () {
@@ -161,6 +174,27 @@ let role = {
             $.messager.alert("对话框", "只能选择一行", 'warning');
             return;
         }
+        //加载角色已有权限
+        $.ajax({
+            type: "GET",
+            url: role.URL.queryMenu(sels[0].id),
+            success: function (res) {
+                if (res.code === 0) {
+                    roleEditPermissionSelectTree.combotree({
+                        multiple: true,
+                        lines:true,
+                        cascadeCheck:false,//不级联检查
+                        url: role.URL.menuTree(),
+                        //回显权限
+                        onLoadSuccess:function () {
+                            roleEditPermissionSelectTree.combotree('setValues', res.data);
+                        }
+                    });
+                } else {
+                    alert(data.msg);
+                }
+            }
+        });
 
         $.ajax({
             type: "GET",

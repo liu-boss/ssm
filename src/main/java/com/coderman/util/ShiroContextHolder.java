@@ -1,6 +1,6 @@
 package com.coderman.util;
 
-import com.coderman.common.CurrentUser;
+import com.coderman.common.shiro.CurrentUser;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 

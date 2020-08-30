@@ -1,4 +1,4 @@
-package com.coderman.shiro.credentials;
+package com.coderman.common.shiro.credentials;
 
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;

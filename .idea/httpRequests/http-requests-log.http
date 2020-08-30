@@ -1,0 +1,44 @@
+POST http://localhost:8080/user/login.do?page=1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"zhangyukang","password":"123456"}
+
+<> 2020-08-30T105128.200.json
+
+###
+
+GET http://localhost:8080/user/login.do?page=1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"zhangyukang","password":"123456"}
+
+<> 2020-08-30T105123.405.html
+
+###
+
+GET http://localhost:8080/menu/findUserMenus.do?page=1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"zhangyukang","password":"123456"}
+
+<> 2020-08-30T105110.200.json
+
+###
+
+GET http://localhost:8080/menu/findUserMenus?page=1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"zhangyukang","password":"123456"}
+
+<> 2020-08-30T105101.404.html
+
+###
+

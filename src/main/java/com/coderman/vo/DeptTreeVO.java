@@ -117,4 +117,6 @@ public class DeptTreeVO implements TreeObject {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
+
 }

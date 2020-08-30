@@ -3,7 +3,6 @@ package com.coderman.util;
 import com.coderman.mapper.DeptMapper;
 import com.coderman.model.Dept;
 import com.coderman.vo.DeptTreeVO;
-import com.coderman.vo.MenuVO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
@@ -27,17 +26,17 @@ public class TreeUtilTest {
 
     @Autowired
     private DeptMapper deptMapper;
-
-    public static void main(String[] args) {
-        List<TreeObject> list=new ArrayList<>();
-        list.add(new MenuVO(1L,null,"系统管理",null));
-        list.add(new MenuVO(2L,1L,"用户管理",null));
-        list.add(new MenuVO(3L,1L,"角色管理",null));
-        list.add(new MenuVO(4L,3L,"角色添加",null));
-        list.add(new MenuVO(5L,null,"其他管理",null));
-        List<TreeObject> tree = TreeUtil.buildTree(list);
-        System.out.println(tree);
-    }
+//
+//    public static void main(String[] args) {
+//        List<TreeObject> list=new ArrayList<>();
+//        list.add(new MenuVO(1L,null,"系统管理",null));
+//        list.add(new MenuVO(2L,1L,"用户管理",null));
+//        list.add(new MenuVO(3L,1L,"角色管理",null));
+//        list.add(new MenuVO(4L,3L,"角色添加",null));
+//        list.add(new MenuVO(5L,null,"其他管理",null));
+//        List<TreeObject> tree = TreeUtil.buildTree(list);
+//        System.out.println(tree);
+//    }
 
     @Test
     public void deptVOTreeTest() throws JsonProcessingException {
