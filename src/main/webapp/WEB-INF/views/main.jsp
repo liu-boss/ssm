@@ -16,6 +16,7 @@
         padding: 0px;
     }
 </style>
+
 <body class="easyui-layout">
 <%--上--%>
 <div region="north" style="height: 50px; background-color: #E0ECFF">

@@ -173,6 +173,12 @@
             <artifactId>easy-captcha</artifactId>
             <version>${easy-captcha-version}</version>
         </dependency>
+        <!--ip获取地址-->
+        <dependency>
+            <groupId>org.lionsoul</groupId>
+            <artifactId>ip2region</artifactId>
+            <version>1.7</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>ssm</finalName>

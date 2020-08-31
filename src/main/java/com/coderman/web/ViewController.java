@@ -17,6 +17,11 @@ public class ViewController {
 
     /*****************************后台管理页面***********************************/
 
+    //在线管理
+    @RequiresPermissions({"system:online:view"})
+    @RequestMapping(value = "/system/onlinePage.do",method = RequestMethod.GET)
+    public String onlinePage(){ return "system/online"; }
+
     //菜单管理
     @RequiresPermissions({"system:menu:view"})
     @RequestMapping(value = "/system/menuPage.do",method = RequestMethod.GET)

@@ -8,7 +8,9 @@ import com.coderman.model.User;
 import com.coderman.service.MenuService;
 import com.coderman.service.RoleService;
 import com.coderman.service.UserService;
+import com.coderman.util.AddressUtil;
 import com.coderman.util.ShiroContextHolder;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -72,7 +74,7 @@ public class UserRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         String username = (String) authenticationToken.getPrincipal();
         logger.info("用户认证:{}",username);
-        /**************** session start  用户只能在同一个地方登录 *********************/
+        /**************** session start  同一个账号只能一人登入 *********************/
         Collection<Session> sessions = sessionDAO.getActiveSessions();
         for(Session session:sessions){
             if(session.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY)!=null){
@@ -81,6 +83,7 @@ public class UserRealm extends AuthorizingRealm {
                 if(username.equals(principal.getUsername())){
                     //设置session立即失效，即将其踢出系统
                     session.setTimeout(0);
+                    sessionDAO.delete(session);
                     break;
                 }
             }

@@ -1,3 +1,4 @@
+<%@ page import="com.coderman.util.ShiroContextHolder" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -46,6 +47,13 @@
     </style>
 </head>
 <body>
+
+<%
+    if( ShiroContextHolder.getUser()!=null){
+        //如果已登入,跳转到后台主页
+        response.sendRedirect(request.getContextPath()+"/system/mainPage.do");
+    }
+%>
 <form action="#">
     <div>
         <h1>后台系统登录</h1>
