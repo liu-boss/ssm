@@ -10,12 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * mybatis 逆向生成
  * @Author zhangyukang
  * @Date 2020/7/6 11:13
  * @Version 1.0
  **/
 public class MybatisGenerator {
-
 
     public static void main(String[] args) throws Exception {
         Logger logger=LoggerFactory.getLogger(MybatisGenerator.class);

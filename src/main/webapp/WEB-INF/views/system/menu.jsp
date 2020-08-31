@@ -53,7 +53,7 @@
                 <td></td>
                 <td><label>上级:</label></td>
                 <td>
-                    <select id="menu_add_menu_select_tree" class="easyui-combotree com_input" name="parentId" data-options="prompt:'请选择上级的菜单',required:true"></select>
+                    <select id="menu_add_menu_select_tree" class="easyui-combotree com_input" name="parentId" data-options="prompt:'请选择上级的菜单'"></select>
                 </td>
                 <td></td>
             </tr>
@@ -118,7 +118,7 @@
                 <td></td>
                 <td><label>上级:</label></td>
                 <td>
-                    <select id="menu_edit_menu_select_tree" class="easyui-combotree com_input" name="parentId" data-options="prompt:'请选择上级的菜单',required:true"></select>
+                    <select id="menu_edit_menu_select_tree" class="easyui-combotree com_input" name="parentId" data-options="prompt:'请选择上级的菜单'"></select>
                 </td>
                 <td></td>
             </tr>

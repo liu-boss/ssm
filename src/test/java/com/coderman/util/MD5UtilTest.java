@@ -17,8 +17,10 @@ public class MD5UtilTest {
     public void encrypt() {
         RandomNumberGenerator randomNumberGenerator = new SecureRandomNumberGenerator();
         String salt = randomNumberGenerator.nextBytes().toHex();
-        String password = MD5Util.encryptPassword("123456",salt);
-        System.out.println(password);
-        System.out.println(salt);
+        String username="zhangyukang";//管理员账户
+        String password = MD5Util.encryptPassword("123456",salt);//管理员密码
+        System.out.println("username:"+username);
+        System.out.println("password:"+password);
+        System.out.println("salt:"+salt);
     }
 }

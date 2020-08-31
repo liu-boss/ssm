@@ -67,9 +67,11 @@ public class MenuServiceImpl implements MenuService {
         if (menuMapper.checkByMenuName(menuParam.getMenuName(), null) > 0) { //校验菜单名可用性
             throw new ParamException("菜单名称已被占用");
         }
-        Menu parentMenu = menuMapper.selectByPrimaryKey(menuParam.getParentId());
-        if (parentMenu == null) {
-            throw new ParamException("父菜单不存在");
+        if(menuParam.getParentId()!=0L){
+            Menu parentMenu = menuMapper.selectByPrimaryKey(menuParam.getParentId());
+            if (parentMenu == null) {
+                throw new ParamException("父菜单不存在");
+            }
         }
 
         Menu menu = new Menu();

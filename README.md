@@ -1,121 +1,50 @@
-## ssm与shiro 整合
+## ssm_shiro 通用后台管理系统
 
-#### 1. 添加依赖
+> 此项目旨在让您轻松搭建一个后台管理系统. 接口级权限,细粒度的权限控制.
 
-```xml
-     <!--   shiro的依赖     -->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring</artifactId>
-            <version>${shiro-spring-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-ehcache</artifactId>
-            <version>${shiro-ehcache-version}</version>
-        </dependency>
+## 搭建步骤
+
+#### 第一步: 克隆项目
+
+```text
+https://github.com/zykzhangyukang/ssm/tree/ssm-shiro
+```
+#### 第二步: 创建一个名为 'ssm_shiro' 的数据库
+
+> 当然你可以使用其他名称
+
+```sql
+create databases ssm_shiro
 ```
 
+#### 第三步: 运行程序 InitProjectRunner.java
 
-#### 2. 添加shiro的拦截器 (web.xml)
+> 在此程序中,填写对应的数据库配置: 如主机,用户名,密码等
 
-```xml
-  <filter>
-    <filter-name>shiroFilter</filter-name>
-    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-    <init-param>
-      <param-name>targetFilterLifecycle</param-name>
-      <param-value>true</param-value>
-    </init-param>
-  </filter>
-  <filter-mapping>
-    <filter-name>shiroFilter</filter-name>
-    <servlet-name>web-dispatcher</servlet-name>
-  </filter-mapping>
-```
+#### 第四步: 启动项目
 
-#### 3. 配置shiro和spring整合
+> 使用maven的tomcat 插件运行项目即可
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+> 访问: http://localhost:8080/
 
-    <!-- 缓存管理器 使用Ehcache实现 -->
-    <bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
-        <property name="cacheManagerConfigFile" value="classpath:ehcache.xml"/>
-    </bean>
+## 项目截图
 
-    <!-- 凭证匹配器 -->
-    <bean id="credentialsMatcher" class="com.coderman.common.shiro.credentials.RetryLimitHashedCredentialsMatcher">
-        <constructor-arg ref="cacheManager"/>
-        <property name="hashAlgorithmName" value="md5"/>
-        <property name="hashIterations" value="2"/>
-        <property name="storedCredentialsHexEncoded" value="true"/>
-    </bean>
+> 登入页面
 
-    <!--自定义realm-->
-    <bean id="userRealm" class="com.coderman.common.shiro.realm.UserRealm">
-        <property name="credentialsMatcher" ref="credentialsMatcher"/>
-        <property name="cachingEnabled" value="true"/>
-        <property name="authenticationCachingEnabled" value="true"/>
-        <property name="authenticationCacheName" value="authenticationCache"/>
-        <property name="authorizationCachingEnabled" value="true"/>
-        <property name="authorizationCacheName" value="authorizationCache"/>
-    </bean>
+![](http://myforum.oss-cn-beijing.aliyuncs.com/postImages/159884388549061107d55-8a85-4950-8fdb-4c44611ba7d65.PNG?Expires=1693451885&OSSAccessKeyId=LTAI4FsV5R1tnt8W8kqFqBYh&Signature=pwKJzcWJ7aGCcaJtMiBHt8Yqvg0%3D)
 
-    <!-- 配置 shiro 的核心组件：securityManager -->
-    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
-        <property name="realm" ref="userRealm"/>
-    </bean>
+> 用户管理
 
-    <!-- 配置shiro的一些拦截规则，id必须和web.xml中的 shiro 拦截器名一致 -->
-    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
-        <!-- Shiro的核心安全接口,这个属性是必须的 -->
-        <property name="securityManager" ref="securityManager"/>
-        <!-- 身份认证失败，则跳转到登录页面的配置 -->
-        <property name="loginUrl" value="/loginPage.do"/>
-        <!-- 登录成功后的页面 -->
-        <property name="successUrl" value="/mainPage.do"/>
-        <!-- 权限认证失败，则跳转到指定页面 -->
-        <property name="unauthorizedUrl" value="/unauthorized"/>  <!-- 登录后访问没有权限的页面后跳转的页面 -->
-        <!-- Shiro连接约束配置,即过滤链的定义 -->
-        <property name="filterChainDefinitions">
-            <value>
-                <!-- 注意：规则是有顺序的，从上到下，拦截范围必须是从小到大的 -->
-                <!--  url = 拦截规则（anon为匿名，authc为要登录后，才能访问，logout登出过滤） -->
-                /loginPage.do = anon
-                /user/login.do = anon
-                /user/logout.do = logout
-                /** = authc
-            </value>
-        </property>
-    </bean>
-</beans>
+![](http://myforum.oss-cn-beijing.aliyuncs.com/postImages/1598843665829285f1f89-4b53-4bae-8a26-2ea947d614b61.PNG?Expires=1693451665&OSSAccessKeyId=LTAI4FsV5R1tnt8W8kqFqBYh&Signature=AUa2FU70gKqpxtuClfqPN%2BbeniU%3D)
 
-```
+> 角色管理
 
-#### 4. 添加ehcache配置文件
+![](http://myforum.oss-cn-beijing.aliyuncs.com/postImages/159884371010931c8c0f0-221c-4da3-928c-ae69730bf9712.PNG?Expires=1693451710&OSSAccessKeyId=LTAI4FsV5R1tnt8W8kqFqBYh&Signature=VCt%2FNeNpUvKhufkzPNIk21%2BoGsQ%3D)
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<ehcache name="es">
+> 部门管理
 
-    <diskStore path="java.io.tmpdir"/>
+![](http://myforum.oss-cn-beijing.aliyuncs.com/postImages/1598843739829334a5541-51f1-4f11-b792-14796dfab2273.PNG?Expires=1693451739&OSSAccessKeyId=LTAI4FsV5R1tnt8W8kqFqBYh&Signature=Z0FNGslsJHT6ev8tYiwa%2BzBDclE%3D)
 
-    <!-- 登录记录缓存 锁定1分钟 -->
-    <cache name="passwordRetryCache"
-           maxEntriesLocalHeap="2000"
-           eternal="false"
-           timeToIdleSeconds="3600"
-           timeToLiveSeconds="0"
-           overflowToDisk="false"
-           statistics="true">
-    </cache>
+> 菜单管理
 
-</ehcache>
-
-```
-
-#### 5. RBAC系统搭建
+![](http://myforum.oss-cn-beijing.aliyuncs.com/postImages/15988437928832f6be6e6-2f3a-4b06-9572-9d1afbfc13a64.PNG?Expires=1693451792&OSSAccessKeyId=LTAI4FsV5R1tnt8W8kqFqBYh&Signature=jZZSkFCKipany9WTFFUXcq7AqLk%3D)

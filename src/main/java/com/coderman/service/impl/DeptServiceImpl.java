@@ -58,9 +58,11 @@ public class DeptServiceImpl implements DeptService {
         if (deptMapper.checkByDeptName(deptParam.getDeptName(), null) > 0) { //校验部门名可用性
             throw new ParamException("部门名称已被占用");
         }
-        Dept parentDept = deptMapper.selectByPrimaryKey(dept.getParentId());
-        if (parentDept == null) {
-            throw new ParamException("父部门不存在");
+        if(dept.getParentId()!=0L){
+            Dept parentDept = deptMapper.selectByPrimaryKey(dept.getParentId());
+            if (parentDept == null) {
+                throw new ParamException("父部门不存在");
+            }
         }
         deptMapper.insert(dept);
     }
