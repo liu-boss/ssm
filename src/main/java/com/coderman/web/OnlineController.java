@@ -4,7 +4,6 @@ import com.coderman.common.EasyUIData;
 import com.coderman.common.JsonData;
 import com.coderman.common.shiro.CurrentUser;
 import com.coderman.exception.ParamException;
-import com.coderman.util.AddressUtil;
 import com.coderman.util.ShiroContextHolder;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -52,11 +51,9 @@ public class OnlineController {
                 principal.setStartTime(startTime);
                 String ipHost = SecurityUtils.getSubject().getSession().getHost();
                 principal.setHost(ipHost);
-
                 SimpleSession simpleSession= (SimpleSession) activeSession;
                 boolean expired = simpleSession.isExpired();
                 principal.setExpired(expired);
-                principal.setLocation(AddressUtil.getCityInfo(ipHost));
                 userList.add(principal);
             }
         }

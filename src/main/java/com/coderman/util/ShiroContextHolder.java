@@ -3,6 +3,11 @@ package com.coderman.util;
 import com.coderman.common.shiro.CurrentUser;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Objects;
 
 /**
  * @Author zhangyukang
@@ -19,5 +24,10 @@ public class ShiroContextHolder {
 
     public static Long getIdentity(){
         return getUser().getId();
+    }
+
+    public static HttpServletRequest getHttpServletRequest() {
+        return ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder
+                .getRequestAttributes())).getRequest();
     }
 }

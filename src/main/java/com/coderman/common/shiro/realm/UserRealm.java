@@ -1,14 +1,14 @@
 package com.coderman.common.shiro.realm;
 
-import com.coderman.common.shiro.CurrentUser;
 import com.coderman.common.ProjectConstant;
+import com.coderman.common.shiro.CurrentUser;
 import com.coderman.model.Menu;
 import com.coderman.model.Role;
 import com.coderman.model.User;
 import com.coderman.service.MenuService;
 import com.coderman.service.RoleService;
 import com.coderman.service.UserService;
-import com.coderman.util.AddressUtil;
+import com.coderman.util.IpUtil;
 import com.coderman.util.ShiroContextHolder;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
@@ -24,7 +24,10 @@ import org.apache.shiro.util.ByteSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
@@ -100,6 +103,7 @@ public class UserRealm extends AuthorizingRealm {
         CurrentUser currentUser = new CurrentUser();
         currentUser.setId(user.getId());
         currentUser.setUsername(user.getUsername());
+        currentUser.setLocation(IpUtil.getCityInfo(ShiroContextHolder.getHttpServletRequest()));
         return new SimpleAuthenticationInfo(currentUser,user.getPassword(),salt,getName());
     }
 }

@@ -8,6 +8,7 @@ import org.lionsoul.ip2region.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.lang.reflect.Method;
 import java.util.Objects;
@@ -15,22 +16,22 @@ import java.util.Objects;
 /**
  * @author MrBird
  */
-public class AddressUtil {
+public class IpUtil {
 
-    private static Logger log = LoggerFactory.getLogger(AddressUtil.class);
+    private static Logger log = LoggerFactory.getLogger(IpUtil.class);
 
-    public static String getCityInfo(String ip){
-
+    public static String getCityInfo(HttpServletRequest request){
+        String ip = getIpAddr(request);
         File file;
         try {
             //db
-            String dbPath = AddressUtil.class.getResource("/ip2region/ip2region.db").getPath();
+            String dbPath = IpUtil.class.getResource("/ip2region/ip2region.db").getPath();
              file= new File(dbPath);
             if (!file.exists()) {
                 String tmpDir = System.getProperties().getProperty("java.io.tmpdir");
                 dbPath = tmpDir + "ip.db";
                 file = new File(dbPath);
-                FileUtils.copyInputStreamToFile(Objects.requireNonNull(AddressUtil.class.getClassLoader().getResourceAsStream("classpath:ip2region/ip2region.db")), file);
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(IpUtil.class.getClassLoader().getResourceAsStream("classpath:ip2region/ip2region.db")), file);
             }
 
             //查询算法
@@ -63,7 +64,26 @@ public class AddressUtil {
 
         return null;
     }
-    public static void main(String[] args)  throws Exception{
-        System.err.println(getCityInfo("127.0.0.1"));
+
+    private static final String UNKNOWN = "unknown";
+
+    /**
+     * 获取 IP地址
+     * 使用 Nginx等反向代理软件， 则不能通过 request.getRemoteAddr()获取 IP地址
+     * 如果使用了多级反向代理的话，X-Forwarded-For的值并不止一个，而是一串IP地址，
+     * X-Forwarded-For中第一个非 unknown的有效IP字符串，则为真实IP地址
+     */
+    public static String getIpAddr(HttpServletRequest request) {
+        String ip = request.getHeader("x-forwarded-for");
+        if (ip == null || ip.length() == 0 || UNKNOWN.equalsIgnoreCase(ip)) {
+            ip = request.getHeader("Proxy-Client-IP");
+        }
+        if (ip == null || ip.length() == 0 || UNKNOWN.equalsIgnoreCase(ip)) {
+            ip = request.getHeader("WL-Proxy-Client-IP");
+        }
+        if (ip == null || ip.length() == 0 || UNKNOWN.equalsIgnoreCase(ip)) {
+            ip = request.getRemoteAddr();
+        }
+        return "0:0:0:0:0:0:0:1".equals(ip) ? "127.0.0.1" : ip;
     }
 }
