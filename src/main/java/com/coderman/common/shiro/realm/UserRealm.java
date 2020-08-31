@@ -9,17 +9,21 @@ import com.coderman.service.MenuService;
 import com.coderman.service.RoleService;
 import com.coderman.service.UserService;
 import com.coderman.util.ShiroContextHolder;
-import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
+import org.apache.shiro.session.Session;
+import org.apache.shiro.session.mgt.eis.SessionDAO;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.subject.SimplePrincipalCollection;
+import org.apache.shiro.subject.support.DefaultSubjectContext;
 import org.apache.shiro.util.ByteSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -39,6 +43,9 @@ public class UserRealm extends AuthorizingRealm {
 
     @Autowired
     private MenuService menuService;
+
+    @Autowired
+    private SessionDAO sessionDAO;
 
     private Logger logger= LoggerFactory.getLogger(this.getClass());
 
@@ -65,6 +72,20 @@ public class UserRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         String username = (String) authenticationToken.getPrincipal();
         logger.info("用户认证:{}",username);
+        /**************** session start  用户只能在同一个地方登录 *********************/
+        Collection<Session> sessions = sessionDAO.getActiveSessions();
+        for(Session session:sessions){
+            if(session.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY)!=null){
+                SimplePrincipalCollection simplePrincipalCollection = (SimplePrincipalCollection) session.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
+                CurrentUser principal = (CurrentUser) simplePrincipalCollection.getPrimaryPrincipal();
+                if(username.equals(principal.getUsername())){
+                    //设置session立即失效，即将其踢出系统
+                    session.setTimeout(0);
+                    break;
+                }
+            }
+        }
+        /**************** session end*********************/
         User user=userService.findByUsername(username);
         if(null==user){
             throw new UnknownAccountException();
