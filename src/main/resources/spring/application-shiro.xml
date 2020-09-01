@@ -34,7 +34,7 @@
         <!-- 身份认证失败，则跳转到登录页面的配置 -->
         <property name="loginUrl" value="/system/loginPage.do"/>
         <!-- 登录成功后的页面:(后台主页面) -->
-        <property name="successUrl" value="/mainPage.do"/>
+<!--        <property name="successUrl" value="/system/mainPage.do"/>-->
         <!-- 登录后访问没有权限的页面后跳转的页面 -->
         <property name="unauthorizedUrl" value="/unauthorizedPage.do"/>
         <!-- Shiro连接约束配置,即过滤链的定义 -->

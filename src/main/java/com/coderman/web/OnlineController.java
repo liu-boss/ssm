@@ -5,7 +5,6 @@ import com.coderman.common.JsonData;
 import com.coderman.common.shiro.CurrentUser;
 import com.coderman.exception.ParamException;
 import com.coderman.util.ShiroContextHolder;
-import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.SimpleSession;
@@ -40,6 +39,7 @@ public class OnlineController {
         Set<CurrentUser> userList=new HashSet<>();
         Collection<Session> activeSessions = sessionDAO.getActiveSessions();
         for (Session activeSession : activeSessions) {
+            //如果没有过期,并且登入系统
             if(activeSession.getAttributeKeys().contains(DefaultSubjectContext.PRINCIPALS_SESSION_KEY)){
                 SimplePrincipalCollection simplePrincipalCollection = (SimplePrincipalCollection)
                         activeSession.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
@@ -47,10 +47,9 @@ public class OnlineController {
                 Date lastAccessTime = activeSession.getLastAccessTime();
                 Date startTime= activeSession.getStartTimestamp();
                 principal.setLastAccessTime(lastAccessTime);
-
                 principal.setStartTime(startTime);
-                String ipHost = SecurityUtils.getSubject().getSession().getHost();
-                principal.setHost(ipHost);
+                long timeout = activeSession.getTimeout();
+                principal.setTimeout(timeout/1000/60);
                 SimpleSession simpleSession= (SimpleSession) activeSession;
                 boolean expired = simpleSession.isExpired();
                 principal.setExpired(expired);

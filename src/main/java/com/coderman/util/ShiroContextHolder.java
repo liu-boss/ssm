@@ -22,10 +22,12 @@ public class ShiroContextHolder {
         return (CurrentUser) subject.getPrincipal();
     }
 
+    //用户ID
     public static Long getIdentity(){
         return getUser().getId();
     }
 
+    //HttpServletRequest请求
     public static HttpServletRequest getHttpServletRequest() {
         return ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder
                 .getRequestAttributes())).getRequest();

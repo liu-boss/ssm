@@ -22,6 +22,20 @@ public class CurrentUser implements Serializable {
 
     public String location;
 
+    private long timeout;
+
+    public long getTimeout() {
+        return timeout;
+    }
+
+    public void setTimeout(long timeout) {
+        this.timeout = timeout;
+    }
+
+    public boolean isExpired() {
+        return expired;
+    }
+
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date lastAccessTime;
     private boolean expired;

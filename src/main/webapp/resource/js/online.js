@@ -40,6 +40,7 @@ let online = {
                 {field: 'location', title: '登入地址', width: 220, align: 'center'},
                 {field: 'startTime', title: '开始访问', width: 150, align: 'center'},
                 {field: 'expired', title: '是否过期', width: 150, align: 'center'},
+                {field: 'timeout', title: '会话过期时间(分钟)', width: 150, align: 'center'},
                 {field: 'lastAccessTime', title: '最新访问', width: 150, align: 'center'},
             ]]
         });
