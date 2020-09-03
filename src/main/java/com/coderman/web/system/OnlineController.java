@@ -1,4 +1,4 @@
-package com.coderman.web;
+package com.coderman.web.system;
 
 import com.coderman.common.EasyUIData;
 import com.coderman.common.JsonData;
@@ -44,14 +44,18 @@ public class OnlineController {
                 SimplePrincipalCollection simplePrincipalCollection = (SimplePrincipalCollection)
                         activeSession.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
                 CurrentUser principal = (CurrentUser) simplePrincipalCollection.getPrimaryPrincipal();
+                //最新访问时间
                 Date lastAccessTime = activeSession.getLastAccessTime();
+                //开始访问时间
                 Date startTime= activeSession.getStartTimestamp();
                 principal.setLastAccessTime(lastAccessTime);
                 principal.setStartTime(startTime);
+                //会话过期时间
                 long timeout = activeSession.getTimeout();
                 principal.setTimeout(timeout/1000/60);
                 SimpleSession simpleSession= (SimpleSession) activeSession;
                 boolean expired = simpleSession.isExpired();
+                //是否过期
                 principal.setExpired(expired);
                 userList.add(principal);
             }

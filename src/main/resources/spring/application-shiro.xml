@@ -66,7 +66,6 @@
         <property name="sessionManager" ref="sessionManager"/>
     </bean>
 
-
     <!--session 相关配置-->
     <bean id="sessionDAO" class="org.apache.shiro.session.mgt.eis.MemorySessionDAO"/>
     <bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">

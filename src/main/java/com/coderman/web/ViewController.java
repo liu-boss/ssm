@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * 只控制页面路由
+ * 控制页面路由
  *
  * @Author zhangyukang
  * @Date 2020/8/16 16:35
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class ViewController {
 
 
-    /*****************************后台管理页面***********************************/
+    /*****************************系统管理页面***********************************/
 
     //在线管理
     @RequiresPermissions({"system:online:view"})

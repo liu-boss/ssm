@@ -1,4 +1,4 @@
-package com.coderman.web;
+package com.coderman.web.system;
 
 import com.coderman.common.JsonData;
 import com.coderman.dto.form.DeptParam;
