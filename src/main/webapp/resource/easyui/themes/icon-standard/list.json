@@ -1,0 +1,4034 @@
+[
+  {
+    "text": "icon-standard-emoticon-happy",
+    "url": "/resource/easyui/themes/icon-standard/16x16/emoticon-happy.png"
+  },
+  {
+    "text": "icon-standard-email-attach",
+    "url": "/resource/easyui/themes/icon-standard/16x16/email-attach.png"
+  },
+  {
+    "text": "icon-standard-resultset-previous",
+    "url": "/resource/easyui/themes/icon-standard/16x16/resultset-previous.png"
+  },
+  {
+    "text": "icon-standard-telephone-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/telephone-link.png"
+  },
+  {
+    "text": "icon-standard-lock-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lock-edit.png"
+  },
+  {
+    "text": "icon-standard-controller-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/controller-delete.png"
+  },
+  {
+    "text": "icon-standard-bug-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bug-edit.png"
+  },
+  {
+    "text": "icon-standard-cart-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cart-go.png"
+  },
+  {
+    "text": "icon-standard-calculator",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calculator.png"
+  },
+  {
+    "text": "icon-standard-chart-line-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-line-link.png"
+  },
+  {
+    "text": "icon-standard-feed-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/feed-add.png"
+  },
+  {
+    "text": "icon-standard-server-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server-error.png"
+  },
+  {
+    "text": "icon-standard-page-red",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-red.png"
+  },
+  {
+    "text": "icon-standard-sum",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sum.png"
+  },
+  {
+    "text": "icon-standard-chart-curve-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-curve-error.png"
+  },
+  {
+    "text": "icon-standard-money-pound",
+    "url": "/resource/easyui/themes/icon-standard/16x16/money-pound.png"
+  },
+  {
+    "text": "icon-standard-page-white-cd",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-cd.png"
+  },
+  {
+    "text": "icon-standard-bullet-feed",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-feed.png"
+  },
+  {
+    "text": "icon-standard-medal-silver-3",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-silver-3.png"
+  },
+  {
+    "text": "icon-standard-cog-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cog-add.png"
+  },
+  {
+    "text": "icon-standard-page-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-key.png"
+  },
+  {
+    "text": "icon-standard-image-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/image-link.png"
+  },
+  {
+    "text": "icon-standard-wand",
+    "url": "/resource/easyui/themes/icon-standard/16x16/wand.png"
+  },
+  {
+    "text": "icon-standard-page-white-cplusplus",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-cplusplus.png"
+  },
+  {
+    "text": "icon-standard-clock-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/clock-go.png"
+  },
+  {
+    "text": "icon-standard-cart-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cart-error.png"
+  },
+  {
+    "text": "icon-standard-cart-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cart-delete.png"
+  },
+  {
+    "text": "icon-standard-computer-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/computer-go.png"
+  },
+  {
+    "text": "icon-standard-database-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database-error.png"
+  },
+  {
+    "text": "icon-standard-film-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/film-delete.png"
+  },
+  {
+    "text": "icon-standard-page-white-code-red",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-code-red.png"
+  },
+  {
+    "text": "icon-standard-plugin-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/plugin-delete.png"
+  },
+  {
+    "text": "icon-standard-calendar-view-day",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calendar-view-day.png"
+  },
+  {
+    "text": "icon-standard-group-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/group-delete.png"
+  },
+  {
+    "text": "icon-standard-table-gear",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-gear.png"
+  },
+  {
+    "text": "icon-standard-layout-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/layout-link.png"
+  },
+  {
+    "text": "icon-standard-magnifier",
+    "url": "/resource/easyui/themes/icon-standard/16x16/magnifier.png"
+  },
+  {
+    "text": "icon-standard-tab-close-right",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tab-close-right.png"
+  },
+  {
+    "text": "icon-standard-ipod-cast-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ipod-cast-add.png"
+  },
+  {
+    "text": "icon-standard-cog-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cog-edit.png"
+  },
+  {
+    "text": "icon-standard-flag-purple",
+    "url": "/resource/easyui/themes/icon-standard/16x16/flag-purple.png"
+  },
+  {
+    "text": "icon-standard-lorry-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lorry-link.png"
+  },
+  {
+    "text": "icon-standard-rss-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/rss-delete.png"
+  },
+  {
+    "text": "icon-standard-sitemap-color",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sitemap-color.png"
+  },
+  {
+    "text": "icon-standard-folder-bell",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-bell.png"
+  },
+  {
+    "text": "icon-standard-page-white-world",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-world.png"
+  },
+  {
+    "text": "icon-standard-tag-pink",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tag-pink.png"
+  },
+  {
+    "text": "icon-standard-page-white-c",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-c.png"
+  },
+  {
+    "text": "icon-standard-weather-snow",
+    "url": "/resource/easyui/themes/icon-standard/16x16/weather-snow.png"
+  },
+  {
+    "text": "icon-standard-tab-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tab-delete.png"
+  },
+  {
+    "text": "icon-standard-vcard",
+    "url": "/resource/easyui/themes/icon-standard/16x16/vcard.png"
+  },
+  {
+    "text": "icon-standard-control-stop-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-stop-blue.png"
+  },
+  {
+    "text": "icon-standard-user-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/user-go.png"
+  },
+  {
+    "text": "icon-standard-disk-multiple",
+    "url": "/resource/easyui/themes/icon-standard/16x16/disk-multiple.png"
+  },
+  {
+    "text": "icon-standard-weather-rain",
+    "url": "/resource/easyui/themes/icon-standard/16x16/weather-rain.png"
+  },
+  {
+    "text": "icon-standard-status-busy",
+    "url": "/resource/easyui/themes/icon-standard/16x16/status-busy.png"
+  },
+  {
+    "text": "icon-standard-text-subscript",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-subscript.png"
+  },
+  {
+    "text": "icon-standard-cd-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cd-delete.png"
+  },
+  {
+    "text": "icon-standard-shape-rotate-anticlockwise",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-rotate-anticlockwise.png"
+  },
+  {
+    "text": "icon-standard-book-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/book-edit.png"
+  },
+  {
+    "text": "icon-standard-textfield-rename",
+    "url": "/resource/easyui/themes/icon-standard/16x16/textfield-rename.png"
+  },
+  {
+    "text": "icon-standard-monitor",
+    "url": "/resource/easyui/themes/icon-standard/16x16/monitor.png"
+  },
+  {
+    "text": "icon-standard-page-gear",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-gear.png"
+  },
+  {
+    "text": "icon-standard-timeline-marker",
+    "url": "/resource/easyui/themes/icon-standard/16x16/timeline-marker.png"
+  },
+  {
+    "text": "icon-standard-hmenu-desc",
+    "url": "/resource/easyui/themes/icon-standard/16x16/hmenu-desc.gif"
+  },
+  {
+    "text": "icon-standard-report-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/report-delete.png"
+  },
+  {
+    "text": "icon-standard-vcard-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/vcard-edit.png"
+  },
+  {
+    "text": "icon-standard-paintbrush",
+    "url": "/resource/easyui/themes/icon-standard/16x16/paintbrush.png"
+  },
+  {
+    "text": "icon-standard-medal-gold-1",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-gold-1.png"
+  },
+  {
+    "text": "icon-standard-pencil-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/pencil-delete.png"
+  },
+  {
+    "text": "icon-standard-webcam-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/webcam-delete.png"
+  },
+  {
+    "text": "icon-standard-award-star-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/award-star-delete.png"
+  },
+  {
+    "text": "icon-standard-date-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/date-delete.png"
+  },
+  {
+    "text": "icon-standard-folder-bug",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-bug.png"
+  },
+  {
+    "text": "icon-standard-text-heading-5",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-heading-5.png"
+  },
+  {
+    "text": "icon-standard-page-white-h",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-h.png"
+  },
+  {
+    "text": "icon-standard-application-view-list",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-view-list.png"
+  },
+  {
+    "text": "icon-standard-bullet-purple",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-purple.png"
+  },
+  {
+    "text": "icon-standard-chart-line-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-line-edit.png"
+  },
+  {
+    "text": "icon-standard-page-white-dvd",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-dvd.png"
+  },
+  {
+    "text": "icon-standard-application-tile-horizontal",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-tile-horizontal.png"
+  },
+  {
+    "text": "icon-standard-text-replace",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-replace.png"
+  },
+  {
+    "text": "icon-standard-medal-silver-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-silver-delete.png"
+  },
+  {
+    "text": "icon-standard-link-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/link-go.png"
+  },
+  {
+    "text": "icon-standard-page-white-code",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-code.png"
+  },
+  {
+    "text": "icon-standard-email-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/email-edit.png"
+  },
+  {
+    "text": "icon-standard-basket-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/basket-add.png"
+  },
+  {
+    "text": "icon-standard-mouse",
+    "url": "/resource/easyui/themes/icon-standard/16x16/mouse.png"
+  },
+  {
+    "text": "icon-standard-pictures",
+    "url": "/resource/easyui/themes/icon-standard/16x16/pictures.png"
+  },
+  {
+    "text": "icon-standard-sound-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sound-add.png"
+  },
+  {
+    "text": "icon-standard-basket-remove",
+    "url": "/resource/easyui/themes/icon-standard/16x16/basket-remove.png"
+  },
+  {
+    "text": "icon-standard-lock-break",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lock-break.png"
+  },
+  {
+    "text": "icon-standard-mouse-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/mouse-error.png"
+  },
+  {
+    "text": "icon-standard-clock-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/clock-delete.png"
+  },
+  {
+    "text": "icon-standard-ruby-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ruby-delete.png"
+  },
+  {
+    "text": "icon-standard-bug-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bug-link.png"
+  },
+  {
+    "text": "icon-standard-page-white-flash",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-flash.png"
+  },
+  {
+    "text": "icon-standard-monitor-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/monitor-delete.png"
+  },
+  {
+    "text": "icon-standard-page-white-database",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-database.png"
+  },
+  {
+    "text": "icon-standard-image-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/image-edit.png"
+  },
+  {
+    "text": "icon-standard-textfield-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/textfield-key.png"
+  },
+  {
+    "text": "icon-standard-server-chart",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server-chart.png"
+  },
+  {
+    "text": "icon-standard-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/key.png"
+  },
+  {
+    "text": "icon-standard-thumb-up",
+    "url": "/resource/easyui/themes/icon-standard/16x16/thumb-up.png"
+  },
+  {
+    "text": "icon-standard-computer-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/computer-edit.png"
+  },
+  {
+    "text": "icon-standard-photo-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/photo-add.png"
+  },
+  {
+    "text": "icon-standard-printer-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/printer-delete.png"
+  },
+  {
+    "text": "icon-standard-flag-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/flag-blue.png"
+  },
+  {
+    "text": "icon-standard-drive-burn",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-burn.png"
+  },
+  {
+    "text": "icon-standard-folder-palette",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-palette.png"
+  },
+  {
+    "text": "icon-standard-text-lowercase",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-lowercase.png"
+  },
+  {
+    "text": "icon-standard-script-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script-go.png"
+  },
+  {
+    "text": "icon-standard-page-world",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-world.png"
+  },
+  {
+    "text": "icon-standard-time-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/time-add.png"
+  },
+  {
+    "text": "icon-standard-shape-align-center",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-align-center.png"
+  },
+  {
+    "text": "icon-standard-newspaper-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/newspaper-go.png"
+  },
+  {
+    "text": "icon-standard-webcam-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/webcam-add.png"
+  },
+  {
+    "text": "icon-standard-basket-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/basket-delete.png"
+  },
+  {
+    "text": "icon-standard-page-white-coldfusion",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-coldfusion.png"
+  },
+  {
+    "text": "icon-standard-page-code",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-code.png"
+  },
+  {
+    "text": "icon-standard-dvd-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/dvd-edit.png"
+  },
+  {
+    "text": "icon-standard-script-code-red",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script-code-red.png"
+  },
+  {
+    "text": "icon-standard-tag-blue-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tag-blue-add.png"
+  },
+  {
+    "text": "icon-standard-page-copy",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-copy.png"
+  },
+  {
+    "text": "icon-standard-pilcrow",
+    "url": "/resource/easyui/themes/icon-standard/16x16/pilcrow.png"
+  },
+  {
+    "text": "icon-standard-page-white-php",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-php.png"
+  },
+  {
+    "text": "icon-standard-book-next",
+    "url": "/resource/easyui/themes/icon-standard/16x16/book-next.png"
+  },
+  {
+    "text": "icon-standard-monitor-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/monitor-edit.png"
+  },
+  {
+    "text": "icon-standard-monitor-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/monitor-link.png"
+  },
+  {
+    "text": "icon-standard-picture",
+    "url": "/resource/easyui/themes/icon-standard/16x16/picture.png"
+  },
+  {
+    "text": "icon-standard-cup-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cup-delete.png"
+  },
+  {
+    "text": "icon-standard-emoticon-wink",
+    "url": "/resource/easyui/themes/icon-standard/16x16/emoticon-wink.png"
+  },
+  {
+    "text": "icon-standard-folder-lightbulb",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-lightbulb.png"
+  },
+  {
+    "text": "icon-standard-text-indent",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-indent.png"
+  },
+  {
+    "text": "icon-standard-phone-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/phone-delete.png"
+  },
+  {
+    "text": "icon-standard-text-bold",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-bold.png"
+  },
+  {
+    "text": "icon-standard-group-gear",
+    "url": "/resource/easyui/themes/icon-standard/16x16/group-gear.png"
+  },
+  {
+    "text": "icon-standard-bullet-picture",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-picture.png"
+  },
+  {
+    "text": "icon-standard-transmit-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/transmit-go.png"
+  },
+  {
+    "text": "icon-standard-drive",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive.png"
+  },
+  {
+    "text": "icon-standard-cart-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cart-edit.png"
+  },
+  {
+    "text": "icon-standard-page-white-zip",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-zip.png"
+  },
+  {
+    "text": "icon-standard-chart-line-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-line-add.png"
+  },
+  {
+    "text": "icon-standard-image-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/image-delete.png"
+  },
+  {
+    "text": "icon-standard-page-white-camera",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-camera.png"
+  },
+  {
+    "text": "icon-standard-printer",
+    "url": "/resource/easyui/themes/icon-standard/16x16/printer.png"
+  },
+  {
+    "text": "icon-standard-folder-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-link.png"
+  },
+  {
+    "text": "icon-standard-script-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script-add.png"
+  },
+  {
+    "text": "icon-standard-report-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/report-key.png"
+  },
+  {
+    "text": "icon-standard-text-align-center",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-align-center.png"
+  },
+  {
+    "text": "icon-standard-database-gear",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database-gear.png"
+  },
+  {
+    "text": "icon-standard-door-out",
+    "url": "/resource/easyui/themes/icon-standard/16x16/door-out.png"
+  },
+  {
+    "text": "icon-standard-database-refresh",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database-refresh.png"
+  },
+  {
+    "text": "icon-standard-heart-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/heart-delete.png"
+  },
+  {
+    "text": "icon-standard-computer-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/computer-key.png"
+  },
+  {
+    "text": "icon-standard-bell-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bell-delete.png"
+  },
+  {
+    "text": "icon-standard-ipod-sound",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ipod-sound.png"
+  },
+  {
+    "text": "icon-standard-lorry-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lorry-go.png"
+  },
+  {
+    "text": "icon-standard-shape-flip-vertical",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-flip-vertical.png"
+  },
+  {
+    "text": "icon-standard-calendar-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calendar-delete.png"
+  },
+  {
+    "text": "icon-standard-application-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-edit.png"
+  },
+  {
+    "text": "icon-standard-user-comment",
+    "url": "/resource/easyui/themes/icon-standard/16x16/user-comment.png"
+  },
+  {
+    "text": "icon-standard-printer-empty",
+    "url": "/resource/easyui/themes/icon-standard/16x16/printer-empty.png"
+  },
+  {
+    "text": "icon-standard-folder-database",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-database.png"
+  },
+  {
+    "text": "icon-standard-picture-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/picture-go.png"
+  },
+  {
+    "text": "icon-standard-bullet-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-key.png"
+  },
+  {
+    "text": "icon-standard-page-white-lightning",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-lightning.png"
+  },
+  {
+    "text": "icon-standard-find",
+    "url": "/resource/easyui/themes/icon-standard/16x16/find.png"
+  },
+  {
+    "text": "icon-standard-cancel",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cancel.png"
+  },
+  {
+    "text": "icon-standard-application-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-error.png"
+  },
+  {
+    "text": "icon-standard-folder-heart",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-heart.png"
+  },
+  {
+    "text": "icon-standard-comments",
+    "url": "/resource/easyui/themes/icon-standard/16x16/comments.png"
+  },
+  {
+    "text": "icon-standard-bullet-pink",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-pink.png"
+  },
+  {
+    "text": "icon-standard-medal-bronze-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-bronze-add.png"
+  },
+  {
+    "text": "icon-standard-text-superscript",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-superscript.png"
+  },
+  {
+    "text": "icon-standard-bullet-arrow-top",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-arrow-top.png"
+  },
+  {
+    "text": "icon-standard-application-form-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-form-add.png"
+  },
+  {
+    "text": "icon-standard-male",
+    "url": "/resource/easyui/themes/icon-standard/16x16/male.png"
+  },
+  {
+    "text": "icon-standard-table-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-edit.png"
+  },
+  {
+    "text": "icon-standard-link-break",
+    "url": "/resource/easyui/themes/icon-standard/16x16/link-break.png"
+  },
+  {
+    "text": "icon-standard-date-previous",
+    "url": "/resource/easyui/themes/icon-standard/16x16/date-previous.png"
+  },
+  {
+    "text": "icon-standard-photo-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/photo-link.png"
+  },
+  {
+    "text": "icon-standard-disconnect",
+    "url": "/resource/easyui/themes/icon-standard/16x16/disconnect.png"
+  },
+  {
+    "text": "icon-standard-chart-bar-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-bar-delete.png"
+  },
+  {
+    "text": "icon-standard-user-green",
+    "url": "/resource/easyui/themes/icon-standard/16x16/user-green.png"
+  },
+  {
+    "text": "icon-standard-page-white-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-edit.png"
+  },
+  {
+    "text": "icon-standard-error-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/error-delete.png"
+  },
+  {
+    "text": "icon-standard-weather-cloudy",
+    "url": "/resource/easyui/themes/icon-standard/16x16/weather-cloudy.png"
+  },
+  {
+    "text": "icon-standard-tag-blue-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tag-blue-edit.png"
+  },
+  {
+    "text": "icon-standard-drive-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-key.png"
+  },
+  {
+    "text": "icon-standard-photos",
+    "url": "/resource/easyui/themes/icon-standard/16x16/photos.png"
+  },
+  {
+    "text": "icon-standard-server-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server-edit.png"
+  },
+  {
+    "text": "icon-standard-database-lightning",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database-lightning.png"
+  },
+  {
+    "text": "icon-standard-pill-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/pill-go.png"
+  },
+  {
+    "text": "icon-standard-application-lightning",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-lightning.png"
+  },
+  {
+    "text": "icon-standard-ruby-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ruby-go.png"
+  },
+  {
+    "text": "icon-standard-style-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/style-add.png"
+  },
+  {
+    "text": "icon-standard-text-list-numbers",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-list-numbers.png"
+  },
+  {
+    "text": "icon-standard-text-padding-left",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-padding-left.png"
+  },
+  {
+    "text": "icon-standard-application-side-tree",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-side-tree.png"
+  },
+  {
+    "text": "icon-standard-report-disk",
+    "url": "/resource/easyui/themes/icon-standard/16x16/report-disk.png"
+  },
+  {
+    "text": "icon-standard-shape-align-middle",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-align-middle.png"
+  },
+  {
+    "text": "icon-standard-contrast",
+    "url": "/resource/easyui/themes/icon-standard/16x16/contrast.png"
+  },
+  {
+    "text": "icon-standard-css-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/css-go.png"
+  },
+  {
+    "text": "icon-standard-plugin-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/plugin-edit.png"
+  },
+  {
+    "text": "icon-standard-textfield-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/textfield-delete.png"
+  },
+  {
+    "text": "icon-standard-page-white-medal",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-medal.png"
+  },
+  {
+    "text": "icon-standard-table",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table.png"
+  },
+  {
+    "text": "icon-standard-page-white-magnify",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-magnify.png"
+  },
+  {
+    "text": "icon-standard-text-strikethrough",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-strikethrough.png"
+  },
+  {
+    "text": "icon-standard-attach",
+    "url": "/resource/easyui/themes/icon-standard/16x16/attach.png"
+  },
+  {
+    "text": "icon-standard-medal-gold-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-gold-add.png"
+  },
+  {
+    "text": "icon-standard-clock",
+    "url": "/resource/easyui/themes/icon-standard/16x16/clock.png"
+  },
+  {
+    "text": "icon-standard-application-side-expand",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-side-expand.png"
+  },
+  {
+    "text": "icon-standard-resultset-last",
+    "url": "/resource/easyui/themes/icon-standard/16x16/resultset-last.png"
+  },
+  {
+    "text": "icon-standard-medal-bronze-2",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-bronze-2.png"
+  },
+  {
+    "text": "icon-standard-control-eject",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-eject.png"
+  },
+  {
+    "text": "icon-standard-zoom-out",
+    "url": "/resource/easyui/themes/icon-standard/16x16/zoom-out.png"
+  },
+  {
+    "text": "icon-standard-page-paste",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-paste.png"
+  },
+  {
+    "text": "icon-standard-transmit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/transmit.png"
+  },
+  {
+    "text": "icon-standard-rainbow",
+    "url": "/resource/easyui/themes/icon-standard/16x16/rainbow.png"
+  },
+  {
+    "text": "icon-standard-pill",
+    "url": "/resource/easyui/themes/icon-standard/16x16/pill.png"
+  },
+  {
+    "text": "icon-standard-arrow-out",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-out.png"
+  },
+  {
+    "text": "icon-standard-bullet-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-delete.png"
+  },
+  {
+    "text": "icon-standard-page-white-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-key.png"
+  },
+  {
+    "text": "icon-standard-chart-curve-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-curve-go.png"
+  },
+  {
+    "text": "icon-standard-building-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/building-go.png"
+  },
+  {
+    "text": "icon-standard-application-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-go.png"
+  },
+  {
+    "text": "icon-standard-emoticon-unhappy",
+    "url": "/resource/easyui/themes/icon-standard/16x16/emoticon-unhappy.png"
+  },
+  {
+    "text": "icon-standard-group-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/group-link.png"
+  },
+  {
+    "text": "icon-standard-bullet-disk",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-disk.png"
+  },
+  {
+    "text": "icon-standard-control-repeat-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-repeat-blue.png"
+  },
+  {
+    "text": "icon-standard-webcam-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/webcam-error.png"
+  },
+  {
+    "text": "icon-standard-world-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/world-delete.png"
+  },
+  {
+    "text": "icon-standard-database",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database.png"
+  },
+  {
+    "text": "icon-standard-page-white-excel",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-excel.png"
+  },
+  {
+    "text": "icon-standard-page-white-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-go.png"
+  },
+  {
+    "text": "icon-standard-transmit-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/transmit-add.png"
+  },
+  {
+    "text": "icon-standard-controller-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/controller-add.png"
+  },
+  {
+    "text": "icon-standard-picture-empty",
+    "url": "/resource/easyui/themes/icon-standard/16x16/picture-empty.png"
+  },
+  {
+    "text": "icon-standard-xhtml-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/xhtml-add.png"
+  },
+  {
+    "text": "icon-standard-server-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server-add.png"
+  },
+  {
+    "text": "icon-standard-shape-align-left",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-align-left.png"
+  },
+  {
+    "text": "icon-standard-tab",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tab.png"
+  },
+  {
+    "text": "icon-standard-car-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/car-delete.png"
+  },
+  {
+    "text": "icon-standard-drive-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-go.png"
+  },
+  {
+    "text": "icon-standard-bug-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bug-delete.png"
+  },
+  {
+    "text": "icon-standard-control-play",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-play.png"
+  },
+  {
+    "text": "icon-standard-shape-square-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-square-key.png"
+  },
+  {
+    "text": "icon-standard-calculator-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calculator-add.png"
+  },
+  {
+    "text": "icon-standard-film-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/film-error.png"
+  },
+  {
+    "text": "icon-standard-sound-mute",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sound-mute.png"
+  },
+  {
+    "text": "icon-standard-calculator-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calculator-link.png"
+  },
+  {
+    "text": "icon-standard-folder-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-error.png"
+  },
+  {
+    "text": "icon-standard-clock-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/clock-error.png"
+  },
+  {
+    "text": "icon-standard-brick-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/brick-edit.png"
+  },
+  {
+    "text": "icon-standard-world-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/world-add.png"
+  },
+  {
+    "text": "icon-standard-house-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/house-link.png"
+  },
+  {
+    "text": "icon-standard-folder-feed",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-feed.png"
+  },
+  {
+    "text": "icon-standard-chart-bar-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-bar-add.png"
+  },
+  {
+    "text": "icon-standard-bug-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bug-add.png"
+  },
+  {
+    "text": "icon-standard-report-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/report-link.png"
+  },
+  {
+    "text": "icon-standard-building-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/building-add.png"
+  },
+  {
+    "text": "icon-standard-cog-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cog-error.png"
+  },
+  {
+    "text": "icon-standard-drive-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-add.png"
+  },
+  {
+    "text": "icon-standard-text-smallcaps",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-smallcaps.png"
+  },
+  {
+    "text": "icon-standard-flag-red",
+    "url": "/resource/easyui/themes/icon-standard/16x16/flag-red.png"
+  },
+  {
+    "text": "icon-standard-calendar-view-week",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calendar-view-week.png"
+  },
+  {
+    "text": "icon-standard-coins-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/coins-add.png"
+  },
+  {
+    "text": "icon-standard-weather-sun",
+    "url": "/resource/easyui/themes/icon-standard/16x16/weather-sun.png"
+  },
+  {
+    "text": "icon-standard-arrow-undo",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-undo.png"
+  },
+  {
+    "text": "icon-standard-text-underline",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-underline.png"
+  },
+  {
+    "text": "icon-standard-television",
+    "url": "/resource/easyui/themes/icon-standard/16x16/television.png"
+  },
+  {
+    "text": "icon-standard-folder-open",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-open.png"
+  },
+  {
+    "text": "icon-standard-error-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/error-add.png"
+  },
+  {
+    "text": "icon-standard-paintcan",
+    "url": "/resource/easyui/themes/icon-standard/16x16/paintcan.png"
+  },
+  {
+    "text": "icon-standard-page-white-word",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-word.png"
+  },
+  {
+    "text": "icon-standard-bell-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bell-link.png"
+  },
+  {
+    "text": "icon-standard-camera-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/camera-error.png"
+  },
+  {
+    "text": "icon-standard-cog-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cog-delete.png"
+  },
+  {
+    "text": "icon-standard-color-wheel",
+    "url": "/resource/easyui/themes/icon-standard/16x16/color-wheel.png"
+  },
+  {
+    "text": "icon-standard-hourglass-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/hourglass-delete.png"
+  },
+  {
+    "text": "icon-standard-disk",
+    "url": "/resource/easyui/themes/icon-standard/16x16/disk.png"
+  },
+  {
+    "text": "icon-standard-plugin-disabled",
+    "url": "/resource/easyui/themes/icon-standard/16x16/plugin-disabled.png"
+  },
+  {
+    "text": "icon-standard-application-double",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-double.png"
+  },
+  {
+    "text": "icon-standard-server-lightning",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server-lightning.png"
+  },
+  {
+    "text": "icon-standard-shape-square-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-square-edit.png"
+  },
+  {
+    "text": "icon-standard-cart",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cart.png"
+  },
+  {
+    "text": "icon-standard-medal-silver-1",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-silver-1.png"
+  },
+  {
+    "text": "icon-standard-table-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-link.png"
+  },
+  {
+    "text": "icon-standard-application-side-contract",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-side-contract.png"
+  },
+  {
+    "text": "icon-standard-control-fastforward",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-fastforward.png"
+  },
+  {
+    "text": "icon-standard-shape-ungroup",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-ungroup.png"
+  },
+  {
+    "text": "icon-standard-application-put",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-put.png"
+  },
+  {
+    "text": "icon-standard-lock",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lock.png"
+  },
+  {
+    "text": "icon-standard-layout-sidebar",
+    "url": "/resource/easyui/themes/icon-standard/16x16/layout-sidebar.png"
+  },
+  {
+    "text": "icon-standard-comment-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/comment-edit.png"
+  },
+  {
+    "text": "icon-standard-page-white-freehand",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-freehand.png"
+  },
+  {
+    "text": "icon-standard-lock-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lock-delete.png"
+  },
+  {
+    "text": "icon-standard-drive-cd-empty",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-cd-empty.png"
+  },
+  {
+    "text": "icon-standard-joystick",
+    "url": "/resource/easyui/themes/icon-standard/16x16/joystick.png"
+  },
+  {
+    "text": "icon-standard-picture-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/picture-delete.png"
+  },
+  {
+    "text": "icon-standard-door-open",
+    "url": "/resource/easyui/themes/icon-standard/16x16/door-open.png"
+  },
+  {
+    "text": "icon-standard-feed-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/feed-error.png"
+  },
+  {
+    "text": "icon-standard-control-play-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-play-blue.png"
+  },
+  {
+    "text": "icon-standard-medal-bronze-1",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-bronze-1.png"
+  },
+  {
+    "text": "icon-standard-cup-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cup-edit.png"
+  },
+  {
+    "text": "icon-standard-layout-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/layout-delete.png"
+  },
+  {
+    "text": "icon-standard-database-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database-delete.png"
+  },
+  {
+    "text": "icon-standard-text-heading-4",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-heading-4.png"
+  },
+  {
+    "text": "icon-standard-bug-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bug-error.png"
+  },
+  {
+    "text": "icon-standard-link-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/link-delete.png"
+  },
+  {
+    "text": "icon-standard-text-uppercase",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-uppercase.png"
+  },
+  {
+    "text": "icon-standard-cup-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cup-error.png"
+  },
+  {
+    "text": "icon-standard-map-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/map-delete.png"
+  },
+  {
+    "text": "icon-standard-shape-flip-horizontal",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-flip-horizontal.png"
+  },
+  {
+    "text": "icon-standard-xhtml-valid",
+    "url": "/resource/easyui/themes/icon-standard/16x16/xhtml-valid.png"
+  },
+  {
+    "text": "icon-standard-clock-play",
+    "url": "/resource/easyui/themes/icon-standard/16x16/clock-play.png"
+  },
+  {
+    "text": "icon-standard-drive-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-link.png"
+  },
+  {
+    "text": "icon-standard-rss",
+    "url": "/resource/easyui/themes/icon-standard/16x16/rss.png"
+  },
+  {
+    "text": "icon-standard-sport-8ball",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sport-8ball.png"
+  },
+  {
+    "text": "icon-standard-transmit-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/transmit-blue.png"
+  },
+  {
+    "text": "icon-standard-computer-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/computer-add.png"
+  },
+  {
+    "text": "icon-standard-tag-blue-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tag-blue-delete.png"
+  },
+  {
+    "text": "icon-standard-cursor",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cursor.png"
+  },
+  {
+    "text": "icon-standard-medal-bronze-3",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-bronze-3.png"
+  },
+  {
+    "text": "icon-standard-cup-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cup-link.png"
+  },
+  {
+    "text": "icon-standard-picture-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/picture-key.png"
+  },
+  {
+    "text": "icon-standard-application-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-add.png"
+  },
+  {
+    "text": "icon-standard-application-form",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-form.png"
+  },
+  {
+    "text": "icon-standard-award-star-bronze-1",
+    "url": "/resource/easyui/themes/icon-standard/16x16/award-star-bronze-1.png"
+  },
+  {
+    "text": "icon-standard-bin-closed",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bin-closed.png"
+  },
+  {
+    "text": "icon-standard-key-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/key-go.png"
+  },
+  {
+    "text": "icon-standard-bullet-yellow",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-yellow.png"
+  },
+  {
+    "text": "icon-standard-report-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/report-go.png"
+  },
+  {
+    "text": "icon-standard-control-rewind-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-rewind-blue.png"
+  },
+  {
+    "text": "icon-standard-controller-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/controller-error.png"
+  },
+  {
+    "text": "icon-standard-application-view-tile",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-view-tile.png"
+  },
+  {
+    "text": "icon-standard-arrow-branch",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-branch.png"
+  },
+  {
+    "text": "icon-standard-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/link.png"
+  },
+  {
+    "text": "icon-standard-lorry-flatbed",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lorry-flatbed.png"
+  },
+  {
+    "text": "icon-standard-script-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script-edit.png"
+  },
+  {
+    "text": "icon-standard-arrow-switch",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-switch.png"
+  },
+  {
+    "text": "icon-standard-server-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server-go.png"
+  },
+  {
+    "text": "icon-standard-keyboard-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/keyboard-delete.png"
+  },
+  {
+    "text": "icon-standard-report-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/report-add.png"
+  },
+  {
+    "text": "icon-standard-chart-pie-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-pie-error.png"
+  },
+  {
+    "text": "icon-standard-bullet-white",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-white.png"
+  },
+  {
+    "text": "icon-standard-world",
+    "url": "/resource/easyui/themes/icon-standard/16x16/world.png"
+  },
+  {
+    "text": "icon-standard-control-start-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-start-blue.png"
+  },
+  {
+    "text": "icon-standard-house",
+    "url": "/resource/easyui/themes/icon-standard/16x16/house.png"
+  },
+  {
+    "text": "icon-standard-arrow-join",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-join.png"
+  },
+  {
+    "text": "icon-standard-page-white-find",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-find.png"
+  },
+  {
+    "text": "icon-standard-application-form-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-form-edit.png"
+  },
+  {
+    "text": "icon-standard-script-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script-link.png"
+  },
+  {
+    "text": "icon-standard-transmit-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/transmit-edit.png"
+  },
+  {
+    "text": "icon-standard-vcard-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/vcard-delete.png"
+  },
+  {
+    "text": "icon-standard-coins-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/coins-delete.png"
+  },
+  {
+    "text": "icon-standard-monitor-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/monitor-error.png"
+  },
+  {
+    "text": "icon-standard-page-refresh",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-refresh.png"
+  },
+  {
+    "text": "icon-standard-controller",
+    "url": "/resource/easyui/themes/icon-standard/16x16/controller.png"
+  },
+  {
+    "text": "icon-standard-zoom-in",
+    "url": "/resource/easyui/themes/icon-standard/16x16/zoom-in.png"
+  },
+  {
+    "text": "icon-standard-application-cascade",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-cascade.png"
+  },
+  {
+    "text": "icon-standard-stop",
+    "url": "/resource/easyui/themes/icon-standard/16x16/stop.png"
+  },
+  {
+    "text": "icon-standard-lorry",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lorry.png"
+  },
+  {
+    "text": "icon-standard-chart-curve",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-curve.png"
+  },
+  {
+    "text": "icon-standard-page-white-paste",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-paste.png"
+  },
+  {
+    "text": "icon-standard-email-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/email-add.png"
+  },
+  {
+    "text": "icon-standard-television-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/television-delete.png"
+  },
+  {
+    "text": "icon-standard-joystick-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/joystick-error.png"
+  },
+  {
+    "text": "icon-standard-page-white-cup",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-cup.png"
+  },
+  {
+    "text": "icon-standard-bin",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bin.png"
+  },
+  {
+    "text": "icon-standard-folder-image",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-image.png"
+  },
+  {
+    "text": "icon-standard-error-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/error-go.png"
+  },
+  {
+    "text": "icon-standard-link-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/link-edit.png"
+  },
+  {
+    "text": "icon-standard-tag-yellow",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tag-yellow.png"
+  },
+  {
+    "text": "icon-standard-bin-empty",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bin-empty.png"
+  },
+  {
+    "text": "icon-standard-emoticon-smile",
+    "url": "/resource/easyui/themes/icon-standard/16x16/emoticon-smile.png"
+  },
+  {
+    "text": "icon-standard-shape-group",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-group.png"
+  },
+  {
+    "text": "icon-standard-medal-silver-2",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-silver-2.png"
+  },
+  {
+    "text": "icon-standard-user-female",
+    "url": "/resource/easyui/themes/icon-standard/16x16/user-female.png"
+  },
+  {
+    "text": "icon-standard-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/add.png"
+  },
+  {
+    "text": "icon-standard-drive-user",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-user.png"
+  },
+  {
+    "text": "icon-standard-emoticon-evilgrin",
+    "url": "/resource/easyui/themes/icon-standard/16x16/emoticon-evilgrin.png"
+  },
+  {
+    "text": "icon-standard-money",
+    "url": "/resource/easyui/themes/icon-standard/16x16/money.png"
+  },
+  {
+    "text": "icon-standard-chart-organisation-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-organisation-delete.png"
+  },
+  {
+    "text": "icon-standard-tag",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tag.png"
+  },
+  {
+    "text": "icon-standard-shape-move-backwards",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-move-backwards.png"
+  },
+  {
+    "text": "icon-standard-hourglass",
+    "url": "/resource/easyui/themes/icon-standard/16x16/hourglass.png"
+  },
+  {
+    "text": "icon-standard-control-pause",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-pause.png"
+  },
+  {
+    "text": "icon-standard-medal-gold-2",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-gold-2.png"
+  },
+  {
+    "text": "icon-standard-database-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database-edit.png"
+  },
+  {
+    "text": "icon-standard-application-split",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-split.png"
+  },
+  {
+    "text": "icon-standard-xhtml",
+    "url": "/resource/easyui/themes/icon-standard/16x16/xhtml.png"
+  },
+  {
+    "text": "icon-standard-information",
+    "url": "/resource/easyui/themes/icon-standard/16x16/information.png"
+  },
+  {
+    "text": "icon-standard-cup-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cup-add.png"
+  },
+  {
+    "text": "icon-standard-arrow-in",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-in.png"
+  },
+  {
+    "text": "icon-standard-email",
+    "url": "/resource/easyui/themes/icon-standard/16x16/email.png"
+  },
+  {
+    "text": "icon-standard-spellcheck",
+    "url": "/resource/easyui/themes/icon-standard/16x16/spellcheck.png"
+  },
+  {
+    "text": "icon-standard-group-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/group-add.png"
+  },
+  {
+    "text": "icon-standard-group",
+    "url": "/resource/easyui/themes/icon-standard/16x16/group.png"
+  },
+  {
+    "text": "icon-standard-flag-green",
+    "url": "/resource/easyui/themes/icon-standard/16x16/flag-green.png"
+  },
+  {
+    "text": "icon-standard-shield-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shield-go.png"
+  },
+  {
+    "text": "icon-standard-vector-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/vector-add.png"
+  },
+  {
+    "text": "icon-standard-asterisk-yellow",
+    "url": "/resource/easyui/themes/icon-standard/16x16/asterisk-yellow.png"
+  },
+  {
+    "text": "icon-standard-style",
+    "url": "/resource/easyui/themes/icon-standard/16x16/style.png"
+  },
+  {
+    "text": "icon-standard-picture-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/picture-edit.png"
+  },
+  {
+    "text": "icon-standard-database-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database-link.png"
+  },
+  {
+    "text": "icon-standard-shape-square-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-square-delete.png"
+  },
+  {
+    "text": "icon-standard-connect",
+    "url": "/resource/easyui/themes/icon-standard/16x16/connect.png"
+  },
+  {
+    "text": "icon-standard-map",
+    "url": "/resource/easyui/themes/icon-standard/16x16/map.png"
+  },
+  {
+    "text": "icon-standard-film-save",
+    "url": "/resource/easyui/themes/icon-standard/16x16/film-save.png"
+  },
+  {
+    "text": "icon-standard-cart-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cart-add.png"
+  },
+  {
+    "text": "icon-standard-page-green",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-green.png"
+  },
+  {
+    "text": "icon-standard-page-white-gear",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-gear.png"
+  },
+  {
+    "text": "icon-standard-text-heading-2",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-heading-2.png"
+  },
+  {
+    "text": "icon-standard-control-pause-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-pause-blue.png"
+  },
+  {
+    "text": "icon-standard-picture-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/picture-add.png"
+  },
+  {
+    "text": "icon-standard-page-white-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-error.png"
+  },
+  {
+    "text": "icon-standard-date-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/date-edit.png"
+  },
+  {
+    "text": "icon-standard-text-columns",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-columns.png"
+  },
+  {
+    "text": "icon-standard-text-heading-6",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-heading-6.png"
+  },
+  {
+    "text": "icon-standard-thumb-down",
+    "url": "/resource/easyui/themes/icon-standard/16x16/thumb-down.png"
+  },
+  {
+    "text": "icon-standard-joystick-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/joystick-delete.png"
+  },
+  {
+    "text": "icon-standard-application-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-link.png"
+  },
+  {
+    "text": "icon-standard-lock-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lock-go.png"
+  },
+  {
+    "text": "icon-standard-user-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/user-edit.png"
+  },
+  {
+    "text": "icon-standard-rss-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/rss-add.png"
+  },
+  {
+    "text": "icon-standard-rss-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/rss-go.png"
+  },
+  {
+    "text": "icon-standard-drive-cd",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-cd.png"
+  },
+  {
+    "text": "icon-standard-page-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-add.png"
+  },
+  {
+    "text": "icon-standard-application-get",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-get.png"
+  },
+  {
+    "text": "icon-standard-time-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/time-go.png"
+  },
+  {
+    "text": "icon-standard-pencil-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/pencil-go.png"
+  },
+  {
+    "text": "icon-standard-shield",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shield.png"
+  },
+  {
+    "text": "icon-standard-page-excel",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-excel.png"
+  },
+  {
+    "text": "icon-standard-feed-magnify",
+    "url": "/resource/easyui/themes/icon-standard/16x16/feed-magnify.png"
+  },
+  {
+    "text": "icon-standard-application-xp",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-xp.png"
+  },
+  {
+    "text": "icon-standard-mouse-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/mouse-add.png"
+  },
+  {
+    "text": "icon-standard-shading",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shading.png"
+  },
+  {
+    "text": "icon-standard-font-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/font-add.png"
+  },
+  {
+    "text": "icon-standard-drive-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-edit.png"
+  },
+  {
+    "text": "icon-standard-date-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/date-add.png"
+  },
+  {
+    "text": "icon-standard-page-save",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-save.png"
+  },
+  {
+    "text": "icon-standard-package-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/package-link.png"
+  },
+  {
+    "text": "icon-standard-chart-pie",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-pie.png"
+  },
+  {
+    "text": "icon-standard-script-save",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script-save.png"
+  },
+  {
+    "text": "icon-standard-date-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/date-go.png"
+  },
+  {
+    "text": "icon-standard-keyboard-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/keyboard-add.png"
+  },
+  {
+    "text": "icon-standard-hourglass-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/hourglass-go.png"
+  },
+  {
+    "text": "icon-standard-email-open",
+    "url": "/resource/easyui/themes/icon-standard/16x16/email-open.png"
+  },
+  {
+    "text": "icon-standard-clock-pause",
+    "url": "/resource/easyui/themes/icon-standard/16x16/clock-pause.png"
+  },
+  {
+    "text": "icon-standard-drink-empty",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drink-empty.png"
+  },
+  {
+    "text": "icon-standard-folder-magnify",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-magnify.png"
+  },
+  {
+    "text": "icon-standard-image",
+    "url": "/resource/easyui/themes/icon-standard/16x16/image.png"
+  },
+  {
+    "text": "icon-standard-lightbulb-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lightbulb-add.png"
+  },
+  {
+    "text": "icon-standard-page-white-stack",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-stack.png"
+  },
+  {
+    "text": "icon-standard-cd-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cd-add.png"
+  },
+  {
+    "text": "icon-standard-link-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/link-add.png"
+  },
+  {
+    "text": "icon-standard-shape-move-back",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-move-back.png"
+  },
+  {
+    "text": "icon-standard-cd",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cd.png"
+  },
+  {
+    "text": "icon-standard-cut",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cut.png"
+  },
+  {
+    "text": "icon-standard-table-multiple",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-multiple.png"
+  },
+  {
+    "text": "icon-standard-accept",
+    "url": "/resource/easyui/themes/icon-standard/16x16/accept.png"
+  },
+  {
+    "text": "icon-standard-folder-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-go.png"
+  },
+  {
+    "text": "icon-standard-clock-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/clock-edit.png"
+  },
+  {
+    "text": "icon-standard-color-swatch",
+    "url": "/resource/easyui/themes/icon-standard/16x16/color-swatch.png"
+  },
+  {
+    "text": "icon-standard-flag-pink",
+    "url": "/resource/easyui/themes/icon-standard/16x16/flag-pink.png"
+  },
+  {
+    "text": "icon-standard-shape-square-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-square-add.png"
+  },
+  {
+    "text": "icon-standard-door",
+    "url": "/resource/easyui/themes/icon-standard/16x16/door.png"
+  },
+  {
+    "text": "icon-standard-drive-rename",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-rename.png"
+  },
+  {
+    "text": "icon-standard-camera",
+    "url": "/resource/easyui/themes/icon-standard/16x16/camera.png"
+  },
+  {
+    "text": "icon-standard-printer-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/printer-error.png"
+  },
+  {
+    "text": "icon-standard-page-white",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white.png"
+  },
+  {
+    "text": "icon-standard-cog",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cog.png"
+  },
+  {
+    "text": "icon-standard-bullet-black",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-black.png"
+  },
+  {
+    "text": "icon-standard-vcard-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/vcard-add.png"
+  },
+  {
+    "text": "icon-standard-wrench",
+    "url": "/resource/easyui/themes/icon-standard/16x16/wrench.png"
+  },
+  {
+    "text": "icon-standard-layout-content",
+    "url": "/resource/easyui/themes/icon-standard/16x16/layout-content.png"
+  },
+  {
+    "text": "icon-standard-book-addresses",
+    "url": "/resource/easyui/themes/icon-standard/16x16/book-addresses.png"
+  },
+  {
+    "text": "icon-standard-folder-table",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-table.png"
+  },
+  {
+    "text": "icon-standard-package-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/package-delete.png"
+  },
+  {
+    "text": "icon-standard-emoticon-surprised",
+    "url": "/resource/easyui/themes/icon-standard/16x16/emoticon-surprised.png"
+  },
+  {
+    "text": "icon-standard-calculator-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calculator-delete.png"
+  },
+  {
+    "text": "icon-standard-script-code",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script-code.png"
+  },
+  {
+    "text": "icon-standard-text-dropcaps",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-dropcaps.png"
+  },
+  {
+    "text": "icon-standard-telephone",
+    "url": "/resource/easyui/themes/icon-standard/16x16/telephone.png"
+  },
+  {
+    "text": "icon-standard-page-white-copy",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-copy.png"
+  },
+  {
+    "text": "icon-standard-camera-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/camera-delete.png"
+  },
+  {
+    "text": "icon-standard-money-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/money-delete.png"
+  },
+  {
+    "text": "icon-standard-brick",
+    "url": "/resource/easyui/themes/icon-standard/16x16/brick.png"
+  },
+  {
+    "text": "icon-standard-money-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/money-add.png"
+  },
+  {
+    "text": "icon-standard-cut-red",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cut-red.png"
+  },
+  {
+    "text": "icon-standard-table-row-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-row-delete.png"
+  },
+  {
+    "text": "icon-standard-book-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/book-error.png"
+  },
+  {
+    "text": "icon-standard-contrast-increase",
+    "url": "/resource/easyui/themes/icon-standard/16x16/contrast-increase.png"
+  },
+  {
+    "text": "icon-standard-control-start",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-start.png"
+  },
+  {
+    "text": "icon-standard-table-save",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-save.png"
+  },
+  {
+    "text": "icon-standard-picture-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/picture-link.png"
+  },
+  {
+    "text": "icon-standard-phone-sound",
+    "url": "/resource/easyui/themes/icon-standard/16x16/phone-sound.png"
+  },
+  {
+    "text": "icon-standard-webcam",
+    "url": "/resource/easyui/themes/icon-standard/16x16/webcam.png"
+  },
+  {
+    "text": "icon-standard-bullet-arrow-up",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-arrow-up.png"
+  },
+  {
+    "text": "icon-standard-arrow-rotate-anticlockwise",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-rotate-anticlockwise.png"
+  },
+  {
+    "text": "icon-standard-control-stop",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-stop.png"
+  },
+  {
+    "text": "icon-standard-arrow-rotate-clockwise",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-rotate-clockwise.png"
+  },
+  {
+    "text": "icon-standard-phone",
+    "url": "/resource/easyui/themes/icon-standard/16x16/phone.png"
+  },
+  {
+    "text": "icon-standard-emoticon-grin",
+    "url": "/resource/easyui/themes/icon-standard/16x16/emoticon-grin.png"
+  },
+  {
+    "text": "icon-standard-layout",
+    "url": "/resource/easyui/themes/icon-standard/16x16/layout.png"
+  },
+  {
+    "text": "icon-standard-page-white-text-width",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-text-width.png"
+  },
+  {
+    "text": "icon-standard-text-align-right",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-align-right.png"
+  },
+  {
+    "text": "icon-standard-arrow-turn-right",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-turn-right.png"
+  },
+  {
+    "text": "icon-standard-shape-handles",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-handles.png"
+  },
+  {
+    "text": "icon-standard-arrow-refresh",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-refresh.png"
+  },
+  {
+    "text": "icon-standard-table-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-key.png"
+  },
+  {
+    "text": "icon-standard-chart-pie-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-pie-edit.png"
+  },
+  {
+    "text": "icon-standard-folder-explore",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-explore.png"
+  },
+  {
+    "text": "icon-standard-application-osx-terminal",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-osx-terminal.png"
+  },
+  {
+    "text": "icon-standard-feed-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/feed-go.png"
+  },
+  {
+    "text": "icon-standard-chart-line-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-line-error.png"
+  },
+  {
+    "text": "icon-standard-brick-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/brick-error.png"
+  },
+  {
+    "text": "icon-standard-arrow-merge",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-merge.png"
+  },
+  {
+    "text": "icon-standard-drive-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-delete.png"
+  },
+  {
+    "text": "icon-standard-text-kerning",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-kerning.png"
+  },
+  {
+    "text": "icon-standard-brick-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/brick-link.png"
+  },
+  {
+    "text": "icon-standard-control-repeat",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-repeat.png"
+  },
+  {
+    "text": "icon-standard-table-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-error.png"
+  },
+  {
+    "text": "icon-standard-pencil-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/pencil-add.png"
+  },
+  {
+    "text": "icon-standard-computer-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/computer-link.png"
+  },
+  {
+    "text": "icon-standard-email-open-image",
+    "url": "/resource/easyui/themes/icon-standard/16x16/email-open-image.png"
+  },
+  {
+    "text": "icon-standard-page-white-star",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-star.png"
+  },
+  {
+    "text": "icon-standard-user-orange",
+    "url": "/resource/easyui/themes/icon-standard/16x16/user-orange.png"
+  },
+  {
+    "text": "icon-standard-clock-stop",
+    "url": "/resource/easyui/themes/icon-standard/16x16/clock-stop.png"
+  },
+  {
+    "text": "icon-standard-shape-move-front",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-move-front.png"
+  },
+  {
+    "text": "icon-standard-lightning-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lightning-delete.png"
+  },
+  {
+    "text": "icon-standard-tick",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tick.png"
+  },
+  {
+    "text": "icon-standard-flag-yellow",
+    "url": "/resource/easyui/themes/icon-standard/16x16/flag-yellow.png"
+  },
+  {
+    "text": "icon-standard-shield-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shield-delete.png"
+  },
+  {
+    "text": "icon-standard-lightning",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lightning.png"
+  },
+  {
+    "text": "icon-standard-resultset-next",
+    "url": "/resource/easyui/themes/icon-standard/16x16/resultset-next.png"
+  },
+  {
+    "text": "icon-standard-folder-page",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-page.png"
+  },
+  {
+    "text": "icon-standard-up",
+    "url": "/resource/easyui/themes/icon-standard/16x16/up.png"
+  },
+  {
+    "text": "icon-standard-script-gear",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script-gear.png"
+  },
+  {
+    "text": "icon-standard-sitemap",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sitemap.png"
+  },
+  {
+    "text": "icon-standard-xhtml-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/xhtml-delete.png"
+  },
+  {
+    "text": "icon-standard-house-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/house-go.png"
+  },
+  {
+    "text": "icon-standard-calendar-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calendar-link.png"
+  },
+  {
+    "text": "icon-standard-note-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/note-add.png"
+  },
+  {
+    "text": "icon-standard-bullet-orange",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-orange.png"
+  },
+  {
+    "text": "icon-standard-cd-burn",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cd-burn.png"
+  },
+  {
+    "text": "icon-standard-lorry-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lorry-delete.png"
+  },
+  {
+    "text": "icon-standard-map-magnify",
+    "url": "/resource/easyui/themes/icon-standard/16x16/map-magnify.png"
+  },
+  {
+    "text": "icon-standard-bell-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bell-error.png"
+  },
+  {
+    "text": "icon-standard-book-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/book-key.png"
+  },
+  {
+    "text": "icon-standard-car",
+    "url": "/resource/easyui/themes/icon-standard/16x16/car.png"
+  },
+  {
+    "text": "icon-standard-world-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/world-edit.png"
+  },
+  {
+    "text": "icon-standard-page-lightning",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-lightning.png"
+  },
+  {
+    "text": "icon-standard-newspaper-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/newspaper-link.png"
+  },
+  {
+    "text": "icon-standard-sport-football",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sport-football.png"
+  },
+  {
+    "text": "icon-standard-basket-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/basket-error.png"
+  },
+  {
+    "text": "icon-standard-application-view-icons",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-view-icons.png"
+  },
+  {
+    "text": "icon-standard-basket-put",
+    "url": "/resource/easyui/themes/icon-standard/16x16/basket-put.png"
+  },
+  {
+    "text": "icon-standard-new",
+    "url": "/resource/easyui/themes/icon-standard/16x16/new.png"
+  },
+  {
+    "text": "icon-standard-plugin-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/plugin-go.png"
+  },
+  {
+    "text": "icon-standard-page-white-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-link.png"
+  },
+  {
+    "text": "icon-standard-bullet-wrench",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-wrench.png"
+  },
+  {
+    "text": "icon-standard-group-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/group-edit.png"
+  },
+  {
+    "text": "icon-standard-folder-picture",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-picture.png"
+  },
+  {
+    "text": "icon-standard-control-equalizer",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-equalizer.png"
+  },
+  {
+    "text": "icon-standard-layers",
+    "url": "/resource/easyui/themes/icon-standard/16x16/layers.png"
+  },
+  {
+    "text": "icon-standard-calendar",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calendar.png"
+  },
+  {
+    "text": "icon-standard-vector-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/vector-delete.png"
+  },
+  {
+    "text": "icon-standard-newspaper-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/newspaper-add.png"
+  },
+  {
+    "text": "icon-standard-chart-curve-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-curve-edit.png"
+  },
+  {
+    "text": "icon-standard-report-user",
+    "url": "/resource/easyui/themes/icon-standard/16x16/report-user.png"
+  },
+  {
+    "text": "icon-standard-picture-save",
+    "url": "/resource/easyui/themes/icon-standard/16x16/picture-save.png"
+  },
+  {
+    "text": "icon-standard-page-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-edit.png"
+  },
+  {
+    "text": "icon-standard-page-white-compressed",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-compressed.png"
+  },
+  {
+    "text": "icon-standard-page-white-visualstudio",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-visualstudio.png"
+  },
+  {
+    "text": "icon-standard-bullet-green",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-green.png"
+  },
+  {
+    "text": "icon-standard-ipod-cast-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ipod-cast-delete.png"
+  },
+  {
+    "text": "icon-standard-shape-align-bottom",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-align-bottom.png"
+  },
+  {
+    "text": "icon-standard-bullet-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-add.png"
+  },
+  {
+    "text": "icon-standard-application-view-columns",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-view-columns.png"
+  },
+  {
+    "text": "icon-standard-drive-web",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-web.png"
+  },
+  {
+    "text": "icon-standard-note-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/note-error.png"
+  },
+  {
+    "text": "icon-standard-award-star-bronze-3",
+    "url": "/resource/easyui/themes/icon-standard/16x16/award-star-bronze-3.png"
+  },
+  {
+    "text": "icon-standard-award-star-silver-2",
+    "url": "/resource/easyui/themes/icon-standard/16x16/award-star-silver-2.png"
+  },
+  {
+    "text": "icon-standard-rosette",
+    "url": "/resource/easyui/themes/icon-standard/16x16/rosette.png"
+  },
+  {
+    "text": "icon-standard-page-paintbrush",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-paintbrush.png"
+  },
+  {
+    "text": "icon-standard-server-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server-delete.png"
+  },
+  {
+    "text": "icon-standard-text-letterspacing",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-letterspacing.png"
+  },
+  {
+    "text": "icon-standard-pill-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/pill-add.png"
+  },
+  {
+    "text": "icon-standard-page-white-powerpoint",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-powerpoint.png"
+  },
+  {
+    "text": "icon-standard-arrow-turn-left",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-turn-left.png"
+  },
+  {
+    "text": "icon-standard-eye",
+    "url": "/resource/easyui/themes/icon-standard/16x16/eye.png"
+  },
+  {
+    "text": "icon-standard-page-white-csharp",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-csharp.png"
+  },
+  {
+    "text": "icon-standard-server-compressed",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server-compressed.png"
+  },
+  {
+    "text": "icon-standard-calendar-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calendar-add.png"
+  },
+  {
+    "text": "icon-standard-award-star-gold-1",
+    "url": "/resource/easyui/themes/icon-standard/16x16/award-star-gold-1.png"
+  },
+  {
+    "text": "icon-standard-font-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/font-delete.png"
+  },
+  {
+    "text": "icon-standard-text-heading-3",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-heading-3.png"
+  },
+  {
+    "text": "icon-standard-building",
+    "url": "/resource/easyui/themes/icon-standard/16x16/building.png"
+  },
+  {
+    "text": "icon-standard-server",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server.png"
+  },
+  {
+    "text": "icon-standard-folder-star",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-star.png"
+  },
+  {
+    "text": "icon-standard-application",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application.png"
+  },
+  {
+    "text": "icon-standard-brick-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/brick-delete.png"
+  },
+  {
+    "text": "icon-standard-car-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/car-add.png"
+  },
+  {
+    "text": "icon-standard-layout-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/layout-edit.png"
+  },
+  {
+    "text": "icon-standard-telephone-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/telephone-go.png"
+  },
+  {
+    "text": "icon-standard-bell-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bell-go.png"
+  },
+  {
+    "text": "icon-standard-book-open",
+    "url": "/resource/easyui/themes/icon-standard/16x16/book-open.png"
+  },
+  {
+    "text": "icon-standard-book",
+    "url": "/resource/easyui/themes/icon-standard/16x16/book.png"
+  },
+  {
+    "text": "icon-standard-chart-bar-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-bar-edit.png"
+  },
+  {
+    "text": "icon-standard-html-valid",
+    "url": "/resource/easyui/themes/icon-standard/16x16/html-valid.png"
+  },
+  {
+    "text": "icon-standard-page-white-actionscript",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-actionscript.png"
+  },
+  {
+    "text": "icon-standard-server-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server-link.png"
+  },
+  {
+    "text": "icon-standard-camera-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/camera-add.png"
+  },
+  {
+    "text": "icon-standard-drive-network",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-network.png"
+  },
+  {
+    "text": "icon-standard-layout-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/layout-add.png"
+  },
+  {
+    "text": "icon-standard-lock-open",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lock-open.png"
+  },
+  {
+    "text": "icon-standard-camera-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/camera-edit.png"
+  },
+  {
+    "text": "icon-standard-photo-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/photo-delete.png"
+  },
+  {
+    "text": "icon-standard-resultset-first",
+    "url": "/resource/easyui/themes/icon-standard/16x16/resultset-first.png"
+  },
+  {
+    "text": "icon-standard-table-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-add.png"
+  },
+  {
+    "text": "icon-standard-newspaper",
+    "url": "/resource/easyui/themes/icon-standard/16x16/newspaper.png"
+  },
+  {
+    "text": "icon-standard-comments-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/comments-add.png"
+  },
+  {
+    "text": "icon-standard-clock-red",
+    "url": "/resource/easyui/themes/icon-standard/16x16/clock-red.png"
+  },
+  {
+    "text": "icon-standard-phone-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/phone-add.png"
+  },
+  {
+    "text": "icon-standard-html-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/html-go.png"
+  },
+  {
+    "text": "icon-standard-clock-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/clock-link.png"
+  },
+  {
+    "text": "icon-standard-page-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-link.png"
+  },
+  {
+    "text": "icon-standard-user-suit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/user-suit.png"
+  },
+  {
+    "text": "icon-standard-cup-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cup-key.png"
+  },
+  {
+    "text": "icon-standard-bullet-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-error.png"
+  },
+  {
+    "text": "icon-standard-package-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/package-go.png"
+  },
+  {
+    "text": "icon-standard-database-save",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database-save.png"
+  },
+  {
+    "text": "icon-standard-dvd-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/dvd-link.png"
+  },
+  {
+    "text": "icon-standard-monitor-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/monitor-go.png"
+  },
+  {
+    "text": "icon-standard-css-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/css-add.png"
+  },
+  {
+    "text": "icon-standard-calculator-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calculator-error.png"
+  },
+  {
+    "text": "icon-standard-sport-tennis",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sport-tennis.png"
+  },
+  {
+    "text": "icon-standard-email-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/email-error.png"
+  },
+  {
+    "text": "icon-standard-printer-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/printer-add.png"
+  },
+  {
+    "text": "icon-standard-table-refresh",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-refresh.png"
+  },
+  {
+    "text": "icon-standard-money-yen",
+    "url": "/resource/easyui/themes/icon-standard/16x16/money-yen.png"
+  },
+  {
+    "text": "icon-standard-server-uncompressed",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server-uncompressed.png"
+  },
+  {
+    "text": "icon-standard-chart-organisation",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-organisation.png"
+  },
+  {
+    "text": "icon-standard-arrow-left",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-left.png"
+  },
+  {
+    "text": "icon-standard-database-connect",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database-connect.png"
+  },
+  {
+    "text": "icon-standard-newspaper-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/newspaper-delete.png"
+  },
+  {
+    "text": "icon-standard-date-magnify",
+    "url": "/resource/easyui/themes/icon-standard/16x16/date-magnify.png"
+  },
+  {
+    "text": "icon-standard-layout-header",
+    "url": "/resource/easyui/themes/icon-standard/16x16/layout-header.png"
+  },
+  {
+    "text": "icon-standard-style-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/style-delete.png"
+  },
+  {
+    "text": "icon-standard-bomb",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bomb.png"
+  },
+  {
+    "text": "icon-standard-help",
+    "url": "/resource/easyui/themes/icon-standard/16x16/help.png"
+  },
+  {
+    "text": "icon-standard-key-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/key-delete.png"
+  },
+  {
+    "text": "icon-standard-textfield",
+    "url": "/resource/easyui/themes/icon-standard/16x16/textfield.png"
+  },
+  {
+    "text": "icon-standard-chart-bar-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-bar-error.png"
+  },
+  {
+    "text": "icon-standard-application-form-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-form-delete.png"
+  },
+  {
+    "text": "icon-standard-script-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script-delete.png"
+  },
+  {
+    "text": "icon-standard-page-white-text",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-text.png"
+  },
+  {
+    "text": "icon-standard-book-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/book-link.png"
+  },
+  {
+    "text": "icon-standard-sound-none",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sound-none.png"
+  },
+  {
+    "text": "icon-standard-ipod-cast",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ipod-cast.png"
+  },
+  {
+    "text": "icon-standard-drive-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-error.png"
+  },
+  {
+    "text": "icon-standard-tab-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tab-add.png"
+  },
+  {
+    "text": "icon-standard-chart-line",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-line.png"
+  },
+  {
+    "text": "icon-standard-photo",
+    "url": "/resource/easyui/themes/icon-standard/16x16/photo.png"
+  },
+  {
+    "text": "icon-standard-pill-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/pill-delete.png"
+  },
+  {
+    "text": "icon-standard-emoticon-waii",
+    "url": "/resource/easyui/themes/icon-standard/16x16/emoticon-waii.png"
+  },
+  {
+    "text": "icon-standard-html-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/html-delete.png"
+  },
+  {
+    "text": "icon-standard-sport-basketball",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sport-basketball.png"
+  },
+  {
+    "text": "icon-standard-hourglass-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/hourglass-link.png"
+  },
+  {
+    "text": "icon-standard-image-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/image-add.png"
+  },
+  {
+    "text": "icon-standard-page-white-wrench",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-wrench.png"
+  },
+  {
+    "text": "icon-standard-page-word",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-word.png"
+  },
+  {
+    "text": "icon-standard-control-fastforward-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-fastforward-blue.png"
+  },
+  {
+    "text": "icon-standard-page-white-swoosh",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-swoosh.png"
+  },
+  {
+    "text": "icon-standard-sound",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sound.png"
+  },
+  {
+    "text": "icon-standard-group-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/group-key.png"
+  },
+  {
+    "text": "icon-standard-sound-low",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sound-low.png"
+  },
+  {
+    "text": "icon-standard-date",
+    "url": "/resource/easyui/themes/icon-standard/16x16/date.png"
+  },
+  {
+    "text": "icon-standard-control-rewind",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-rewind.png"
+  },
+  {
+    "text": "icon-standard-overlays",
+    "url": "/resource/easyui/themes/icon-standard/16x16/overlays.png"
+  },
+  {
+    "text": "icon-standard-arrow-redo",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-redo.png"
+  },
+  {
+    "text": "icon-standard-telephone-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/telephone-error.png"
+  },
+  {
+    "text": "icon-standard-server-database",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server-database.png"
+  },
+  {
+    "text": "icon-standard-television-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/television-add.png"
+  },
+  {
+    "text": "icon-standard-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/delete.png"
+  },
+  {
+    "text": "icon-standard-paste-plain",
+    "url": "/resource/easyui/themes/icon-standard/16x16/paste-plain.png"
+  },
+  {
+    "text": "icon-standard-award-star-gold-3",
+    "url": "/resource/easyui/themes/icon-standard/16x16/award-star-gold-3.png"
+  },
+  {
+    "text": "icon-standard-keyboard",
+    "url": "/resource/easyui/themes/icon-standard/16x16/keyboard.png"
+  },
+  {
+    "text": "icon-standard-cd-eject",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cd-eject.png"
+  },
+  {
+    "text": "icon-standard-creditcards",
+    "url": "/resource/easyui/themes/icon-standard/16x16/creditcards.png"
+  },
+  {
+    "text": "icon-standard-ruby",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ruby.png"
+  },
+  {
+    "text": "icon-standard-shape-move-forwards",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-move-forwards.png"
+  },
+  {
+    "text": "icon-standard-page-attach",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-attach.png"
+  },
+  {
+    "text": "icon-standard-page-white-put",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-put.png"
+  },
+  {
+    "text": "icon-standard-picture-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/picture-error.png"
+  },
+  {
+    "text": "icon-standard-application-osx",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-osx.png"
+  },
+  {
+    "text": "icon-standard-application-view-gallery",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-view-gallery.png"
+  },
+  {
+    "text": "icon-standard-mouse-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/mouse-delete.png"
+  },
+  {
+    "text": "icon-standard-shape-rotate-clockwise",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-rotate-clockwise.png"
+  },
+  {
+    "text": "icon-standard-ipod",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ipod.png"
+  },
+  {
+    "text": "icon-standard-book-previous",
+    "url": "/resource/easyui/themes/icon-standard/16x16/book-previous.png"
+  },
+  {
+    "text": "icon-standard-page-white-horizontal",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-horizontal.png"
+  },
+  {
+    "text": "icon-standard-shape-square-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-square-go.png"
+  },
+  {
+    "text": "icon-standard-bell",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bell.png"
+  },
+  {
+    "text": "icon-standard-text-padding-top",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-padding-top.png"
+  },
+  {
+    "text": "icon-standard-folder-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-delete.png"
+  },
+  {
+    "text": "icon-standard-note",
+    "url": "/resource/easyui/themes/icon-standard/16x16/note.png"
+  },
+  {
+    "text": "icon-standard-page-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-delete.png"
+  },
+  {
+    "text": "icon-standard-user-red",
+    "url": "/resource/easyui/themes/icon-standard/16x16/user-red.png"
+  },
+  {
+    "text": "icon-standard-xhtml-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/xhtml-go.png"
+  },
+  {
+    "text": "icon-standard-folder-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-edit.png"
+  },
+  {
+    "text": "icon-standard-feed-disk",
+    "url": "/resource/easyui/themes/icon-standard/16x16/feed-disk.png"
+  },
+  {
+    "text": "icon-standard-rss-valid",
+    "url": "/resource/easyui/themes/icon-standard/16x16/rss-valid.png"
+  },
+  {
+    "text": "icon-standard-world-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/world-go.png"
+  },
+  {
+    "text": "icon-standard-weather-clouds",
+    "url": "/resource/easyui/themes/icon-standard/16x16/weather-clouds.png"
+  },
+  {
+    "text": "icon-standard-arrow-inout",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-inout.png"
+  },
+  {
+    "text": "icon-standard-report-magnify",
+    "url": "/resource/easyui/themes/icon-standard/16x16/report-magnify.png"
+  },
+  {
+    "text": "icon-standard-vector",
+    "url": "/resource/easyui/themes/icon-standard/16x16/vector.png"
+  },
+  {
+    "text": "icon-standard-paste-word",
+    "url": "/resource/easyui/themes/icon-standard/16x16/paste-word.png"
+  },
+  {
+    "text": "icon-standard-camera-small",
+    "url": "/resource/easyui/themes/icon-standard/16x16/camera-small.png"
+  },
+  {
+    "text": "icon-standard-date-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/date-link.png"
+  },
+  {
+    "text": "icon-standard-map-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/map-add.png"
+  },
+  {
+    "text": "icon-standard-sport-raquet",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sport-raquet.png"
+  },
+  {
+    "text": "icon-standard-calendar-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calendar-edit.png"
+  },
+  {
+    "text": "icon-standard-page-white-ruby",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-ruby.png"
+  },
+  {
+    "text": "icon-standard-sport-soccer",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sport-soccer.png"
+  },
+  {
+    "text": "icon-standard-bullet-arrow-down",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-arrow-down.png"
+  },
+  {
+    "text": "icon-standard-star",
+    "url": "/resource/easyui/themes/icon-standard/16x16/star.png"
+  },
+  {
+    "text": "icon-standard-chart-bar",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-bar.png"
+  },
+  {
+    "text": "icon-standard-script-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script-key.png"
+  },
+  {
+    "text": "icon-standard-text-align-justify",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-align-justify.png"
+  },
+  {
+    "text": "icon-standard-note-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/note-edit.png"
+  },
+  {
+    "text": "icon-standard-medal-gold-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-gold-delete.png"
+  },
+  {
+    "text": "icon-standard-comment-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/comment-delete.png"
+  },
+  {
+    "text": "icon-standard-heart-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/heart-add.png"
+  },
+  {
+    "text": "icon-standard-money-euro",
+    "url": "/resource/easyui/themes/icon-standard/16x16/money-euro.png"
+  },
+  {
+    "text": "icon-standard-arrow-divide",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-divide.png"
+  },
+  {
+    "text": "icon-standard-report-picture",
+    "url": "/resource/easyui/themes/icon-standard/16x16/report-picture.png"
+  },
+  {
+    "text": "icon-standard-lightbulb-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lightbulb-delete.png"
+  },
+  {
+    "text": "icon-standard-heart",
+    "url": "/resource/easyui/themes/icon-standard/16x16/heart.png"
+  },
+  {
+    "text": "icon-standard-joystick-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/joystick-add.png"
+  },
+  {
+    "text": "icon-standard-dvd-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/dvd-add.png"
+  },
+  {
+    "text": "icon-standard-down",
+    "url": "/resource/easyui/themes/icon-standard/16x16/down.png"
+  },
+  {
+    "text": "icon-standard-folder-find",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-find.png"
+  },
+  {
+    "text": "icon-standard-script",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script.png"
+  },
+  {
+    "text": "icon-standard-report",
+    "url": "/resource/easyui/themes/icon-standard/16x16/report.png"
+  },
+  {
+    "text": "icon-standard-plugin",
+    "url": "/resource/easyui/themes/icon-standard/16x16/plugin.png"
+  },
+  {
+    "text": "icon-standard-lorry-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lorry-add.png"
+  },
+  {
+    "text": "icon-standard-tag-red",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tag-red.png"
+  },
+  {
+    "text": "icon-standard-building-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/building-edit.png"
+  },
+  {
+    "text": "icon-standard-cd-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cd-edit.png"
+  },
+  {
+    "text": "icon-standard-table-sort",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-sort.png"
+  },
+  {
+    "text": "icon-standard-tag-orange",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tag-orange.png"
+  },
+  {
+    "text": "icon-standard-date-next",
+    "url": "/resource/easyui/themes/icon-standard/16x16/date-next.png"
+  },
+  {
+    "text": "icon-standard-images",
+    "url": "/resource/easyui/themes/icon-standard/16x16/images.png"
+  },
+  {
+    "text": "icon-standard-magifier-zoom-out",
+    "url": "/resource/easyui/themes/icon-standard/16x16/magifier-zoom-out.png"
+  },
+  {
+    "text": "icon-standard-report-word",
+    "url": "/resource/easyui/themes/icon-standard/16x16/report-word.png"
+  },
+  {
+    "text": "icon-standard-feed-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/feed-delete.png"
+  },
+  {
+    "text": "icon-standard-palette",
+    "url": "/resource/easyui/themes/icon-standard/16x16/palette.png"
+  },
+  {
+    "text": "icon-standard-flag-orange",
+    "url": "/resource/easyui/themes/icon-standard/16x16/flag-orange.png"
+  },
+  {
+    "text": "icon-standard-page-white-tux",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-tux.png"
+  },
+  {
+    "text": "icon-standard-cog-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cog-go.png"
+  },
+  {
+    "text": "icon-standard-application-home",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-home.png"
+  },
+  {
+    "text": "icon-standard-dvd-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/dvd-error.png"
+  },
+  {
+    "text": "icon-standard-layout-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/layout-error.png"
+  },
+  {
+    "text": "icon-standard-shape-square-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-square-link.png"
+  },
+  {
+    "text": "icon-standard-film-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/film-edit.png"
+  },
+  {
+    "text": "icon-standard-monitor-lightning",
+    "url": "/resource/easyui/themes/icon-standard/16x16/monitor-lightning.png"
+  },
+  {
+    "text": "icon-standard-status-online",
+    "url": "/resource/easyui/themes/icon-standard/16x16/status-online.png"
+  },
+  {
+    "text": "icon-standard-basket-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/basket-go.png"
+  },
+  {
+    "text": "icon-standard-comment",
+    "url": "/resource/easyui/themes/icon-standard/16x16/comment.png"
+  },
+  {
+    "text": "icon-standard-user-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/user-delete.png"
+  },
+  {
+    "text": "icon-standard-cart-remove",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cart-remove.png"
+  },
+  {
+    "text": "icon-standard-lorry-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lorry-error.png"
+  },
+  {
+    "text": "icon-standard-note-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/note-delete.png"
+  },
+  {
+    "text": "icon-standard-page-white-paint",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-paint.png"
+  },
+  {
+    "text": "icon-standard-ruby-get",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ruby-get.png"
+  },
+  {
+    "text": "icon-standard-calculator-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calculator-edit.png"
+  },
+  {
+    "text": "icon-standard-monitor-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/monitor-add.png"
+  },
+  {
+    "text": "icon-standard-page-find",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-find.png"
+  },
+  {
+    "text": "icon-standard-shape-align-right",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-align-right.png"
+  },
+  {
+    "text": "icon-standard-anchor",
+    "url": "/resource/easyui/themes/icon-standard/16x16/anchor.png"
+  },
+  {
+    "text": "icon-standard-arrow-refresh-small",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-refresh-small.png"
+  },
+  {
+    "text": "icon-standard-application-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-key.png"
+  },
+  {
+    "text": "icon-standard-female",
+    "url": "/resource/easyui/themes/icon-standard/16x16/female.png"
+  },
+  {
+    "text": "icon-standard-film-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/film-link.png"
+  },
+  {
+    "text": "icon-standard-compress",
+    "url": "/resource/easyui/themes/icon-standard/16x16/compress.png"
+  },
+  {
+    "text": "icon-standard-page-white-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-add.png"
+  },
+  {
+    "text": "icon-standard-application-view-detail",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-view-detail.png"
+  },
+  {
+    "text": "icon-standard-drive-magnify",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-magnify.png"
+  },
+  {
+    "text": "icon-standard-contrast-low",
+    "url": "/resource/easyui/themes/icon-standard/16x16/contrast-low.png"
+  },
+  {
+    "text": "icon-standard-brick-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/brick-add.png"
+  },
+  {
+    "text": "icon-standard-table-relationship",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-relationship.png"
+  },
+  {
+    "text": "icon-standard-tag-green",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tag-green.png"
+  },
+  {
+    "text": "icon-standard-hourglass-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/hourglass-add.png"
+  },
+  {
+    "text": "icon-standard-cart-put",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cart-put.png"
+  },
+  {
+    "text": "icon-standard-folder-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-key.png"
+  },
+  {
+    "text": "icon-standard-font-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/font-go.png"
+  },
+  {
+    "text": "icon-standard-calendar-view-month",
+    "url": "/resource/easyui/themes/icon-standard/16x16/calendar-view-month.png"
+  },
+  {
+    "text": "icon-standard-note-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/note-go.png"
+  },
+  {
+    "text": "icon-standard-time-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/time-delete.png"
+  },
+  {
+    "text": "icon-standard-user",
+    "url": "/resource/easyui/themes/icon-standard/16x16/user.png"
+  },
+  {
+    "text": "icon-standard-asterisk-orange",
+    "url": "/resource/easyui/themes/icon-standard/16x16/asterisk-orange.png"
+  },
+  {
+    "text": "icon-standard-bricks",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bricks.png"
+  },
+  {
+    "text": "icon-standard-music",
+    "url": "/resource/easyui/themes/icon-standard/16x16/music.png"
+  },
+  {
+    "text": "icon-standard-bug",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bug.png"
+  },
+  {
+    "text": "icon-standard-page-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-error.png"
+  },
+  {
+    "text": "icon-standard-bullet-star",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-star.png"
+  },
+  {
+    "text": "icon-standard-chart-curve-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-curve-link.png"
+  },
+  {
+    "text": "icon-standard-page-white-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-delete.png"
+  },
+  {
+    "text": "icon-standard-computer-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/computer-delete.png"
+  },
+  {
+    "text": "icon-standard-award-star-bronze-2",
+    "url": "/resource/easyui/themes/icon-standard/16x16/award-star-bronze-2.png"
+  },
+  {
+    "text": "icon-standard-script-palette",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script-palette.png"
+  },
+  {
+    "text": "icon-standard-camera-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/camera-go.png"
+  },
+  {
+    "text": "icon-standard-feed-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/feed-key.png"
+  },
+  {
+    "text": "icon-standard-film-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/film-go.png"
+  },
+  {
+    "text": "icon-standard-control-end",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-end.png"
+  },
+  {
+    "text": "icon-standard-database-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database-add.png"
+  },
+  {
+    "text": "icon-standard-shape-align-top",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-align-top.png"
+  },
+  {
+    "text": "icon-standard-text-heading-1",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-heading-1.png"
+  },
+  {
+    "text": "icon-standard-application-form-magnify",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-form-magnify.png"
+  },
+  {
+    "text": "icon-standard-ruby-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ruby-add.png"
+  },
+  {
+    "text": "icon-standard-text-list-bullets",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-list-bullets.png"
+  },
+  {
+    "text": "icon-standard-briefcase",
+    "url": "/resource/easyui/themes/icon-standard/16x16/briefcase.png"
+  },
+  {
+    "text": "icon-standard-lightbulb-off",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lightbulb-off.png"
+  },
+  {
+    "text": "icon-standard-folder-camera",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-camera.png"
+  },
+  {
+    "text": "icon-standard-page-white-width",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-width.png"
+  },
+  {
+    "text": "icon-standard-chart-curve-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-curve-delete.png"
+  },
+  {
+    "text": "icon-standard-medal-gold-3",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-gold-3.png"
+  },
+  {
+    "text": "icon-standard-text-italic",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-italic.png"
+  },
+  {
+    "text": "icon-standard-dvd-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/dvd-key.png"
+  },
+  {
+    "text": "icon-standard-basket-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/basket-edit.png"
+  },
+  {
+    "text": "icon-standard-contrast-decrease",
+    "url": "/resource/easyui/themes/icon-standard/16x16/contrast-decrease.png"
+  },
+  {
+    "text": "icon-standard-application-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-delete.png"
+  },
+  {
+    "text": "icon-standard-link-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/link-error.png"
+  },
+  {
+    "text": "icon-standard-bullet-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-go.png"
+  },
+  {
+    "text": "icon-standard-computer",
+    "url": "/resource/easyui/themes/icon-standard/16x16/computer.png"
+  },
+  {
+    "text": "icon-standard-css",
+    "url": "/resource/easyui/themes/icon-standard/16x16/css.png"
+  },
+  {
+    "text": "icon-standard-camera-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/camera-link.png"
+  },
+  {
+    "text": "icon-standard-css-valid",
+    "url": "/resource/easyui/themes/icon-standard/16x16/css-valid.png"
+  },
+  {
+    "text": "icon-standard-text-indent-remove",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-indent-remove.png"
+  },
+  {
+    "text": "icon-standard-arrow-down",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-down.png"
+  },
+  {
+    "text": "icon-standard-style-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/style-edit.png"
+  },
+  {
+    "text": "icon-standard-bullet-toggle-minus",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-toggle-minus.png"
+  },
+  {
+    "text": "icon-standard-chart-pie-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-pie-delete.png"
+  },
+  {
+    "text": "icon-standard-lightning-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lightning-go.png"
+  },
+  {
+    "text": "icon-standard-database-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database-key.png"
+  },
+  {
+    "text": "icon-standard-clock-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/clock-add.png"
+  },
+  {
+    "text": "icon-standard-contrast-high",
+    "url": "/resource/easyui/themes/icon-standard/16x16/contrast-high.png"
+  },
+  {
+    "text": "icon-standard-telephone-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/telephone-edit.png"
+  },
+  {
+    "text": "icon-standard-tab-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tab-go.png"
+  },
+  {
+    "text": "icon-standard-coins",
+    "url": "/resource/easyui/themes/icon-standard/16x16/coins.png"
+  },
+  {
+    "text": "icon-standard-box",
+    "url": "/resource/easyui/themes/icon-standard/16x16/box.png"
+  },
+  {
+    "text": "icon-standard-world-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/world-link.png"
+  },
+  {
+    "text": "icon-standard-text-align-left",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-align-left.png"
+  },
+  {
+    "text": "icon-standard-ruby-gear",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ruby-gear.png"
+  },
+  {
+    "text": "icon-standard-feed-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/feed-link.png"
+  },
+  {
+    "text": "icon-standard-drink",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drink.png"
+  },
+  {
+    "text": "icon-standard-css-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/css-delete.png"
+  },
+  {
+    "text": "icon-standard-exclamation",
+    "url": "/resource/easyui/themes/icon-standard/16x16/exclamation.png"
+  },
+  {
+    "text": "icon-standard-folder",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder.png"
+  },
+  {
+    "text": "icon-standard-time",
+    "url": "/resource/easyui/themes/icon-standard/16x16/time.png"
+  },
+  {
+    "text": "icon-standard-comment-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/comment-add.png"
+  },
+  {
+    "text": "icon-standard-email-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/email-link.png"
+  },
+  {
+    "text": "icon-standard-page-white-picture",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-picture.png"
+  },
+  {
+    "text": "icon-standard-drive-disk",
+    "url": "/resource/easyui/themes/icon-standard/16x16/drive-disk.png"
+  },
+  {
+    "text": "icon-standard-text-padding-bottom",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-padding-bottom.png"
+  },
+  {
+    "text": "icon-standard-status-away",
+    "url": "/resource/easyui/themes/icon-standard/16x16/status-away.png"
+  },
+  {
+    "text": "icon-standard-text-padding-right",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-padding-right.png"
+  },
+  {
+    "text": "icon-standard-weather-lightning",
+    "url": "/resource/easyui/themes/icon-standard/16x16/weather-lightning.png"
+  },
+  {
+    "text": "icon-standard-application-side-list",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-side-list.png"
+  },
+  {
+    "text": "icon-standard-dvd",
+    "url": "/resource/easyui/themes/icon-standard/16x16/dvd.png"
+  },
+  {
+    "text": "icon-standard-tab-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tab-edit.png"
+  },
+  {
+    "text": "icon-standard-text-allcaps",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-allcaps.png"
+  },
+  {
+    "text": "icon-standard-dvd-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/dvd-delete.png"
+  },
+  {
+    "text": "icon-standard-font",
+    "url": "/resource/easyui/themes/icon-standard/16x16/font.png"
+  },
+  {
+    "text": "icon-standard-map-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/map-edit.png"
+  },
+  {
+    "text": "icon-standard-building-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/building-error.png"
+  },
+  {
+    "text": "icon-standard-style-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/style-go.png"
+  },
+  {
+    "text": "icon-standard-lock-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lock-add.png"
+  },
+  {
+    "text": "icon-standard-tab-close-left",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tab-close-left.png"
+  },
+  {
+    "text": "icon-standard-cake",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cake.png"
+  },
+  {
+    "text": "icon-standard-wrench-orange",
+    "url": "/resource/easyui/themes/icon-standard/16x16/wrench-orange.png"
+  },
+  {
+    "text": "icon-standard-html-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/html-add.png"
+  },
+  {
+    "text": "icon-standard-book-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/book-delete.png"
+  },
+  {
+    "text": "icon-standard-plugin-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/plugin-error.png"
+  },
+  {
+    "text": "icon-standard-tag-purple",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tag-purple.png"
+  },
+  {
+    "text": "icon-standard-bullet-red",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-red.png"
+  },
+  {
+    "text": "icon-standard-page-white-get",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-get.png"
+  },
+  {
+    "text": "icon-standard-book-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/book-add.png"
+  },
+  {
+    "text": "icon-standard-group-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/group-go.png"
+  },
+  {
+    "text": "icon-standard-page-white-acrobat",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-acrobat.png"
+  },
+  {
+    "text": "icon-standard-book-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/book-go.png"
+  },
+  {
+    "text": "icon-standard-chart-line-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-line-delete.png"
+  },
+  {
+    "text": "icon-standard-telephone-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/telephone-delete.png"
+  },
+  {
+    "text": "icon-standard-shape-square-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-square-error.png"
+  },
+  {
+    "text": "icon-standard-arrow-up",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-up.png"
+  },
+  {
+    "text": "icon-standard-control-eject-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-eject-blue.png"
+  },
+  {
+    "text": "icon-standard-magnifier-zoom-in",
+    "url": "/resource/easyui/themes/icon-standard/16x16/magnifier-zoom-in.png"
+  },
+  {
+    "text": "icon-standard-award-star-gold-2",
+    "url": "/resource/easyui/themes/icon-standard/16x16/award-star-gold-2.png"
+  },
+  {
+    "text": "icon-standard-page-white-office",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-office.png"
+  },
+  {
+    "text": "icon-standard-plugin-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/plugin-add.png"
+  },
+  {
+    "text": "icon-standard-script-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script-error.png"
+  },
+  {
+    "text": "icon-standard-film",
+    "url": "/resource/easyui/themes/icon-standard/16x16/film.png"
+  },
+  {
+    "text": "icon-standard-folder-brick",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-brick.png"
+  },
+  {
+    "text": "icon-standard-control-equalizer-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-equalizer-blue.png"
+  },
+  {
+    "text": "icon-standard-sport-shuttlecock",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sport-shuttlecock.png"
+  },
+  {
+    "text": "icon-standard-award-star-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/award-star-add.png"
+  },
+  {
+    "text": "icon-standard-ruby-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ruby-key.png"
+  },
+  {
+    "text": "icon-standard-cup-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cup-go.png"
+  },
+  {
+    "text": "icon-standard-medal-bronze-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-bronze-delete.png"
+  },
+  {
+    "text": "icon-standard-sound-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sound-delete.png"
+  },
+  {
+    "text": "icon-standard-door-in",
+    "url": "/resource/easyui/themes/icon-standard/16x16/door-in.png"
+  },
+  {
+    "text": "icon-standard-pencil",
+    "url": "/resource/easyui/themes/icon-standard/16x16/pencil.png"
+  },
+  {
+    "text": "icon-standard-application-tile-vertical",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-tile-vertical.png"
+  },
+  {
+    "text": "icon-standard-page-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-go.png"
+  },
+  {
+    "text": "icon-standard-ruby-put",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ruby-put.png"
+  },
+  {
+    "text": "icon-standard-chart-organisation-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-organisation-add.png"
+  },
+  {
+    "text": "icon-standard-group-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/group-error.png"
+  },
+  {
+    "text": "icon-standard-user-gray",
+    "url": "/resource/easyui/themes/icon-standard/16x16/user-gray.png"
+  },
+  {
+    "text": "icon-standard-email-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/email-go.png"
+  },
+  {
+    "text": "icon-standard-status-offline",
+    "url": "/resource/easyui/themes/icon-standard/16x16/status-offline.png"
+  },
+  {
+    "text": "icon-standard-table-lightning",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-lightning.png"
+  },
+  {
+    "text": "icon-standard-folder-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-add.png"
+  },
+  {
+    "text": "icon-standard-report-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/report-edit.png"
+  },
+  {
+    "text": "icon-standard-cup",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cup.png"
+  },
+  {
+    "text": "icon-standard-film-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/film-add.png"
+  },
+  {
+    "text": "icon-standard-lightbulb",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lightbulb.png"
+  },
+  {
+    "text": "icon-standard-computer-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/computer-error.png"
+  },
+  {
+    "text": "icon-standard-textfield-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/textfield-add.png"
+  },
+  {
+    "text": "icon-standard-folder-user",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-user.png"
+  },
+  {
+    "text": "icon-standard-chart-pie-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-pie-add.png"
+  },
+  {
+    "text": "icon-standard-keyboard-magnify",
+    "url": "/resource/easyui/themes/icon-standard/16x16/keyboard-magnify.png"
+  },
+  {
+    "text": "icon-standard-sport-golf",
+    "url": "/resource/easyui/themes/icon-standard/16x16/sport-golf.png"
+  },
+  {
+    "text": "icon-standard-package",
+    "url": "/resource/easyui/themes/icon-standard/16x16/package.png"
+  },
+  {
+    "text": "icon-standard-comments-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/comments-delete.png"
+  },
+  {
+    "text": "icon-standard-folder-wrench",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-wrench.png"
+  },
+  {
+    "text": "icon-standard-chart-pie-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-pie-link.png"
+  },
+  {
+    "text": "icon-standard-chart-bar-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-bar-link.png"
+  },
+  {
+    "text": "icon-standard-shape-square",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shape-square.png"
+  },
+  {
+    "text": "icon-standard-arrow-right",
+    "url": "/resource/easyui/themes/icon-standard/16x16/arrow-right.png"
+  },
+  {
+    "text": "icon-standard-application-side-boxes",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-side-boxes.png"
+  },
+  {
+    "text": "icon-standard-bullet-toggle-plus",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-toggle-plus.png"
+  },
+  {
+    "text": "icon-standard-feed-edit",
+    "url": "/resource/easyui/themes/icon-standard/16x16/feed-edit.png"
+  },
+  {
+    "text": "icon-standard-folder-close",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-close.png"
+  },
+  {
+    "text": "icon-standard-feed",
+    "url": "/resource/easyui/themes/icon-standard/16x16/feed.png"
+  },
+  {
+    "text": "icon-standard-money-dollar",
+    "url": "/resource/easyui/themes/icon-standard/16x16/money-dollar.png"
+  },
+  {
+    "text": "icon-standard-chart-curve-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/chart-curve-add.png"
+  },
+  {
+    "text": "icon-standard-brick-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/brick-go.png"
+  },
+  {
+    "text": "icon-standard-page-white-vector",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-vector.png"
+  },
+  {
+    "text": "icon-standard-ruby-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/ruby-link.png"
+  },
+  {
+    "text": "icon-standard-emoticon-tongue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/emoticon-tongue.png"
+  },
+  {
+    "text": "icon-standard-lightning-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/lightning-add.png"
+  },
+  {
+    "text": "icon-standard-cross",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cross.png"
+  },
+  {
+    "text": "icon-standard-script-lightning",
+    "url": "/resource/easyui/themes/icon-standard/16x16/script-lightning.png"
+  },
+  {
+    "text": "icon-standard-shield-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/shield-add.png"
+  },
+  {
+    "text": "icon-standard-film-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/film-key.png"
+  },
+  {
+    "text": "icon-standard-page-white-paintbrush",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page-white-paintbrush.png"
+  },
+  {
+    "text": "icon-standard-user-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/user-add.png"
+  },
+  {
+    "text": "icon-standard-text-signature",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-signature.png"
+  },
+  {
+    "text": "icon-standard-table-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-go.png"
+  },
+  {
+    "text": "icon-standard-award-star-silver-1",
+    "url": "/resource/easyui/themes/icon-standard/16x16/award-star-silver-1.png"
+  },
+  {
+    "text": "icon-standard-text-horizontalrule",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-horizontalrule.png"
+  },
+  {
+    "text": "icon-standard-package-green",
+    "url": "/resource/easyui/themes/icon-standard/16x16/package-green.png"
+  },
+  {
+    "text": "icon-standard-table-row-insert",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-row-insert.png"
+  },
+  {
+    "text": "icon-standard-telephone-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/telephone-add.png"
+  },
+  {
+    "text": "icon-standard-plugin-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/plugin-link.png"
+  },
+  {
+    "text": "icon-standard-tag-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tag-blue.png"
+  },
+  {
+    "text": "icon-standard-application-xp-terminal",
+    "url": "/resource/easyui/themes/icon-standard/16x16/application-xp-terminal.png"
+  },
+  {
+    "text": "icon-standard-bullet-arrow-bottom",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-arrow-bottom.png"
+  },
+  {
+    "text": "icon-standard-basket",
+    "url": "/resource/easyui/themes/icon-standard/16x16/basket.png"
+  },
+  {
+    "text": "icon-standard-folder-page-white",
+    "url": "/resource/easyui/themes/icon-standard/16x16/folder-page-white.png"
+  },
+  {
+    "text": "icon-standard-building-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/building-delete.png"
+  },
+  {
+    "text": "icon-standard-server-connect",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server-connect.png"
+  },
+  {
+    "text": "icon-standard-hmenu-asc",
+    "url": "/resource/easyui/themes/icon-standard/16x16/hmenu-asc.gif"
+  },
+  {
+    "text": "icon-standard-cd-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/cd-go.png"
+  },
+  {
+    "text": "icon-standard-transmit-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/transmit-error.png"
+  },
+  {
+    "text": "icon-standard-bug-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bug-go.png"
+  },
+  {
+    "text": "icon-standard-email-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/email-delete.png"
+  },
+  {
+    "text": "icon-standard-map-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/map-go.png"
+  },
+  {
+    "text": "icon-standard-page",
+    "url": "/resource/easyui/themes/icon-standard/16x16/page.png"
+  },
+  {
+    "text": "icon-standard-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/error.png"
+  },
+  {
+    "text": "icon-standard-award-star-silver-3",
+    "url": "/resource/easyui/themes/icon-standard/16x16/award-star-silver-3.png"
+  },
+  {
+    "text": "icon-standard-control-end-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/control-end-blue.png"
+  },
+  {
+    "text": "icon-standard-dvd-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/dvd-go.png"
+  },
+  {
+    "text": "icon-standard-medal-silver-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/medal-silver-add.png"
+  },
+  {
+    "text": "icon-standard-transmit-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/transmit-delete.png"
+  },
+  {
+    "text": "icon-standard-key-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/key-add.png"
+  },
+  {
+    "text": "icon-standard-server-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/server-key.png"
+  },
+  {
+    "text": "icon-standard-text-linespacing",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-linespacing.png"
+  },
+  {
+    "text": "icon-standard-tux",
+    "url": "/resource/easyui/themes/icon-standard/16x16/tux.png"
+  },
+  {
+    "text": "icon-standard-html",
+    "url": "/resource/easyui/themes/icon-standard/16x16/html.png"
+  },
+  {
+    "text": "icon-standard-telephone-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/telephone-key.png"
+  },
+  {
+    "text": "icon-standard-building-key",
+    "url": "/resource/easyui/themes/icon-standard/16x16/building-key.png"
+  },
+  {
+    "text": "icon-standard-database-go",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database-go.png"
+  },
+  {
+    "text": "icon-standard-building-link",
+    "url": "/resource/easyui/themes/icon-standard/16x16/building-link.png"
+  },
+  {
+    "text": "icon-standard-bell-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bell-add.png"
+  },
+  {
+    "text": "icon-standard-date-error",
+    "url": "/resource/easyui/themes/icon-standard/16x16/date-error.png"
+  },
+  {
+    "text": "icon-standard-package-add",
+    "url": "/resource/easyui/themes/icon-standard/16x16/package-add.png"
+  },
+  {
+    "text": "icon-standard-bullet-blue",
+    "url": "/resource/easyui/themes/icon-standard/16x16/bullet-blue.png"
+  },
+  {
+    "text": "icon-standard-database-table",
+    "url": "/resource/easyui/themes/icon-standard/16x16/database-table.png"
+  },
+  {
+    "text": "icon-standard-zoom",
+    "url": "/resource/easyui/themes/icon-standard/16x16/zoom.png"
+  },
+  {
+    "text": "icon-standard-text-letter-omega",
+    "url": "/resource/easyui/themes/icon-standard/16x16/text-letter-omega.png"
+  },
+  {
+    "text": "icon-standard-table-delete",
+    "url": "/resource/easyui/themes/icon-standard/16x16/table-delete.png"
+  }
+]

@@ -167,7 +167,7 @@ let menu = {
         $('#add_icons').combobox({
             valueField:'text',
             textField:'text',
-            url:'/system/iconPage.do',
+            url:'/resource/easyui/themes/icon-standard/list.json',
             editable:false,
             formatter:function(data){
                 return '<img width="16" height="16" class="item-img" src="'+data.url+'"/>&nbsp;&nbsp;<span  class="item-text">&nbsp;'+data.text+'</span>';
@@ -196,7 +196,7 @@ let menu = {
         $('#edit_icons').combobox({
             valueField:'text',
             textField:'text',
-            url:'/system/iconPage.do',
+            url:'/resource/easyui/themes/icon-standard/list.json',
             editable:false,
             formatter:function(data){
                 return '<img width="16" height="16" class="item-img" src="'+data.url+'"/>&nbsp;&nbsp;<span  class="item-text">&nbsp;'+data.text+'</span>';

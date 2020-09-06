@@ -89,24 +89,4 @@ public class ViewController {
         return "error/unauthorized";
     }
 
-    //图标选择
-    @RequestMapping(value = "/system/iconPage.do", method = RequestMethod.POST)
-    @ResponseBody
-    public Set<IconVO> iconList(HttpServletRequest request){
-        String path="/resource/easyui/themes/icon-standard/16x16/";
-        String prefix="icon-standard-";
-        Set<IconVO> result=new HashSet<>();
-        String realPath = request.getSession().getServletContext().getRealPath(path);
-        File file = new File(realPath);
-        String[] iconPngList = file.list();
-        if(file.exists()&&iconPngList!=null){
-            for (String name : iconPngList) {
-                IconVO iconVO = new IconVO();
-                iconVO.setUrl(path+name);
-                iconVO.setText(prefix+name.substring(0,name.lastIndexOf(".")));
-                result.add(iconVO);
-            }
-        }
-        return result;
-    }
 }
