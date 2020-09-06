@@ -9,8 +9,8 @@
 <div id="online_toolbar" style="display: none">
     <%--    操作按钮--%>
     <div style="margin-bottom:5px">
-        <a href="#" onclick="online.forceLogout()" class="easyui-linkbutton" iconCls="icon-cut" plain="false">踢出系统</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="false" onclick="online.reload()">刷新</a>
+        <a href="#" onclick="online.forceLogout()" class="easyui-linkbutton" iconCls="icon-cut" plain="true">踢出系统</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="online.reload()">刷新</a>
     </div>
     <hr>
 </div>

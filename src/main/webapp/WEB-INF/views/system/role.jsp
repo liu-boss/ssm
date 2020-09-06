@@ -8,13 +8,13 @@
 <div id="role_toolbar" style="display: none">
     <%--    操作按钮--%>
     <div style="margin-bottom:5px">
-        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="false" onclick="role.showAddDialog()">添加</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="false"
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="role.showAddDialog()">添加</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true"
            onclick="role.showEditDialog()">修改</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="false">保存</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="false">剪切</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="false" onclick="role.delete()">移除</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="false" onclick="role.reload()">刷新</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true">保存</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true">剪切</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="true" onclick="role.delete()">移除</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="role.reload()">刷新</a>
     </div>
     <%--    搜索表单--%>
     <form id="role_search_form">

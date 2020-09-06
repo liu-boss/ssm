@@ -13,6 +13,6 @@
     let no;
     $.parser.onComplete = function () {
         if (no) clearTimeout(no);
-        no = setTimeout(closeLoading, 500);
+        no = setTimeout(closeLoading, 400);
     }
 </script>

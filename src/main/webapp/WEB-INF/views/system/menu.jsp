@@ -9,12 +9,12 @@
 <div id="menu_toolbar" style="display: none">
     <%--    操作按钮--%>
     <div style="margin-bottom:5px">
-        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="false" onclick="menu.showAddDialog()">添加</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="false" onclick="menu.showEditDialog()">修改</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="false" onclick="menu.delete()">移除</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="false" onclick="menu.reload()">刷新</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="false" onclick="menu.openAll()">展开所有</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-lock" plain="false" onclick="menu.closeAll()">折叠所有</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="menu.showAddDialog()">添加</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="menu.showEditDialog()">修改</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="true" onclick="menu.delete()">移除</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="menu.reload()">刷新</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true" onclick="menu.openAll()">展开所有</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-lock" plain="true" onclick="menu.closeAll()">折叠所有</a>
     </div>
     <hr>
 </div>
@@ -49,6 +49,12 @@
                 <td></td>
             </tr>
 
+            <tr id="menu_add_icon_tr">
+                <td></td>
+                <td><label>图标:</label></td>
+                <td><input class="easyui-textbox com_input"  type="text" name="icon" id="add_icons"  data-options="prompt:'请输入icon图标'"/></td>
+                <td></td>
+            </tr>
             <tr>
                 <td></td>
                 <td><label>上级:</label></td>
@@ -70,12 +76,7 @@
                 <td><input class="easyui-textbox com_input" type="text" name="url" data-options="prompt:'请输入url地址'"/></td>
                 <td></td>
             </tr>
-            <tr id="menu_add_icon_tr">
-                <td></td>
-                <td><label>icon图标:</label></td>
-                <td><input class="easyui-textbox com_input" type="text" name="icon" data-options="prompt:'请输入icon图标'"/></td>
-                <td></td>
-            </tr>
+
             <tr id="menu_add_orderNum_tr">
                 <td></td>
                 <td><label>排序:</label></td>
@@ -102,6 +103,7 @@
                 <td><input class="easyui-textbox com_input" type="text" name="menuName" data-options="required:true,prompt:'请输入菜单名'"/></td>
                 <td></td>
             </tr>
+
             <tr>
                 <td></td>
                 <td><label>类型:</label></td>
@@ -111,6 +113,13 @@
                         <option value="1">按钮</option>
                     </select>
                 </td>
+                <td></td>
+            </tr>
+
+            <tr id="menu_edit_icon_tr">
+                <td></td>
+                <td><label>icon图标:</label></td>
+                <td><input class="easyui-textbox com_input" type="text" name="icon" id="edit_icons"  data-options="prompt:'请输入icon图标'"/></td>
                 <td></td>
             </tr>
 
@@ -135,12 +144,7 @@
                 <td><input class="easyui-textbox com_input" type="text" name="url" data-options="prompt:'请输入url地址'"/></td>
                 <td></td>
             </tr>
-            <tr id="menu_edit_icon_tr">
-                <td></td>
-                <td><label>icon图标:</label></td>
-                <td><input class="easyui-textbox com_input" type="text" name="icon" data-options="prompt:'请输入icon图标'"/></td>
-                <td></td>
-            </tr>
+
             <tr id="menu_edit_orderNum_tr">
                 <td></td>
                 <td><label>排序:</label></td>
@@ -154,5 +158,12 @@
 <script src="<%=request.getContextPath()%>/resource/js/menu.js"></script>
 <script>
     menu.init('<%=request.getContextPath()%>');
+
 </script>
+
+<style>
+    .item-img,.item-text{
+        cursor: pointer;
+    }
+</style>
 

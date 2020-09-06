@@ -16,16 +16,16 @@
     <div id="user_toolbar" style="display: none">
         <%--    操作按钮--%>
         <div style="margin-bottom:5px">
-            <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="false" onclick="user.openAll()">展开所有</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-lock" plain="false" onclick="user.closeAll()">折叠所有</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="false" onclick="user.showAddDialog()">添加</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="false"
+            <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true" onclick="user.openAll()">展开所有</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-lock" plain="true" onclick="user.closeAll()">折叠所有</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="user.showAddDialog()">添加</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true"
                onclick="user.showEditDialog()">修改</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="false">保存</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="false">剪切</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="false" onclick="user.delete()">移除</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="false" onclick="user.reload()">刷新</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-mini-refresh" plain="false" onclick="user.resetPassword()">重置密码</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true">保存</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true">剪切</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="true" onclick="user.delete()">移除</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="user.reload()">刷新</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-mini-refresh" plain="true" onclick="user.resetPassword()">重置密码</a>
         </div>
         <%--    搜索表单--%>
         <form id="user_search_form">

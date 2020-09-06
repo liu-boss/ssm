@@ -71,7 +71,7 @@ let menu = {
                 {field: 'createTime', title: '创建时间', width: 150, align: 'center'},
                 {field: 'modifyTime', title: '修改时间', width: 150, align: 'center'},
             ]],
-            onLoadSuccess: function(){  menu.openAll()  }
+            onLoadSuccess: function(){  menu.closeAll()  }
         });
     },
     //添加
@@ -164,6 +164,15 @@ let menu = {
         menuAddDeptSelectTree.combotree({
             url: menu.URL.tree(),
         });
+        $('#add_icons').combobox({
+            valueField:'text',
+            textField:'text',
+            url:'/system/iconPage.do',
+            editable:false,
+            formatter:function(data){
+                return '<img width="16" height="16" class="item-img" src="'+data.url+'"/>&nbsp;&nbsp;<span  class="item-text">&nbsp;'+data.text+'</span>';
+            },
+        });
     },
     //关闭添加框
     closeAddDialog: function () {
@@ -183,6 +192,15 @@ let menu = {
         }
         menuEditDeptSelectTree.combotree({
             url: menu.URL.tree(),
+        });
+        $('#edit_icons').combobox({
+            valueField:'text',
+            textField:'text',
+            url:'/system/iconPage.do',
+            editable:false,
+            formatter:function(data){
+                return '<img width="16" height="16" class="item-img" src="'+data.url+'"/>&nbsp;&nbsp;<span  class="item-text">&nbsp;'+data.text+'</span>';
+            },
         });
         $.ajax({
             type: "GET",

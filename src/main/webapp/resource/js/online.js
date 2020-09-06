@@ -1,7 +1,4 @@
 let onlineTable;
-let onlineSearchForm;
-let onlineAddForm;
-let onlineEditForm;
 let ctx = null;
 let online = {
     init: function (contextPath) {

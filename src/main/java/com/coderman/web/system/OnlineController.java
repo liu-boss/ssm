@@ -32,22 +32,27 @@ public class OnlineController {
     @Autowired
     private SessionDAO sessionDAO;
 
-    //当前在线用户
+
+    /**
+     * 当前在线用户
+     * @return
+     */
     @RequestMapping(value = "/list.do",method = RequestMethod.POST)
     @ResponseBody
     public EasyUIData<CurrentUser> list() {
         Set<CurrentUser> userList=new HashSet<>();
         Collection<Session> activeSessions = sessionDAO.getActiveSessions();
         for (Session activeSession : activeSessions) {
+            //最新访问时间
+            Date lastAccessTime = activeSession.getLastAccessTime();
+            //开始访问时间
+            Date startTime= activeSession.getStartTimestamp();
             //如果没有过期,并且登入系统
             if(activeSession.getAttributeKeys().contains(DefaultSubjectContext.PRINCIPALS_SESSION_KEY)){
-                SimplePrincipalCollection simplePrincipalCollection = (SimplePrincipalCollection)
-                        activeSession.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
+
+                SimplePrincipalCollection simplePrincipalCollection = (SimplePrincipalCollection) activeSession.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
+
                 CurrentUser principal = (CurrentUser) simplePrincipalCollection.getPrimaryPrincipal();
-                //最新访问时间
-                Date lastAccessTime = activeSession.getLastAccessTime();
-                //开始访问时间
-                Date startTime= activeSession.getStartTimestamp();
                 principal.setLastAccessTime(lastAccessTime);
                 principal.setStartTime(startTime);
                 //会话过期时间
@@ -57,13 +62,18 @@ public class OnlineController {
                 boolean expired = simpleSession.isExpired();
                 //是否过期
                 principal.setExpired(expired);
+
                 userList.add(principal);
             }
         }
         return new EasyUIData<>(userList.size(),new ArrayList<>(userList));
     }
 
-    //踢出系统
+    /**
+     * 踢出用户
+     * @param usernameList
+     * @return
+     */
     @RequiresPermissions({"system:online:forceLogout"})
     @RequestMapping(value = "/forceLogout.do",method = RequestMethod.POST)
     @ResponseBody
