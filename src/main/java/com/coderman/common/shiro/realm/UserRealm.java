@@ -2,6 +2,7 @@ package com.coderman.common.shiro.realm;
 
 import com.coderman.common.ProjectConstant;
 import com.coderman.common.shiro.CurrentUser;
+import com.coderman.exception.ParamException;
 import com.coderman.model.Menu;
 import com.coderman.model.Role;
 import com.coderman.model.User;
@@ -10,6 +11,7 @@ import com.coderman.service.RoleService;
 import com.coderman.service.UserService;
 import com.coderman.util.HttpUtil;
 import com.coderman.util.ShiroContextHolder;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -49,7 +51,7 @@ public class UserRealm extends AuthorizingRealm {
     @Autowired
     private SessionDAO sessionDAO;
 
-    private Logger logger= LoggerFactory.getLogger(this.getClass());
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
@@ -73,14 +75,16 @@ public class UserRealm extends AuthorizingRealm {
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         String username = (String) authenticationToken.getPrincipal();
-        logger.info("用户认证:{}",username);
+        logger.info("用户认证:{}", username);
+
+
         /**************** session start  同一个账号只能一人登入 *********************/
         Collection<Session> sessions = sessionDAO.getActiveSessions();
-        for(Session session:sessions){
-            if(session.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY)!=null){
+        for (Session session : sessions) {
+            if (session.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY) != null) {
                 SimplePrincipalCollection simplePrincipalCollection = (SimplePrincipalCollection) session.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
                 CurrentUser principal = (CurrentUser) simplePrincipalCollection.getPrimaryPrincipal();
-                if(username.equals(principal.getUsername())){
+                if (username.equals(principal.getUsername())) {
                     //设置session立即失效，即将其踢出系统
                     session.setTimeout(0);
                     sessionDAO.delete(session);
@@ -89,10 +93,10 @@ public class UserRealm extends AuthorizingRealm {
             }
         }
         /**************** session end*********************/
-        User user=userService.findByUsername(username);
-        if(null==user){
+        User user = userService.findByUsername(username);
+        if (null == user) {
             throw new UnknownAccountException();
-        }else if (user.getStatus().equalsIgnoreCase(ProjectConstant.LOCKED)){
+        } else if (user.getStatus().equalsIgnoreCase(ProjectConstant.LOCKED)) {
             throw new LockedAccountException();
         }
         ByteSource salt = ByteSource.Util.bytes(user.getSalt());
@@ -103,6 +107,6 @@ public class UserRealm extends AuthorizingRealm {
         HttpServletRequest httpServletRequest = ShiroContextHolder.getHttpServletRequest();
         currentUser.setHost(HttpUtil.getIpAddr(httpServletRequest));
         currentUser.setLocation(HttpUtil.getCityInfo(httpServletRequest));
-        return new SimpleAuthenticationInfo(currentUser,user.getPassword(),salt,getName());
+        return new SimpleAuthenticationInfo(currentUser, user.getPassword(), salt, getName());
     }
 }

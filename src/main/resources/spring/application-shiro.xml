@@ -85,6 +85,7 @@
         <!-- 设置Cookie名字, 默认为: JSESSIONID 问题: 与SERVLET容器名冲突, 如JETTY, TOMCAT 等默认JSESSIONID,
                                     当跳出SHIRO SERVLET时如ERROR-PAGE容器会为JSESSIONID重新分配值导致登录会话丢失! -->
         <property name="name" value="SHIRO-JSESSIONID"/>
+        <property name="maxAge" value="180000"/>
         <!-- JSESSIONID的path为/用于多个系统共享JSESSIONID -->
         <!-- <property name="path" value="/"/> -->
         <!-- 浏览器中通过document.cookie可以获取cookie属性，设置了HttpOnly=true,在脚本中就不能的到cookie，可以避免cookie被盗用 -->

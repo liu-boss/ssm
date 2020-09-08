@@ -86,8 +86,8 @@
       <list>
         <option value="JUnit4 Test Class" />
         <option value="spring-beans.schema" />
-        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -2435,10 +2435,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1599366734477" />
-    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1599369670453">
+    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1599526218190">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1599369670453" />
+    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1599526218190" />
     <state x="499" y="193" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1592013010575">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2455,10 +2455,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="455" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1592827534184" />
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599368533366">
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599526689155">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1599368533366" />
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1599526689155" />
     <state x="504" y="261" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1592820809013">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2483,38 +2483,38 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="90" y="70" width="1250" height="683" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1598836475392" />
-    <state width="1495" height="278" key="GridCell.Tab.0.bottom" timestamp="1599374796508">
+    <state width="1495" height="334" key="GridCell.Tab.0.bottom" timestamp="1599526760052">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="278" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599374796508" />
-    <state width="1495" height="278" key="GridCell.Tab.0.center" timestamp="1599374796508">
+    <state width="1495" height="334" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599526760052" />
+    <state width="1495" height="334" key="GridCell.Tab.0.center" timestamp="1599526760052">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="278" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599374796508" />
-    <state width="1495" height="278" key="GridCell.Tab.0.left" timestamp="1599374796508">
+    <state width="1495" height="334" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599526760052" />
+    <state width="1495" height="334" key="GridCell.Tab.0.left" timestamp="1599526760052">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="278" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599374796508" />
-    <state width="1495" height="278" key="GridCell.Tab.0.right" timestamp="1599374796508">
+    <state width="1495" height="334" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599526760052" />
+    <state width="1495" height="334" key="GridCell.Tab.0.right" timestamp="1599526760052">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="278" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599374796508" />
-    <state width="1495" height="355" key="GridCell.Tab.1.bottom" timestamp="1599373226861">
+    <state width="1495" height="334" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599526760052" />
+    <state width="1495" height="564" key="GridCell.Tab.1.bottom" timestamp="1599526632767">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="355" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599373226861" />
-    <state width="1495" height="355" key="GridCell.Tab.1.center" timestamp="1599373226861">
+    <state width="1495" height="564" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599526632767" />
+    <state width="1495" height="564" key="GridCell.Tab.1.center" timestamp="1599526632767">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="355" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1599373226861" />
-    <state width="1495" height="355" key="GridCell.Tab.1.left" timestamp="1599373226861">
+    <state width="1495" height="564" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1599526632767" />
+    <state width="1495" height="564" key="GridCell.Tab.1.left" timestamp="1599526632767">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="355" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1599373226861" />
-    <state width="1495" height="355" key="GridCell.Tab.1.right" timestamp="1599373226861">
+    <state width="1495" height="564" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1599526632767" />
+    <state width="1495" height="564" key="GridCell.Tab.1.right" timestamp="1599526632767">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="355" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1599373226861" />
+    <state width="1495" height="564" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1599526632767" />
     <state width="1183" height="408" key="GridCell.Tab.2.bottom" timestamp="1592056501057">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2535,10 +2535,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1599365569767" />
-    <state x="490" y="159" width="642" height="524" key="StructurePopup" timestamp="1598873336945">
+    <state x="490" y="159" width="642" height="524" key="StructurePopup" timestamp="1599525658832">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="490" y="159" width="642" height="524" key="StructurePopup/0.0.1536.834@0.0.1536.834" timestamp="1598873336945" />
+    <state x="490" y="159" width="642" height="524" key="StructurePopup/0.0.1536.834@0.0.1536.834" timestamp="1599525658832" />
     <state x="513" y="215" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1597110022370">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2555,10 +2555,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1592017387632" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1598954981396">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1599525945906">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1598954981396" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1599525945906" />
     <state x="370" y="101" key="spring file set editor" timestamp="1592019235835">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2571,11 +2571,6 @@
           <url>jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/List.java</url>
           <line>477</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.1/shiro-core-1.4.1.jar!/org/apache/shiro/session/mgt/AbstractValidatingSessionManager.class</url>
-          <line>206</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
