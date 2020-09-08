@@ -1,7 +1,9 @@
 package com.coderman.service.impl;
 
 import com.coderman.common.shiro.CurrentUser;
+import com.coderman.exception.ParamException;
 import com.coderman.service.OnlineService;
+import com.coderman.util.ShiroContextHolder;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.SimpleSession;
 import org.apache.shiro.session.mgt.eis.SessionDAO;
@@ -55,7 +57,30 @@ public class OnlineServiceImpl implements OnlineService {
     }
 
     @Override
-    public void forceLogout(String username) {
-
+    public void forceLogout(String usernameList) {
+        String[] names = usernameList.split(",");
+        Collection<Session> sessions = sessionDAO.getActiveSessions();
+        if(names.length>0){
+            for (String username : names) {
+                if(ShiroContextHolder.getUser().getUsername().equals(username)){
+                    throw new ParamException("您无法将自己踢出系统!");
+                }else {
+                    for(Session session:sessions){
+                        Object attribute = session.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
+                        if(attribute!=null){
+                            SimplePrincipalCollection simplePrincipalCollection =
+                                    (SimplePrincipalCollection) session.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
+                            CurrentUser principal = (CurrentUser) simplePrincipalCollection.getPrimaryPrincipal();
+                            if(username.equals(principal.getUsername())){
+                                //设置session立即失效，即将其踢出系统
+                                session.setTimeout(0);
+                                sessionDAO.delete(session);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
