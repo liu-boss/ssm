@@ -76,7 +76,7 @@
 
         <script>
             $('#yzm').css('cursor', 'pointer').click(function () {
-                $('#yzm').attr('src', '/system/user/captcha.do?time' + new Date().getTime());
+                $('#yzm').attr('src', '${pageContext.request.contextPath}/system/user/captcha.do?time' + new Date().getTime());
             });
         </script>
     </div>
@@ -130,7 +130,7 @@
             }
             let data = {username: username, password: password, verCode: verCode};
             $.ajax({
-                url: '/system/user/login.do',
+                url: '${pageContext.request.contextPath}/system/user/login.do',
                 type: 'POST',
                 data: JSON.stringify(data),
                 contentType: 'application/json; charset=utf-8',
@@ -144,10 +144,10 @@
                         });
                         setTimeout(function () {
                             $.messager.progress('close');
-                            window.location.href = '/system/mainPage.do';
+                            window.location.href = '${pageContext.request.contextPath}/system/mainPage.do';
                         }, 1000)
                     } else {
-                        $('#yzm').attr('src', '/system/user/captcha.do?time' + new Date().getTime());
+                        $('#yzm').attr('src', '${pageContext.request.contextPath}/system/user/captcha.do?time' + new Date().getTime());
                         $.messager.alert('Error', result.msg, 'error')
                     }
                 }

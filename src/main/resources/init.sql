@@ -11,7 +11,7 @@
  Target Server Version : 50728
  File Encoding         : 65001
 
- Date: 03/09/2020 16:14:34
+ Date: 08/09/2020 14:49:23
 */
 
 SET NAMES utf8mb4;
@@ -66,16 +66,16 @@ CREATE TABLE `t_menu`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `t_menu_parent_id`(`parent_id`) USING BTREE,
   INDEX `t_menu_menu_id`(`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '菜单表' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 24 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '菜单表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_menu
 -- ----------------------------
-INSERT INTO `t_menu` VALUES (1, 0, '系统管理', '', '', 'icon-add', '0', 1, '2020-08-31 10:09:35', '2020-08-31 10:45:01');
-INSERT INTO `t_menu` VALUES (2, 1, '用户管理', '/system/userPage.do', 'system:user:view', 'icon-add', '0', 1, '2020-08-31 10:11:08', '2020-08-31 10:11:12');
-INSERT INTO `t_menu` VALUES (3, 1, '角色管理', '/system/rolePage.do', 'system:role:view', 'icon-edit', '0', 1, '2020-08-31 10:13:00', '2020-08-31 10:25:05');
-INSERT INTO `t_menu` VALUES (4, 1, '部门管理', '/system/deptPage.do', 'system:dept:view', 'icon-edit', '0', 1, '2020-08-31 10:15:38', '2020-08-31 10:15:42');
-INSERT INTO `t_menu` VALUES (5, 1, '菜单管理', '/system/menuPage.do', 'system:menu:view', 'icon-edit', '0', 1, '2020-08-31 10:16:26', '2020-08-31 10:16:27');
+INSERT INTO `t_menu` VALUES (1, 0, '系统管理', '', '', 'icon-standard-application-view-tile', '0', 1, '2020-08-31 10:09:35', '2020-09-06 13:56:14');
+INSERT INTO `t_menu` VALUES (2, 1, '用户管理', '/system/userPage.do', 'system:user:view', 'icon-standard-application-link', '0', 1, '2020-08-31 10:11:08', '2020-09-06 13:05:38');
+INSERT INTO `t_menu` VALUES (3, 1, '角色管理', '/system/rolePage.do', 'system:role:view', 'icon-standard-application-osx-terminal', '0', 1, '2020-08-31 10:13:00', '2020-09-06 13:05:49');
+INSERT INTO `t_menu` VALUES (4, 1, '部门管理', '/system/deptPage.do', 'system:dept:view', 'icon-standard-application-osx', '0', 1, '2020-08-31 10:15:38', '2020-09-06 13:06:01');
+INSERT INTO `t_menu` VALUES (5, 1, '菜单管理', '/system/menuPage.do', 'system:menu:view', 'icon-standard-shield-add', '0', 1, '2020-08-31 10:16:26', '2020-09-06 13:57:48');
 INSERT INTO `t_menu` VALUES (6, 5, '菜单添加', NULL, 'system:menu:add', NULL, '1', 1, '2020-08-31 10:18:28', '2020-08-31 10:18:31');
 INSERT INTO `t_menu` VALUES (7, 5, '菜单修改', NULL, 'system:menu:update', NULL, '1', 1, '2020-08-31 10:19:10', '2020-08-31 10:19:14');
 INSERT INTO `t_menu` VALUES (8, 5, '菜单删除', NULL, 'system:menu:delete', NULL, '1', 0, '2020-08-31 10:20:14', '2020-09-03 16:05:29');
@@ -88,8 +88,9 @@ INSERT INTO `t_menu` VALUES (14, 3, '角色删除', NULL, 'system:role:delete', 
 INSERT INTO `t_menu` VALUES (15, 4, '部门添加', NULL, 'system:dept:add', NULL, '1', 0, '2020-08-31 10:23:36', '2020-08-31 10:23:36');
 INSERT INTO `t_menu` VALUES (16, 4, '部门修改', NULL, 'system:dept:update', NULL, '1', 0, '2020-08-31 10:24:04', '2020-08-31 10:24:04');
 INSERT INTO `t_menu` VALUES (17, 4, '部门删除', NULL, 'system:dept:delete', NULL, '1', 0, '2020-08-31 10:24:34', '2020-08-31 10:24:34');
-INSERT INTO `t_menu` VALUES (21, 1, '在线用户', '/system/onlinePage.do', 'system:online:view', 'icon-edit', '0', 0, '2020-08-31 20:33:03', '2020-08-31 20:36:22');
-INSERT INTO `t_menu` VALUES (22, 21, '踢出用户', NULL, 'sytem:online:forgout', NULL, '1', 0, '2020-08-31 20:33:38', '2020-08-31 20:33:38');
+INSERT INTO `t_menu` VALUES (21, 1, '在线用户', '/system/onlinePage.do', 'system:online:view', 'icon-standard-application-key', '0', 0, '2020-08-31 20:33:03', '2020-09-06 13:05:06');
+INSERT INTO `t_menu` VALUES (22, 21, '踢出用户', NULL, 'icon-standard-application-link', NULL, '1', 0, '2020-08-31 20:33:38', '2020-09-06 13:05:31');
+INSERT INTO `t_menu` VALUES (23, 1, 'Druid监控', '/system/druidPage.do', 'system:druid:view', 'icon-standard-key', '0', 3, '2020-09-06 12:11:15', '2020-09-06 13:55:47');
 
 -- ----------------------------
 -- Table structure for t_role
@@ -107,7 +108,7 @@ CREATE TABLE `t_role`  (
 -- ----------------------------
 -- Records of t_role
 -- ----------------------------
-INSERT INTO `t_role` VALUES (1, '超级管理员', '系统的最高权限', '2020-08-31 10:10:02', '2020-09-03 15:31:23');
+INSERT INTO `t_role` VALUES (1, '超级管理员', '系统的最高权限', '2020-08-31 10:10:02', '2020-09-06 12:11:38');
 INSERT INTO `t_role` VALUES (2, '网站管理员', '管理文章', '2020-08-31 10:55:02', '2020-09-01 17:12:54');
 
 -- ----------------------------
@@ -132,6 +133,7 @@ INSERT INTO `t_role_menu` VALUES (2, 20);
 INSERT INTO `t_role_menu` VALUES (1, 1);
 INSERT INTO `t_role_menu` VALUES (1, 21);
 INSERT INTO `t_role_menu` VALUES (1, 22);
+INSERT INTO `t_role_menu` VALUES (1, 23);
 INSERT INTO `t_role_menu` VALUES (1, 2);
 INSERT INTO `t_role_menu` VALUES (1, 9);
 INSERT INTO `t_role_menu` VALUES (1, 10);
@@ -149,8 +151,8 @@ INSERT INTO `t_role_menu` VALUES (1, 8);
 INSERT INTO `t_role_menu` VALUES (1, 6);
 INSERT INTO `t_role_menu` VALUES (1, 7);
 INSERT INTO `t_role_menu` VALUES (1, 18);
-INSERT INTO `t_role_menu` VALUES (1, 20);
 INSERT INTO `t_role_menu` VALUES (1, 19);
+INSERT INTO `t_role_menu` VALUES (1, 20);
 
 -- ----------------------------
 -- Table structure for t_user
@@ -175,13 +177,14 @@ CREATE TABLE `t_user`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `t_user_username`(`username`) USING BTREE,
   INDEX `t_user_mobile`(`mobile`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户表' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
-INSERT INTO `t_user` VALUES (1, 'zhangyukang', '4decb28fdcc4f5ea2f847337f1826a2b', 'bbfc0d4c899dea9965a9002f36841708', '3053161401@qq.com', '15079437282', '1', '2020-08-31 09:46:47', '2020-08-31 10:44:00', '2020-09-03 16:13:28', '1', NULL, 'test', 6, NULL);
-INSERT INTO `t_user` VALUES (2, 'test', 'cfb0d432214ed19e6eee417e405d8354', 'd8c057270180c5dbd8a2f62f4bdeec84', 'test@qq.com', '13426527485', '1', '2020-08-31 10:54:27', '2020-08-31 10:55:16', '2020-09-01 18:19:57', '0', NULL, 'test', 6, 1);
+INSERT INTO `t_user` VALUES (1, 'zhangyukang', '4decb28fdcc4f5ea2f847337f1826a2b', 'bbfc0d4c899dea9965a9002f36841708', '3053161401@qq.com', '15079437282', '1', '2020-08-31 09:46:47', '2020-08-31 10:44:00', '2020-09-08 14:48:24', '1', NULL, 'test', 6, NULL);
+INSERT INTO `t_user` VALUES (2, 'test', 'cfb0d432214ed19e6eee417e405d8354', 'd8c057270180c5dbd8a2f62f4bdeec84', 'test@qq.com', '13426527485', '1', '2020-08-31 10:54:27', '2020-08-31 10:55:16', '2020-09-06 12:21:12', '0', NULL, 'test', 6, 1);
+INSERT INTO `t_user` VALUES (3, 'test2', '83839e2890f7219b55446b003ef93ee9', '8961fd3737f659fea8f96ba51858c5cd', 'test2@qq.com', '15241415254', '1', '2020-09-08 09:00:26', '2020-09-08 09:00:26', NULL, '0', NULL, '1111', 4, 1);
 
 -- ----------------------------
 -- Table structure for t_user_role
@@ -199,5 +202,6 @@ CREATE TABLE `t_user_role`  (
 -- ----------------------------
 INSERT INTO `t_user_role` VALUES (1, 1);
 INSERT INTO `t_user_role` VALUES (2, 2);
+INSERT INTO `t_user_role` VALUES (3, 2);
 
 SET FOREIGN_KEY_CHECKS = 1;

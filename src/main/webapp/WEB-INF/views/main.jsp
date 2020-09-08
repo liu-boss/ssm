@@ -54,7 +54,7 @@
     $(function () {
         //加载后台菜单
         $.ajax({
-            url: '/system/menu/getUserMenus.do?username='+$("#username").text(),
+            url: '${pageContext.request.contextPath}/system/menu/getUserMenus.do?username='+$("#username").text(),
             type: 'POST',
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
