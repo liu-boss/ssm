@@ -127,6 +127,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
@@ -2483,22 +2484,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="90" y="70" width="1250" height="683" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1598836475392" />
-    <state width="1495" height="334" key="GridCell.Tab.0.bottom" timestamp="1599527557580">
+    <state width="1495" height="456" key="GridCell.Tab.0.bottom" timestamp="1599527990871">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="334" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599527557580" />
-    <state width="1495" height="334" key="GridCell.Tab.0.center" timestamp="1599527557580">
+    <state width="1495" height="456" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599527990871" />
+    <state width="1495" height="456" key="GridCell.Tab.0.center" timestamp="1599527990871">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="334" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599527557580" />
-    <state width="1495" height="334" key="GridCell.Tab.0.left" timestamp="1599527557580">
+    <state width="1495" height="456" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599527990871" />
+    <state width="1495" height="456" key="GridCell.Tab.0.left" timestamp="1599527990871">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="334" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599527557580" />
-    <state width="1495" height="334" key="GridCell.Tab.0.right" timestamp="1599527557580">
+    <state width="1495" height="456" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599527990871" />
+    <state width="1495" height="456" key="GridCell.Tab.0.right" timestamp="1599527990871">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="334" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599527557580" />
+    <state width="1495" height="456" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599527990871" />
     <state width="1495" height="564" key="GridCell.Tab.1.bottom" timestamp="1599526632767">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2555,10 +2556,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1592017387632" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1599525945906">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1599527687067">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1599525945906" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1599527687067" />
     <state x="370" y="101" key="spring file set editor" timestamp="1592019235835">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

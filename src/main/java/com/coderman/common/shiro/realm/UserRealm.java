@@ -2,7 +2,6 @@ package com.coderman.common.shiro.realm;
 
 import com.coderman.common.ProjectConstant;
 import com.coderman.common.shiro.CurrentUser;
-import com.coderman.exception.ParamException;
 import com.coderman.model.Menu;
 import com.coderman.model.Role;
 import com.coderman.model.User;
@@ -11,7 +10,6 @@ import com.coderman.service.RoleService;
 import com.coderman.service.UserService;
 import com.coderman.util.HttpUtil;
 import com.coderman.util.ShiroContextHolder;
-import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
