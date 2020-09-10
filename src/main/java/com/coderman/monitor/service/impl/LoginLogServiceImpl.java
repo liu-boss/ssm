@@ -3,13 +3,9 @@ package com.coderman.monitor.service.impl;
 import com.coderman.monitor.mapper.LoginLogMapper;
 import com.coderman.monitor.model.LoginLog;
 import com.coderman.monitor.service.LoginLogService;
-import com.coderman.util.HttpUtil;
-import com.coderman.util.ShiroContextHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -30,10 +26,6 @@ public class LoginLogServiceImpl implements LoginLogService {
 
     @Override
     public void add(LoginLog loginLog) {
-        loginLog.setLoginTime(new Date());
-        HttpServletRequest request = ShiroContextHolder.getHttpServletRequest();
-        loginLog.setIp(HttpUtil.getIpAddr(request));
-        loginLog.setLocation(HttpUtil.getCityInfo(request));
         loginLogMapper.insert(loginLog);
     }
 

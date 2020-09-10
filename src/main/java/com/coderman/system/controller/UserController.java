@@ -13,6 +13,7 @@ import com.coderman.system.model.User;
 import com.coderman.monitor.service.LoginLogService;
 import com.coderman.system.service.UserService;
 import com.coderman.util.BeanValidator;
+import com.coderman.util.HttpUtil;
 import com.coderman.util.ShiroContextHolder;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -28,6 +29,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -137,6 +139,9 @@ public class UserController {
             LoginLog loginLog = new LoginLog();
             loginLog.setSystemBrowserInfo();
             loginLog.setUsername(username);
+            loginLog.setLoginTime(new Date());
+            loginLog.setIp(HttpUtil.getIpAddr(request));
+            loginLog.setLocation(HttpUtil.getCityInfo(request));
             loginLogService.add(loginLog);
             return JsonData.success();
         }
