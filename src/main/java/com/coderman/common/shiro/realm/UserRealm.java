@@ -2,12 +2,12 @@ package com.coderman.common.shiro.realm;
 
 import com.coderman.common.ProjectConstant;
 import com.coderman.common.shiro.CurrentUser;
-import com.coderman.model.Menu;
-import com.coderman.model.Role;
-import com.coderman.model.User;
-import com.coderman.service.MenuService;
-import com.coderman.service.RoleService;
-import com.coderman.service.UserService;
+import com.coderman.system.model.Menu;
+import com.coderman.system.model.Role;
+import com.coderman.system.model.User;
+import com.coderman.system.service.MenuService;
+import com.coderman.system.service.RoleService;
+import com.coderman.system.service.UserService;
 import com.coderman.util.HttpUtil;
 import com.coderman.util.ShiroContextHolder;
 import org.apache.shiro.authc.*;

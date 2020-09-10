@@ -20,6 +20,11 @@ public interface ProjectConstant {
     String UN_LOCKED="1"; //未锁定
     String LOCKED="0"; //锁定
 
+    /** 模块划分 **/
+    String SYSTEM_MODULE="系统模块";
+    String MONITOR_MODULE="监控模块";
+
+
     /** 用户类型 */
     enum UserType {
         ADMIN(0,"超级管理员"),
@@ -54,4 +59,6 @@ public interface ProjectConstant {
             return desc;
         }
     }
+
+
 }

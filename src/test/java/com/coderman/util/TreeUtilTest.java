@@ -1,8 +1,8 @@
 package com.coderman.util;
 
-import com.coderman.mapper.DeptMapper;
-import com.coderman.model.Dept;
-import com.coderman.vo.DeptTreeVO;
+import com.coderman.system.mapper.DeptMapper;
+import com.coderman.system.model.Dept;
+import com.coderman.system.vo.DeptTreeVO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;

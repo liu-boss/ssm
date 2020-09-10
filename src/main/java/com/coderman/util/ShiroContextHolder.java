@@ -7,7 +7,6 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Objects;
 
 /**
  * @Author zhangyukang
@@ -22,6 +21,11 @@ public class ShiroContextHolder {
         return (CurrentUser) subject.getPrincipal();
     }
 
+    //用户名
+    public static String getUsername(){
+        return getUser().getUsername();
+    }
+
     //用户ID
     public static Long getIdentity(){
         return getUser().getId();
@@ -29,7 +33,9 @@ public class ShiroContextHolder {
 
     //HttpServletRequest请求
     public static HttpServletRequest getHttpServletRequest() {
-        return ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder
-                .getRequestAttributes())).getRequest();
+        ServletRequestAttributes sra = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        RequestContextHolder.setRequestAttributes(sra, true);
+        assert sra != null;
+        return sra.getRequest();
     }
 }

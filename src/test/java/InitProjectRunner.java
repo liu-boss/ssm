@@ -1,5 +1,6 @@
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.jdbc.ScriptRunner;
+import org.junit.Test;
 
 import java.io.Reader;
 import java.nio.charset.StandardCharsets;
@@ -18,9 +19,23 @@ public class InitProjectRunner {
     private static String dbName = "ssm_shiro";                 // 数据库名称
     private static String userName = "root";                    // 登录账户
     private static String userPassword = "zhangyukang";         // 登录密码
-    private static String dbPort = "3307";                      // 数据库端口号
+    private static String dbPort = "3306";                      // 数据库端口号
 
-    public static void main(String[] args) {
+
+    /**
+     * @return
+     * @throws Exception
+     * @功能描述： 获取数据库连接
+     */
+    public static Connection getMySqlConnection() throws Exception {
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        String url = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName + "?useUnicode=true&characterEncoding=utf-8&port=" + dbPort + "&autoReconnect=true&serverTimezone=GMT%2B8";
+        return DriverManager.getConnection(url, userName, userPassword);
+    }
+
+
+    @Test
+    public void testInit() throws Exception {
         try {
             Connection conn = getMySqlConnection();
             ScriptRunner runner = new ScriptRunner(conn);
@@ -39,16 +54,4 @@ public class InitProjectRunner {
             e.printStackTrace();
         }
     }
-
-    /**
-     * @return
-     * @throws Exception
-     * @功能描述： 获取数据库连接
-     */
-    public static Connection getMySqlConnection() throws Exception {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        String url = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName + "?useUnicode=true&characterEncoding=utf-8&port=" + dbPort + "&autoReconnect=true&serverTimezone=GMT%2B8";
-        return DriverManager.getConnection(url, userName, userPassword);
-    }
-
 }

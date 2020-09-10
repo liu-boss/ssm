@@ -38,10 +38,10 @@
         <shiro-ehcache-version>1.2.2</shiro-ehcache-version>
         <easy-captcha-version>1.6.2</easy-captcha-version>
         <ip2region-version>1.7.2</ip2region-version>
+        <aspectjweaver-version>1.9.5</aspectjweaver-version>
     </properties>
 
     <dependencies>
-
         <!--spring框架的三个基础包-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -56,6 +56,16 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
             <version>${spring-version}</version>
         </dependency>
         <!--springMVC的两个包-->

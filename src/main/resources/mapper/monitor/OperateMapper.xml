@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coderman.monitor.mapper.OperateMapper">
+  <resultMap id="BaseResultMap" type="com.coderman.monitor.model.Operate">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="time" jdbcType="DECIMAL" property="time" />
+    <result column="ip" jdbcType="VARCHAR" property="ip" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="location" jdbcType="VARCHAR" property="location" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.coderman.monitor.model.OperateWithBLOBs">
+    <result column="operation" jdbcType="LONGVARCHAR" property="operation" />
+    <result column="controller" jdbcType="LONGVARCHAR" property="controller" />
+    <result column="method" jdbcType="LONGVARCHAR" property="method" />
+    <result column="return_value" jdbcType="LONGVARCHAR" property="returnValue" />
+    <result column="params" jdbcType="LONGVARCHAR" property="params" />
+    <result column="error_msg" jdbcType="LONGVARCHAR" property="errorMsg" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, username, time, ip, create_time, location, type
+  </sql>
+  <sql id="Blob_Column_List">
+    operation, controller, method, return_value, params, error_msg
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from t_operate
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_operate
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.monitor.model.OperateWithBLOBs">
+    insert into t_operate (id, username, time,
+      ip, create_time, location,
+      type, operation, controller,
+      method, return_value, params,
+      error_msg)
+    values (#{id,jdbcType=BIGINT}, #{username,jdbcType=VARCHAR}, #{time,jdbcType=DECIMAL},
+      #{ip,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{location,jdbcType=VARCHAR},
+      #{type,jdbcType=INTEGER}, #{operation,jdbcType=LONGVARCHAR}, #{controller,jdbcType=LONGVARCHAR},
+      #{method,jdbcType=LONGVARCHAR}, #{returnValue,jdbcType=LONGVARCHAR}, #{params,jdbcType=LONGVARCHAR},
+      #{errorMsg,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.coderman.monitor.model.OperateWithBLOBs">
+    insert into t_operate
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="time != null">
+        time,
+      </if>
+      <if test="ip != null">
+        ip,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="location != null">
+        location,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="operation != null">
+        operation,
+      </if>
+      <if test="controller != null">
+        controller,
+      </if>
+      <if test="method != null">
+        method,
+      </if>
+      <if test="returnValue != null">
+        return_value,
+      </if>
+      <if test="params != null">
+        params,
+      </if>
+      <if test="errorMsg != null">
+        error_msg,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=DECIMAL},
+      </if>
+      <if test="ip != null">
+        #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="location != null">
+        #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="operation != null">
+        #{operation,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="controller != null">
+        #{controller,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="method != null">
+        #{method,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="returnValue != null">
+        #{returnValue,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="params != null">
+        #{params,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="errorMsg != null">
+        #{errorMsg,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coderman.monitor.model.OperateWithBLOBs">
+    update t_operate
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null">
+        time = #{time,jdbcType=DECIMAL},
+      </if>
+      <if test="ip != null">
+        ip = #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="location != null">
+        location = #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="operation != null">
+        operation = #{operation,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="controller != null">
+        controller = #{controller,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="method != null">
+        method = #{method,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="returnValue != null">
+        return_value = #{returnValue,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="params != null">
+        params = #{params,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="errorMsg != null">
+        error_msg = #{errorMsg,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.coderman.monitor.model.OperateWithBLOBs">
+    update t_operate
+    set username = #{username,jdbcType=VARCHAR},
+      time = #{time,jdbcType=DECIMAL},
+      ip = #{ip,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      location = #{location,jdbcType=VARCHAR},
+      type = #{type,jdbcType=INTEGER},
+      operation = #{operation,jdbcType=LONGVARCHAR},
+      controller = #{controller,jdbcType=LONGVARCHAR},
+      method = #{method,jdbcType=LONGVARCHAR},
+      return_value = #{returnValue,jdbcType=LONGVARCHAR},
+      params = #{params,jdbcType=LONGVARCHAR},
+      error_msg = #{errorMsg,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.monitor.model.Operate">
+    update t_operate
+    set username = #{username,jdbcType=VARCHAR},
+      time = #{time,jdbcType=DECIMAL},
+      ip = #{ip,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      location = #{location,jdbcType=VARCHAR},
+      type = #{type,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="query" parameterType="com.coderman.monitor.model.OperateWithBLOBs" resultMap="ResultMapWithBLOBs">
+    SELECT
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+    FROM t_operate
+    <where>
+      <if test="ip!=null and ip!=''">
+        and ip like "%"#{ip}"%"
+      </if>
+      <if test="location!=null and location!=''">
+        and location like "%"#{location}"%"
+      </if>
+      <if test="operation!=null and operation!=''">
+        and operation like "%"#{operation}"%"
+      </if>
+      <if test="method!=null and method!=''">
+        and method like "%"#{method}"%"
+      </if>
+      <if test="type!=null and type!=''">
+        and type=#{type}
+      </if>
+    </where>
+    order by create_time desc
+  </select>
+
+  <delete id="delete">
+    DELETE FROM t_operate where id in
+    <foreach collection="array" item="item" index="index" open="(" separator="," close=")">
+      #{item}
+    </foreach>
+  </delete>
+
+</mapper>

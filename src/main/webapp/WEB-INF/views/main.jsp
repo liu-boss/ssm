@@ -15,12 +15,15 @@
         margin: 0px;
         padding: 0px;
     }
+    .tree-icon{
+        margin-right: 4px;
+    }
 </style>
 
 <body class="easyui-layout">
 <%--上--%>
 <div region="north" style="height: 50px; background-color: #E0ECFF">
-    <img src="${pageContext.request.contextPath}/resource/image/logo.png" height="100%" style="float:left;margin-left: 10px;">
+    <img src="${pageContext.request.contextPath}/resource/easyui/image/logo.png" height="100%" style="float:left;margin-left: 10px;">
     <div style="margin: 10px 20px;float: right;overflow: hidden">
         欢迎[<span style="color: red" id="username"><shiro:principal property="username"/></span>]登录，
         <a style="color:blue;" href="${pageContext.request.contextPath}/system/user/logout.do">退出</a>
@@ -85,7 +88,7 @@
             $("#div_tabs").tabs("add", {
                 title: item.text,
                 closable: true,
-                content: "<iframe src=" + item.url + " style='width:100%;height:98%' frameborder='0'/>"
+                content: "<iframe src="${pageContext.request.contextPath} + item.url + " style='width:100%;height:98%' frameborder='0'/>"
             })
         }
     }

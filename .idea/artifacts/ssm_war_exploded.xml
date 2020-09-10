@@ -20,9 +20,11 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.8.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-test:5.2.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:5.2.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.5" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.8" />

@@ -87,6 +87,8 @@
         <option value="JUnit4 Test Class" />
         <option value="spring-beans.schema" />
         <option value="Jsp File" />
+        <option value="Enum" />
+        <option value="Aspect" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -132,7 +134,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resource/easyui/themes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -148,25 +150,26 @@
       <recent name="com.coderman.util" />
       <recent name="com.coderman.dao" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\js" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\WEB-INF\views\user" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\WEB-INF\views\error" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\WEB-INF\jsp\error" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.coderman" />
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui\themes" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\js" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\WEB-INF\views\monitor" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\ueditor" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui\themes" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\mapper\monitor" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\mapper\system" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\WEB-INF\views\monitor" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\js" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\java\com\coderman\util" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -2111,6 +2114,30 @@
     </option>
   </component>
   <component name="RunManager" selected="Maven.tomcat">
+    <configuration name="InitProjectRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="InitProjectRunner" />
+      <module name="ssm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MybatisGenerator" />
+      <module name="ssm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InitProjectRunner.testInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ssm" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="InitProjectRunner" />
+      <option name="METHOD_NAME" value="testInit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MD5UtilTest.encrypt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm" />
       <extension name="coverage">
@@ -2216,12 +2243,18 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.MybatisGenerator" />
       <item itemvalue="JUnit.TreeUtilTest.deptVOTreeTest" />
       <item itemvalue="JUnit.MD5UtilTest.encrypt" />
       <item itemvalue="Maven.tomcat" />
+      <item itemvalue="JUnit.InitProjectRunner.testInit" />
+      <item itemvalue="Application.InitProjectRunner" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.InitProjectRunner" />
+        <item itemvalue="JUnit.InitProjectRunner.testInit" />
+        <item itemvalue="Application.MybatisGenerator" />
         <item itemvalue="JUnit.MD5UtilTest.encrypt" />
         <item itemvalue="JUnit.TreeUtilTest.deptVOTreeTest" />
       </list>
@@ -2306,7 +2339,12 @@
       <workItem from="1599365598556" duration="3542000" />
       <workItem from="1599369485284" duration="3711000" />
       <workItem from="1599374288784" duration="498000" />
-      <workItem from="1599546832017" duration="710000" />
+      <workItem from="1599546832017" duration="1055000" />
+      <workItem from="1599548763477" duration="1312000" />
+      <workItem from="1599565530443" duration="6043000" />
+      <workItem from="1599643811217" duration="464000" />
+      <workItem from="1599701125790" duration="16564000" />
+      <workItem from="1599725013252" duration="6701000" />
     </task>
     <task id="LOCAL-00001" summary="添加README.md">
       <created>1591975324666</created>
@@ -2425,10 +2463,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="629" y="280" width="561" height="274" key="#Notifications/0.0.1536.834@0.0.1536.834" timestamp="1598689210734" />
-    <state x="249" y="0" key="#Project_Structure" timestamp="1598842715761">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1599707959771">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1598842715761" />
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1599707959771" />
     <state x="310" y="108" key="#UserDAOTest.save" timestamp="1592820561684">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2437,30 +2475,34 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1599547052328" />
-    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1599526218190">
+    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1599710109615">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1599526218190" />
+    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1599710109615" />
     <state x="499" y="193" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1592013010575">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="193" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.834@0.0.1536.834" timestamp="1592013010575" />
-    <state x="327" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1598749091993">
+    <state x="327" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1599714870151">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="327" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1598749091993" />
-    <state x="516" y="282" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1598837278882">
+    <state x="327" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1599714870151" />
+    <state x="516" y="282" width="504" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1599568077245">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="516" y="282" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.834@0.0.1536.834" timestamp="1598837278882" />
+    <state x="516" y="282" width="504" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.834@0.0.1536.834" timestamp="1599568077245" />
+    <state x="516" y="298" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1599714871773">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="516" y="298" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.834@0.0.1536.834" timestamp="1599714871773" />
     <state x="455" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592827534184">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="455" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1592827534184" />
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599528137037">
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599567593029">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1599528137037" />
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1599567593029" />
     <state x="504" y="261" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1592820809013">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2485,38 +2527,38 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="90" y="70" width="1250" height="683" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1598836475392" />
-    <state width="1495" height="418" key="GridCell.Tab.0.bottom" timestamp="1599547680401">
+    <state width="1495" height="436" key="GridCell.Tab.0.bottom" timestamp="1599731756904">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="418" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599547680401" />
-    <state width="1495" height="418" key="GridCell.Tab.0.center" timestamp="1599547680401">
+    <state width="1495" height="436" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599731756904" />
+    <state width="1495" height="436" key="GridCell.Tab.0.center" timestamp="1599731756904">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="418" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599547680401" />
-    <state width="1495" height="418" key="GridCell.Tab.0.left" timestamp="1599547680401">
+    <state width="1495" height="436" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599731756904" />
+    <state width="1495" height="436" key="GridCell.Tab.0.left" timestamp="1599731756904">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="418" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599547680401" />
-    <state width="1495" height="418" key="GridCell.Tab.0.right" timestamp="1599547680401">
+    <state width="1495" height="436" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599731756904" />
+    <state width="1495" height="436" key="GridCell.Tab.0.right" timestamp="1599731756904">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="418" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599547680401" />
-    <state width="1495" height="564" key="GridCell.Tab.1.bottom" timestamp="1599529115066">
+    <state width="1495" height="436" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599731756904" />
+    <state width="1495" height="322" key="GridCell.Tab.1.bottom" timestamp="1599727578609">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="564" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599529115066" />
-    <state width="1495" height="564" key="GridCell.Tab.1.center" timestamp="1599529115066">
+    <state width="1495" height="322" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599727578609" />
+    <state width="1495" height="322" key="GridCell.Tab.1.center" timestamp="1599727578609">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="564" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1599529115066" />
-    <state width="1495" height="564" key="GridCell.Tab.1.left" timestamp="1599529115066">
+    <state width="1495" height="322" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1599727578609" />
+    <state width="1495" height="322" key="GridCell.Tab.1.left" timestamp="1599727578609">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="564" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1599529115066" />
-    <state width="1495" height="564" key="GridCell.Tab.1.right" timestamp="1599529115066">
+    <state width="1495" height="322" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1599727578609" />
+    <state width="1495" height="322" key="GridCell.Tab.1.right" timestamp="1599727578609">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="564" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1599529115066" />
+    <state width="1495" height="322" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1599727578609" />
     <state width="1183" height="408" key="GridCell.Tab.2.bottom" timestamp="1592056501057">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2557,10 +2599,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1592017387632" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1599527687067">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1599717331226">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1599527687067" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1599717331226" />
     <state x="370" y="101" key="spring file set editor" timestamp="1592019235835">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

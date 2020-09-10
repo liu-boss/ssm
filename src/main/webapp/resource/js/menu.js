@@ -44,7 +44,7 @@ let menu = {
             idField:'id',
             pagination: true,  //是否开启分页
             treeField:'text',
-            fit: true,
+            fit: false,
             collapsible: true,
             fitColumns: true,
             toolbar: '#menu_toolbar',//绑定工具栏

@@ -97,7 +97,6 @@ let user = {
                 {field: 'createTime', title: '创建时间', width: 150, align: 'center'},
                 {field: 'modifyTime', title: '修改时间', width: 150, align: 'center'},
                 {field: 'lastLoginTime', title: '最近登入时间', width: 150, align: 'center'}
-
             ]]
         });
     },

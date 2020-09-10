@@ -1,8 +1,10 @@
 let onlineTable;
 let ctx = null;
+let current;
 let online = {
-    init: function (contextPath) {
+    init: function (contextPath,username) {
         ctx = contextPath;
+        current=username;
         onlineTable = $("#online_table"); //表格
         online.initTable(); //初始化表格
     },
@@ -26,17 +28,28 @@ let online = {
             toolbar: '#online_toolbar',//绑定工具栏
             pagination: true,  //是否开启分页
             pageList: [10, 15, 20, 30],
-            pageSize: 10,
+            pageSize: 15,
             rownumbers: true, //显示行列号
             showFooter: true,
             singleSelect: false, //只可以选择1行
             columns: [[
                 {field: 'id', title: 'ID', checkbox: true},
-                {field: 'username', title: '用户名', width: 120, align: 'center'},
+                {field: 'username', title: '用户名', width: 120, align: 'center',
+                    formatter: function (value, row, index) {
+                        if(row.username===current){
+                            return  '<font color="#663399">[当前用户]</font>';
+                        }else{
+                            return row.username;
+                        }
+                    }},
                 {field: 'host', title: '主机地址', width: 220, align: 'center'},
                 {field: 'location', title: '登入地址', width: 220, align: 'center'},
                 {field: 'startTime', title: '开始访问', width: 150, align: 'center'},
                 {field: 'expired', title: '是否过期', width: 150, align: 'center'},
+                {field: 'status', title: '状态', width: 150, align: 'center',
+                    formatter: function (value, row, index) {
+                        return "<font style='color: #00ee00'>[在线]</font>"
+                    }},
                 {field: 'timeout', title: '会话过期时间(分钟)', width: 150, align: 'center'},
                 {field: 'lastAccessTime', title: '最新访问', width: 150, align: 'center'},
             ]]
