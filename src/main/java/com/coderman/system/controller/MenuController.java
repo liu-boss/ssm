@@ -58,7 +58,7 @@ public class MenuController {
         return JsonData.success();
     }
 
-    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE,operateDesc = "更新菜单")
+    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE,operateDesc = "编辑菜单")
     @RequestMapping(value = "/get.do", method = RequestMethod.GET)
     @ResponseBody
     public JsonData get(@RequestParam("id") Long id) {

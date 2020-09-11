@@ -70,7 +70,7 @@ public class RoleController {
         return JsonData.success();
     }
 
-    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE,operateDesc = "更新角色")
+    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE,operateDesc = "编辑角色")
     @RequestMapping(value = "/get.do", method = RequestMethod.GET)
     @ResponseBody
     public JsonData get(@RequestParam("id") Long id) {
