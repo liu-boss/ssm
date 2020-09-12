@@ -162,7 +162,7 @@ public class UserServiceImpl implements UserService {
         } catch (CredentialsException e) {
             exceptionMessage = "密码不匹配";
         } catch (ExcessiveAttemptsException e) {
-            exceptionMessage = "账户已被限制登入,请10分钟后再试";
+            exceptionMessage = "账户已被限制登入,请1分钟后再试";
         } catch (LockedAccountException e) {
             exceptionMessage = "账号已被锁定,请联系管理员";
         } catch (AuthenticationException e) {

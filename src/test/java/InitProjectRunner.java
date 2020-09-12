@@ -1,3 +1,4 @@
+import com.coderman.util.PropertiesUtil;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.jdbc.ScriptRunner;
 import org.junit.Test;
@@ -15,27 +16,27 @@ import java.sql.DriverManager;
  * @Version 1.0
  **/
 public class InitProjectRunner {
-    private static String dbHost = "127.0.0.1";                 // 数据库地址
-    private static String dbName = "ssm_shiro";                 // 数据库名称
-    private static String userName = "root";                    // 登录账户
-    private static String userPassword = "zhangyukang";         // 登录密码
-    private static String dbPort = "3306";                      // 数据库端口号
+
+    private static final String driverClass;
+    private static final String user;
+    private static final String password;
+    private static final String url;
 
 
-    /**
-     * @return
-     * @throws Exception
-     * @功能描述： 获取数据库连接
-     */
-    public static Connection getMySqlConnection() throws Exception {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        String url = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName + "?useUnicode=true&characterEncoding=utf-8&port=" + dbPort + "&autoReconnect=true&serverTimezone=GMT%2B8";
-        return DriverManager.getConnection(url, userName, userPassword);
+    static {
+        driverClass= PropertiesUtil.getProperty("driverClass");
+        user= PropertiesUtil.getProperty("user");
+        password= PropertiesUtil.getProperty("password");
+        url= PropertiesUtil.getProperty("url");
+    }
+
+    @Test
+    public void init() {
+        initProject("init.sql");
     }
 
 
-    @Test
-    public void testInit() throws Exception {
+    public static void initProject(String sqlFile){
         try {
             Connection conn = getMySqlConnection();
             ScriptRunner runner = new ScriptRunner(conn);
@@ -44,7 +45,7 @@ public class InitProjectRunner {
             // 绝对路径读取
             //Reader read = new FileReader(new File("f:\\test.sql"));
             // 从class目录下直接读取
-            Reader read = Resources.getResourceAsReader("init.sql");
+            Reader read = Resources.getResourceAsReader(sqlFile);
             runner.runScript(read);
             runner.closeConnection();
             conn.close();
@@ -54,4 +55,15 @@ public class InitProjectRunner {
             e.printStackTrace();
         }
     }
+
+    /**
+     * @return
+     * @throws Exception
+     * @功能描述： 获取数据库连接
+     */
+    public static Connection getMySqlConnection() throws Exception {
+        Class.forName(driverClass);
+        return DriverManager.getConnection(url, user, password);
+    }
+
 }

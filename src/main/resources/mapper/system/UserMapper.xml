@@ -210,23 +210,25 @@
     where id = #{id,jdbcType=BIGINT}
   </update>
 
+    <!-- 批量删除-->
     <delete id="delete">
         DELETE FROM t_user where id in
         <foreach collection="array" item="item" index="index" open="(" separator="," close=")">
             #{item}
         </foreach>
     </delete>
-
+    <!-- 根据用户名获取用户-->
     <select id="selectByUsername" parameterType="string" resultMap="BaseResultMap">
-        SELECT
+        select
         <include refid="Base_Column_List"/>
-        FROM t_user
-        WHERE username=#{username}
+        from t_user
+        where username=#{username}
     </select>
+    <!-- 模糊查询 -->
     <select id="query" parameterType="com.coderman.system.model.User" resultMap="BaseResultMap">
-        SELECT
+        select
         <include refid="Base_Column_List"/>
-        FROM t_user
+        from t_user
         <where>
             <if test="username!=null and username!=''">
                 and username like "%"#{username}"%"
@@ -248,7 +250,10 @@
             </if>
         </where>
     </select>
-
+    <!-- 校验用户名
+     如果:id!=null (查看该用户名的人数,不包括当前用户,用于修改时用户名校验)
+     如果:id==null (查看该用户名的人数,用于添加时用户名校验)
+     -->
     <select id="checkByUsername"  resultType="int">
         select IFNULL(count(1),0)
         from t_user
@@ -302,10 +307,12 @@
         delete from t_user_role
         where user_id=#{userId}
     </delete>
+    <!-- 根据用户id查询用户的角色集合-->
     <select id="queryRolesById" resultType="Long">
         select
         role_id
         from t_user_role
         where user_id=#{userId}
     </select>
+
 </mapper>

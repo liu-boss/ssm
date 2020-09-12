@@ -53,8 +53,7 @@ public class UserRealm extends AuthorizingRealm {
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        CurrentUser user = ShiroContextHolder.getUser();
-        String userName = user.getUsername();
+        String userName = ShiroContextHolder.getUsername();
 
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
 
