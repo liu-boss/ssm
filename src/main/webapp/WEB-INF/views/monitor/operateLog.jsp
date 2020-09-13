@@ -11,8 +11,8 @@
 <div id="operateLog_toolbar" style="display: none">
     <%--    操作按钮--%>
     <div style="margin-bottom:5px">
-        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="true" onclick="operateLog.delete()">移除</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="operateLog.reload()">刷新</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="false" onclick="operateLog.delete()">移除</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="false" onclick="operateLog.reload()">刷新</a>
     </div>
     <hr>
         <%--    搜索表单--%>

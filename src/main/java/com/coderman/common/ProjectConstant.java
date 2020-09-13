@@ -11,10 +11,8 @@ public interface ProjectConstant {
 
     /** 默认密码*/
     String DEFAULT_PASSWORD="123456";
-
-    /** 性别*/
-    int SEX_MAN=0; //男
-    int SEX_FEMALE=1; //女
+    /** 默认性别: 男*/
+    String DEFAULT_SEX="0";
 
     /** 用户是否锁定*/
     String UN_LOCKED="1"; //未锁定

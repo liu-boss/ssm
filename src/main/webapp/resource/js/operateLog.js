@@ -37,6 +37,7 @@ let operateLog = {
                 {field: 'ip', title: '主机IP', width: 200, align: 'center'},
                 {field: 'location', title: '登入地址', width: 200, align: 'center'},
                 {field: 'operation', title: '操作', width: 200, align: 'center'},
+                {field: 'createTime', title: '操作时间', width: 200, align: 'center'},
                 {field: 'time', title: '耗时/毫秒', width: 150, align: 'center'},
                 {
                     field: 'type', title: '状态', width: 150, align: 'center',

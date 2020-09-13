@@ -36,7 +36,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
-
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
@@ -62,6 +61,8 @@ public class UserServiceImpl implements UserService {
             BeanUtils.copyProperties(userAddParam, user);
             user.setCreateTime(new Date());
             user.setModifyTime(new Date());
+            user.setStatus(ProjectConstant.UN_LOCKED); //unlock status
+            user.setSex(ProjectConstant.DEFAULT_SEX);
             user.setType(ProjectConstant.UserType.USER.getValue()); //用户类型:user
             RandomNumberGenerator randomNumberGenerator = new SecureRandomNumberGenerator();  //密码盐值
             String salt = randomNumberGenerator.nextBytes().toHex();

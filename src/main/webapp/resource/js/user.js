@@ -65,7 +65,7 @@ let user = {
             autoSave: true,//自动保存
             fit: true,
             collapsible: true,
-            fitColumns: false,
+            fitColumns: true,
             toolbar: '#user_toolbar',//绑定工具栏
             pagination: true,  //是否开启分页
             pageList: [15, 20, 30],
@@ -95,7 +95,7 @@ let user = {
                 },
                 {field: 'description', title: '描述信息', width: 220, align: 'center'},
                 {field: 'createTime', title: '创建时间', width: 150, align: 'center'},
-                {field: 'modifyTime', title: '修改时间', width: 150, align: 'center'},
+                // {field: 'modifyTime', title: '修改时间', width: 150, align: 'center'},
                 {field: 'lastLoginTime', title: '最近登入时间', width: 150, align: 'center'}
             ]]
         });

@@ -21,12 +21,12 @@
 </style>
 
 <body class="easyui-layout">
-<%--上--%>
+<%--上: E0ECFF--%>
 <div region="north" style="height: 50px; background-color: #E0ECFF">
     <img src="${pageContext.request.contextPath}/resource/easyui/image/logo.png" height="100%" style="float:left;margin-left: 10px;">
-    <div style="margin: 10px 20px;float: right;overflow: hidden">
+    <div style="margin: 15px 20px;float: right;overflow: hidden">
         欢迎[<span style="color: red" id="username"><shiro:principal property="username"/></span>]登录，
-        <a style="color:blue;" href="${pageContext.request.contextPath}/system/user/logout.do">退出</a>
+        <a style="color:blue;" href="${pageContext.request.contextPath}/system/user/logout.do">退出系统</a>
     </div>
 </div>
 <%--左--%>
@@ -34,7 +34,7 @@
     <div id="leftMenu" style="width: 193px;" data-options="onSelect:menuSelect,multiple:true"></div>
 </div>
 <%--主体--%>
-<div data-options="region:'center'" style="background:#fff3f3;">
+<div data-options="region:'center'" style="background:#ffffff;">
     <!--选项卡使用-->
     <div id="div_tabs" class="easyui-tabs" data-options="tools:'#tab-tools',fit:true,border:true">
         <!--首页-->

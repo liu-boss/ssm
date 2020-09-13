@@ -9,12 +9,12 @@
 <div id="menu_toolbar" style="display: none">
     <%--    操作按钮--%>
     <div style="margin-bottom:5px">
-        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="menu.showAddDialog()">添加</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="menu.showEditDialog()">修改</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="true" onclick="menu.delete()">移除</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="menu.reload()">刷新</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true" onclick="menu.openAll()">展开所有</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-lock" plain="true" onclick="menu.closeAll()">折叠所有</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="false" onclick="menu.showAddDialog()">添加</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="false" onclick="menu.showEditDialog()">修改</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="false" onclick="menu.delete()">移除</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="false" onclick="menu.reload()">刷新</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="false" onclick="menu.openAll()">展开所有</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-lock" plain="false" onclick="menu.closeAll()">折叠所有</a>
     </div>
     <hr>
 </div>

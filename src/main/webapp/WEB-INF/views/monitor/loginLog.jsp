@@ -9,8 +9,8 @@
 <div id="loginLog_toolbar" style="display: none">
     <%--    操作按钮--%>
     <div style="margin-bottom:5px">
-        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="true" onclick="loginLog.delete()">移除</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="loginLog.reload()">刷新</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="false" onclick="loginLog.delete()">移除</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="false" onclick="loginLog.reload()">刷新</a>
     </div>
     <hr>
 </div>
