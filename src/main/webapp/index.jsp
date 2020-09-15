@@ -6,7 +6,7 @@
 </head>
 <body>
 <%
-    response.sendRedirect(request.getContextPath()+"/system/loginPage.do");
+    response.sendRedirect(request.getContextPath()+"/backend/loginPage.do");
 %>
 </body>
 </html>

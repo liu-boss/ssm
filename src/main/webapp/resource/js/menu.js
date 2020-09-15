@@ -21,19 +21,19 @@ let menu = {
     },
     URL: {
         tree: function () {
-            return ctx + '/system/menu/tree.do';
+            return ctx + '/backend/system/menu/tree.do';
         },
         delete: function () {
-            return ctx + '/system/menu/delete.do';
+            return ctx + '/backend/system/menu/delete.do';
         },
         add: function () {
-            return ctx + '/system/menu/add.do';
+            return ctx + '/backend/system/menu/add.do';
         },
         get: function (id) {
-            return ctx + '/system/menu/get.do?id=' + id;
+            return ctx + '/backend/system/menu/get.do?id=' + id;
         },
         update: function () {
-            return ctx + '/system/menu/update.do';
+            return ctx + '/backend/system/menu/update.do';
         },
     },
     //初始化表格数据
@@ -44,7 +44,7 @@ let menu = {
             idField:'id',
             pagination: true,  //是否开启分页
             treeField:'text',
-            fit: false,
+            fit: true,
             collapsible: true,
             fitColumns: true,
             toolbar: '#menu_toolbar',//绑定工具栏

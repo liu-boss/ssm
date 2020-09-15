@@ -1,4 +1,4 @@
-import com.coderman.util.PropertiesUtil;
+import com.coderman.backend.util.PropertiesUtil;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.jdbc.ScriptRunner;
 import org.junit.Test;

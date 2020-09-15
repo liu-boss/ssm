@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coderman.backend.monitor.mapper.LoginLogMapper">
+
+  <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+
+  <resultMap id="BaseResultMap" type="com.coderman.backend.monitor.model.LoginLog">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="login_time" jdbcType="TIMESTAMP" property="loginTime" />
+    <result column="location" jdbcType="VARCHAR" property="location" />
+    <result column="ip" jdbcType="VARCHAR" property="ip" />
+    <result column="os" jdbcType="VARCHAR" property="os" />
+    <result column="browser" jdbcType="VARCHAR" property="browser" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, username, login_time, location, ip, os, browser
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_login_log
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_login_log
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.backend.monitor.model.LoginLog">
+    insert into t_login_log (id, username, login_time,
+      location, ip, os, browser
+      )
+    values (#{id,jdbcType=BIGINT}, #{username,jdbcType=VARCHAR}, #{loginTime,jdbcType=TIMESTAMP},
+      #{location,jdbcType=VARCHAR}, #{ip,jdbcType=VARCHAR}, #{os,jdbcType=VARCHAR}, #{browser,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.coderman.backend.monitor.model.LoginLog">
+    insert into t_login_log
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="loginTime != null">
+        login_time,
+      </if>
+      <if test="location != null">
+        location,
+      </if>
+      <if test="ip != null">
+        ip,
+      </if>
+      <if test="os != null">
+        os,
+      </if>
+      <if test="browser != null">
+        browser,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="loginTime != null">
+        #{loginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="location != null">
+        #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="ip != null">
+        #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="os != null">
+        #{os,jdbcType=VARCHAR},
+      </if>
+      <if test="browser != null">
+        #{browser,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coderman.backend.monitor.model.LoginLog">
+    update t_login_log
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="loginTime != null">
+        login_time = #{loginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="location != null">
+        location = #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="ip != null">
+        ip = #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="os != null">
+        os = #{os,jdbcType=VARCHAR},
+      </if>
+      <if test="browser != null">
+        browser = #{browser,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.backend.monitor.model.LoginLog">
+    update t_login_log
+    set username = #{username,jdbcType=VARCHAR},
+      login_time = #{loginTime,jdbcType=TIMESTAMP},
+      location = #{location,jdbcType=VARCHAR},
+      ip = #{ip,jdbcType=VARCHAR},
+      os = #{os,jdbcType=VARCHAR},
+      browser = #{browser,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="query" parameterType="com.coderman.backend.monitor.model.LoginLog" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List"/>
+    FROM t_login_log
+    <where>
+      <if test="ip!=null and ip!=''">
+        and ip like "%"#{ip}"%"
+      </if>
+      <if test="location!=null and location!=''">
+        and location like "%"#{location}"%"
+      </if>
+      <if test="os!=null and os!=''">
+        and os like "%"#{os}"%"
+      </if>
+      <if test="browser!=null and browser!=''">
+        and browser like "%"#{browser}"%"
+      </if>
+    </where>
+    order by login_time desc
+  </select>
+
+  <delete id="delete">
+    DELETE FROM t_login_log where id in
+    <foreach collection="array" item="item" index="index" open="(" separator="," close=")">
+      #{item}
+    </foreach>
+  </delete>
+</mapper>

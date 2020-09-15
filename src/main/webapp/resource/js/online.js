@@ -10,10 +10,10 @@ let online = {
     },
     URL: {
         list: function () {
-            return ctx + '/system/online/list.do';
+            return ctx + '/backend/system/online/list.do';
         },
         forceLogout: function (strs) {
-            return ctx+'/system/online/forceLogout.do?nameList='+strs
+            return ctx+'/backend/system/online/forceLogout.do?nameList='+strs
         }
     },
     //初始化表格数据

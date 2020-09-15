@@ -21,19 +21,19 @@ let dept = {
     },
     URL: {
         tree: function () {
-            return ctx + '/system/dept/tree.do';
+            return ctx + '/backend/system/dept/tree.do';
         },
         delete: function () {
-            return ctx + '/system/dept/delete.do';
+            return ctx + '/backend/system/dept/delete.do';
         },
         add: function () {
-            return ctx + '/system/dept/add.do';
+            return ctx + '/backend/system/dept/add.do';
         },
         get: function (id) {
-            return ctx + '/system/dept/get.do?id=' + id;
+            return ctx + '/backend/system/dept/get.do?id=' + id;
         },
         update: function () {
-            return ctx + '/system/dept/update.do';
+            return ctx + '/backend/system/dept/update.do';
         },
     },
     //初始化表格数据
@@ -44,7 +44,7 @@ let dept = {
             idField:'id',
             pagination: true,  //是否开启分页
             treeField:'text',
-            fit: false,
+            fit: true,
             collapsible: true,
             fitColumns: true,
             toolbar: '#dept_toolbar',//绑定工具栏
@@ -59,7 +59,7 @@ let dept = {
                 {field: 'createTime', title: '创建时间', width: 150, align: 'center'},
                 {field: 'modifyTime', title: '修改时间', width: 150, align: 'center'},
             ]],
-            onLoadSuccess: function(){  dept.openAll()  }
+            onLoadSuccess: function(){  dept.closeAll()  }
         });
     },
     //添加
@@ -121,7 +121,7 @@ let dept = {
         let n = comboTree.tree('getSelected');
         let deptId=$("#deptId").val();//当前编辑的节点id
         while (n != null) {
-            if ( deptId == n.id) {
+            if ( deptId === n.id) {
                 $.messager.alert("提示","上级选择有误:(不能选择本身和子节点)",'error');
                 return false;
             }

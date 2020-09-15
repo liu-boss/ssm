@@ -8,10 +8,10 @@ let loginLog = {
     },
     URL: {
         list: function () {
-            return ctx + '/monitor/loginLog/list.do';
+            return ctx + '/backend/monitor/loginLog/list.do';
         },
         delete: function () {
-            return ctx + '/monitor/loginLog/delete.do';
+            return ctx + '/backend/monitor/loginLog/delete.do';
         },
     },
     //初始化表格数据

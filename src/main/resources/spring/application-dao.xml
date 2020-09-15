@@ -10,7 +10,7 @@
     <context:property-placeholder ignore-unresolvable="true" location="classpath:jdbc.properties"/>
 
     <!--配置数据库连接池-->
-    <bean id="dataSource"  class="com.alibaba.druid.pool.DruidDataSource">
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="username" value="${user}"/>
         <property name="password" value="${password}"/>
         <property name="url" value="${url}"/>
@@ -51,33 +51,17 @@
         <property name="dataSource" ref="dataSource"/>
         <!--mybatis的配置文件-->
         <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
-<!--        &lt;!&ndash;配置mybatis扫面的实体类的包&ndash;&gt;-->
-<!--        <property name="typeAliasesPackage" value="com.coderman.system.model"/>-->
+        <!--        &lt;!&ndash;配置mybatis扫面的实体类的包&ndash;&gt;-->
+        <!--        <property name="typeAliasesPackage" value="com.coderman.backend.system.model"/>-->
         <!--   扫描sql配置文件：mapper需要的xml文件-->
-        <property name="mapperLocations" value="classpath:mapper/*/*.xml"/>
+        <property name="mapperLocations" value="classpath:mapper/backend/*/*.xml"/>
     </bean>
 
     <!--配置通用mapper-->
-    <!--    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
-    <!--        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>-->
-    <!--        &lt;!&ndash;  给出需要扫描Dao接口包       &ndash;&gt;-->
-    <!--        <property name="basePackage" value="com.coderman.system.mapper"/>-->
-    <!--    </bean>-->
-
-
-    <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
-    <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.coderman.*.mapper"/>
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <property name="properties">
-            <value>
-                <!-- 通用mapper -->
-                mappers=tk.mybatis.mapper.common.Mapper
-            </value>
-        </property>
+        <!--  给出需要扫描Dao接口包       -->
+        <property name="basePackage" value="com.coderman.backend.*.mapper"/>
     </bean>
-
-
-
 
 </beans>

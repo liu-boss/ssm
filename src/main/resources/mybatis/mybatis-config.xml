@@ -6,13 +6,14 @@
     <settings>
         <!-- 表示开启缓存 -->
         <setting name="cacheEnabled" value="true" />
-<!--        使用列标签代替列名-->
+        <!--使用列标签代替列名-->
         <setting name="useColumnLabel" value="true"/>
-<!--        插入时返回主键-->
+        <!--插入时返回主键-->
         <setting name="useGeneratedKeys" value="true"/>
-<!--        开启驼峰命名-->
+        <!--开启驼峰命名-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
+
     <plugins>
         <plugin interceptor="com.github.pagehelper.PageInterceptor">
             <!--reasonable：分页合理化参数，默认值为false,直接根据参数进行查询。

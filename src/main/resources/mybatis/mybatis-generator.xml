@@ -10,7 +10,7 @@
 		</commentGenerator>
 		<!-- 配置数据库连接 -->
 		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3307/ssm_shiro?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=UTC" userId="root"
+			connectionURL="jdbc:mysql://localhost:3307/backend?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=UTC" userId="root"
 			password="zhangyukang">
 		</jdbcConnection>
 
@@ -20,7 +20,7 @@
 		</javaTypeResolver>
 
 		<!-- 指定javaBean生成的位置 -->
-		<javaModelGenerator targetPackage="com.coderman.system.model"
+		<javaModelGenerator targetPackage="com.coderman.backend.article.model"
 			targetProject=".\src\main\java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
@@ -32,7 +32,7 @@
 		</sqlMapGenerator>
 
 		<!-- 指定dao接口生成的位置，mapper接口 -->
-		<javaClientGenerator type="XMLMAPPER" targetPackage="com.coderman.system.mapper" targetProject=".\src\main\java">
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.coderman.backend.article.mapper" targetProject=".\src\main\java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
@@ -43,6 +43,6 @@
 <!--		<table tableName="sys_permissions" domainObjectName="Permission" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
 <!--		<table tableName="sys_roles_permissions" domainObjectName="RolePermission" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
 <!--		<table tableName="sys_users" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
-		<table tableName="t_operate" domainObjectName="Operate"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+		<table tableName="t_article" domainObjectName="Article"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
 	</context>
 </generatorConfiguration>

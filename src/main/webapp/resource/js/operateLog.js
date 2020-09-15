@@ -10,10 +10,10 @@ let operateLog = {
     },
     URL: {
         list: function () {
-            return ctx + '/monitor/operateLog/list.do';
+            return ctx + '/backend/monitor/operateLog/list.do';
         },
         delete: function () {
-            return ctx + '/monitor/operateLog/delete.do';
+            return ctx + '/backend/monitor/operateLog/delete.do';
         },
     },
     //初始化表格数据
@@ -23,12 +23,13 @@ let operateLog = {
             url: operateLog.URL.list(),
             autoSave: true,//自动保存
             fit: true,
+            rownumbers: true, //显示行列号
             collapsible: true,
             fitColumns: false,
             toolbar: '#operateLog_toolbar',//绑定工具栏
             pagination: true,  //是否开启分页
-            pageList: [14, 15, 20, 30],
-            pageSize: 14,
+            pageList: [12, 15, 20, 30],
+            pageSize: 12,
             showFooter: true,
             singleSelect: false, //只可以选择1行
             columns: [[

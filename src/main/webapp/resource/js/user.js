@@ -30,31 +30,31 @@ let user = {
     },
     URL: {
         list: function () {
-            return ctx + '/system/user/list.do';
+            return ctx + '/backend/system/user/list.do';
         },
         delete: function (id) {
-            return ctx + '/system/user/delete.do?id='+id;
+            return ctx + '/backend/system/user/delete.do?id='+id;
         },
         add: function () {
-            return ctx + '/system/user/add.do';
+            return ctx + '/backend/system/user/add.do';
         },
         get: function (id) {
-            return ctx + '/system/user/get.do?id=' + id;
+            return ctx + '/backend/system/user/get.do?id=' + id;
         },
         update: function () {
-            return ctx + '/system/user/update.do';
+            return ctx + '/backend/system/user/update.do';
         },
         resetPassword:function (id) {
-            return ctx+'/system/user/resetPassword.do?id='+id;
+            return ctx+'/backend/system/user/resetPassword.do?id='+id;
         },
         queryRole: function (id) {
-            return ctx + '/system/user/queryRole.do?id=' + id;
+            return ctx + '/backend/system/user/queryRole.do?id=' + id;
         },
         deptTree: function () {
-            return ctx + '/system/dept/tree.do';
+            return ctx + '/backend/system/dept/tree.do';
         },
         roleAll: function () {
-            return ctx + '/system/role/listAll.do';
+            return ctx + '/backend/system/role/listAll.do';
         },
     },
     //初始化表格数据
@@ -68,8 +68,8 @@ let user = {
             fitColumns: true,
             toolbar: '#user_toolbar',//绑定工具栏
             pagination: true,  //是否开启分页
-            pageList: [15, 20, 30],
-            pageSize: 15,
+            pageList: [12,15, 20, 30],
+            pageSize: 12,
             rownumbers: true, //显示行列号
             showFooter: true,
             singleSelect: false, //只可以选择1行

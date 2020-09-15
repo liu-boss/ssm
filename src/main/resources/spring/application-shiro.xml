@@ -3,21 +3,30 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+    <!-- MyBatis使用ehcache缓存 start -->
+    <bean id="ehCacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:ehcache.xml"/>
+        <!-- 和shiro分享缓存  -->
+        <property name="shared" value="true"/>
+    </bean>
+
+
     <!-- 缓存管理器 使用Ehcache实现 -->
-    <bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
-        <property name="cacheManagerConfigFile" value="classpath:ehcache.xml"/>
+    <bean id="shiroCacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+        <property name="cacheManager" ref="ehCacheManager"/>
     </bean>
 
     <!-- 凭证匹配器 -->
-    <bean id="credentialsMatcher" class="com.coderman.common.shiro.credentials.RetryLimitHashedCredentialsMatcher">
-        <constructor-arg ref="cacheManager"/>
+    <bean id="credentialsMatcher" class="com.coderman.backend.common.shiro.credentials.RetryLimitHashedCredentialsMatcher">
+        <constructor-arg ref="shiroCacheManager"/>
         <property name="hashAlgorithmName" value="md5"/>
         <property name="hashIterations" value="1024"/>
         <property name="storedCredentialsHexEncoded" value="true"/>
     </bean>
 
     <!--自定义realm-->
-    <bean id="userRealm" class="com.coderman.common.shiro.realm.UserRealm">
+    <bean id="userRealm" class="com.coderman.backend.common.shiro.realm.UserRealm">
         <property name="credentialsMatcher" ref="credentialsMatcher"/>
         <property name="cachingEnabled" value="true"/>
         <property name="authenticationCachingEnabled" value="true"/>
@@ -32,21 +41,20 @@
         <!-- Shiro的核心安全接口,这个属性是必须的 -->
         <property name="securityManager" ref="securityManager"/>
         <!-- 身份认证失败，则跳转到登录页面的配置 -->
-        <property name="loginUrl" value="/system/loginPage.do"/>
+        <property name="loginUrl" value="/backend/loginPage.do"/>
         <!-- 登录成功后的页面:(后台主页面) -->
-<!--        <property name="successUrl" value="/system/mainPage.do"/>-->
+<!--        <property name="successUrl" value="/backend/mainPage.do"/>-->
         <!-- 登录后访问没有权限的页面后跳转的页面 -->
-        <property name="unauthorizedUrl" value="/unauthorizedPage.do"/>
+        <property name="unauthorizedUrl" value="/backend/unauthorizedPage.do"/>
         <!-- Shiro连接约束配置,即过滤链的定义 -->
         <property name="filterChainDefinitions">
             <value>
                 <!-- 注意：规则是有顺序的，从上到下，拦截范围必须是从小到大的 -->
                 <!--  url = 拦截规则（anon为匿名，authc为要登录后，才能访问，logout登出过滤） -->
-                /system/loginPage.do = anon
-                /system/user/login.do = anon
-                /system/user/captcha.do = anon
-                /system/** = authc
-                /monitor/** = authc
+                /backend/loginPage.do = anon
+                /backend/system/user/login.do = anon
+                /backend/system/user/captcha.do = anon
+                /backend/** = authc
             </value>
         </property>
         <property name="filters">
@@ -57,7 +65,7 @@
         </property>
     </bean>
     <!--解决前后端(页面跳转问题)跳转页面的filter-->
-    <bean id="restLoginAuthorizationFilter" class="com.coderman.common.shiro.filter.RestLoginAuthorizationFilter"/>
+    <bean id="restLoginAuthorizationFilter" class="com.coderman.backend.common.shiro.filter.RestLoginAuthorizationFilter"/>
 
     <!-- 配置 shiro 的核心组件：securityManager -->
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">

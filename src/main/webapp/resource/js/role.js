@@ -23,25 +23,25 @@ let role = {
     },
     URL: {
         list: function () {
-            return ctx + '/system/role/list.do';
+            return ctx + '/backend/system/role/list.do';
         },
         delete: function () {
-            return ctx + '/system/role/delete.do';
+            return ctx + '/backend/system/role/delete.do';
         },
         add: function () {
-            return ctx + '/system/role/add.do';
+            return ctx + '/backend/system/role/add.do';
         },
         get: function (id) {
-            return ctx + '/system/role/get.do?id=' + id;
+            return ctx + '/backend/system/role/get.do?id=' + id;
         },
         update: function () {
-            return ctx + '/system/role/update.do';
+            return ctx + '/backend/system/role/update.do';
         },
         menuTree: function () {
-            return ctx + '/system/menu/tree.do';
+            return ctx + '/backend/system/menu/tree.do';
         },
         queryMenu: function (id) {
-            return ctx+'/system/role/queryMenu.do?id='+id;
+            return ctx+'/backend/system/role/queryMenu.do?id='+id;
         }
     },
     //初始化表格数据
