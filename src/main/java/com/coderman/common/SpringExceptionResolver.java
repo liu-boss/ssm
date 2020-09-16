@@ -2,6 +2,7 @@ package com.coderman.common;
 
 import com.coderman.exception.BizException;
 import com.coderman.exception.ParamException;
+import io.jsonwebtoken.JwtException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerExceptionResolver;
@@ -31,6 +32,10 @@ public class SpringExceptionResolver implements HandlerExceptionResolver {
                 log.error("ajax请求:参数异常, url:" + url, ex);
                 JsonData result = JsonData.fail(JsonData.PARAM_ERROR,ex.getMessage());
                 mv = new ModelAndView("jsonView", result.toMap());
+            }else if(ex instanceof JwtException){
+                log.error("ajax请求:签名异常, url:" + url, ex);
+                JsonData result = JsonData.fail(JsonData.TOKEN_ILLEGAL,ex.getMessage());
+                mv = new ModelAndView("jsonView", result.toMap());
             } else {//系统异常
                 log.error("ajax请求:系统异常, url:" + url, ex);
                 JsonData result = JsonData.fail(JsonData.INTERNAL_SERVER_ERROR,defaultMsg);
@@ -38,9 +43,8 @@ public class SpringExceptionResolver implements HandlerExceptionResolver {
             }
         } else {
             log.error("页面请求出现异常:" + url, ex);
-            Map<String,Object> map=new HashMap<>();
-            map.put("errorMsg",ex.toString());
-            mv = new ModelAndView("error/exception",map);
+            JsonData result = JsonData.fail(JsonData.PARAM_ERROR,ex.toString());
+            mv = new ModelAndView("jsonView",result.toMap());
         }
         return mv;
     }

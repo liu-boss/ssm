@@ -1,21 +1,3 @@
-### SSM整合JWT
-
-#### 1.加入依赖
-
-```xml
-  <!-- jwt -->
-<dependency>
-    <groupId>io.jsonwebtoken</groupId>
-    <artifactId>jjwt</artifactId>
-    <version>${jjwt_version}</version>
-</dependency>
-```
-
-#### 2. 编写jwt 拦截器
-
-
-```java
-
 package com.coderman.common;
 
 import com.coderman.model.User;
@@ -72,19 +54,3 @@ public class JWTInterceptor implements HandlerInterceptor {
         WebContextHolder.remove();
     }
 }
-
-```
-
-#### 3. 配置拦截器
-
-```xml
-    <!-- 拦截器 -->
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/**"/>
-            <mvc:exclude-mapping path="/user/login.do"/>
-            <bean class="com.coderman.common.JWTInterceptor"/>
-        </mvc:interceptor>
-    </mvc:interceptors>
-
-```

@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>ssm</artifactId>
+    <artifactId>ssm-jwt</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>ssm Maven Webapp</name>
+    <name>ssm-jwt Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -34,10 +34,16 @@
         <hibernate-validator-version>5.3.6.Final</hibernate-validator-version>
         <guava-version>27.0-jre</guava-version>
         <commons-fileupload-version>1.4</commons-fileupload-version>
+        <jjwt_version>0.7.0</jjwt_version>
     </properties>
 
     <dependencies>
-
+        <!-- jwt -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${jjwt_version}</version>
+        </dependency>
         <!--spring框架的三个基础包-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -107,22 +113,11 @@
             <artifactId>jackson-databind</artifactId>
             <version>${jackson-version}</version>
         </dependency>
-        <!--jstl标签+servlet+jsp依赖-->
-        <dependency>
-            <groupId>jstl</groupId>
-            <artifactId>jstl</artifactId>
-            <version>${jstl-version}</version>
-        </dependency>
+        <!--servlet-->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>${servlet-api-version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
-            <version>${jsp-api-version}</version>
             <scope>provided</scope>
         </dependency>
         <!--pageHelper分页插件-->
@@ -149,7 +144,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>ssm</finalName>
+        <finalName>ssm-jwt</finalName>
         <pluginManagement>
             <plugins>
                 <!-- tomcat插件控制 -->

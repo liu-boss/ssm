@@ -5,6 +5,7 @@ import com.coderman.exception.BizException;
 import com.coderman.model.User;
 import com.coderman.service.UserService;
 import com.coderman.util.BeanValidator;
+import com.coderman.util.JWTUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -57,6 +59,8 @@ public class UserController {
         if("yu".equals(user.getUsername())){
             int a=9/0;
         }
-        return JsonData.success(user);
+        String id="100";
+        String token = JWTUtil.createToken(id, new HashMap<>());
+        return JsonData.success(token);
     }
 }

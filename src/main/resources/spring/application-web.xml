@@ -20,6 +20,16 @@
     <!--配置注解驱动的配置-->
     <mvc:annotation-driven />
 
+
+    <!-- 拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/user/login.do"/>
+            <bean class="com.coderman.common.JWTInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
     <!--
         DispatcherServlet请求映射配置为"/"，则Spring MVC将捕获Web容器所有的请求，包括静态资源的请求，(不包括 jsp),
         因为tomcat的配置文件中有一个默认的*.jsp映射规则优先级更高
@@ -35,7 +45,6 @@
     <!-- 配置视图  BeanNameViewResolver 解析器: 使用视图的名字来解析视图:(在异常处理中使用的: ModelAndView("jsonView", result.toMap());) -->
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
 
-
     <!--自己的异常处理器-->
     <bean class="com.coderman.common.SpringExceptionResolver" />
 
@@ -46,11 +55,5 @@
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="defaultEncoding" value="utf-8"/>
         <property name="maxUploadSize" value="5242440"/>
-    </bean>
-
-    <!--jsp视图解析器-->
-    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/views/"/>
-        <property name="suffix" value=".jsp"/>
     </bean>
 </beans>

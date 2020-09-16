@@ -1,0 +1,215 @@
+GET http://localhost:8080/user/list.do?page=2&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+###
+
+GET http://localhost:8080/user/list.do?page=2&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-16T101150.200.json
+
+###
+
+GET http://localhost:8080/user/list.do?page=2&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-16T101147.200.json
+
+###
+
+GET http://localhost:8080/user/list.do?page=1&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+###
+
+GET http://localhost:8080/user/list.do?page=1&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-16T101132.200.json
+
+###
+
+GET http://localhost:8080/user/list.do?page=1&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+###
+
+GET http://localhost:8080/user/list.do?page=1&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-16T101131.200.json
+
+###
+
+GET http://localhost:8080/user/list.do?page=1&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-16T101116.200.json
+
+###
+
+GET http://localhost:8080/user/list.do?page=1&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+###
+
+GET http://localhost:8080/user/list.do?page=1&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-16T101032.200.json
+
+###
+
+GET http://localhost:8080/user/list.do?page=1&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+###
+
+GET http://localhost:8080/user/list.do?page=1&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-16T101022.200.json
+
+###
+
+GET http://localhost:8080/user/list.do?page=1&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-16T100824.200.json
+
+###
+
+POST http://localhost:8080/user/list.do?page=1&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-16T100818.405.html
+
+###
+
+POST http://localhost:8080/user/list?page=1&size=4
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-16T100812.404.html
+
+###
+
