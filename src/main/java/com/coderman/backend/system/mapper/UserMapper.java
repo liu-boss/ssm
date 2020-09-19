@@ -20,6 +20,5 @@ public interface UserMapper {
     int checkByEmail(@Param("email") String email,@Param("id") Long id); //校验邮箱
     int checkMobile(@Param("mobile") String mobile,@Param("id") Long id);
     void assignedRoleList(@Param("userId") Long id,@Param("roleIdList") Long[] roleIdList); //关联用户和角色
-    void clearRoleList(@Param("userId") Long id); //清除用户-角色关联
     Set<Long> queryRolesById(String userId); //用户已有的角色set
 }

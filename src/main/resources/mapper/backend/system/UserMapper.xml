@@ -305,11 +305,6 @@
             )
         </foreach>
     </insert>
-    <!-- 清除用户角色关联-->
-    <delete id="clearRoleList">
-        delete from t_user_role
-        where user_id=#{userId}
-    </delete>
 
     <!-- 根据用户id查询用户的角色集合-->
     <select id="queryRolesById" resultType="Long" useCache="false">

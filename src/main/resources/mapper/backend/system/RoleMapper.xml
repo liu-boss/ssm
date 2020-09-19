@@ -143,10 +143,33 @@
             u.username = #{username}
     </select>
 
-  <delete id="clearMenuList">
+  <!-- 请求菜单和角色的关联-->
+  <delete id="cleanRoleMenuAssociation">
     delete from t_role_menu
-    where role_id=#{id}
+    <where>
+      <if test="type=='role'">
+        and role_id=#{id}
+      </if>
+      <if test="type=='menu'">
+        and menu_id=#{id}
+      </if>
+    </where>
   </delete>
+
+  <!-- 清除用户角色关联-->
+  <delete id="cleanUserRoleAssociation">
+    delete from t_user_role
+    <where>
+      <if test="type=='user'">
+        and  user_id=#{id}
+      </if>
+      <if test="type=='role'">
+        and  role_id=#{id}
+      </if>
+    </where>
+
+  </delete>
+
 
   <!-- 关联用户和角色-->
   <insert id="roleAuthorization">

@@ -4,6 +4,7 @@ import com.coderman.backend.common.ProjectConstant;
 import com.coderman.backend.exception.ParamException;
 import com.coderman.backend.system.dto.form.UserAddParam;
 import com.coderman.backend.system.dto.form.UserUpdateParam;
+import com.coderman.backend.system.mapper.RoleMapper;
 import com.coderman.backend.system.mapper.UserMapper;
 import com.coderman.backend.system.model.User;
 import com.coderman.backend.system.service.UserService;
@@ -36,6 +37,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private RoleMapper roleMapper;
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -83,8 +87,8 @@ public class UserServiceImpl implements UserService {
      */
     private void assignedRoleList(Long id, Long[] roleIdList) {
         if (roleIdList != null && roleIdList.length != 0 && id != null) {
-            //先清除用户-角色关联
-            userMapper.clearRoleList(id);
+            //清除用户-角色关联
+            roleMapper.cleanUserRoleAssociation(id,"user");
             //添加用户-角色关联
             userMapper.assignedRoleList(id, roleIdList);
         }
@@ -99,7 +103,7 @@ public class UserServiceImpl implements UserService {
             } else {
                 //删除用户-角色关联
                 for (String userId : ids) {
-                    userMapper.clearRoleList(Long.parseLong(userId));
+                    roleMapper.cleanUserRoleAssociation(Long.parseLong(userId),"user");
                 }
                 userMapper.delete(ids);
             }

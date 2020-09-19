@@ -2122,6 +2122,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InitProjectRunner.init" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ssm" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="InitProjectRunner" />
+      <option name="METHOD_NAME" value="init" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TreeUtilTest.deptVOTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm" />
       <extension name="coverage">
@@ -2210,8 +2220,15 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.MybatisGenerator" />
+      <item itemvalue="JUnit.TreeUtilTest.deptVOTreeTest" />
+      <item itemvalue="Maven.tomcat" />
+      <item itemvalue="JUnit.InitProjectRunner.init" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InitProjectRunner.init" />
         <item itemvalue="JUnit.TreeUtilTest.deptVOTreeTest" />
         <item itemvalue="Application.MybatisGenerator" />
       </list>
@@ -2492,38 +2509,38 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="90" y="70" width="1250" height="683" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1598836475392" />
-    <state width="1495" height="411" key="GridCell.Tab.0.bottom" timestamp="1600174354223">
+    <state width="1495" height="443" key="GridCell.Tab.0.bottom" timestamp="1600489047224">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="411" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600174354223" />
-    <state width="1495" height="411" key="GridCell.Tab.0.center" timestamp="1600174354223">
+    <state width="1495" height="443" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600489047224" />
+    <state width="1495" height="443" key="GridCell.Tab.0.center" timestamp="1600489047224">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="411" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1600174354223" />
-    <state width="1495" height="411" key="GridCell.Tab.0.left" timestamp="1600174354223">
+    <state width="1495" height="443" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1600489047224" />
+    <state width="1495" height="443" key="GridCell.Tab.0.left" timestamp="1600489047224">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="411" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1600174354223" />
-    <state width="1495" height="411" key="GridCell.Tab.0.right" timestamp="1600174354223">
+    <state width="1495" height="443" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1600489047224" />
+    <state width="1495" height="443" key="GridCell.Tab.0.right" timestamp="1600489047224">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="411" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1600174354223" />
-    <state width="1495" height="411" key="GridCell.Tab.1.bottom" timestamp="1600174354223">
+    <state width="1495" height="443" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1600489047224" />
+    <state width="1495" height="296" key="GridCell.Tab.1.bottom" timestamp="1600487186388">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="411" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600174354223" />
-    <state width="1495" height="411" key="GridCell.Tab.1.center" timestamp="1600174354223">
+    <state width="1495" height="296" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600487186388" />
+    <state width="1495" height="296" key="GridCell.Tab.1.center" timestamp="1600487186388">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="411" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1600174354223" />
-    <state width="1495" height="411" key="GridCell.Tab.1.left" timestamp="1600174354223">
+    <state width="1495" height="296" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1600487186388" />
+    <state width="1495" height="296" key="GridCell.Tab.1.left" timestamp="1600487186387">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="411" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1600174354223" />
-    <state width="1495" height="411" key="GridCell.Tab.1.right" timestamp="1600174354223">
+    <state width="1495" height="296" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1600487186387" />
+    <state width="1495" height="296" key="GridCell.Tab.1.right" timestamp="1600487186388">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="411" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1600174354223" />
+    <state width="1495" height="296" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1600487186388" />
     <state width="1183" height="408" key="GridCell.Tab.2.bottom" timestamp="1592056501057">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

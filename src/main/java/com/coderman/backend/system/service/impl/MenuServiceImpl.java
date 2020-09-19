@@ -1,18 +1,18 @@
 package com.coderman.backend.system.service.impl;
 
 import com.coderman.backend.common.ProjectConstant;
-import com.coderman.backend.system.dto.form.MenuParam;
 import com.coderman.backend.exception.ParamException;
+import com.coderman.backend.system.dto.form.MenuParam;
 import com.coderman.backend.system.mapper.MenuMapper;
+import com.coderman.backend.system.mapper.RoleMapper;
 import com.coderman.backend.system.model.Menu;
 import com.coderman.backend.system.service.MenuService;
+import com.coderman.backend.system.vo.MenuTreeVO;
 import com.coderman.backend.util.TreeObject;
 import com.coderman.backend.util.TreeUtil;
-import com.coderman.backend.system.vo.MenuTreeVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
@@ -26,6 +26,9 @@ public class MenuServiceImpl implements MenuService {
 
     @Autowired
     private MenuMapper menuMapper;
+
+    @Autowired
+    private RoleMapper roleMapper;
 
     @Override
     public List<TreeObject> getUserMenus(String username) {
@@ -155,6 +158,8 @@ public class MenuServiceImpl implements MenuService {
             throw new ParamException("有子菜单无法删除");
         }else {
             menuMapper.deleteByPrimaryKey(id);
+            //清除菜单-角色关联
+            roleMapper.cleanRoleMenuAssociation(id,"menu");
         }
     }
     @Override

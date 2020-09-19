@@ -1,7 +1,7 @@
 package com.coderman.backend.system.service.impl;
 
-import com.coderman.backend.system.dto.form.RoleParam;
 import com.coderman.backend.exception.ParamException;
+import com.coderman.backend.system.dto.form.RoleParam;
 import com.coderman.backend.system.mapper.RoleMapper;
 import com.coderman.backend.system.model.Role;
 import com.coderman.backend.system.service.RoleService;
@@ -54,7 +54,7 @@ public class RoleServiceImpl implements RoleService {
     private void roleAuthorization(Long id, Long[] menuIdList) {
         if (menuIdList != null && menuIdList.length != 0 && id != null) {
             //先清除角色-菜单关联
-            roleMapper.clearMenuList(id);
+            roleMapper.cleanRoleMenuAssociation(id,"role");
             //添加角色-菜单关联
             roleMapper.roleAuthorization(id, menuIdList);
         }
@@ -78,9 +78,11 @@ public class RoleServiceImpl implements RoleService {
                 throw new ParamException("当前用户拥有该角色,无法删除");
             }else {
                 roleMapper.delete(ids);
-                //删除角色-菜单关联
                 for (String roleId : ids) {
-                    roleMapper.clearMenuList(Long.parseLong(roleId));
+                    //删除角色-菜单关联
+                    roleMapper.cleanRoleMenuAssociation(Long.parseLong(roleId),"role");
+                    //删除用户-角色关联
+                    roleMapper.cleanUserRoleAssociation(Long.parseLong(roleId),"role");
                 }
             }
         }

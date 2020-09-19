@@ -51,7 +51,7 @@
 <%
     if( ShiroContextHolder.getUser()!=null){
         //如果已登入,跳转到后台主页
-        response.sendRedirect(request.getContextPath()+"/backend/system/mainPage.do");
+        response.sendRedirect(request.getContextPath()+"/backend/mainPage.do");
     }
 %>
 <form action="#">

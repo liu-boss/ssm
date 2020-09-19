@@ -11,7 +11,7 @@ https://github.com/zykzhangyukang/ssm/tree/ssm-shiro
 ```
 #### 第二步: 创建一个名为 'ssm_shiro' 的数据库
 
-> 当然你可以使用其他名称
+> 当然你可以使用其他名称,保证和jdbc.properties对应
 
 ```sql
 create databases ssm_shiro
