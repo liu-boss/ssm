@@ -1,6 +1,7 @@
 package com.coderman.backend.system.service.impl;
 
 import com.coderman.backend.common.ProjectConstant;
+import com.coderman.backend.common.shiro.realm.UserRealm;
 import com.coderman.backend.exception.ParamException;
 import com.coderman.backend.system.dto.form.UserAddParam;
 import com.coderman.backend.system.dto.form.UserUpdateParam;
@@ -40,6 +41,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private RoleMapper roleMapper;
+
+    @Autowired
+    private UserRealm userRealm;
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -101,8 +105,8 @@ public class UserServiceImpl implements UserService {
             if (Arrays.asList(ids).contains(ShiroContextHolder.getIdentity().toString())) {
                 throw new ParamException("不能删除当前登入用户");
             } else {
-                //删除用户-角色关联
                 for (String userId : ids) {
+                    //删除用户-角色关联
                     roleMapper.cleanUserRoleAssociation(Long.parseLong(userId),"user");
                 }
                 userMapper.delete(ids);
@@ -135,6 +139,8 @@ public class UserServiceImpl implements UserService {
             userMapper.updateByPrimaryKeySelective(user);
             //更新用户-角色关联
             assignedRoleList(id, updateParam.getRoleIdList());
+            //清空权限缓存
+            userRealm.clearCache();
         }
     }
 

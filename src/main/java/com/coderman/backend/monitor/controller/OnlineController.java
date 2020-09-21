@@ -35,7 +35,7 @@ public class OnlineController {
     private SessionDAO sessionDAO;
 
     /**
-     * 当前在线用户
+     * 当前登入用户
      * @return
      */
     @RequestMapping(value = "/list.do",method = RequestMethod.POST)
@@ -63,7 +63,6 @@ public class OnlineController {
                 boolean expired = simpleSession.isExpired();
                 //是否过期
                 principal.setExpired(expired);
-
                 userList.add(principal);
             }
         }

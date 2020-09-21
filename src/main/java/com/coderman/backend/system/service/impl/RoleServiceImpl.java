@@ -1,5 +1,6 @@
 package com.coderman.backend.system.service.impl;
 
+import com.coderman.backend.common.shiro.realm.UserRealm;
 import com.coderman.backend.exception.ParamException;
 import com.coderman.backend.system.dto.form.RoleParam;
 import com.coderman.backend.system.mapper.RoleMapper;
@@ -25,6 +26,9 @@ public class RoleServiceImpl implements RoleService {
 
     @Autowired
     private RoleMapper roleMapper;
+
+    @Autowired
+    private UserRealm userRealm;
 
     @Override
     public List<Role> query(Role role) {
@@ -107,6 +111,8 @@ public class RoleServiceImpl implements RoleService {
             roleMapper.updateByPrimaryKeySelective(record);
             //更新角色-菜单关联
             roleAuthorization(roleParam.getId(), roleParam.getMenuIdList());
+            //清空权限缓存
+            userRealm.clearCache();
         }
     }
     @Override

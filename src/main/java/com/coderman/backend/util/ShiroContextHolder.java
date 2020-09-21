@@ -1,7 +1,9 @@
 package com.coderman.backend.util;
 
 import com.coderman.backend.common.shiro.CurrentUser;
+import com.coderman.backend.common.shiro.realm.UserRealm;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.SimplePrincipalCollection;
 import org.apache.shiro.subject.Subject;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -38,4 +40,5 @@ public class ShiroContextHolder {
         assert sra != null;
         return sra.getRequest();
     }
+
 }

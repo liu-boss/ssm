@@ -11,7 +11,7 @@
  Target Server Version : 50728
  File Encoding         : 65001
 
- Date: 15/09/2020 13:16:11
+ Date: 19/09/2020 12:23:19
 */
 
 SET NAMES utf8mb4;
@@ -62,7 +62,7 @@ CREATE TABLE `t_login_log`  (
   `browser` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '浏览器',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `t_login_log_login_time`(`login_time`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 106 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '登录日志表' ROW_FORMAT = DYNAMIC;
+) ENGINE = MyISAM AUTO_INCREMENT = 117 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '登录日志表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_login_log
@@ -76,6 +76,17 @@ INSERT INTO `t_login_log` VALUES (101, 'zhangyukang', '2020-09-15 11:55:44', '�
 INSERT INTO `t_login_log` VALUES (102, 'zhangyukang', '2020-09-15 12:04:21', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
 INSERT INTO `t_login_log` VALUES (103, 'zhangyukang', '2020-09-15 12:07:22', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
 INSERT INTO `t_login_log` VALUES (104, 'zhangyukang', '2020-09-15 12:34:20', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
+INSERT INTO `t_login_log` VALUES (106, 'zhangyukang', '2020-09-19 11:35:18', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
+INSERT INTO `t_login_log` VALUES (107, 'test4', '2020-09-19 11:37:10', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
+INSERT INTO `t_login_log` VALUES (108, 'test4', '2020-09-19 11:39:16', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
+INSERT INTO `t_login_log` VALUES (109, 'test4', '2020-09-19 11:42:34', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
+INSERT INTO `t_login_log` VALUES (110, 'test4', '2020-09-19 11:43:32', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
+INSERT INTO `t_login_log` VALUES (111, 'test4', '2020-09-19 11:44:18', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
+INSERT INTO `t_login_log` VALUES (112, 'zhangyukang', '2020-09-19 11:45:21', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
+INSERT INTO `t_login_log` VALUES (113, 'zhangyukang', '2020-09-19 12:00:11', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
+INSERT INTO `t_login_log` VALUES (114, 'zhangyukang', '2020-09-19 12:02:02', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
+INSERT INTO `t_login_log` VALUES (115, 'zhangyukang', '2020-09-19 12:09:00', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
+INSERT INTO `t_login_log` VALUES (116, 'zhangyukang', '2020-09-19 12:17:48', '内网IP|0|0|内网IP|内网IP', '127.0.0.1', 'Windows 10', 'Chrome 85');
 
 -- ----------------------------
 -- Table structure for t_menu
@@ -95,7 +106,7 @@ CREATE TABLE `t_menu`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `t_menu_parent_id`(`parent_id`) USING BTREE,
   INDEX `t_menu_menu_id`(`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 32 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '菜单表' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 34 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '菜单表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_menu
@@ -126,6 +137,7 @@ INSERT INTO `t_menu` VALUES (26, 24, '删除操作', NULL, 'monitor:loginLog:del
 INSERT INTO `t_menu` VALUES (27, 25, '操作日志', '/backend/monitor/operateLogPage.do', 'monitor:operateLog:view', 'icon-standard-calendar-view-day', '0', 0, '2020-09-10 16:23:57', '2020-09-15 11:03:27');
 INSERT INTO `t_menu` VALUES (28, 27, '删除操作日志', NULL, 'monitor:operateLog:delete', NULL, '1', 0, '2020-09-10 16:49:21', '2020-09-10 16:49:21');
 INSERT INTO `t_menu` VALUES (29, 2, '重置用户密码', NULL, 'system:user:resetPassword', NULL, '1', 0, '2020-09-10 16:51:17', '2020-09-10 16:51:17');
+INSERT INTO `t_menu` VALUES (32, 0, 'test', '', '', 'icon-standard-email-attach', '0', 0, '2020-09-19 12:18:21', '2020-09-19 12:18:21');
 
 -- ----------------------------
 -- Table structure for t_operate
@@ -147,7 +159,7 @@ CREATE TABLE `t_operate`  (
   `error_msg` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '错误信息',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `t_log_create_time`(`create_time`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 124 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '操作日志表' ROW_FORMAT = DYNAMIC;
+) ENGINE = MyISAM AUTO_INCREMENT = 162 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '操作日志表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_operate
@@ -184,6 +196,44 @@ INSERT INTO `t_operate` VALUES (120, 'zhangyukang', '[系统模块]=>更新菜�
 INSERT INTO `t_operate` VALUES (121, 'zhangyukang', '[系统模块]=>删除菜单', 56, 'MenuController', 'delete ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[31]', '127.0.0.1', '2020-09-15 13:12:46', '内网IP|0|0|内网IP|内网IP', 1, NULL);
 INSERT INTO `t_operate` VALUES (122, 'zhangyukang', '[系统模块]=>删除菜单', 24, 'MenuController', 'delete ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[30]', '127.0.0.1', '2020-09-15 13:12:49', '内网IP|0|0|内网IP|内网IP', 1, NULL);
 INSERT INTO `t_operate` VALUES (123, 'zhangyukang', '[系统模块]=>编辑角色', 1, 'RoleController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":1,\"roleName\":\"超级管理员\",\"remark\":\"系统的最高权限\",\"createTime\":\"2020-08-31 10:10:02\",\"modifyTime\":\"2020-09-15 11:56:52\"}}', '[1]', '127.0.0.1', '2020-09-15 13:13:02', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (124, 'zhangyukang', '[监控模块]=>踢出用户', 0, 'OnlineController', 'forceLogout ()', 'null', '[\"zhangyukang\"]', '127.0.0.1', '2020-09-19 11:35:55', '内网IP|0|0|内网IP|内网IP', 2, '您无法将自己踢出系统!');
+INSERT INTO `t_operate` VALUES (125, 'zhangyukang', '[系统模块]=>新增用户', 638, 'UserController', 'add ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[{\"username\":\"test4\",\"password\":\"123456\",\"email\":\"test4@qq.com\",\"mobile\":\"15041415474\",\"sex\":\"1\",\"status\":\"1\",\"description\":\"test4\",\"roleIdList\":[2],\"deptId\":7}]', '127.0.0.1', '2020-09-19 11:36:37', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (126, 'zhangyukang', '[系统模块]=>编辑用户', 4, 'UserController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":6,\"username\":\"test4\",\"password\":\"\",\"salt\":\"\",\"email\":\"test4@qq.com\",\"mobile\":\"15041415474\",\"status\":\"1\",\"createTime\":\"2020-09-19 11:36:37\",\"modifyTime\":\"2020-09-19 11:36:37\",\"lastLoginTime\":null,\"sex\":\"0\",\"avatar\":null,\"description\":\"test4\",\"deptId\":7,\"type\":1}}', '[6]', '127.0.0.1', '2020-09-19 11:36:40', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (127, 'zhangyukang', '[系统模块]=>编辑角色', 5, 'RoleController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":2,\"roleName\":\"网站管理员\",\"remark\":\"管理文章\",\"createTime\":\"2020-08-31 10:55:02\",\"modifyTime\":\"2020-09-10 16:39:28\"}}', '[2]', '127.0.0.1', '2020-09-19 11:36:45', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (128, 'zhangyukang', '[系统模块]=>更新角色', 625, 'RoleController', 'update ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[{\"id\":2,\"roleName\":\"网站管理员\",\"remark\":\"管理文章\",\"menuIdList\":[24,26,23,18,19,20]}]', '127.0.0.1', '2020-09-19 11:36:59', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (129, 'zhangyukang', '[系统模块]=>编辑角色', 4, 'RoleController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":2,\"roleName\":\"网站管理员\",\"remark\":\"管理文章\",\"createTime\":\"2020-08-31 10:55:02\",\"modifyTime\":\"2020-09-19 11:36:59\"}}', '[2]', '127.0.0.1', '2020-09-19 11:45:37', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (130, 'zhangyukang', '[系统模块]=>编辑角色', 3, 'RoleController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":2,\"roleName\":\"网站管理员\",\"remark\":\"管理文章\",\"createTime\":\"2020-08-31 10:55:02\",\"modifyTime\":\"2020-09-19 11:36:59\"}}', '[2]', '127.0.0.1', '2020-09-19 12:00:17', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (131, 'zhangyukang', '[系统模块]=>删除角色', 104, 'RoleController', 'delete ()', 'null', '[\"2\"]', '127.0.0.1', '2020-09-19 12:00:30', '内网IP|0|0|内网IP|内网IP', 2, 'nested exception is org.apache.ibatis.binding.BindingException: Parameter \'type\' not found. Available parameters are [1, id, param1, param2]');
+INSERT INTO `t_operate` VALUES (132, 'zhangyukang', '[系统模块]=>编辑角色', 3, 'RoleController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":2,\"roleName\":\"网站管理员\",\"remark\":\"管理文章\",\"createTime\":\"2020-08-31 10:55:02\",\"modifyTime\":\"2020-09-19 11:36:59\"}}', '[2]', '127.0.0.1', '2020-09-19 12:02:13', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (133, 'zhangyukang', '[系统模块]=>删除角色', 100, 'RoleController', 'delete ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[\"2\"]', '127.0.0.1', '2020-09-19 12:02:21', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (134, 'zhangyukang', '[系统模块]=>编辑用户', 3, 'UserController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":6,\"username\":\"test4\",\"password\":\"\",\"salt\":\"\",\"email\":\"test4@qq.com\",\"mobile\":\"15041415474\",\"status\":\"1\",\"createTime\":\"2020-09-19 11:36:37\",\"modifyTime\":\"2020-09-19 11:36:37\",\"lastLoginTime\":\"2020-09-19 11:44:18\",\"sex\":\"0\",\"avatar\":null,\"description\":\"test4\",\"deptId\":7,\"type\":1}}', '[6]', '127.0.0.1', '2020-09-19 12:03:12', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (135, 'zhangyukang', '[系统模块]=>更新用户', 91, 'UserController', 'update ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[{\"id\":6,\"username\":\"test4\",\"email\":\"test4@qq.com\",\"mobile\":\"15041415474\",\"sex\":\"0\",\"status\":\"1\",\"description\":\"test4\",\"roleIdList\":[2],\"deptId\":7}]', '127.0.0.1', '2020-09-19 12:03:15', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (136, 'zhangyukang', '[系统模块]=>编辑用户', 4, 'UserController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":6,\"username\":\"test4\",\"password\":\"\",\"salt\":\"\",\"email\":\"test4@qq.com\",\"mobile\":\"15041415474\",\"status\":\"1\",\"createTime\":\"2020-09-19 11:36:37\",\"modifyTime\":\"2020-09-19 12:03:15\",\"lastLoginTime\":\"2020-09-19 11:44:18\",\"sex\":\"0\",\"avatar\":null,\"description\":\"test4\",\"deptId\":7,\"type\":1}}', '[6]', '127.0.0.1', '2020-09-19 12:03:18', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (137, 'zhangyukang', '[系统模块]=>编辑用户', 4, 'UserController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":6,\"username\":\"test4\",\"password\":\"\",\"salt\":\"\",\"email\":\"test4@qq.com\",\"mobile\":\"15041415474\",\"status\":\"1\",\"createTime\":\"2020-09-19 11:36:37\",\"modifyTime\":\"2020-09-19 12:03:15\",\"lastLoginTime\":\"2020-09-19 11:44:18\",\"sex\":\"0\",\"avatar\":null,\"description\":\"test4\",\"deptId\":7,\"type\":1}}', '[6]', '127.0.0.1', '2020-09-19 12:09:08', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (138, 'zhangyukang', '[系统模块]=>新增角色', 91, 'RoleController', 'add ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[{\"id\":null,\"roleName\":\"网站管理员\",\"remark\":\"1111\",\"menuIdList\":[24,26,23]}]', '127.0.0.1', '2020-09-19 12:09:37', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (139, 'zhangyukang', '[系统模块]=>编辑角色', 4, 'RoleController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":3,\"roleName\":\"网站管理员\",\"remark\":\"1111\",\"createTime\":\"2020-09-19 12:09:37\",\"modifyTime\":\"2020-09-19 12:09:37\"}}', '[3]', '127.0.0.1', '2020-09-19 12:09:39', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (140, 'zhangyukang', '[系统模块]=>编辑角色', 0, 'RoleController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":3,\"roleName\":\"网站管理员\",\"remark\":\"1111\",\"createTime\":\"2020-09-19 12:09:37\",\"modifyTime\":\"2020-09-19 12:09:37\"}}', '[3]', '127.0.0.1', '2020-09-19 12:10:14', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (141, 'zhangyukang', '[系统模块]=>编辑用户', 0, 'UserController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":6,\"username\":\"test4\",\"password\":\"\",\"salt\":\"\",\"email\":\"test4@qq.com\",\"mobile\":\"15041415474\",\"status\":\"1\",\"createTime\":\"2020-09-19 11:36:37\",\"modifyTime\":\"2020-09-19 12:03:15\",\"lastLoginTime\":\"2020-09-19 11:44:18\",\"sex\":\"0\",\"avatar\":null,\"description\":\"test4\",\"deptId\":7,\"type\":1}}', '[6]', '127.0.0.1', '2020-09-19 12:10:46', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (142, 'zhangyukang', '[系统模块]=>更新用户', 1015, 'UserController', 'update ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[{\"id\":6,\"username\":\"test4\",\"email\":\"test4@qq.com\",\"mobile\":\"15041415474\",\"sex\":\"0\",\"status\":\"1\",\"description\":\"test4\",\"roleIdList\":[3,2],\"deptId\":7}]', '127.0.0.1', '2020-09-19 12:10:50', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (143, 'zhangyukang', '[系统模块]=>删除角色', 131, 'RoleController', 'delete ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[\"3\"]', '127.0.0.1', '2020-09-19 12:11:52', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (144, 'zhangyukang', '[系统模块]=>编辑用户', 3, 'UserController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":6,\"username\":\"test4\",\"password\":\"\",\"salt\":\"\",\"email\":\"test4@qq.com\",\"mobile\":\"15041415474\",\"status\":\"1\",\"createTime\":\"2020-09-19 11:36:37\",\"modifyTime\":\"2020-09-19 12:10:49\",\"lastLoginTime\":\"2020-09-19 11:44:18\",\"sex\":\"0\",\"avatar\":null,\"description\":\"test4\",\"deptId\":7,\"type\":1}}', '[6]', '127.0.0.1', '2020-09-19 12:12:12', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (145, 'zhangyukang', '[系统模块]=>更新用户', 34, 'UserController', 'update ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[{\"id\":6,\"username\":\"test4\",\"email\":\"test4@qq.com\",\"mobile\":\"15041415474\",\"sex\":\"0\",\"status\":\"1\",\"description\":\"test4\",\"roleIdList\":null,\"deptId\":7}]', '127.0.0.1', '2020-09-19 12:12:15', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (146, 'zhangyukang', '[系统模块]=>编辑用户', 3, 'UserController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":6,\"username\":\"test4\",\"password\":\"\",\"salt\":\"\",\"email\":\"test4@qq.com\",\"mobile\":\"15041415474\",\"status\":\"1\",\"createTime\":\"2020-09-19 11:36:37\",\"modifyTime\":\"2020-09-19 12:12:15\",\"lastLoginTime\":\"2020-09-19 11:44:18\",\"sex\":\"0\",\"avatar\":null,\"description\":\"test4\",\"deptId\":7,\"type\":1}}', '[6]', '127.0.0.1', '2020-09-19 12:12:50', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (147, 'zhangyukang', '[系统模块]=>更新用户', 38, 'UserController', 'update ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[{\"id\":6,\"username\":\"test4\",\"email\":\"test4@qq.com\",\"mobile\":\"15041415474\",\"sex\":\"0\",\"status\":\"1\",\"description\":\"test4\",\"roleIdList\":[1],\"deptId\":7}]', '127.0.0.1', '2020-09-19 12:12:53', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (148, 'zhangyukang', '[系统模块]=>删除用户', 47, 'UserController', 'delete ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[\"6\"]', '127.0.0.1', '2020-09-19 12:13:07', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (149, 'zhangyukang', '[系统模块]=>编辑用户', 2, 'UserController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":3,\"username\":\"test2\",\"password\":\"\",\"salt\":\"\",\"email\":\"test2@qq.com\",\"mobile\":\"15241415254\",\"status\":\"1\",\"createTime\":\"2020-09-08 09:00:26\",\"modifyTime\":\"2020-09-10 16:39:19\",\"lastLoginTime\":null,\"sex\":\"0\",\"avatar\":null,\"description\":\"1111\",\"deptId\":4,\"type\":1}}', '[3]', '127.0.0.1', '2020-09-19 12:13:21', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (150, 'zhangyukang', '[系统模块]=>新增角色', 59, 'RoleController', 'add ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[{\"id\":null,\"roleName\":\"网站管理员\",\"remark\":\"test\",\"menuIdList\":[24,26,23]}]', '127.0.0.1', '2020-09-19 12:14:03', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (151, 'zhangyukang', '[系统模块]=>编辑用户', 2, 'UserController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":4,\"username\":\"test3\",\"password\":\"\",\"salt\":\"\",\"email\":\"test3@qq.com\",\"mobile\":\"13525254541\",\"status\":\"1\",\"createTime\":\"2020-09-10 13:59:42\",\"modifyTime\":\"2020-09-10 17:44:12\",\"lastLoginTime\":null,\"sex\":\"0\",\"avatar\":null,\"description\":\"11\",\"deptId\":5,\"type\":1}}', '[4]', '127.0.0.1', '2020-09-19 12:14:07', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (152, 'zhangyukang', '[系统模块]=>更新用户', 58, 'UserController', 'update ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[{\"id\":4,\"username\":\"test3\",\"email\":\"test3@qq.com\",\"mobile\":\"13525254541\",\"sex\":\"0\",\"status\":\"1\",\"description\":\"11\",\"roleIdList\":[4],\"deptId\":5}]', '127.0.0.1', '2020-09-19 12:14:10', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (153, 'zhangyukang', '[系统模块]=>编辑用户', 3, 'UserController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":4,\"username\":\"test3\",\"password\":\"\",\"salt\":\"\",\"email\":\"test3@qq.com\",\"mobile\":\"13525254541\",\"status\":\"1\",\"createTime\":\"2020-09-10 13:59:42\",\"modifyTime\":\"2020-09-19 12:14:10\",\"lastLoginTime\":null,\"sex\":\"0\",\"avatar\":null,\"description\":\"11\",\"deptId\":5,\"type\":1}}', '[4]', '127.0.0.1', '2020-09-19 12:17:54', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (154, 'zhangyukang', '[系统模块]=>删除角色', 396, 'RoleController', 'delete ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[\"4\"]', '127.0.0.1', '2020-09-19 12:18:00', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (155, 'zhangyukang', '[系统模块]=>编辑用户', 0, 'UserController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":4,\"username\":\"test3\",\"password\":\"\",\"salt\":\"\",\"email\":\"test3@qq.com\",\"mobile\":\"13525254541\",\"status\":\"1\",\"createTime\":\"2020-09-10 13:59:42\",\"modifyTime\":\"2020-09-19 12:14:10\",\"lastLoginTime\":null,\"sex\":\"0\",\"avatar\":null,\"description\":\"11\",\"deptId\":5,\"type\":1}}', '[4]', '127.0.0.1', '2020-09-19 12:18:04', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (156, 'zhangyukang', '[系统模块]=>新增菜单', 579, 'MenuController', 'add ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[{\"id\":null,\"parentId\":0,\"menuName\":\"test\",\"orderNum\":0,\"icon\":\"icon-standard-email-attach\",\"url\":\"\",\"type\":\"0\",\"perms\":\"\"}]', '127.0.0.1', '2020-09-19 12:18:21', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (157, 'zhangyukang', '[系统模块]=>新增菜单', 211, 'MenuController', 'add ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[{\"id\":null,\"parentId\":32,\"menuName\":\"test2\",\"orderNum\":0,\"icon\":\"icon-standard-telephone-link\",\"url\":\"\",\"type\":\"0\",\"perms\":\"\"}]', '127.0.0.1', '2020-09-19 12:18:36', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (158, 'zhangyukang', '[系统模块]=>新增角色', 41, 'RoleController', 'add ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[{\"id\":null,\"roleName\":\"网站管理员\",\"remark\":\"111\",\"menuIdList\":[32,33]}]', '127.0.0.1', '2020-09-19 12:19:01', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (159, 'zhangyukang', '[系统模块]=>编辑角色', 5, 'RoleController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":5,\"roleName\":\"网站管理员\",\"remark\":\"111\",\"createTime\":\"2020-09-19 12:19:01\",\"modifyTime\":\"2020-09-19 12:19:01\"}}', '[5]', '127.0.0.1', '2020-09-19 12:19:06', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (160, 'zhangyukang', '[系统模块]=>删除菜单', 46, 'MenuController', 'delete ()', '{\"code\":0,\"msg\":null,\"data\":null}', '[33]', '127.0.0.1', '2020-09-19 12:19:25', '内网IP|0|0|内网IP|内网IP', 1, NULL);
+INSERT INTO `t_operate` VALUES (161, 'zhangyukang', '[系统模块]=>编辑角色', 2, 'RoleController', 'get ()', '{\"code\":0,\"msg\":null,\"data\":{\"id\":5,\"roleName\":\"网站管理员\",\"remark\":\"111\",\"createTime\":\"2020-09-19 12:19:01\",\"modifyTime\":\"2020-09-19 12:19:01\"}}', '[5]', '127.0.0.1', '2020-09-19 12:19:35', '内网IP|0|0|内网IP|内网IP', 1, NULL);
 
 -- ----------------------------
 -- Table structure for t_role
@@ -196,13 +246,13 @@ CREATE TABLE `t_role`  (
   `create_time` datetime(0) NOT NULL COMMENT '创建时间',
   `modify_time` datetime(0) NULL DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色表' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_role
 -- ----------------------------
 INSERT INTO `t_role` VALUES (1, '超级管理员', '系统的最高权限', '2020-08-31 10:10:02', '2020-09-15 11:56:52');
-INSERT INTO `t_role` VALUES (2, '网站管理员', '管理文章', '2020-08-31 10:55:02', '2020-09-10 16:39:28');
+INSERT INTO `t_role` VALUES (5, '网站管理员', '111', '2020-09-19 12:19:01', '2020-09-19 12:19:01');
 
 -- ----------------------------
 -- Table structure for t_role_menu
@@ -218,12 +268,6 @@ CREATE TABLE `t_role_menu`  (
 -- ----------------------------
 -- Records of t_role_menu
 -- ----------------------------
-INSERT INTO `t_role_menu` VALUES (2, 1);
-INSERT INTO `t_role_menu` VALUES (2, 18);
-INSERT INTO `t_role_menu` VALUES (2, 19);
-INSERT INTO `t_role_menu` VALUES (2, 20);
-INSERT INTO `t_role_menu` VALUES (2, 21);
-INSERT INTO `t_role_menu` VALUES (2, 25);
 INSERT INTO `t_role_menu` VALUES (1, 1);
 INSERT INTO `t_role_menu` VALUES (1, 2);
 INSERT INTO `t_role_menu` VALUES (1, 9);
@@ -254,6 +298,7 @@ INSERT INTO `t_role_menu` VALUES (1, 31);
 INSERT INTO `t_role_menu` VALUES (1, 18);
 INSERT INTO `t_role_menu` VALUES (1, 19);
 INSERT INTO `t_role_menu` VALUES (1, 20);
+INSERT INTO `t_role_menu` VALUES (5, 32);
 
 -- ----------------------------
 -- Table structure for t_user
@@ -278,15 +323,15 @@ CREATE TABLE `t_user`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `t_user_username`(`username`) USING BTREE,
   INDEX `t_user_mobile`(`mobile`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户表' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
-INSERT INTO `t_user` VALUES (1, 'zhangyukang', '4decb28fdcc4f5ea2f847337f1826a2b', 'bbfc0d4c899dea9965a9002f36841708', '3053161401@qq.com', '15079437282', '1', '2020-08-31 09:46:47', '2020-08-31 10:44:00', '2020-09-15 13:12:36', '1', NULL, 'test', 6, NULL);
+INSERT INTO `t_user` VALUES (1, 'zhangyukang', '4decb28fdcc4f5ea2f847337f1826a2b', 'bbfc0d4c899dea9965a9002f36841708', '3053161401@qq.com', '15079437282', '1', '2020-08-31 09:46:47', '2020-08-31 10:44:00', '2020-09-19 12:17:48', '1', NULL, 'test', 6, NULL);
 INSERT INTO `t_user` VALUES (2, 'test', '28dcfab8a4b4bc1ed303ea1ba2c7f695', 'c02eafe490675ce8cc157d45933de2e6', 'test@qq.com', '13426527485', '1', '2020-08-31 10:54:27', '2020-09-10 16:54:48', '2020-09-10 14:00:55', '1', NULL, 'test', 6, 1);
 INSERT INTO `t_user` VALUES (3, 'test2', '83839e2890f7219b55446b003ef93ee9', '8961fd3737f659fea8f96ba51858c5cd', 'test2@qq.com', '15241415254', '1', '2020-09-08 09:00:26', '2020-09-10 16:39:19', NULL, '0', NULL, '1111', 4, 1);
-INSERT INTO `t_user` VALUES (4, 'test3', 'a8890f548479de9b23ca2f69d021020a', 'f81969fdf0909b84939d54dd219bfd38', 'test3@qq.com', '13525254541', '1', '2020-09-10 13:59:42', '2020-09-10 17:44:12', NULL, '0', NULL, '11', 5, 1);
+INSERT INTO `t_user` VALUES (4, 'test3', 'a8890f548479de9b23ca2f69d021020a', 'f81969fdf0909b84939d54dd219bfd38', 'test3@qq.com', '13525254541', '1', '2020-09-10 13:59:42', '2020-09-19 12:14:10', NULL, '0', NULL, '11', 5, 1);
 
 -- ----------------------------
 -- Table structure for t_user_role
@@ -303,8 +348,5 @@ CREATE TABLE `t_user_role`  (
 -- Records of t_user_role
 -- ----------------------------
 INSERT INTO `t_user_role` VALUES (1, 1);
-INSERT INTO `t_user_role` VALUES (2, 2);
-INSERT INTO `t_user_role` VALUES (4, 2);
-INSERT INTO `t_user_role` VALUES (3, 2);
 
 SET FOREIGN_KEY_CHECKS = 1;

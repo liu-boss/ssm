@@ -10,6 +10,7 @@ import com.coderman.backend.system.service.RoleService;
 import com.coderman.backend.system.service.UserService;
 import com.coderman.backend.util.HttpUtil;
 import com.coderman.backend.util.ShiroContextHolder;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -58,6 +59,7 @@ public class UserRealm extends AuthorizingRealm {
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
 
         // 获取用户角色集
+        System.out.println("-----------查询数据库-------授权-------");
         List<Role> roleList = this.roleService.findUserRole(userName);
         Set<String> roleSet = roleList.stream().map(Role::getRoleName).collect(Collectors.toSet());
         simpleAuthorizationInfo.setRoles(roleSet);
@@ -105,5 +107,15 @@ public class UserRealm extends AuthorizingRealm {
         currentUser.setHost(HttpUtil.getIpAddr(httpServletRequest));
         currentUser.setLocation(HttpUtil.getCityInfo(httpServletRequest));
         return new SimpleAuthenticationInfo(currentUser, user.getPassword(), salt, getName());
+    }
+
+    /**
+     * 清除当前用户权限缓存
+     * 使用方法：在需要清除用户权限的地方注入 ShiroRealm,
+     * 然后调用其 clearCache方法。
+     */
+    public void clearCache() {
+        PrincipalCollection principals = SecurityUtils.getSubject().getPrincipals();
+        super.clearCache(principals);
     }
 }

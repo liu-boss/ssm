@@ -5,11 +5,11 @@
 
     <!--默认的缓存策略-->
     <defaultCache
-            maxElementsInMemory="10000"
+            maxElementsInMemory="50000"
             eternal="false"
-            overflowToDisk="true"
-            timeToIdleSeconds="360"
-            timeToLiveSeconds="360"
+            overflowToDisk="false"
+            timeToIdleSeconds="720"
+            timeToLiveSeconds="720"
             diskPersistent="false"
             diskExpiryThreadIntervalSeconds="120"/>
 

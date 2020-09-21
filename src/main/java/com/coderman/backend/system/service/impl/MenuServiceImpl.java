@@ -1,6 +1,7 @@
 package com.coderman.backend.system.service.impl;
 
 import com.coderman.backend.common.ProjectConstant;
+import com.coderman.backend.common.shiro.realm.UserRealm;
 import com.coderman.backend.exception.ParamException;
 import com.coderman.backend.system.dto.form.MenuParam;
 import com.coderman.backend.system.mapper.MenuMapper;
@@ -29,6 +30,9 @@ public class MenuServiceImpl implements MenuService {
 
     @Autowired
     private RoleMapper roleMapper;
+
+    @Autowired
+    private UserRealm userRealm;
 
     @Override
     public List<TreeObject> getUserMenus(String username) {
@@ -150,6 +154,8 @@ public class MenuServiceImpl implements MenuService {
             menu.setModifyTime(new Date());
         }
         menuMapper.updateByPrimaryKeySelective(menu);
+        //清空权限缓存
+        userRealm.clearCache();
     }
 
     @Override
@@ -160,6 +166,8 @@ public class MenuServiceImpl implements MenuService {
             menuMapper.deleteByPrimaryKey(id);
             //清除菜单-角色关联
             roleMapper.cleanRoleMenuAssociation(id,"menu");
+            //清空权限缓存
+            userRealm.clearCache();
         }
     }
     @Override

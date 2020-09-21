@@ -73,10 +73,10 @@
             <list><ref bean="userRealm"/></list>
         </property>
         <property name="sessionManager" ref="sessionManager"/>
+        <property name="cacheManager" ref="shiroCacheManager"/>
     </bean>
 
     <!--session 相关配置-->
-    <bean id="sessionDAO" class="org.apache.shiro.session.mgt.eis.MemorySessionDAO"/>
     <bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
         <property name="sessionDAO" ref="sessionDAO"/>
         <!-- 检测扫描信息时间间隔,单位为毫秒-->
@@ -88,6 +88,9 @@
         <property name="sessionIdUrlRewritingEnabled" value="true"/>
         <property name="globalSessionTimeout" value="3600000"/>
     </bean>
+
+
+    <bean id="sessionDAO" class="org.apache.shiro.session.mgt.eis.MemorySessionDAO"/>
 
     <!-- sessionIdCookie的实现,用于重写覆盖容器默认的JSESSIONID -->
     <bean id="simpleCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
