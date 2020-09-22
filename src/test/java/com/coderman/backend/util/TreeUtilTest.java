@@ -21,7 +21,7 @@ import java.util.List;
  * @Version 1.0
  **/
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring/application-dao.xml", "classpath:spring/application-service.xml"})
+@ContextConfiguration({"classpath:spring/application-dao.xml", "classpath:spring/application-service.xml", "classpath:spring/application-shiro.xml"})
 public class TreeUtilTest {
 
     @Autowired

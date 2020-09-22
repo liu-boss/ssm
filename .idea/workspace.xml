@@ -134,7 +134,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -2114,7 +2114,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.tomcat">
+  <component name="RunManager" selected="JUnit.MD5UtilTest.encrypt">
     <configuration name="MybatisGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MybatisGenerator" />
       <module name="ssm" />
@@ -2127,6 +2127,22 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="InitProjectRunner" />
       <option name="METHOD_NAME" value="init" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MD5UtilTest.encrypt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ssm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coderman.backend.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.coderman.backend.util" />
+      <option name="MAIN_CLASS_NAME" value="com.coderman.backend.util.MD5UtilTest" />
+      <option name="METHOD_NAME" value="encrypt" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -2225,9 +2241,11 @@
       <item itemvalue="JUnit.TreeUtilTest.deptVOTreeTest" />
       <item itemvalue="JUnit.InitProjectRunner.init" />
       <item itemvalue="Maven.tomcat" />
+      <item itemvalue="JUnit.MD5UtilTest.encrypt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MD5UtilTest.encrypt" />
         <item itemvalue="JUnit.InitProjectRunner.init" />
         <item itemvalue="JUnit.TreeUtilTest.deptVOTreeTest" />
         <item itemvalue="Application.MybatisGenerator" />
@@ -2328,7 +2346,9 @@
       <workItem from="1600138214686" duration="7997000" />
       <workItem from="1600156536465" duration="16877000" />
       <workItem from="1600660284549" duration="2215000" />
-      <workItem from="1600663300754" duration="3392000" />
+      <workItem from="1600663300754" duration="3526000" />
+      <workItem from="1600744327055" duration="243000" />
+      <workItem from="1600748418622" duration="588000" />
     </task>
     <task id="LOCAL-00001" summary="添加README.md">
       <created>1591975324666</created>
@@ -2487,10 +2507,6 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="504" y="261" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.834@0.0.1536.834" timestamp="1592820809013" />
-    <state x="280" y="0" key="CommitChangelistDialog2" timestamp="1592026410105">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="280" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1592026410105" />
     <state width="582" height="466" key="DebuggerActiveHint" timestamp="1598870006874">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2507,54 +2523,38 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="90" y="70" width="1250" height="683" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1598836475392" />
-    <state width="1495" height="396" key="GridCell.Tab.0.bottom" timestamp="1600666709304">
+    <state width="1495" height="633" key="GridCell.Tab.0.bottom" timestamp="1600749008728">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="396" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600666709304" />
-    <state width="1495" height="396" key="GridCell.Tab.0.center" timestamp="1600666709304">
+    <state width="1495" height="633" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600749008728" />
+    <state width="1495" height="633" key="GridCell.Tab.0.center" timestamp="1600749008728">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="396" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1600666709304" />
-    <state width="1495" height="396" key="GridCell.Tab.0.left" timestamp="1600666709304">
+    <state width="1495" height="633" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1600749008728" />
+    <state width="1495" height="633" key="GridCell.Tab.0.left" timestamp="1600749008728">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="396" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1600666709304" />
-    <state width="1495" height="396" key="GridCell.Tab.0.right" timestamp="1600666709304">
+    <state width="1495" height="633" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1600749008728" />
+    <state width="1495" height="633" key="GridCell.Tab.0.right" timestamp="1600749008728">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="396" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1600666709304" />
-    <state width="1495" height="296" key="GridCell.Tab.1.bottom" timestamp="1600665719424">
+    <state width="1495" height="633" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1600749008728" />
+    <state width="1495" height="296" key="GridCell.Tab.1.bottom" timestamp="1600666852784">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="296" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600665719424" />
-    <state width="1495" height="296" key="GridCell.Tab.1.center" timestamp="1600665719424">
+    <state width="1495" height="296" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600666852784" />
+    <state width="1495" height="296" key="GridCell.Tab.1.center" timestamp="1600666852784">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="296" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1600665719424" />
-    <state width="1495" height="296" key="GridCell.Tab.1.left" timestamp="1600665719424">
+    <state width="1495" height="296" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1600666852784" />
+    <state width="1495" height="296" key="GridCell.Tab.1.left" timestamp="1600666852784">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="296" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1600665719424" />
-    <state width="1495" height="296" key="GridCell.Tab.1.right" timestamp="1600665719424">
+    <state width="1495" height="296" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1600666852784" />
+    <state width="1495" height="296" key="GridCell.Tab.1.right" timestamp="1600666852784">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="296" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1600665719424" />
-    <state width="1183" height="408" key="GridCell.Tab.2.bottom" timestamp="1592056501057">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1183" height="408" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592056501057" />
-    <state width="1183" height="408" key="GridCell.Tab.2.center" timestamp="1592056501057">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1183" height="408" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1592056501057" />
-    <state width="1183" height="408" key="GridCell.Tab.2.left" timestamp="1592056501057">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1183" height="408" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1592056501057" />
-    <state width="1183" height="408" key="GridCell.Tab.2.right" timestamp="1592056501057">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1183" height="408" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1592056501057" />
+    <state width="1495" height="296" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1600666852784" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1600146934805">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
