@@ -30,7 +30,6 @@
     <!-- 配置视图  BeanNameViewResolver 解析器: 使用视图的名字来解析视图:(在异常处理中使用的: ModelAndView("jsonView", result.toMap());) -->
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
 
-
     <!--自己的异常处理器-->
     <bean class="com.coderman.backend.common.SpringExceptionResolver" />
 
@@ -49,7 +48,6 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!--shiro 注解的配置-->
     <!-- 解决shiro注解失效的问题 -->
     <bean id="defaultWebSecurityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager"/>
     <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>

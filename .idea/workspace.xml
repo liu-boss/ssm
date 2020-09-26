@@ -89,8 +89,8 @@
         <option value="Enum" />
         <option value="Aspect" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -134,7 +134,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resource/image" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -150,27 +150,27 @@
       <recent name="com.coderman.util" />
       <recent name="com.coderman.dao" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.coderman.backend" />
-      <recent name="com.coderman" />
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui\ext" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui\themes" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\js" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\mapper\backend\cms" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\WEB-INF\views\backend" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\mapper\backend" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\mapper\monitor" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.coderman.backend" />
+      <recent name="com.coderman" />
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\image" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui\ext" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui\themes" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -2114,56 +2114,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MD5UtilTest.encrypt">
-    <configuration name="MybatisGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MybatisGenerator" />
-      <module name="ssm" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InitProjectRunner.init" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ssm" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="InitProjectRunner" />
-      <option name="METHOD_NAME" value="init" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MD5UtilTest.encrypt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ssm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coderman.backend.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.coderman.backend.util" />
-      <option name="MAIN_CLASS_NAME" value="com.coderman.backend.util.MD5UtilTest" />
-      <option name="METHOD_NAME" value="encrypt" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TreeUtilTest.deptVOTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ssm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coderman.backend.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.coderman.backend.util" />
-      <option name="MAIN_CLASS_NAME" value="com.coderman.backend.util.TreeUtilTest" />
-      <option name="METHOD_NAME" value="deptVOTreeTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="easyui_crud" />
       <option name="VM_PARAMETERS" />
@@ -2236,21 +2187,6 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Application.MybatisGenerator" />
-      <item itemvalue="JUnit.TreeUtilTest.deptVOTreeTest" />
-      <item itemvalue="JUnit.InitProjectRunner.init" />
-      <item itemvalue="Maven.tomcat" />
-      <item itemvalue="JUnit.MD5UtilTest.encrypt" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.MD5UtilTest.encrypt" />
-        <item itemvalue="JUnit.InitProjectRunner.init" />
-        <item itemvalue="JUnit.TreeUtilTest.deptVOTreeTest" />
-        <item itemvalue="Application.MybatisGenerator" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpringGeneralSettings">
     <option name="showMultipleContextsPanel" value="false" />
@@ -2348,7 +2284,9 @@
       <workItem from="1600660284549" duration="2215000" />
       <workItem from="1600663300754" duration="3526000" />
       <workItem from="1600744327055" duration="243000" />
-      <workItem from="1600748418622" duration="588000" />
+      <workItem from="1600748418622" duration="942000" />
+      <workItem from="1600841979483" duration="1874000" />
+      <workItem from="1601117126477" duration="660000" />
     </task>
     <task id="LOCAL-00001" summary="添加README.md">
       <created>1591975324666</created>
@@ -2475,10 +2413,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="310" y="108" key="#UserDAOTest.save/0.0.1536.834@0.0.1536.834" timestamp="1592820561684" />
-    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599884854919">
+    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600749277829">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1599884854919" />
+    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1600749277829" />
     <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1599710109615">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2523,22 +2461,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="90" y="70" width="1250" height="683" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1598836475392" />
-    <state width="1495" height="633" key="GridCell.Tab.0.bottom" timestamp="1600749008728">
+    <state width="1495" height="386" key="GridCell.Tab.0.bottom" timestamp="1601117476305">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="633" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600749008728" />
-    <state width="1495" height="633" key="GridCell.Tab.0.center" timestamp="1600749008728">
+    <state width="1495" height="386" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1601117476305" />
+    <state width="1495" height="386" key="GridCell.Tab.0.center" timestamp="1601117476305">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="633" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1600749008728" />
-    <state width="1495" height="633" key="GridCell.Tab.0.left" timestamp="1600749008728">
+    <state width="1495" height="386" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1601117476305" />
+    <state width="1495" height="386" key="GridCell.Tab.0.left" timestamp="1601117476305">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="633" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1600749008728" />
-    <state width="1495" height="633" key="GridCell.Tab.0.right" timestamp="1600749008728">
+    <state width="1495" height="386" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1601117476305" />
+    <state width="1495" height="386" key="GridCell.Tab.0.right" timestamp="1601117476305">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="633" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1600749008728" />
+    <state width="1495" height="386" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1601117476305" />
     <state width="1495" height="296" key="GridCell.Tab.1.bottom" timestamp="1600666852784">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

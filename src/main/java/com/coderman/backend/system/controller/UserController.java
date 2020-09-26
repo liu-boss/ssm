@@ -50,6 +50,7 @@ public class UserController {
     @Autowired
     private LoginLogService loginLogService;
 
+
     @RequestMapping(value = "/queryRole.do", method = RequestMethod.GET)
     @ResponseBody
     public JsonData queryRole(@RequestParam("id") String userId) {
@@ -59,10 +60,11 @@ public class UserController {
 
     @RequestMapping(value = "/logout.do", method = RequestMethod.GET)
     public String logout() {
-        logger.info("退出登入:user=>{}", ShiroContextHolder.getUser());
+        logger.info("用户:{},退出登入,时间:{}", ShiroContextHolder.getUsername(), new Date());
         SecurityUtils.getSubject().logout();
         return "redirect:/backend/loginPage.do";
     }
+
 
     @RequestMapping(value = "/list.do", method = RequestMethod.POST)
     @ResponseBody
@@ -75,7 +77,8 @@ public class UserController {
         return new EasyUIData<>(pageInfo.getTotal(), pageInfo.getList());
     }
 
-    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE,operateDesc = "密码重置")
+
+    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE, operateDesc = "密码重置")
     @RequiresPermissions({"system:user:resetPassword"})
     @RequestMapping(value = "/resetPassword.do", method = RequestMethod.GET)
     @ResponseBody
@@ -84,7 +87,8 @@ public class UserController {
         return JsonData.success();
     }
 
-    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE,operateDesc = "新增用户")
+
+    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE, operateDesc = "新增用户")
     @RequiresPermissions({"system:user:add"})
     @RequestMapping(value = "/add.do", method = RequestMethod.POST)
     @ResponseBody
@@ -94,7 +98,8 @@ public class UserController {
         return JsonData.success();
     }
 
-    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE,operateDesc = "编辑用户")
+
+    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE, operateDesc = "编辑用户")
     @RequestMapping(value = "/get.do", method = RequestMethod.GET)
     @ResponseBody
     public JsonData get(@RequestParam("id") Long id) {
@@ -102,7 +107,8 @@ public class UserController {
         return JsonData.success(user);
     }
 
-    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE,operateDesc = "更新用户")
+
+    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE, operateDesc = "更新用户")
     @RequiresPermissions({"system:user:update"})
     @RequestMapping(value = "/update.do", method = RequestMethod.POST)
     @ResponseBody
@@ -112,7 +118,8 @@ public class UserController {
         return JsonData.success();
     }
 
-    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE,operateDesc = "删除用户")
+
+    @Operate(operateModule = ProjectConstant.SYSTEM_MODULE, operateDesc = "删除用户")
     @RequiresPermissions({"system:user:delete"})
     @RequestMapping(value = "/delete.do", method = RequestMethod.POST)
     @ResponseBody
@@ -121,6 +128,7 @@ public class UserController {
         userService.delete(ids);
         return JsonData.success();
     }
+
 
     @RequestMapping(value = "/login.do", method = RequestMethod.POST)
     @ResponseBody
@@ -146,6 +154,7 @@ public class UserController {
             return JsonData.success();
         }
     }
+
 
     @RequestMapping("/captcha.do")
     public void captcha(HttpServletRequest request, HttpServletResponse response) throws Exception {
