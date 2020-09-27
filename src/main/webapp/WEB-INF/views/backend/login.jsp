@@ -51,6 +51,7 @@
 <body>
 
 <%
+    String baseUrlPath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort();
     if (ShiroContextHolder.getUser() != null) {
         //如果已登入,跳转到后台主页
         response.sendRedirect(request.getContextPath() + "/backend/mainPage.do");
@@ -100,11 +101,11 @@
 
     <div style="width: 100%;text-align: center">
         <div style="display:inline-block;">
-            <a style="color: #333333;font-size: 13px" href="${pageContext.request.contextPath}/backend/loginPage.do?locale=en_US">English</a>
+            <a style="color: #333333;font-size: 13px" href="<%=baseUrlPath%>/backend/loginPage.do?locale=en_US">English</a>
         </div>
         <span style="font-size: 13px;color: #999">|</span>
         <div style="display:inline-block;">
-            <a style="color: #333333;font-size: 13px" href="${pageContext.request.contextPath}/backend/loginPage.do?locale=zh_CH">简体中文</a>
+            <a style="color: #333333;font-size: 13px" href="<%=baseUrlPath%>/backend/loginPage.do?locale=zh_CH">简体中文</a>
         </div>
     </div>
 
