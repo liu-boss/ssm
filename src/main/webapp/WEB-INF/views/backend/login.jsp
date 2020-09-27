@@ -26,7 +26,9 @@
             color: rgb(128, 128, 128);
             text-decoration: none;
         }
-
+        label{
+            font-size: 11px;
+        }
         form {
             width: 400px;
             min-width: 400px;
@@ -42,35 +44,36 @@
         }
 
         form div {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
     </style>
 </head>
 <body>
 
 <%
-    if( ShiroContextHolder.getUser()!=null){
+    if (ShiroContextHolder.getUser() != null) {
         //如果已登入,跳转到后台主页
-        response.sendRedirect(request.getContextPath()+"/backend/mainPage.do");
+        response.sendRedirect(request.getContextPath() + "/backend/mainPage.do");
     }
 %>
 <form action="#">
     <div>
-        <h1>后台系统登录</h1>
+        <h1><fmt:message key="i18n.title"></fmt:message></h1>
     </div>
     <div>
-        <input class="easyui-textbox easyui-validatebox" id="username" value="zhangyukang" name="username"
-               data-options="iconCls:'icon-man',iconWidth:30,iconAlign:'left',prompt:'用户名'"
+        <input class="easyui-textbox easyui-validatebox" id="username" value="" name="username"
+               data-options="iconCls:'icon-man',iconWidth:30,iconAlign:'left',prompt:'<fmt:message key="i18n.username"></fmt:message>'"
                style="width:100%;height:35px;"/>
     </div>
     <div>
-        <input class="easyui-passwordbox easyui-validatebox" id="password" value="123456" name="password"
-               data-options="iconWidth:30,iconAlign:'left',prompt:'密码'" style="width:100%;height:35px;"/>
+        <input class="easyui-passwordbox easyui-validatebox" id="password" value="" name="password"
+               data-options="iconWidth:30,iconAlign:'left',prompt:'<fmt:message key="i18n.password"></fmt:message>'"
+               style="width:100%;height:35px;"/>
     </div>
 
     <div style="overflow: hidden">
-        <input class="easyui-textbox easyui-validatebox" id="verCode" name="verCode" value="123"
-               data-options="iconCls:'icon-reload',iconWidth:30,iconAlign:'left',prompt:'验证码'"
+        <input class="easyui-textbox easyui-validatebox" id="verCode" value="" name="verCode"
+               data-options="iconCls:'icon-reload',iconWidth:30,iconAlign:'left',prompt:'<fmt:message key="i18n.code"></fmt:message>'"
                style="width:60%;height:35px;float: left"/>
         <img style="float: right" src="${pageContext.request.contextPath}/backend/system/user/captcha.do" id="yzm">
 
@@ -81,20 +84,30 @@
         </script>
     </div>
     <div>
-        <input class="easyui-checkbox" type="checkbox" id="remember" label="记住密码" labelPosition="after"
-               labelWidth="70"/>
+        <input class="easyui-checkbox" type="checkbox" id="remember" label="<fmt:message key="i18n.rememberMe"></fmt:message>" labelPosition="after" labelWidth="100"/>
     </div>
     <div>
-        <input class="easyui-linkbutton" type="button" id="loginBtn" value="登陆" style="width:100%;height:35px;"/>
+        <input class="easyui-linkbutton" type="button" id="loginBtn" value="<fmt:message key="i18n.loginBtn"></fmt:message>" style="width:100%;height:35px;"/>
     </div>
     <div>
         <div style="display:inline;">
-            <a href="javascript:void(0)">还未注册？</a>
+            <a href="javascript:void(0)"><fmt:message key="i18n.createAccount"></fmt:message></a>
         </div>
         <div style="display:inline;margin-left:170px;">
-            <a href="javascript:void(0)">忘记密码？</a>
+            <a href="javascript:void(0)"><fmt:message key="i18n.forgetPass"></fmt:message></a>
         </div>
     </div>
+
+    <div style="width: 100%;text-align: center">
+        <div style="display:inline-block;">
+            <a style="color: #333333;font-size: 13px" href="${pageContext.request.contextPath}/backend/loginPage.do?locale=en_US">English</a>
+        </div>
+        <span style="font-size: 13px;color: #999">|</span>
+        <div style="display:inline-block;">
+            <a style="color: #333333;font-size: 13px" href="${pageContext.request.contextPath}/backend/loginPage.do?locale=zh_CH">简体中文</a>
+        </div>
+    </div>
+
 </form>
 </body>
 </html>
@@ -117,15 +130,15 @@
             let username = $("#username").val();
             let password = $("#password").val();
             let verCode = $("#verCode").val();
-            let remember = $("#remember").checkbox('options').checked;
+            // let remember = $("#remember").checkbox('options').checked;
             if (username == null || username === '') {
-                $.messager.alert('Warning', '用户名不能为空');
+                $.messager.alert('<fmt:message key="i18n.tip"></fmt:message>', '<fmt:message key="i18n.emptyUsername"></fmt:message>','warning');
                 return;
             } else if (password == null || password === '') {
-                $.messager.alert('Warning', '密码不能为空');
+                $.messager.alert('<fmt:message key="i18n.tip"></fmt:message>', '<fmt:message key="i18n.emptyPassword"></fmt:message>','warning');
                 return;
             } else if (verCode == null || verCode === '') {
-                $.messager.alert('Warning', '验证码不能为空');
+                $.messager.alert('<fmt:message key="i18n.tip"></fmt:message>', '<fmt:message key="i18n.emptyCode"></fmt:message>','warning');
                 return;
             }
             let data = {username: username, password: password, verCode: verCode};
@@ -139,8 +152,8 @@
                 success: function (result) {
                     if (result.code === 0) {
                         let win = $.messager.progress({
-                            title: '登入成功,正在跳转到后台',
-                            msg: '正在努力加载数据中......'
+                            title: '<fmt:message key="i18n.loginLoadingTitle"></fmt:message>',
+                            msg: '<fmt:message key="i18n.loginLoadingMsg"></fmt:message>'
                         });
                         setTimeout(function () {
                             $.messager.progress('close');
@@ -148,7 +161,7 @@
                         }, 1000)
                     } else {
                         $('#yzm').attr('src', '${pageContext.request.contextPath}/backend/system/user/captcha.do?time' + new Date().getTime());
-                        $.messager.alert('Error', result.msg, 'error')
+                        $.messager.alert('<fmt:message key="i18n.tip"></fmt:message>', result.msg, 'error')
                     }
                 }
             });

@@ -123,6 +123,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -134,7 +135,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resource/image" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/message" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -142,7 +143,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24482758" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -150,27 +151,27 @@
       <recent name="com.coderman.util" />
       <recent name="com.coderman.dao" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\mapper\backend\cms" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\WEB-INF\views\backend" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\mapper\backend" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\mapper\monitor" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.coderman.backend" />
       <recent name="com.coderman" />
       <recent name="" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\message" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\image" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui\ext" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui\themes" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\mapper\backend\cms" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\WEB-INF\views\backend" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\mapper\backend" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -2286,7 +2287,8 @@
       <workItem from="1600744327055" duration="243000" />
       <workItem from="1600748418622" duration="942000" />
       <workItem from="1600841979483" duration="1874000" />
-      <workItem from="1601117126477" duration="660000" />
+      <workItem from="1601117126477" duration="792000" />
+      <workItem from="1601177373769" duration="5790000" />
     </task>
     <task id="LOCAL-00001" summary="添加README.md">
       <created>1591975324666</created>
@@ -2461,22 +2463,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="90" y="70" width="1250" height="683" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1598836475392" />
-    <state width="1495" height="386" key="GridCell.Tab.0.bottom" timestamp="1601117476305">
+    <state width="1495" height="291" key="GridCell.Tab.0.bottom" timestamp="1601183105981">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="386" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1601117476305" />
-    <state width="1495" height="386" key="GridCell.Tab.0.center" timestamp="1601117476305">
+    <state width="1495" height="291" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1601183105981" />
+    <state width="1495" height="291" key="GridCell.Tab.0.center" timestamp="1601183105981">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="386" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1601117476305" />
-    <state width="1495" height="386" key="GridCell.Tab.0.left" timestamp="1601117476305">
+    <state width="1495" height="291" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1601183105981" />
+    <state width="1495" height="291" key="GridCell.Tab.0.left" timestamp="1601183105981">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="386" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1601117476305" />
-    <state width="1495" height="386" key="GridCell.Tab.0.right" timestamp="1601117476305">
+    <state width="1495" height="291" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1601183105981" />
+    <state width="1495" height="291" key="GridCell.Tab.0.right" timestamp="1601183105981">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="386" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1601117476305" />
+    <state width="1495" height="291" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1601183105981" />
     <state width="1495" height="296" key="GridCell.Tab.1.bottom" timestamp="1600666852784">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2493,10 +2495,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1495" height="296" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1600666852784" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1600146934805">
+    <state x="249" y="0" width="1141" height="710" key="SettingsEditor" timestamp="1601179111736">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1600146934805" />
+    <state x="249" y="0" width="1141" height="710" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1601179111736" />
     <state x="490" y="159" width="642" height="524" key="StructurePopup" timestamp="1600661605659">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

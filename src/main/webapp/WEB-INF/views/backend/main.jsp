@@ -25,8 +25,8 @@
 <div region="north" style="height: 50px; background-color: #E0ECFF">
     <img src="${pageContext.request.contextPath}/resource/easyui/image/logo.png" height="100%" style="float:left;margin-left: 10px;">
     <div style="margin: 15px 20px;float: right;overflow: hidden">
-        欢迎[<span style="color: red" id="username"><shiro:principal property="username"/></span>]登录，
-        <a style="color:blue;" href="${pageContext.request.contextPath}/backend/system/user/logout.do">退出系统</a>
+        <fmt:message key="i18n.welcome"></fmt:message> &nbsp;[<span style="color: red" id="username"><shiro:principal property="username"/></span>]，
+        <a style="color:blue;" href="${pageContext.request.contextPath}/backend/system/user/logout.do"><fmt:message key="i18n.logout"></fmt:message></a>
     </div>
 </div>
 <%--左--%>

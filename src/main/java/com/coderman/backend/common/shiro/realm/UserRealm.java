@@ -59,7 +59,6 @@ public class UserRealm extends AuthorizingRealm {
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
 
         // 获取用户角色集
-        System.out.println("-----------查询数据库-------授权-------");
         List<Role> roleList = this.roleService.findUserRole(userName);
         Set<String> roleSet = roleList.stream().map(Role::getRoleName).collect(Collectors.toSet());
         simpleAuthorizationInfo.setRoles(roleSet);
