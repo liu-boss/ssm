@@ -27,6 +27,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -73,9 +74,7 @@ public class UserRealm extends AuthorizingRealm {
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         String username = (String) authenticationToken.getPrincipal();
-        logger.info("用户认证:{}", username);
-
-
+        logger.info("用户:{},授权登入,time:{}",username,new Date());
         /**************** session start  同一个账号只能一人登入 *********************/
         Collection<Session> sessions = sessionDAO.getActiveSessions();
         for (Session session : sessions) {
@@ -102,9 +101,6 @@ public class UserRealm extends AuthorizingRealm {
         CurrentUser currentUser = new CurrentUser();
         currentUser.setId(user.getId());
         currentUser.setUsername(user.getUsername());
-        HttpServletRequest httpServletRequest = ShiroContextHolder.getHttpServletRequest();
-        currentUser.setHost(HttpUtil.getIpAddr(httpServletRequest));
-        currentUser.setLocation(HttpUtil.getCityInfo(httpServletRequest));
         return new SimpleAuthenticationInfo(currentUser, user.getPassword(), salt, getName());
     }
 

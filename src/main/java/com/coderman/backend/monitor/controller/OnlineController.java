@@ -43,13 +43,47 @@ public class OnlineController {
      */
     @RequestMapping(value = "/list.do", method = RequestMethod.POST)
     @ResponseBody
-    public EasyUIData<CurrentUser> list() {
+    public EasyUIData<CurrentUser> list(@RequestParam(value = "page", defaultValue = "1") Integer page,
+                                        @RequestParam(value = "rows", defaultValue = "20") Integer rows) {
         Set<CurrentUser> userList = new HashSet<>();
         Collection<Session> activeSessions = sessionDAO.getActiveSessions();
         for (Session activeSession : activeSessions) {
             buildOnlineList(userList, activeSession);
         }
-        return new EasyUIData<>(userList.size(), new ArrayList<>(userList));
+        //分页
+        List<CurrentUser> list = page(new ArrayList<>(userList), page, rows);
+        return new EasyUIData<>(userList.size(), list);
+    }
+
+    /** 分页显示 */
+    public static <T> List<T> page(List<T> dataList,int pageNo,int pageSize){
+        int startNum = (pageNo-1)* pageSize+1 ;                     //起始截取数据位置
+        if(startNum > dataList.size()){
+            return null;
+        }
+        List<T> res = new ArrayList<>();
+        int rum = dataList.size() - startNum;
+        if(rum < 0){
+            return null;
+        }
+        if(rum == 0){                                               //说明正好是最后一个了
+            int index = dataList.size() -1;
+            res.add(dataList.get(index));
+            return res;
+        }
+        if(rum / pageSize >= 1){                                    //剩下的数据还够1页，返回整页的数据
+            for(int i=startNum;i<startNum + pageSize;i++){          //截取从startNum开始的数据
+                res.add(dataList.get(i-1));
+            }
+            return res;
+        }else if(rum / pageSize == 0){                 //不够一页，直接返回剩下数据
+            for(int j = startNum ;j<=dataList.size();j++){
+                res.add(dataList.get(j-1));
+            }
+            return res;
+        }else{
+            return null;
+        }
     }
 
     /**
@@ -69,31 +103,29 @@ public class OnlineController {
         SimpleSession simpleSession = (SimpleSession) activeSession;
         //是否过期
         boolean expired = simpleSession.isExpired();
+        HttpServletRequest httpServletRequest = ShiroContextHolder.getHttpServletRequest();
         if (activeSession.getAttributeKeys().contains(DefaultSubjectContext.PRINCIPALS_SESSION_KEY)) {
             //如果没有过期,并且登入系统
             SimplePrincipalCollection simplePrincipalCollection = (SimplePrincipalCollection) activeSession.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
             CurrentUser principal = (CurrentUser) simplePrincipalCollection.getPrimaryPrincipal();
+            principal.setSessionId(sessionId);
             principal.setLastAccessTime(lastAccessTime);
             principal.setStartTime(startTime);
-            long timeout = activeSession.getTimeout();
-            principal.setTimeout(timeout / 1000 / 60);
-            principal.setSessionId(sessionId);
             principal.setExpired(expired);
+            principal.setHost(HttpUtil.getIpAddr(httpServletRequest));
             principal.setOnline(true);
+            principal.setLocation(HttpUtil.getCityInfo(httpServletRequest));
             userList.add(principal);
-
         } else {
-            HttpServletRequest httpServletRequest = ShiroContextHolder.getHttpServletRequest();
             //匿名session
             CurrentUser currentUser = new CurrentUser();
+            currentUser.setUsername("[游客:" + sessionId.substring(0, 4) + "]");
             currentUser.setSessionId(sessionId);
             currentUser.setLastAccessTime(lastAccessTime);
             currentUser.setStartTime(startTime);
             currentUser.setExpired(expired);
-
             currentUser.setHost(HttpUtil.getIpAddr(httpServletRequest));
             currentUser.setLocation(HttpUtil.getCityInfo(httpServletRequest));
-            currentUser.setUsername("[游客" + sessionId.substring(0, 4) + "]");
             currentUser.setOnline(false);
             userList.add(currentUser);
         }
@@ -137,5 +169,7 @@ public class OnlineController {
         }
 
     }
+
+
 
 }

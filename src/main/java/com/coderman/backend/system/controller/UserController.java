@@ -4,6 +4,7 @@ import com.coderman.backend.common.EasyUIData;
 import com.coderman.backend.common.JsonData;
 import com.coderman.backend.common.ProjectConstant;
 import com.coderman.backend.common.aop.Operate;
+import com.coderman.backend.common.shiro.realm.UserRealm;
 import com.coderman.backend.system.dto.UserLoginDTO;
 import com.coderman.backend.system.dto.form.UserAddParam;
 import com.coderman.backend.system.dto.form.UserUpdateParam;
@@ -49,6 +50,9 @@ public class UserController {
 
     @Autowired
     private LoginLogService loginLogService;
+
+    @Autowired
+    private UserRealm userRealm;
 
 
     @RequestMapping(value = "/queryRole.do", method = RequestMethod.GET)

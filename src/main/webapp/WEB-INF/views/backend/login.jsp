@@ -105,7 +105,7 @@
         </div>
         <span style="font-size: 13px;color: #999">|</span>
         <div style="display:inline-block;">
-            <a style="color: #333333;font-size: 13px" href="<%=baseUrlPath%>/backend/loginPage.do?locale=zh_CH">简体中文</a>
+            <a style="color: #333333;font-size: 13px" href="<%=baseUrlPath%>/backend/loginPage.do?locale=zh_CN">简体中文</a>
         </div>
     </div>
 

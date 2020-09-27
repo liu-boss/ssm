@@ -37,7 +37,7 @@ let online = {
                 {field: 'username', title: '用户名', width: 120, align: 'center',
                     formatter: function (value, row, index) {
                         if(row.username===current){
-                            return  '<font color="#663399">[当前用户]</font>';
+                            return  '<font color="#ff6600">[当前用户]</font>';
                         }else{
                             return row.username;
                         }
@@ -49,7 +49,7 @@ let online = {
                 {field: 'expired', title: '是否过期', width: 150, align: 'center'},
                 {field: 'online', title: '状态', width: 150, align: 'center',
                     formatter: function (value, row, index) {
-                        return value ?"<font style='color: #00ee00'>[在线]</font>":"<font style='color: #666'>[离线]</font>"
+                        return value ?"<font style='color: #00cc66'>[在线]</font>":"<font style='color: #c3cbd6'>[离线]</font>"
                     }},
                 // {field: 'timeout', title: '会话过期时间(分钟)', width: 150, align: 'center'},
                 {field: 'lastAccessTime', title: '最新访问', width: 150, align: 'center'},
