@@ -62,12 +62,12 @@
         <h1><fmt:message key="i18n.title"></fmt:message></h1>
     </div>
     <div>
-        <input class="easyui-textbox easyui-validatebox" id="username" value="" name="username"
+        <input  class="easyui-textbox easyui-validatebox" id="username" value="zhangyukang" name="username"
                data-options="iconCls:'icon-man',iconWidth:30,iconAlign:'left',prompt:'<fmt:message key="i18n.username"></fmt:message>'"
                style="width:100%;height:35px;"/>
     </div>
     <div>
-        <input class="easyui-passwordbox easyui-validatebox" id="password" value="" name="password"
+        <input class="easyui-passwordbox easyui-validatebox" id="password" value="123456" name="password"
                data-options="iconWidth:30,iconAlign:'left',prompt:'<fmt:message key="i18n.password"></fmt:message>'"
                style="width:100%;height:35px;"/>
     </div>

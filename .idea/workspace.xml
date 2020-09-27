@@ -135,6 +135,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/message" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -2289,7 +2290,8 @@
       <workItem from="1600841979483" duration="1874000" />
       <workItem from="1601117126477" duration="792000" />
       <workItem from="1601177373769" duration="6089000" />
-      <workItem from="1601185035258" duration="664000" />
+      <workItem from="1601185035258" duration="845000" />
+      <workItem from="1601186837991" duration="3586000" />
     </task>
     <task id="LOCAL-00001" summary="添加README.md">
       <created>1591975324666</created>
@@ -2420,10 +2422,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1600749277829" />
-    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1599710109615">
+    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1601188625270">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1599710109615" />
+    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1601188625270" />
     <state x="327" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1600139908744">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2464,22 +2466,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="90" y="70" width="1250" height="683" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1598836475392" />
-    <state width="1495" height="310" key="GridCell.Tab.0.bottom" timestamp="1601185218642">
+    <state width="1495" height="297" key="GridCell.Tab.0.bottom" timestamp="1601190447458">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="310" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1601185218642" />
-    <state width="1495" height="310" key="GridCell.Tab.0.center" timestamp="1601185218642">
+    <state width="1495" height="297" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1601190447458" />
+    <state width="1495" height="297" key="GridCell.Tab.0.center" timestamp="1601190447458">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="310" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1601185218642" />
-    <state width="1495" height="310" key="GridCell.Tab.0.left" timestamp="1601185218642">
+    <state width="1495" height="297" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1601190447458" />
+    <state width="1495" height="297" key="GridCell.Tab.0.left" timestamp="1601190447458">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="310" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1601185218642" />
-    <state width="1495" height="310" key="GridCell.Tab.0.right" timestamp="1601185218642">
+    <state width="1495" height="297" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1601190447458" />
+    <state width="1495" height="297" key="GridCell.Tab.0.right" timestamp="1601190447458">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="310" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1601185218642" />
+    <state width="1495" height="297" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1601190447458" />
     <state width="1495" height="296" key="GridCell.Tab.1.bottom" timestamp="1600666852784">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2508,10 +2510,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="513" y="215" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.834@0.0.1536.834" timestamp="1597110022370" />
-    <state x="499" y="178" key="extract.method.dialog" timestamp="1598879841068">
+    <state x="499" y="178" key="extract.method.dialog" timestamp="1601189754583">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="499" y="178" key="extract.method.dialog/0.0.1536.834@0.0.1536.834" timestamp="1598879841068" />
+    <state x="499" y="178" key="extract.method.dialog/0.0.1536.834@0.0.1536.834" timestamp="1601189754583" />
     <state x="464" y="174" key="refactoring.ChangeSignatureDialog" timestamp="1598514925901">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

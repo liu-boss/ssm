@@ -6,6 +6,7 @@ import com.coderman.backend.common.ProjectConstant;
 import com.coderman.backend.common.aop.Operate;
 import com.coderman.backend.common.shiro.CurrentUser;
 import com.coderman.backend.exception.ParamException;
+import com.coderman.backend.util.HttpUtil;
 import com.coderman.backend.util.ShiroContextHolder;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.session.Session;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
 /**
@@ -36,74 +38,104 @@ public class OnlineController {
 
     /**
      * 当前登入用户
+     *
      * @return
      */
-    @RequestMapping(value = "/list.do",method = RequestMethod.POST)
+    @RequestMapping(value = "/list.do", method = RequestMethod.POST)
     @ResponseBody
     public EasyUIData<CurrentUser> list() {
-        Set<CurrentUser> userList=new HashSet<>();
+        Set<CurrentUser> userList = new HashSet<>();
         Collection<Session> activeSessions = sessionDAO.getActiveSessions();
         for (Session activeSession : activeSessions) {
-            //最新访问时间
-            Date lastAccessTime = activeSession.getLastAccessTime();
-            //开始访问时间
-            Date startTime= activeSession.getStartTimestamp();
-            //如果没有过期,并且登入系统
-            if(activeSession.getAttributeKeys().contains(DefaultSubjectContext.PRINCIPALS_SESSION_KEY)){
-
-                SimplePrincipalCollection simplePrincipalCollection = (SimplePrincipalCollection) activeSession.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
-
-                CurrentUser principal = (CurrentUser) simplePrincipalCollection.getPrimaryPrincipal();
-                principal.setLastAccessTime(lastAccessTime);
-                principal.setStartTime(startTime);
-                //会话过期时间
-                long timeout = activeSession.getTimeout();
-                principal.setTimeout(timeout/1000/60);
-                SimpleSession simpleSession= (SimpleSession) activeSession;
-                boolean expired = simpleSession.isExpired();
-                //是否过期
-                principal.setExpired(expired);
-                userList.add(principal);
-            }
+            buildOnlineList(userList, activeSession);
         }
         return new EasyUIData<>(userList.size(), new ArrayList<>(userList));
     }
 
     /**
+     * 组装在线用户列表
+     *
+     * @param userList
+     * @param activeSession
+     */
+    private void buildOnlineList(Set<CurrentUser> userList, Session activeSession) {
+        //最新访问时间
+        final Date lastAccessTime = activeSession.getLastAccessTime();
+        //开始访问时间
+        final Date startTime = activeSession.getStartTimestamp();
+        //sessionId
+        final String sessionId = activeSession.getId().toString();
+
+        SimpleSession simpleSession = (SimpleSession) activeSession;
+        //是否过期
+        boolean expired = simpleSession.isExpired();
+        if (activeSession.getAttributeKeys().contains(DefaultSubjectContext.PRINCIPALS_SESSION_KEY)) {
+            //如果没有过期,并且登入系统
+            SimplePrincipalCollection simplePrincipalCollection = (SimplePrincipalCollection) activeSession.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
+            CurrentUser principal = (CurrentUser) simplePrincipalCollection.getPrimaryPrincipal();
+            principal.setLastAccessTime(lastAccessTime);
+            principal.setStartTime(startTime);
+            long timeout = activeSession.getTimeout();
+            principal.setTimeout(timeout / 1000 / 60);
+            principal.setSessionId(sessionId);
+            principal.setExpired(expired);
+            principal.setOnline(true);
+            userList.add(principal);
+
+        } else {
+            HttpServletRequest httpServletRequest = ShiroContextHolder.getHttpServletRequest();
+            //匿名session
+            CurrentUser currentUser = new CurrentUser();
+            currentUser.setSessionId(sessionId);
+            currentUser.setLastAccessTime(lastAccessTime);
+            currentUser.setStartTime(startTime);
+            currentUser.setExpired(expired);
+
+            currentUser.setHost(HttpUtil.getIpAddr(httpServletRequest));
+            currentUser.setLocation(HttpUtil.getCityInfo(httpServletRequest));
+            currentUser.setUsername("[游客" + sessionId.substring(0, 4) + "]");
+            currentUser.setOnline(false);
+            userList.add(currentUser);
+        }
+    }
+
+    /**
      * 踢出用户
-     * @param usernameList
+     *
+     * @param sessionIdList
      * @return
      */
-    @Operate(operateModule = ProjectConstant.MONITOR_MODULE,operateDesc = "踢出用户")
+    @Operate(operateModule = ProjectConstant.MONITOR_MODULE, operateDesc = "踢出用户")
     @RequiresPermissions({"system:online:forceLogout"})
-    @RequestMapping(value = "/forceLogout.do",method = RequestMethod.POST)
+    @RequestMapping(value = "/forceLogout.do", method = RequestMethod.POST)
     @ResponseBody
-    public JsonData forceLogout(@RequestParam("nameList") String  usernameList) {
-        String[] names = usernameList.split(",");
+    public JsonData forceLogout(@RequestParam("sessionIdList") String sessionIdList) {
+        String[] sessionIds = sessionIdList.split(",");
         Collection<Session> sessions = sessionDAO.getActiveSessions();
-        if(names.length>0){
-            for (String username : names) {
-                if(ShiroContextHolder.getUser().getUsername().equals(username)){
+        doForceLogout(sessionIds, sessions);
+        return JsonData.success();
+    }
+
+    /**
+     * 执行踢出操作
+     * @param sessionIds
+     * @param sessions
+     */
+    private void doForceLogout(String[] sessionIds, Collection<Session> sessions) {
+        if (sessionIds.length > 0) {
+            for (String sessionId : sessionIds) {
+                final String currentSessionId = ShiroContextHolder.getUser().getSessionId();
+                if (!"".equals(currentSessionId)&&currentSessionId.equals(sessionId)) {
                     throw new ParamException("您无法将自己踢出系统!");
-                }else {
-                    for(Session session:sessions){
-                        Object attribute = session.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
-                        if(attribute!=null){
-                            SimplePrincipalCollection simplePrincipalCollection =
-                                    (SimplePrincipalCollection) session.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
-                            CurrentUser principal = (CurrentUser) simplePrincipalCollection.getPrimaryPrincipal();
-                            if(username.equals(principal.getUsername())){
-                                //设置session立即失效，即将其踢出系统
-                                session.setTimeout(0);
-                                sessionDAO.delete(session);
-                                break;
-                            }
-                        }
+                } else {
+                    Session session = sessionDAO.readSession(sessionId);
+                    if(session!=null){
+                        sessionDAO.delete(session);
                     }
                 }
             }
         }
-        return JsonData.success();
+
     }
 
 }

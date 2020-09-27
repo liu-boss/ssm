@@ -18,6 +18,10 @@ public class CurrentUser implements Serializable {
 
     public Long id;
 
+    private String sessionId;
+
+    private boolean online;
+
     public String host;
 
     public String location;
@@ -36,6 +40,14 @@ public class CurrentUser implements Serializable {
         return expired;
     }
 
+    public String getSessionId() {
+        return sessionId;
+    }
+
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+    }
+
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date lastAccessTime;
     private boolean expired;
@@ -49,6 +61,14 @@ public class CurrentUser implements Serializable {
                 Objects.equals(id, user.id) &&
                 Objects.equals(host, user.host) &&
                 Objects.equals(location, user.location);
+    }
+
+    public boolean isOnline() {
+        return online;
+    }
+
+    public void setOnline(boolean online) {
+        this.online = online;
     }
 
     @Override

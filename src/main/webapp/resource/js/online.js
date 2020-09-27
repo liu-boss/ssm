@@ -13,7 +13,7 @@ let online = {
             return ctx + '/backend/system/online/list.do';
         },
         forceLogout: function (strs) {
-            return ctx+'/backend/system/online/forceLogout.do?nameList='+strs
+            return ctx+'/backend/system/online/forceLogout.do?sessionIdList='+strs
         }
     },
     //初始化表格数据
@@ -42,15 +42,16 @@ let online = {
                             return row.username;
                         }
                     }},
+                {field: 'sessionId', title: 'SHIRO-SESSION-ID', width: 220, align: 'center'},
                 {field: 'host', title: '主机地址', width: 220, align: 'center'},
                 {field: 'location', title: '登入地址', width: 220, align: 'center'},
                 {field: 'startTime', title: '开始访问', width: 150, align: 'center'},
                 {field: 'expired', title: '是否过期', width: 150, align: 'center'},
-                {field: 'status', title: '状态', width: 150, align: 'center',
+                {field: 'online', title: '状态', width: 150, align: 'center',
                     formatter: function (value, row, index) {
-                        return "<font style='color: #00ee00'>[在线]</font>"
+                        return value ?"<font style='color: #00ee00'>[在线]</font>":"<font style='color: #666'>[离线]</font>"
                     }},
-                {field: 'timeout', title: '会话过期时间(分钟)', width: 150, align: 'center'},
+                // {field: 'timeout', title: '会话过期时间(分钟)', width: 150, align: 'center'},
                 {field: 'lastAccessTime', title: '最新访问', width: 150, align: 'center'},
             ]]
         });
@@ -72,7 +73,7 @@ let online = {
                 let strIds = "";
                 //拼接字符串，这里也可以使用数组，作用一样
                 for (let i = 0; i < selectRows.length; i++) {
-                    strIds += selectRows[i].username + ",";
+                    strIds += selectRows[i].sessionId + ",";
                 }
                 //循环切割
                 strIds = strIds.substr(0, strIds.length - 1);
