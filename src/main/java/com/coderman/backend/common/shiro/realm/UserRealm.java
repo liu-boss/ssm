@@ -56,7 +56,7 @@ public class UserRealm extends AuthorizingRealm {
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         String userName = ShiroContextHolder.getUsername();
-
+        logger.info("用户:{},授权,time:{}",userName,new Date());
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
 
         // 获取用户角色集
@@ -74,7 +74,7 @@ public class UserRealm extends AuthorizingRealm {
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         String username = (String) authenticationToken.getPrincipal();
-        logger.info("用户:{},授权登入,time:{}",username,new Date());
+        logger.info("用户:{},认证,time:{}",username,new Date());
         /**************** session start  同一个账号只能一人登入 *********************/
         Collection<Session> sessions = sessionDAO.getActiveSessions();
         for (Session session : sessions) {

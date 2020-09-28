@@ -1,13 +1,16 @@
 package com.coderman.backend.monitor.controller;
 
+import com.alibaba.druid.sql.dialect.oracle.ast.stmt.OracleIfStatement;
 import com.coderman.backend.common.EasyUIData;
 import com.coderman.backend.common.JsonData;
 import com.coderman.backend.common.ProjectConstant;
 import com.coderman.backend.common.aop.Operate;
 import com.coderman.backend.common.shiro.CurrentUser;
+import com.coderman.backend.common.shiro.realm.UserRealm;
 import com.coderman.backend.common.shiro.session.OnlineSession;
 import com.coderman.backend.exception.ParamException;
 import com.coderman.backend.util.ShiroContextHolder;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.eis.SessionDAO;
@@ -20,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -53,33 +57,35 @@ public class OnlineController {
         return new EasyUIData<>(userList.size(), list);
     }
 
-    /** 分页显示 */
-    public static <T> List<T> page(List<T> dataList,int pageNo,int pageSize){
-        int startNum = (pageNo-1)* pageSize+1 ;                     //起始截取数据位置
-        if(startNum > dataList.size()){
+    /**
+     * 分页显示
+     */
+    public static <T> List<T> page(List<T> dataList, int pageNo, int pageSize) {
+        int startNum = (pageNo - 1) * pageSize + 1;                     //起始截取数据位置
+        if (startNum > dataList.size()) {
             return null;
         }
         List<T> res = new ArrayList<>();
         int rum = dataList.size() - startNum;
-        if(rum < 0){
+        if (rum < 0) {
             return null;
         }
-        if(rum == 0){                                               //说明正好是最后一个了
-            int index = dataList.size() -1;
+        if (rum == 0) {                                               //说明正好是最后一个了
+            int index = dataList.size() - 1;
             res.add(dataList.get(index));
             return res;
         }
-        if(rum / pageSize >= 1){                                    //剩下的数据还够1页，返回整页的数据
-            for(int i=startNum;i<startNum + pageSize;i++){          //截取从startNum开始的数据
-                res.add(dataList.get(i-1));
+        if (rum / pageSize >= 1) {                                    //剩下的数据还够1页，返回整页的数据
+            for (int i = startNum; i < startNum + pageSize; i++) {          //截取从startNum开始的数据
+                res.add(dataList.get(i - 1));
             }
             return res;
-        }else if(rum / pageSize == 0){                 //不够一页，直接返回剩下数据
-            for(int j = startNum ;j<=dataList.size();j++){
-                res.add(dataList.get(j-1));
+        } else if (rum / pageSize == 0) {                 //不够一页，直接返回剩下数据
+            for (int j = startNum; j <= dataList.size(); j++) {
+                res.add(dataList.get(j - 1));
             }
             return res;
-        }else{
+        } else {
             return null;
         }
     }
@@ -91,26 +97,28 @@ public class OnlineController {
      * @param activeSession
      */
     private void buildOnlineList(Set<CurrentUser> userList, Session activeSession) {
-        OnlineSession onlineSession=null;
-        if(activeSession instanceof OnlineSession){
-             onlineSession= (OnlineSession) activeSession;
+        OnlineSession onlineSession = null;
+        if (activeSession instanceof OnlineSession) {
+            onlineSession = (OnlineSession) activeSession;
         }
         assert onlineSession != null;
         //最新访问时间
-        final Date lastAccessTime = activeSession.getLastAccessTime();
+        final Date lastAccessTime = onlineSession.getLastAccessTime();
         //开始访问时间
-        final Date startTime = activeSession.getStartTimestamp();
+        final Date startTime = onlineSession.getStartTimestamp();
         //sessionId
-        final String sessionId = activeSession.getId().toString();
+        final String sessionId = onlineSession.getId().toString();
         //地理位置
         final String location = onlineSession.getLocation();
         //浏览器
         final String browser = onlineSession.getBrowser();
+        //os
+        String os = onlineSession.getOS();
         //ip
         final String ip = onlineSession.getIp();
         //是否过期
         boolean expired = onlineSession.isExpired();
-        CurrentUser currentUser=new CurrentUser();
+        CurrentUser currentUser = new CurrentUser();
         currentUser.setSessionId(sessionId);
         currentUser.setStartTime(startTime);
         currentUser.setLastAccessTime(lastAccessTime);
@@ -118,16 +126,22 @@ public class OnlineController {
         currentUser.setExpired(expired);
         currentUser.setLocation(location);
         currentUser.setBrowser(browser);
+        currentUser.setOS(os);
         if (activeSession.getAttributeKeys().contains(DefaultSubjectContext.PRINCIPALS_SESSION_KEY)) {
             //如果没有过期,并且登入系统
             SimplePrincipalCollection simplePrincipalCollection = (SimplePrincipalCollection) activeSession.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
             CurrentUser principal = (CurrentUser) simplePrincipalCollection.getPrimaryPrincipal();
-            currentUser.setStatus(OnlineSession.OnlineStatus.on_line.getInfo());
+            Object attribute = onlineSession.getAttribute("session.force.logout");
+            if(attribute==null){
+                currentUser.setStatus(OnlineSession.OnlineStatus.on_line.getInfo());
+            }else if (attribute.equals(Boolean.TRUE)){
+                currentUser.setStatus(OnlineSession.OnlineStatus.force_logout.getInfo());
+            }
             currentUser.setUsername(principal.getUsername());
         } else {
             //匿名session
-            currentUser.setUsername("[游客:"+sessionId.substring(0,4)+"]");
             currentUser.setStatus(OnlineSession.OnlineStatus.off_line.getInfo());
+            currentUser.setUsername("[游客:" + sessionId.substring(0, 4) + "]");
         }
         userList.add(currentUser);
     }
@@ -144,33 +158,39 @@ public class OnlineController {
     @ResponseBody
     public JsonData forceLogout(@RequestParam("sessionIdList") String sessionIdList) {
         String[] sessionIds = sessionIdList.split(",");
-        Collection<Session> sessions = sessionDAO.getActiveSessions();
-        doForceLogout(sessionIds, sessions);
+        doForceLogout(sessionIds);
         return JsonData.success();
     }
 
     /**
      * 执行踢出操作
+     *
      * @param sessionIds
-     * @param sessions
      */
-    private void doForceLogout(String[] sessionIds, Collection<Session> sessions) {
+    private void doForceLogout(String[] sessionIds) {
         if (sessionIds.length > 0) {
             for (String sessionId : sessionIds) {
-                final String currentSessionId = ShiroContextHolder.getUser().getSessionId();
-                if (!"".equals(currentSessionId)&&currentSessionId.equals(sessionId)) {
+                Serializable serializable = SecurityUtils.getSubject().getSession(true).getId();
+                String currentSessionId = serializable.toString();
+                if (!"".equals(currentSessionId) && currentSessionId.equals(sessionId)) {
                     throw new ParamException("您无法将自己踢出系统!");
                 } else {
                     Session session = sessionDAO.readSession(sessionId);
-                    if(session!=null){
-                        sessionDAO.delete(session);
+                    if (session != null) {
+                        session.setAttribute("session.force.logout", Boolean.TRUE);
+                        if(session.getAttributeKeys().contains(DefaultSubjectContext.PRINCIPALS_SESSION_KEY)){
+                            //如果在线用户更新session的标识
+                            sessionDAO.update(session);
+                        }else {
+                            //如果是游客直接删除该session
+                            sessionDAO.delete(session);
+                        }
                     }
                 }
             }
         }
 
     }
-
 
 
 }

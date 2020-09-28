@@ -125,6 +125,18 @@
         }
 
         /**
+         *
+         * 检查是session的状态
+         */
+        let status=<%=request.getParameter("forceLogout")%>;
+        if(status!=null&&status===1){
+            if(confirm("您已被踢出系统,是否重新登入?")){
+                window.location.href = '${pageContext.request.contextPath}/backend/loginPage.do';
+            }
+            return;
+        }
+
+        /**
          * 用户登入
          */
         function login() {

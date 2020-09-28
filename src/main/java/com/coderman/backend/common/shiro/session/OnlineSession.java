@@ -23,6 +23,15 @@ public class OnlineSession extends SimpleSession {
     private OnlineStatus status = OnlineStatus.on_line; //在线状态
     private String ip; //用户登录时系统IP
     private String location;
+    private String OS;
+
+    public String getOS() {
+        return OS;
+    }
+
+    public void setOS(String OS) {
+        this.OS = OS;
+    }
 
     public String getLocation() {
         return location;

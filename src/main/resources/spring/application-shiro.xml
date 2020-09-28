@@ -56,18 +56,20 @@
                 /backend/loginPage.do = anon
                 /backend/system/user/login.do = anon
                 /backend/system/user/captcha.do = anon
-                /backend/** = authc
+                /backend/** = authc,forceLogout
             </value>
         </property>
         <property name="filters">
             <map>
                 <!--定义自己的loginFilter:覆盖之前的-->
                 <entry key="authc" value-ref="restLoginAuthorizationFilter"/>
+                <entry key="forceLogout" value-ref="forceLogoutFilter"/>
             </map>
         </property>
     </bean>
     <!--解决前后端(页面跳转问题)跳转页面的filter-->
     <bean id="restLoginAuthorizationFilter" class="com.coderman.backend.common.shiro.filter.RestLoginAuthorizationFilter"/>
+    <bean id="forceLogoutFilter" class="com.coderman.backend.common.shiro.filter.ForceLogoutFilter"/>
 
     <!-- 配置 shiro 的核心组件：securityManager -->
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">

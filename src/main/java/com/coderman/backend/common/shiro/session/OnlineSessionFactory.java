@@ -23,6 +23,7 @@ public class OnlineSessionFactory implements SessionFactory {
             HttpServletRequest request = (HttpServletRequest) sessionContext.getServletRequest();
             if (request != null) {
                 session.setHost(HttpUtil.getIpAddr(request));
+                session.setOS(HttpUtil.getOsOrBrowser(0));
                 session.setBrowser(HttpUtil.getOsOrBrowser(1));
                 session.setIp(HttpUtil.getIpAddr(request));
                 session.setLocation(HttpUtil.getCityInfo(request));

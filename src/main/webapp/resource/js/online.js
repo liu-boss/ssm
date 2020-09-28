@@ -46,12 +46,18 @@ let online = {
                 {field: 'host', title: '主机IP', width: 220, align: 'center'},
                 {field: 'location', title: '登入地址', width: 220, align: 'center'},
                 {field: 'browser', title: '浏览器', width: 150, align: 'center'},
-                {field: 'expired', title: '是否过期', width: 150, align: 'center'},
+                {field: 'os', title: '操作系统', width: 150, align: 'center'},
+                // {field: 'expired', title: '是否过期', width: 150, align: 'center'},
                 {field: 'status', title: '状态', width: 150, align: 'center',
-                    formatter: function (value, row, index) {
-                        return value==='在线' ?"<font style='color: #00cc66'>[在线]</font>":"<font style='color: #c3cbd6'>[离线]</font>"
+                    formatter: function (value) {
+                        if(value==='在线'){
+                            return  '<font color="#7fff00">在线状态</font>';
+                        }else if (value==='离线'){
+                            return  '<font color="#666">离线状态</font>';
+                        } else if (value==='强制退出'){
+                            return  '<font color="red">强制退出</font>';
+                        }
                     }},
-
                 {field: 'startTime', title: '开始访问', width: 150, align: 'center'},
                 {field: 'lastAccessTime', title: '最新访问', width: 150, align: 'center'},
             ]]

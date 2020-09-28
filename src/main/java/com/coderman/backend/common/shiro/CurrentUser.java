@@ -20,6 +20,8 @@ public class CurrentUser implements Serializable {
 
     private String sessionId;
 
+    private String OS;
+
     public String getStatus() {
         return status;
     }
@@ -64,6 +66,14 @@ public class CurrentUser implements Serializable {
 
     public void setSessionId(String sessionId) {
         this.sessionId = sessionId;
+    }
+
+    public String getOS() {
+        return OS;
+    }
+
+    public void setOS(String OS) {
+        this.OS = OS;
     }
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
