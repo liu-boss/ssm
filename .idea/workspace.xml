@@ -89,8 +89,8 @@
         <option value="Enum" />
         <option value="Aspect" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -136,7 +136,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resource/image" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -152,27 +152,27 @@
       <recent name="com.coderman.util" />
       <recent name="com.coderman.dao" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.coderman.backend" />
+      <recent name="com.coderman" />
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\image" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\java\com\coderman\backend\util" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\message" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources" />
+      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\mapper\backend\cms" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\WEB-INF\views\backend" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\mapper\backend" />
       <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\easyui" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.coderman.backend" />
-      <recent name="com.coderman" />
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\java\com\coderman\backend\util" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources\message" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource\image" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\resources" />
-      <recent name="D:\myworkspace\api-seed\simple_seed\ssm\src\main\webapp\resource" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -2293,7 +2293,8 @@
       <workItem from="1601185035258" duration="845000" />
       <workItem from="1601186837991" duration="3774000" />
       <workItem from="1601197560904" duration="2850000" />
-      <workItem from="1601263386923" duration="925000" />
+      <workItem from="1601263386923" duration="1005000" />
+      <workItem from="1601265205996" duration="3238000" />
     </task>
     <task id="LOCAL-00001" summary="添加README.md">
       <created>1591975324666</created>
@@ -2424,10 +2425,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1600749277829" />
-    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1601188625270">
+    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1601266762733">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1601188625270" />
+    <state x="559" y="42" width="593" height="712" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1601266762733" />
     <state x="327" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1600139908744">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -2468,38 +2469,38 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="90" y="70" width="1250" height="683" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1598836475392" />
-    <state width="1495" height="417" key="GridCell.Tab.0.bottom" timestamp="1601264320620">
+    <state width="1495" height="339" key="GridCell.Tab.0.bottom" timestamp="1601268475639">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="417" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1601264320620" />
-    <state width="1495" height="417" key="GridCell.Tab.0.center" timestamp="1601264320619">
+    <state width="1495" height="339" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1601268475639" />
+    <state width="1495" height="339" key="GridCell.Tab.0.center" timestamp="1601268475639">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="417" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1601264320619" />
-    <state width="1495" height="417" key="GridCell.Tab.0.left" timestamp="1601264320619">
+    <state width="1495" height="339" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1601268475639" />
+    <state width="1495" height="339" key="GridCell.Tab.0.left" timestamp="1601268475639">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="417" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1601264320619" />
-    <state width="1495" height="417" key="GridCell.Tab.0.right" timestamp="1601264320620">
+    <state width="1495" height="339" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1601268475639" />
+    <state width="1495" height="339" key="GridCell.Tab.0.right" timestamp="1601268475639">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="417" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1601264320620" />
-    <state width="1495" height="266" key="GridCell.Tab.1.bottom" timestamp="1601200442392">
+    <state width="1495" height="339" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1601268475639" />
+    <state width="1495" height="341" key="GridCell.Tab.1.bottom" timestamp="1601265733602">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="266" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1601200442392" />
-    <state width="1495" height="266" key="GridCell.Tab.1.center" timestamp="1601200442392">
+    <state width="1495" height="341" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1601265733602" />
+    <state width="1495" height="341" key="GridCell.Tab.1.center" timestamp="1601265733602">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="266" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1601200442392" />
-    <state width="1495" height="266" key="GridCell.Tab.1.left" timestamp="1601200442392">
+    <state width="1495" height="341" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1601265733602" />
+    <state width="1495" height="341" key="GridCell.Tab.1.left" timestamp="1601265733602">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="266" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1601200442392" />
-    <state width="1495" height="266" key="GridCell.Tab.1.right" timestamp="1601200442392">
+    <state width="1495" height="341" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1601265733602" />
+    <state width="1495" height="341" key="GridCell.Tab.1.right" timestamp="1601265733602">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1495" height="266" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1601200442392" />
+    <state width="1495" height="341" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1601265733602" />
     <state x="249" y="0" width="1141" height="710" key="SettingsEditor" timestamp="1601179111736">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

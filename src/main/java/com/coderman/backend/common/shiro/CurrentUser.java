@@ -20,11 +20,29 @@ public class CurrentUser implements Serializable {
 
     private String sessionId;
 
-    private boolean online;
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    private String status;
 
     public String host;
 
     public String location;
+
+    public String browser;
+
+    public String getBrowser() {
+        return browser;
+    }
+
+    public void setBrowser(String browser) {
+        this.browser = browser;
+    }
 
     private long timeout;
 
@@ -63,13 +81,7 @@ public class CurrentUser implements Serializable {
                 Objects.equals(location, user.location);
     }
 
-    public boolean isOnline() {
-        return online;
-    }
 
-    public void setOnline(boolean online) {
-        this.online = online;
-    }
 
     @Override
     public int hashCode() {

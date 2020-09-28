@@ -5,12 +5,11 @@ import com.coderman.backend.common.JsonData;
 import com.coderman.backend.common.ProjectConstant;
 import com.coderman.backend.common.aop.Operate;
 import com.coderman.backend.common.shiro.CurrentUser;
+import com.coderman.backend.common.shiro.session.OnlineSession;
 import com.coderman.backend.exception.ParamException;
-import com.coderman.backend.util.HttpUtil;
 import com.coderman.backend.util.ShiroContextHolder;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.session.Session;
-import org.apache.shiro.session.mgt.SimpleSession;
 import org.apache.shiro.session.mgt.eis.SessionDAO;
 import org.apache.shiro.subject.SimplePrincipalCollection;
 import org.apache.shiro.subject.support.DefaultSubjectContext;
@@ -21,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
 /**
@@ -93,42 +91,45 @@ public class OnlineController {
      * @param activeSession
      */
     private void buildOnlineList(Set<CurrentUser> userList, Session activeSession) {
+        OnlineSession onlineSession=null;
+        if(activeSession instanceof OnlineSession){
+             onlineSession= (OnlineSession) activeSession;
+        }
+        assert onlineSession != null;
         //最新访问时间
         final Date lastAccessTime = activeSession.getLastAccessTime();
         //开始访问时间
         final Date startTime = activeSession.getStartTimestamp();
         //sessionId
         final String sessionId = activeSession.getId().toString();
-
-        SimpleSession simpleSession = (SimpleSession) activeSession;
+        //地理位置
+        final String location = onlineSession.getLocation();
+        //浏览器
+        final String browser = onlineSession.getBrowser();
+        //ip
+        final String ip = onlineSession.getIp();
         //是否过期
-        boolean expired = simpleSession.isExpired();
-        HttpServletRequest httpServletRequest = ShiroContextHolder.getHttpServletRequest();
+        boolean expired = onlineSession.isExpired();
+        CurrentUser currentUser=new CurrentUser();
+        currentUser.setSessionId(sessionId);
+        currentUser.setStartTime(startTime);
+        currentUser.setLastAccessTime(lastAccessTime);
+        currentUser.setHost(ip);
+        currentUser.setExpired(expired);
+        currentUser.setLocation(location);
+        currentUser.setBrowser(browser);
         if (activeSession.getAttributeKeys().contains(DefaultSubjectContext.PRINCIPALS_SESSION_KEY)) {
             //如果没有过期,并且登入系统
             SimplePrincipalCollection simplePrincipalCollection = (SimplePrincipalCollection) activeSession.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY);
             CurrentUser principal = (CurrentUser) simplePrincipalCollection.getPrimaryPrincipal();
-            principal.setSessionId(sessionId);
-            principal.setLastAccessTime(lastAccessTime);
-            principal.setStartTime(startTime);
-            principal.setExpired(expired);
-            principal.setHost(HttpUtil.getIpAddr(httpServletRequest));
-            principal.setOnline(true);
-            principal.setLocation(HttpUtil.getCityInfo(httpServletRequest));
-            userList.add(principal);
+            currentUser.setStatus(OnlineSession.OnlineStatus.on_line.getInfo());
+            currentUser.setUsername(principal.getUsername());
         } else {
             //匿名session
-            CurrentUser currentUser = new CurrentUser();
-            currentUser.setUsername("[游客:" + sessionId.substring(0, 4) + "]");
-            currentUser.setSessionId(sessionId);
-            currentUser.setLastAccessTime(lastAccessTime);
-            currentUser.setStartTime(startTime);
-            currentUser.setExpired(expired);
-            currentUser.setHost(HttpUtil.getIpAddr(httpServletRequest));
-            currentUser.setLocation(HttpUtil.getCityInfo(httpServletRequest));
-            currentUser.setOnline(false);
-            userList.add(currentUser);
+            currentUser.setUsername("[游客:"+sessionId.substring(0,4)+"]");
+            currentUser.setStatus(OnlineSession.OnlineStatus.off_line.getInfo());
         }
+        userList.add(currentUser);
     }
 
     /**

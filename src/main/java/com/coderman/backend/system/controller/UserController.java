@@ -149,7 +149,8 @@ public class UserController {
             userService.login(username, password);
             //保存登入日志
             LoginLog loginLog = new LoginLog();
-            loginLog.setSystemBrowserInfo();
+            loginLog.setOs(HttpUtil.getOsOrBrowser(0));
+            loginLog.setBrowser(HttpUtil.getOsOrBrowser(1));
             loginLog.setUsername(username);
             loginLog.setLoginTime(new Date());
             loginLog.setIp(HttpUtil.getIpAddr(request));

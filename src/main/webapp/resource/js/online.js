@@ -42,16 +42,17 @@ let online = {
                             return row.username;
                         }
                     }},
-                {field: 'sessionId', title: 'SHIRO-SESSION-ID', width: 220, align: 'center'},
-                {field: 'host', title: '主机地址', width: 220, align: 'center'},
+                {field: 'sessionId', title: 'SESSION-ID', width: 120, align: 'center'},
+                {field: 'host', title: '主机IP', width: 220, align: 'center'},
                 {field: 'location', title: '登入地址', width: 220, align: 'center'},
-                {field: 'startTime', title: '开始访问', width: 150, align: 'center'},
+                {field: 'browser', title: '浏览器', width: 150, align: 'center'},
                 {field: 'expired', title: '是否过期', width: 150, align: 'center'},
-                {field: 'online', title: '状态', width: 150, align: 'center',
+                {field: 'status', title: '状态', width: 150, align: 'center',
                     formatter: function (value, row, index) {
-                        return value ?"<font style='color: #00cc66'>[在线]</font>":"<font style='color: #c3cbd6'>[离线]</font>"
+                        return value==='在线' ?"<font style='color: #00cc66'>[在线]</font>":"<font style='color: #c3cbd6'>[离线]</font>"
                     }},
-                // {field: 'timeout', title: '会话过期时间(分钟)', width: 150, align: 'center'},
+
+                {field: 'startTime', title: '开始访问', width: 150, align: 'center'},
                 {field: 'lastAccessTime', title: '最新访问', width: 150, align: 'center'},
             ]]
         });

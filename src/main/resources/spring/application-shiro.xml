@@ -81,6 +81,7 @@
     <!--session 相关配置-->
     <bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
         <property name="sessionDAO" ref="sessionDAO"/>
+        <property name="sessionFactory" ref="onlineSessionFactory"/>
         <!-- 检测扫描信息时间间隔,单位为毫秒-->
         <property name="sessionValidationInterval" value="60000"/>
         <property name="sessionIdCookie" ref="simpleCookie"/>
@@ -90,6 +91,8 @@
         <property name="sessionIdUrlRewritingEnabled" value="true"/>
         <property name="globalSessionTimeout" value="3600000"/>
     </bean>
+
+    <bean id="onlineSessionFactory" class="com.coderman.backend.common.shiro.session.OnlineSessionFactory"/>
 
 
     <bean id="sessionDAO" class="org.apache.shiro.session.mgt.eis.MemorySessionDAO"/>
