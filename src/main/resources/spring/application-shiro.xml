@@ -100,6 +100,7 @@
                                     当跳出SHIRO SERVLET时如ERROR-PAGE容器会为JSESSIONID重新分配值导致登录会话丢失! -->
         <property name="name" value="SHIRO-JSESSIONID"/>
         <!-- JSESSIONID的path为/用于多个系统共享JSESSIONID -->
+        <property name="maxAge" value="3600000"/>
         <!-- <property name="path" value="/"/> -->
         <!-- 浏览器中通过document.cookie可以获取cookie属性，设置了HttpOnly=true,在脚本中就不能的到cookie，可以避免cookie被盗用 -->
         <property name="httpOnly" value="true"/>
