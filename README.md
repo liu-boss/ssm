@@ -6,9 +6,11 @@
 >Hibernate Validator数据校验, 全局异常处理.
 
 ```
-master:    基本的ssm框架搭建
-ssm-redis: ssm与redis进行整合
-sssm-fastdfs: ssm与fastdfs整合
+master:    基本的ssm搭建
+ssm-redis: ssm与redis整合
+ssm-fastdfs: ssm与fastdfs整合
+ssm-shiro: ssm与shiro整合 (实现通用RBAC权限管理系统)
+ssm-token: ssm前后端分离之token认证
 ```
 
 ## 1. Spring, SpringMVC ,Mybatis的整合

@@ -15,12 +15,12 @@ import java.util.List;
  * @Version 1.0
  **/
 @Service
-@Transactional
 public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
 
+    @Transactional
     @Override
     public List<User> listAll() {
         return userMapper.listAll();
