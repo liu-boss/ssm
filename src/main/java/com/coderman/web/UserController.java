@@ -1,18 +1,23 @@
 package com.coderman.web;
 
 import com.coderman.common.JsonData;
-import com.coderman.exception.BizException;
+import com.coderman.exception.custom.UserException;
 import com.coderman.model.User;
 import com.coderman.service.UserService;
 import com.coderman.util.BeanValidator;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
+import com.coderman.util.JwtUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cglib.beans.BeanMap;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author zhangyukang
@@ -26,37 +31,23 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/list.do",method = RequestMethod.GET)
-    @ResponseBody
-    public JsonData list(@RequestParam(value = "page") Integer page,
-                         @RequestParam(value = "size") Integer size){
-        PageHelper.startPage(page,size);
-        if(page==4){
-            throw new BizException("page=4 不合法");
-        }
-        List<User> users=userService.listAll();
-        PageInfo<User> pageInfo = new PageInfo<>(users);
-        return JsonData.success(pageInfo);
-    }
+    private Logger logger=LoggerFactory.getLogger(this.getClass());
 
-
-    @RequestMapping(value = "/upload.do",method = RequestMethod.POST)
+    /**
+     * 用户登入
+     * @param user
+     * @return
+     * @throws UserException
+     */
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody
-    public JsonData upload(MultipartFile file){
-        System.out.println(file);
-        return JsonData.success(file.getOriginalFilename());
-    }
-
-    @RequestMapping(value = "/login.do",method = RequestMethod.POST)
-    @ResponseBody
-    public JsonData login(@RequestBody User user){
+    public JsonData login(@RequestBody User user) throws UserException {
         BeanValidator.check(user);
-        if("zhang".equals(user.getUsername())){
-            throw new BizException("用户名不存在");
-        }
-        if("yu".equals(user.getUsername())){
-            int a=9/0;
-        }
-        return JsonData.success(user);
+        User loginUser=userService.login(user.getUsername(),user.getPassword());
+        //user对象转map
+        BeanMap map = BeanMap.create(user);
+        String token = JwtUtil.createToken(loginUser.getId(), map);
+        logger.info("用户:{},成功登入,返回token:{}",loginUser,token);
+        return JsonData.success(token);
     }
 }

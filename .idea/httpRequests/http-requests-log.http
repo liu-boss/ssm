@@ -1,0 +1,521 @@
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"username:29","password":"password:29"}
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"","password":""}
+
+<> 2020-09-29T090020.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"","password":""}
+
+<> 2020-09-29T085547.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"1","password":""}
+
+<> 2020-09-29T085539.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"","password":""}
+
+<> 2020-09-29T085532.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"","password":"password:29"}
+
+<> 2020-09-29T085519.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T085511.200.json
+
+###
+
+GET http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T085505.405.html
+
+###
+
+GET http://localhost:8080/user/list.do
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T085455.404.html
+
+###
+
+GET http://localhost:8080/user/list.do
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T085215.200.json
+
+###
+
+GET http://localhost:8080/user/list.do
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T085059.200.json
+
+###
+
+GET http://localhost:8080/user/list.do
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084658.400.html
+
+###
+
+POST http://localhost:8080/user/list.do
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084648.405.html
+
+###
+
+POST http://localhost:8080/user/list
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084644.404.html
+
+###
+
+POST http://localhost:8080/user/login3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084608.404.html
+
+###
+
+POST http://localhost:8080/user/login3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NzE1MCwiaWF0IjoxNjAxMzgzNTUwLCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.UEljuTpZQg-sz2R_GSCcp7Gb4WxRBYIIevgzC1dHNtVJnFqxAJGtQYnHqlv0ymlBT9nC9h_Fk4ndIv3oRc1L4g
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084605.404.html
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4Njk4NCwiaWF0IjoxNjAxMzgzMzg0LCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.RSO4sACsXNtojTnhb1SloNElxGfQTOHaFTAnmJuStfMsV_u6eqqKpyj1VlPQxiIt8ii2qT-OJJzXaNPXkxxaVA1
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084550.200.json
+
+###
+
+POST http://localhost:8080/user/234324
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4Njk4NCwiaWF0IjoxNjAxMzgzMzg0LCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.RSO4sACsXNtojTnhb1SloNElxGfQTOHaFTAnmJuStfMsV_u6eqqKpyj1VlPQxiIt8ii2qT-OJJzXaNPXkxxaVA1
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084501.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4Njk4NCwiaWF0IjoxNjAxMzgzMzg0LCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.RSO4sACsXNtojTnhb1SloNElxGfQTOHaFTAnmJuStfMsV_u6eqqKpyj1VlPQxiIt8ii2qT-OJJzXaNPXkxxaVA1
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084454.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4Njk4NCwiaWF0IjoxNjAxMzgzMzg0LCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.RSO4sACsXNtojTnhb1SloNElxGfQTOHaFTAnmJuStfMsV_u6eqqKpyj1VlPQxiIt8ii2qT-OJJzXaNPXkxxaVA1
+
+{"username":"usern2ame:29","password":"password:29"}
+
+<> 2020-09-29T084443.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4Njk4NCwiaWF0IjoxNjAxMzgzMzg0LCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.RSO4sACsXNtojTnhb1SloNElxGfQTOHaFTAnmJuStfMsV_u6eqqKpyj1VlPQxiIt8ii2qT-OJJzXaNPXkxxaVA1
+
+{"username":"usern2ame:29","password":"password:29"}
+
+<> 2020-09-29T084438.200.json
+
+###
+
+POST http://localhost:8080/user/fewrwer
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4Njk4NCwiaWF0IjoxNjAxMzgzMzg0LCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.RSO4sACsXNtojTnhb1SloNElxGfQTOHaFTAnmJuStfMsV_u6eqqKpyj1VlPQxiIt8ii2qT-OJJzXaNPXkxxaVA1
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084429.200.json
+
+###
+
+POST http://localhost:8080/user/fewrwer
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4Njk4NCwiaWF0IjoxNjAxMzgzMzg0LCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.RSO4sACsXNtojTnhb1SloNElxGfQTOHaFTAnmJuStfMsV_u6eqqKpyj1VlPQxiIt8ii2qT-OJJzXaNPXkxxaVA1
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084423.200.json
+
+###
+
+POST http://localhost:8080/user/fewrwer
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4Njk4NCwiaWF0IjoxNjAxMzgzMzg0LCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.RSO4sACsXNtojTnhb1SloNElxGfQTOHaFTAnmJuStfMsV_u6eqqKpyj1VlPQxiIt8ii2qT-OJJzXaNPXkxxaVA1
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084414.200.json
+
+###
+
+POST http://localhost:8080/user/fewrwer
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4Njk4NCwiaWF0IjoxNjAxMzgzMzg0LCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.RSO4sACsXNtojTnhb1SloNElxGfQTOHaFTAnmJuStfMsV_u6eqqKpyj1VlPQxiIt8ii2qT-OJJzXaNPXkxxaVA1
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084405.200.json
+
+###
+
+POST http://localhost:8080/user/fewrwer
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4Njk4NCwiaWF0IjoxNjAxMzgzMzg0LCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.RSO4sACsXNtojTnhb1SloNElxGfQTOHaFTAnmJuStfMsV_u6eqqKpyj1VlPQxiIt8ii2qT-OJJzXaNPXkxxaVA1
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084341.200.json
+
+###
+
+POST http://localhost:8080/user/fewrwer
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4Njk4NCwiaWF0IjoxNjAxMzgzMzg0LCJ1c2VybmFtZSI6InVzZXJuYW1lOjI5In0.RSO4sACsXNtojTnhb1SloNElxGfQTOHaFTAnmJuStfMsV_u6eqqKpyj1VlPQxiIt8ii2qT-OJJzXaNPXkxxaVA
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084321.404.html
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VybmFtZToyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NjczNywiaWF0IjoxNjAxMzgzMTM3fQ.LNgXgpiShBR_RlnCACTc9z7jgDzjBFGz0HMEc29sYWgFVIW0IutW8iHzsgPBp2aLLe_I3CstDbrnm9mGQd4DZQ
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T084304.200.json
+
+###
+
+POST http://localhost:8080/user/login3434
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VybmFtZToyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NjczNywiaWF0IjoxNjAxMzgzMTM3fQ.LNgXgpiShBR_RlnCACTc9z7jgDzjBFGz0HMEc29sYWgFVIW0IutW8iHzsgPBp2aLLe_I3CstDbrnm9mGQd4DZQ
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T083923.200.json
+
+###
+
+POST http://localhost:8080/user/login3434
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VybmFtZToyOSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTYwMTM4NjczNywiaWF0IjoxNjAxMzgzMTM3fQ.LNgXgpiShBR_RlnCACTc9z7jgDzjBFGz0HMEc29sYWgFVIW0IutW8iHzsgPBp2aLLe_I3CstDbrnm9mGQd4DZQ
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T083913.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"username:29","password":"password:29"}
+
+<> 2020-09-29T083857.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"user:29","password":"password:29"}
+
+<> 2020-09-29T083849.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"test","password":"123456"}
+
+<> 2020-09-29T083743.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"zhangyukang","password":"123456"}
+
+<> 2020-09-29T083737.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"admin","password":"123456"}
+
+<> 2020-09-29T083729.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"admin","password":"123456"}
+
+<> 2020-09-29T083657.200.json
+
+###
+
+POST http://localhost:8080/user/login.do
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"admin","password":"123456"}
+
+<> 2020-09-29T083651.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-29T083627.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-29T083625.200.json
+
+###
+
+POST http://localhost:8080/user/login.do
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-29T083607.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+--null
+
+
+< D:\myworkspace\api-seed\simple_seed\admin_quick_start.zip
+--null--
+
+<> 2020-09-29T083553.404.html
+
+###
+

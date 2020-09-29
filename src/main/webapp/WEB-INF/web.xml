@@ -21,25 +21,8 @@
                       http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0"
          metadata-complete="true">
-  <display-name>Archetype Created Web Application</display-name>
+  <display-name>ssm-token</display-name>
 
-  <welcome-file-list>
-    <welcome-file>jsp/index.jsp</welcome-file>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
-
-<!--  <error-page>-->
-<!--    <error-code>404</error-code>-->
-<!--    <location>/WEB-INF/jsp/error/404.jsp</location>-->
-<!--  </error-page>-->
-<!--  <error-page>-->
-<!--    <error-code>500</error-code>-->
-<!--    <location>/WEB-INF/jsp/error/500.jsp</location>-->
-<!--  </error-page>-->
-
-  <!-- set encoding -->
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -80,7 +63,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>web-dispatcher</servlet-name>
-    <url-pattern>*.do</url-pattern>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 
 </web-app>

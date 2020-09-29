@@ -1,5 +1,6 @@
 package com.coderman.service.impl;
 
+import com.coderman.exception.custom.UserException;
 import com.coderman.mapper.UserMapper;
 import com.coderman.model.User;
 import com.coderman.service.UserService;
@@ -24,5 +25,18 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> listAll() {
         return userMapper.listAll();
+    }
+
+    @Override
+    public User login(String username, String password) {
+        User user=userMapper.selectByName(username);
+        if(user==null){
+            throw new UserException("用户名不存在");
+        }
+        if(!password.equals(user.getPassword())){
+            throw new UserException("登入密码错误");
+        }
+        user.setPassword(null);
+        return user;
     }
 }

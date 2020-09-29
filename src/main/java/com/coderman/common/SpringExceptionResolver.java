@@ -2,6 +2,7 @@ package com.coderman.common;
 
 import com.coderman.exception.BizException;
 import com.coderman.exception.ParamException;
+import io.jsonwebtoken.JwtException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerExceptionResolver;
@@ -9,8 +10,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.HashMap;
-import java.util.Map;
 
 public class SpringExceptionResolver implements HandlerExceptionResolver {
 
@@ -20,16 +19,20 @@ public class SpringExceptionResolver implements HandlerExceptionResolver {
     public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
         String url = request.getRequestURL().toString();
         ModelAndView mv;
-        String defaultMsg = "系统异常,请联系管理员";
+        String defaultMsg = "服务器内部异常,请联系管理员";
 
         if (isAjax(request)) {
             if (ex instanceof BizException) {
-                log.error("ajax请求:业务异常, url:" + url, ex);
+                log.warn("ajax请求:业务异常, url:" + url, ex);
                 JsonData result = JsonData.fail(ex.getMessage());
                 mv = new ModelAndView("jsonView", result.toMap());
             } else if(ex instanceof ParamException){
-                log.error("ajax请求:参数异常, url:" + url, ex);
+                log.warn("ajax请求:参数异常, url:" + url, ex);
                 JsonData result = JsonData.fail(JsonData.PARAM_ERROR,ex.getMessage());
+                mv = new ModelAndView("jsonView", result.toMap());
+            } else if(ex instanceof JwtException){
+                log.warn("ajax请求:签名异常, url:" + url, ex);
+                JsonData result = JsonData.fail(JsonData.TOKEN_ILLEGAL,ex.getMessage());
                 mv = new ModelAndView("jsonView", result.toMap());
             } else {//系统异常
                 log.error("ajax请求:系统异常, url:" + url, ex);
@@ -37,10 +40,15 @@ public class SpringExceptionResolver implements HandlerExceptionResolver {
                 mv = new ModelAndView("jsonView", result.toMap());
             }
         } else {
-            log.error("页面请求出现异常:" + url, ex);
-            Map<String,Object> map=new HashMap<>();
-            map.put("errorMsg",ex.toString());
-            mv = new ModelAndView("error/exception",map);
+            if(ex instanceof JwtException){
+                log.warn("页面请求:签名异常" + url, ex);
+                JsonData result = JsonData.fail(JsonData.TOKEN_ILLEGAL,ex.getMessage());
+                mv = new ModelAndView("jsonView", result.toMap());
+            }else {
+                log.error("页面请求:系统异常" + url, ex);
+                JsonData result = JsonData.fail(JsonData.INTERNAL_SERVER_ERROR,ex.getMessage());
+                mv = new ModelAndView("jsonView", result.toMap());
+            }
         }
         return mv;
     }

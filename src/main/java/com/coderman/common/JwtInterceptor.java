@@ -1,22 +1,18 @@
-## SSM-Token
+package com.coderman.common;
 
-> ssm搭建前后端分离服务端系统,基于无状态token认证.
+import com.coderman.model.User;
+import com.coderman.util.JwtUtil;
+import com.coderman.util.WebUtil;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.SignatureException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.util.StringUtils;
+import org.springframework.web.servlet.HandlerInterceptor;
 
-#### 1. 加入JWT依赖
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-```xml
-
-    <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>${jwt-version}</version>
-     </dependency>
-```
-
-
-#### 2. JwtInterceptor
-
-```java
 /**
  * token 拦截器
  *
@@ -65,57 +61,3 @@ public class JwtInterceptor implements HandlerInterceptor {
         WebUtil.remove();
     }
 }
-
-```
-
-#### 3. 配置拦截器
-
-```xml
-    <!-- 配置拦截器 -->
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/**"/>
-            <mvc:exclude-mapping path="/user/login"/>
-            <bean class="com.coderman.common.JwtInterceptor"/>
-        </mvc:interceptor>
-    </mvc:interceptors>
-```
-
-#### 4. 登入方法
-
-```java
-
-/**
- * @Author zhangyukang
- * @Date 2020/8/11 09:24
- * @Version 1.0
- **/
-@Controller
-@RequestMapping("/user")
-public class UserController {
-
-    @Autowired
-    private UserService userService;
-
-    private Logger logger=LoggerFactory.getLogger(this.getClass());
-
-    /**
-     * 用户登入
-     * @param user
-     * @return
-     * @throws UserException
-     */
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
-    @ResponseBody
-    public JsonData login(@RequestBody User user) throws UserException {
-        BeanValidator.check(user);
-        User loginUser=userService.login(user.getUsername(),user.getPassword());
-        //user对象转map
-        BeanMap map = BeanMap.create(user);
-        String token = JwtUtil.createToken(loginUser.getId(), map);
-        logger.info("用户:{},成功登入,返回token:{}",loginUser,token);
-        return JsonData.success(token);
-    }
-}
-
-```

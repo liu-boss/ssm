@@ -9,9 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>ssm Maven Webapp</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
+    <name>ssm-token</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,6 +32,7 @@
         <hibernate-validator-version>5.3.6.Final</hibernate-validator-version>
         <guava-version>27.0-jre</guava-version>
         <commons-fileupload-version>1.4</commons-fileupload-version>
+        <jwt-version>0.7.0</jwt-version>
     </properties>
 
     <dependencies>
@@ -147,9 +146,14 @@
             <artifactId>commons-fileupload</artifactId>
             <version>${commons-fileupload-version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${jwt-version}</version>
+        </dependency>
     </dependencies>
     <build>
-        <finalName>ssm</finalName>
+        <finalName>ssm-token</finalName>
         <pluginManagement>
             <plugins>
                 <!-- tomcat插件控制 -->

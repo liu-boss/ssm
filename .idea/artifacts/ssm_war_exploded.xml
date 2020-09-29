@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="ssm:war exploded">
-    <output-path>$PROJECT_DIR$/target/ssm</output-path>
+    <output-path>$PROJECT_DIR$/target/ssm-token</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -54,10 +54,11 @@
           <element id="library" level="project" name="Maven: org.codehaus.mojo:animal-sniffer-annotations:1.17" />
           <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.4" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.2" />
+          <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt:0.7.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/ssm/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/ssm-token/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="ssm/web/Web" />
     </root>
